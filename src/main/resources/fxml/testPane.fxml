@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity"
+            minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
+            style="-fx-background-color: white;" stylesheets="@../css/leftMenuButtons.css"
+            xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.MyTestScrollPane">
+    <Button fx:id="chooseFileButton" mnemonicParsing="false" onAction="#chooseFiles"
+            text="Button"/>
+    <HBox fx:id="myHBox" alignment="CENTER" prefHeight="40.0" prefWidth="580.0"
+          AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+    </HBox>
+</AnchorPane>

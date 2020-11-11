@@ -21,10 +21,21 @@ public class DbActions {
         this.connectionSource = DbManager.getConnectionSource();
     }
 
-    public void creatOrUpdate(GaugeMeasurement gaugeMeasurement) {
+    public void createOrUpdate(GaugeMeasurement gaugeMeasurement) {
         Dao<GaugeMeasurement, Integer> dao = getDao(GaugeMeasurement.class);
         try {
             dao.createOrUpdate(gaugeMeasurement);
+        } catch (SQLException e) {
+            LOGGER.warn(e.getCause().getMessage());
+        } finally {
+            this.closeDbConnection();
+        }
+    }
+
+    public synchronized void createOrUpdate(List<GaugeMeasurement> gaugeMeasurement) {
+        Dao<GaugeMeasurement, Integer> dao = getDao(GaugeMeasurement.class);
+        try {
+            dao.create(gaugeMeasurement);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
         } finally {
@@ -63,7 +74,7 @@ public class DbActions {
         } finally {
             this.closeDbConnection();
         }
-        return  new ArrayList<>();
+        return new ArrayList<>();
     }
 
 

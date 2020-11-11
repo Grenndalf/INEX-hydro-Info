@@ -4,7 +4,7 @@ import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.layout.AnchorPane;
-import javafx.scene.layout.Pane;
+import javafx.scene.layout.Region;
 
 import java.io.IOException;
 
@@ -15,8 +15,14 @@ public class MainController {
 
     @FXML
     private LeftMenuButtonsController leftMenuButtonsController;
+
+
+    public AnchorPane getFxmlContainer() {
+        return fxmlContainer;
+    }
+
     @FXML
-    private Pane test;
+    private AnchorPane fxmlContainer;
 
     @FXML
     void initialize() {
@@ -32,19 +38,16 @@ public class MainController {
         this.mainParent = mainParent;
     }
 
-    public Pane getTest() {
-        return test;
-    }
-
-    public void setTest(Pane test) {
-        this.test = test;
-    }
     public void setInMainWindow(String path) throws IOException {
         FXMLLoader loader = new FXMLLoader(this.getClass().getResource(path));
-        AnchorPane testPane = loader.load();
-        getTest().getChildren().clear();
-        testPane.prefWidthProperty().bind(getTest().prefWidthProperty());
-        testPane.prefHeightProperty().bind(getTest().prefHeightProperty());
-        getTest().getChildren().add(testPane);
+        System.out.println(getFxmlContainer().getChildren().size() + "dzieci cilda");
+        System.out.println(getMainParent().getChildrenUnmodifiable().size() + "dzieci parenta");
+        getFxmlContainer().getChildren().clear();
+        // musi zostaæ region jako element do ktorego jest przypisany loader,
+        // w jego przypadku mozna bindowac wlasciwosc prefWidthprop z prefWithprop rodzica itd.
+        Region loadedContent = loader.load();
+        getFxmlContainer().getChildren().add(loadedContent);
+        loadedContent.prefWidthProperty().bind(getFxmlContainer().widthProperty());
+        loadedContent.prefHeightProperty().bind(getFxmlContainer().heightProperty());
     }
 }

@@ -1,5 +1,6 @@
 package DButils;
 
+import RegularClasses.GaugeMeasurement;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
@@ -13,7 +14,7 @@ public class DbManager {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(DbManager.class);
 
-    private static final String JDBC_DRIVER_HD = "jdbc:sqlite:pomiary" ;
+    private static final String JDBC_DRIVER_HD = "jdbc:sqlite:pomiary.db" ;
     private static final String USER = "admin";
     private static final String PASS = "admin";
 
@@ -22,6 +23,8 @@ public class DbManager {
     public static void initDatabase() throws SQLException {
         createConnectionSource();
         closeConnectionSource();
+        dropTable();
+        createTable();
     }
 
     private static void createConnectionSource() {
@@ -46,6 +49,21 @@ public class DbManager {
             } catch (IOException e) {
                 LOGGER.warn(e.getMessage());
             }
+        }
+    }
+    private static void createTable(){
+        try {
+            TableUtils.createTableIfNotExists(connectionSource, GaugeMeasurement.class);
+        } catch (SQLException e) {
+            LOGGER.warn(e.getMessage());
+        }
+    }
+
+    private  static  void  dropTable(){
+        try {
+            TableUtils.dropTable(connectionSource, GaugeMeasurement.class, true);
+        } catch (SQLException e) {
+            LOGGER.warn(e.getMessage());
         }
     }
 

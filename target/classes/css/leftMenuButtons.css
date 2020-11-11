@@ -1,14 +1,28 @@
-.leftMenu {
--fx-background-color: #317FFF;
-}
+    .leftMenu {
+    -fx-background-color: #317FFF;
+    }
 
-.toggleButtons{
--fx-pref-width: 180px;
--fx-pref-height: 40px;
--fx-background-color: #306FFF;
--fx-text-fill: white;
-}
+    .toggleButtons{
+    -fx-pref-width: 180px;
+    -fx-pref-height: 40px;
+    -fx-background-color: #306FFF;
+    -fx-text-fill: white;
+    }
 
-.toggleButtons:selected{
-   -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, Orange, OrangeRed);
-}
+    .toggleButtons:selected{
+       -fx-background-color: linear-gradient(from 50% 0% to 50% 100%, Orange, OrangeRed);
+    }
+    .progress-bar {
+         -fx-pref-width: 500px;
+         -fx-pref-height: 50px;
+        }
+    .progress-bar > .bar {
+        -fx-background-color: linear-gradient(
+            from 0px .75em to .75em 0px,
+            repeat,
+            -fx-accent 0%,
+            -fx-accent 49%,
+            derive(-fx-accent, 30%) 50%,
+            derive(-fx-accent, 30%) 99%
+        );
+    }

@@ -26,8 +26,7 @@ public class LeftMenuButtonsController {
 
     @FXML
     void selectFileForImport() throws IOException {
-        mainController.setInMainWindow("/fxml/myTestScrollPane.fxml");
-        System.out.println("Import");
+        mainController.setInMainWindow("/fxml/testPane.fxml");
     }
 
     @FXML
