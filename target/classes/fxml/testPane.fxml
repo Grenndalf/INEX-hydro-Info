@@ -6,7 +6,7 @@
             minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
             style="-fx-background-color: white;" stylesheets="@../css/leftMenuButtons.css"
-            xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.Import">
+            xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.ImportController">
     <Button fx:id="chooseFileButton" mnemonicParsing="false" onAction="#chooseFiles"
             text="Button"/>
     <HBox fx:id="myHBox" alignment="CENTER" prefHeight="40.0" prefWidth="580.0"

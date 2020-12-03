@@ -18,7 +18,7 @@ import java.io.File;
 import java.util.List;
 import java.util.ResourceBundle;
 
-public class Import {
+public class ImportController {
 
     public static final String IMPORT_ON_GOING = "import.on.going";
     public static final String WAIT = "wait";
@@ -28,9 +28,9 @@ public class Import {
     public static final String ERROR_LIST = "error.list";
     public static final String NOT_IMPORTED_LIST = "not.imported.list";
     @FXML
-    public HBox myHBox;
+    public HBox barContainer;
     @FXML
-    public Button chooseFileButton;
+    public Button selectFilesButton;
     @FXML
     AnchorPane pane;
 
@@ -47,12 +47,12 @@ public class Import {
         Button button = new Button("Cancel");
         button.setOnAction(event -> {
             FileImporter.myTask.cancel();
-            myHBox.getChildren().removeAll(progressBar, button);
+            barContainer.getChildren().removeAll(progressBar, button);
             FileImporter.myTask = null;
         });
         FileImporter.myTask.runningProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue) {
-                myHBox.getChildren().clear();
+                barContainer.getChildren().clear();
                 if (!FileImporter.importErrors.isEmpty()) {
                     Button showErrors = new Button(getResourceBundle().getString(ERROR_LIST));
                     showErrors.setOnAction(event -> {
@@ -60,13 +60,13 @@ public class Import {
                     });
                     Region filler = new Region();
                     HBox.setHgrow(filler, Priority.ALWAYS);
-                    myHBox.getChildren().addAll(showErrors, filler);
+                    barContainer.getChildren().addAll(showErrors, filler);
                 }
-                myHBox.getChildren().add(new Label("zadanie skoñczone"));
+                barContainer.getChildren().add(new Label("zadanie skoñczone"));
 
             }
         });
-        myHBox.getChildren().addAll(progressBar, button);
+        barContainer.getChildren().addAll(progressBar, button);
     }
 
     private void showNotImportedData() {
@@ -97,7 +97,7 @@ public class Import {
     }
 
     public void chooseFiles() {
-        chooseFileButton.disableProperty().set(true);
+        selectFilesButton.disableProperty().set(true);
         FileChooser fileChooser = new FileChooser();
         List<File> fileList = fileChooser.showOpenMultipleDialog(new Stage());
         if (fileList != null) {
@@ -112,9 +112,10 @@ public class Import {
                         getResourceBundle().getString(IMPORTING_ERROR));
             }
         }
-        chooseFileButton.disableProperty().set(false);
+        selectFilesButton.disableProperty().set(false);
     }
 
     public void setPathTest(ActionEvent event) {
+        chooseFiles();
     }
 }
