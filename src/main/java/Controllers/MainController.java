@@ -1,5 +1,7 @@
 package Controllers;
 
+import RegularClasses.Mediator.ControllerHolder;
+import RegularClasses.Utils.Utils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -11,43 +13,35 @@ import java.io.IOException;
 public class MainController {
 
     @FXML
-    private Parent mainParent;
+    private AnchorPane leftMenuContainer;
 
     @FXML
-    private LeftMenuButtonsController leftMenuButtonsController;
-
-
-    public AnchorPane getFxmlContainer() {
-        return fxmlContainer;
-    }
+    private AnchorPane contentContainer;
 
     @FXML
-    private AnchorPane fxmlContainer;
+    private AnchorPane mainParent;
 
     @FXML
-    void initialize() {
-        //trzeba przekazac referencje tej klasy do klasy left... bo leci NullPoiter.
-        leftMenuButtonsController.setMainController(this);
+    void initialize() throws IOException {
+        ControllerHolder.getInstance().registerMainController(this);
+        setLeftMenu();
     }
 
-    public Parent getMainParent() {
-        return mainParent;
-    }
-
-    public void setMainParent(Parent mainParent) {
-        this.mainParent = mainParent;
+    private void setLeftMenu() throws IOException {
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/LeftMenuButtons.fxml"), Utils.getResourceBundle());
+        leftMenuContainer.getChildren().clear();
+        Region loadedContent = loader.load();
+        leftMenuContainer.getChildren().add(loadedContent);
     }
 
     public void setInMainWindow(String path) throws IOException {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(path));
-        System.out.println(getFxmlContainer().getChildren().size() + "dzieci cilda");
-        System.out.println(getMainParent().getChildrenUnmodifiable().size() + "dzieci parenta");
-        getFxmlContainer().getChildren().clear();
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(path),Utils.getResourceBundle());
+        contentContainer.getChildren().clear();
         // musi zostaæ region jako element do ktorego jest przypisany loader,
         // w jego przypadku mozna bindowac wlasciwosc prefWidthprop z prefWithprop rodzica itd.
         Region loadedContent = loader.load();
-        getFxmlContainer().getChildren().add(loadedContent);
-        loadedContent.prefWidthProperty().bind(getFxmlContainer().widthProperty());
-        loadedContent.prefHeightProperty().bind(getFxmlContainer().heightProperty());
+        contentContainer.getChildren().add(loadedContent);
+        loadedContent.prefWidthProperty().bind(contentContainer.widthProperty());
+        loadedContent.prefHeightProperty().bind(contentContainer.heightProperty());
     }
 }

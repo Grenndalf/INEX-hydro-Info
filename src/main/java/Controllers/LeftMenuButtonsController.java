@@ -1,18 +1,23 @@
 package Controllers;
 
+import RegularClasses.Mediator.ControllerHolder;
 import javafx.fxml.FXML;
 import javafx.scene.control.ToggleGroup;
+import javafx.scene.layout.AnchorPane;
 
 import java.io.IOException;
 
 public class LeftMenuButtonsController {
     @FXML
-    private ToggleGroup leftMenuToggleGroup;
+    public AnchorPane leftMenuContainer;
+    @FXML
+    public ToggleGroup leftMenuToggleGroup;
 
-    private MainController mainController;
+    public MainController mainController;
 
     @FXML
     void initialize() {
+        ControllerHolder.getInstance().registerButtonLeftMenuButtonController(this);
         addToggleGroupListener();
     }
 
@@ -26,27 +31,21 @@ public class LeftMenuButtonsController {
 
     @FXML
     void selectFileForImport() throws IOException {
-        mainController.setInMainWindow("/fxml/testPane.fxml");
+        ControllerHolder.getInstance().setMainContent("/fxml/Import.fxml");
     }
 
     @FXML
     void showGaugeList() {
-        System.out.println("wodowskazy");
+        ControllerHolder.getInstance().setMainContent("/fxml/GaugeList.fxml");
     }
 
     @FXML
     void showStatistics() throws IOException {
-        mainController.setInMainWindow("/fxml/GaugeList.fxml");
-        System.out.println("Staty");
+        ControllerHolder.getInstance().setMainContent("/fxml/testPane.fxml");
     }
 
 
     @FXML
     void showTableToExport() {
-        System.out.println("Excel export");
-    }
-
-    public void setMainController(MainController mainController) {
-        this.mainController = mainController;
     }
 }

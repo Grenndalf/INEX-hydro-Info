@@ -1,6 +1,7 @@
 package App;
 
 import DButils.DbManager;
+import RegularClasses.Utils.Utils;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -10,7 +11,7 @@ import java.util.ResourceBundle;
 
 public class App extends Application {
 
-    private final String BUNDLES = "Bundles.labels";
+
     private final String MAINFRAMEPATH = "/fxml/MainContainer.fxml";
 
     public static void main(String[] args) {
@@ -24,15 +25,13 @@ public class App extends Application {
 //        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+        System.out.println("dupa");
     }
 
     public FXMLLoader initFxml() {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(MAINFRAMEPATH), getResourceBundle());
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(MAINFRAMEPATH), Utils.getResourceBundle());
         return loader;
     }
 
-    private ResourceBundle getResourceBundle() {
-        ResourceBundle bundle = ResourceBundle.getBundle(BUNDLES);
-        return bundle;
-    }
+
 }
