@@ -1,6 +1,7 @@
 package DButils;
 
 import RegularClasses.GaugeMeasurement;
+import RegularClasses.TownList;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.logger.Logger;
@@ -11,7 +12,10 @@ import com.j256.ormlite.support.ConnectionSource;
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 public class DbActions {
     private static final Logger LOGGER = LoggerFactory.getLogger(DbActions.class);
@@ -21,8 +25,8 @@ public class DbActions {
         this.connectionSource = DbManager.getConnectionSource();
     }
 
-    public void createOrUpdate(GaugeMeasurement gaugeMeasurement) {
-        Dao<GaugeMeasurement, Integer> dao = getDao(GaugeMeasurement.class);
+    public void createOrUpdateMeasurementTable(GaugeMeasurement gaugeMeasurement) {
+        Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement(GaugeMeasurement.class);
         try {
             dao.createOrUpdate(gaugeMeasurement);
         } catch (SQLException e) {
@@ -32,8 +36,8 @@ public class DbActions {
         }
     }
 
-    public synchronized void createOrUpdate(List<GaugeMeasurement> gaugeMeasurement) {
-        Dao<GaugeMeasurement, Integer> dao = getDao(GaugeMeasurement.class);
+    public synchronized void createOrUpdateMeasurementTable(List<GaugeMeasurement> gaugeMeasurement) {
+        Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement(GaugeMeasurement.class);
         try {
             dao.create(gaugeMeasurement);
         } catch (SQLException e) {
@@ -43,9 +47,25 @@ public class DbActions {
         }
     }
 
+    public synchronized void createOrUpdateTownListTable(Set<String> townList) {
+        Dao<TownList, String> dao = getDaoTownList(TownList.class);
+        try {
+            dao.create(townList.stream().map(s -> {
+                TownList tl = new TownList();
+                tl.setTownName(s);
+                return tl;
+            }).collect(Collectors.toSet()));
+        } catch (SQLException e) {
+            LOGGER.warn(e.getCause().getMessage());
+        } finally {
+            this.closeDbConnection();
+        }
+    }
+
+
     public void refresh(GaugeMeasurement gaugeMeasurement) {
         try {
-            Dao<GaugeMeasurement, Integer> dao = getDao(GaugeMeasurement.class);
+            Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement(GaugeMeasurement.class);
             dao.refresh(gaugeMeasurement);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
@@ -56,7 +76,7 @@ public class DbActions {
 
     public void delete(GaugeMeasurement gaugeMeasurement) {
         try {
-            Dao<GaugeMeasurement, Integer> dao = getDao(GaugeMeasurement.class);
+            Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement(GaugeMeasurement.class);
             dao.delete(gaugeMeasurement);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
@@ -67,7 +87,7 @@ public class DbActions {
 
     public List<GaugeMeasurement> queryForAll(Class<GaugeMeasurement> cls) {
         try {
-            Dao<GaugeMeasurement, Integer> dao = getDao(GaugeMeasurement.class);
+            Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement(GaugeMeasurement.class);
             return dao.queryForAll();
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
@@ -77,8 +97,30 @@ public class DbActions {
         return new ArrayList<>();
     }
 
+    public TownList queryForOneTown(Class<TownList> cls, String townName) {
+        try {
+            return getQueryBuilderTownList(cls).where().idEq(townName).queryForFirst();
+        } catch (SQLException e) {
+            LOGGER.warn(e.getCause().getMessage());
+        } finally {
+            this.closeDbConnection();
+        }
+        return new TownList();
+    }
 
-    public Dao<GaugeMeasurement, Integer> getDao(Class<GaugeMeasurement> cls) {
+    public Set<String> queryForAllTowns() {
+        try {
+            return getDaoTownList(TownList.class).queryForAll().stream().map(townList -> townList.getTownName()).collect(Collectors.toSet());
+        } catch (SQLException e) {
+            LOGGER.warn(e.getCause().getMessage());
+        } finally {
+            this.closeDbConnection();
+        }
+        return new HashSet<>();
+    }
+
+
+    public Dao<GaugeMeasurement, Integer> getDaoGaugeMeasurement(Class<GaugeMeasurement> cls) {
         Dao<GaugeMeasurement, Integer> gaugeMeasurementDao = null;
         try {
             return DaoManager.createDao(connectionSource, cls);
@@ -90,8 +132,25 @@ public class DbActions {
         return null;
     }
 
-    public QueryBuilder<GaugeMeasurement, Integer> getQueryBuilder(Class<GaugeMeasurement> cls) {
-        Dao<GaugeMeasurement, Integer> dao = getDao(GaugeMeasurement.class);
+    public Dao<TownList, String> getDaoTownList(Class<TownList> cls) {
+        Dao<TownList, String> townListDao = null;
+        try {
+            return DaoManager.createDao(connectionSource, cls);
+        } catch (SQLException e) {
+            LOGGER.warn(e.getCause().getMessage());
+        } finally {
+            this.closeDbConnection();
+        }
+        return null;
+    }
+
+    public QueryBuilder<GaugeMeasurement, Integer> getQueryBuilderGaugeMeasurement(Class<GaugeMeasurement> cls) {
+        Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement(GaugeMeasurement.class);
+        return dao.queryBuilder();
+    }
+
+    public QueryBuilder<TownList, String> getQueryBuilderTownList(Class<TownList> cls) {
+        Dao<TownList, String> dao = getDaoTownList(TownList.class);
         return dao.queryBuilder();
     }
 

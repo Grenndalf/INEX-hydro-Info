@@ -1,6 +1,7 @@
 package DButils;
 
 import RegularClasses.GaugeMeasurement;
+import RegularClasses.TownList;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
@@ -54,6 +55,7 @@ public class DbManager {
     private static void createTable(){
         try {
             TableUtils.createTableIfNotExists(connectionSource, GaugeMeasurement.class);
+            TableUtils.createTableIfNotExists(connectionSource, TownList.class);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }
@@ -62,6 +64,7 @@ public class DbManager {
     private  static  void  dropTable(){
         try {
             TableUtils.dropTable(connectionSource, GaugeMeasurement.class, true);
+            TableUtils.dropTable(connectionSource, TownList.class, true);
         } catch (SQLException e) {
             LOGGER.warn(e.getMessage());
         }

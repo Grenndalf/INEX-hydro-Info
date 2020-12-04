@@ -115,7 +115,7 @@ public class ImportController {
         selectFilesButton.disableProperty().set(false);
     }
 
-    public void setPathTest(ActionEvent event) {
+    public void selectFiles(ActionEvent event) {
         chooseFiles();
     }
 }

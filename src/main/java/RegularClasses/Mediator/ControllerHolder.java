@@ -31,6 +31,11 @@ public class ControllerHolder implements MediatorMethods {
         }
     }
 
+    @Override
+    public void setTownName(String townName) {
+        menuButtonsController.townName.setText(townName);
+    }
+
     public static ControllerHolder getInstance() {
         return ControllerMediatorHolder.INSTANCE;
     }

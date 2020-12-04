@@ -5,10 +5,8 @@ import javafx.concurrent.Task;
 
 import java.io.File;
 import java.io.FileReader;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.ResourceBundle;
-import java.util.Scanner;
+import java.math.BigDecimal;
+import java.util.*;
 
 public class FileImporter extends Task {
 
@@ -29,6 +27,7 @@ public class FileImporter extends Task {
         myTask = this;
         importErrors.clear();
         int progress = 0;
+        Set<String> townList = new HashSet<>();
         for (File file : this.fileList
         ) {
             List<GaugeMeasurement> gaugeMeasurementsListFromOneFile = new ArrayList<>();
@@ -41,6 +40,7 @@ public class FileImporter extends Task {
                     try {
                         gaugeMeasurement.tryGetGaugeMeasurement(lineToAdd.split(","));
                         gaugeMeasurementsListFromOneFile.add(gaugeMeasurement);
+                        townList.add(lineToAdd.split(",")[1].replace("\"", "").trim());
                     } catch (Exception e) {
                         importErrors.add(lineToAdd
                                 + ResourceBundle.getBundle(BUNDLES_LABELS).getString(IN_FILE)
@@ -51,7 +51,7 @@ public class FileImporter extends Task {
 
                 if (isCancelled()) break;
 
-                dbActions.createOrUpdate(gaugeMeasurementsListFromOneFile);
+                dbActions.createOrUpdateMeasurementTable(gaugeMeasurementsListFromOneFile);
 
                 progress++;
                 updateProgress(progress, this.fileList.size());
@@ -61,6 +61,8 @@ public class FileImporter extends Task {
             }
 
         }
+        townList.removeAll(dbActions.queryForAllTowns());
+        dbActions.createOrUpdateTownListTable(townList);
         myTask = null;
         return null;
     }

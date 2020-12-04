@@ -23,9 +23,31 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Import.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/TownList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pomiary.db" beforeDir="false" afterPath="$PROJECT_DIR$/pomiary.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LeftMenuButtonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LeftMenuButtonsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/DbActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/DbActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/DbManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/FileImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/GaugeMeasurement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/ControllerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/ControllerHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/MediatorMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/MediatorMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Import.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/testPane.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/testPane.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/LeftMenuButtons.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/LeftMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/MainContainer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder$ControllerMediatorHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder$ControllerMediatorHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/MediatorMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/MediatorMethods.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/LeftMenuButtons.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +56,13 @@
   </component>
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -98,23 +127,36 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1606996891442">
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser" timestamp="1607076845135">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606996891442" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1606996891442">
+    <state x="765" y="226" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1607076845135" />
+    <state x="529" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607075707483">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606996891442" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1606996891442">
+    <state x="529" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607075707483" />
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1607080123143">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606996891442" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1606996891442">
+    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607080123143" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1607080123139">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606996891442" />
+    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607080123139" />
+    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1607080123139">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607080123139" />
+    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1607080123143">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607080123143" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1607075472941">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607075472941" />
   </component>
 </project>

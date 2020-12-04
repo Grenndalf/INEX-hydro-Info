@@ -28,9 +28,9 @@ public class MainController {
     }
 
     private void setLeftMenu() throws IOException {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/LeftMenuButtons.fxml"), Utils.getResourceBundle());
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/LeftMenu.fxml"), Utils.getResourceBundle());
         leftMenuContainer.getChildren().clear();
-        Region loadedContent = loader.load();
+        Parent loadedContent = loader.load();
         leftMenuContainer.getChildren().add(loadedContent);
     }
 

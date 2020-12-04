@@ -2,6 +2,7 @@ package Controllers;
 
 import RegularClasses.Mediator.ControllerHolder;
 import javafx.fxml.FXML;
+import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
 
@@ -12,8 +13,8 @@ public class LeftMenuButtonsController {
     public AnchorPane leftMenuContainer;
     @FXML
     public ToggleGroup leftMenuToggleGroup;
-
-    public MainController mainController;
+    @FXML
+    public Label townName;
 
     @FXML
     void initialize() {

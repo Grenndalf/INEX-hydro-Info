@@ -2,7 +2,10 @@ package RegularClasses;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
 
 import java.math.BigDecimal;
 
@@ -43,19 +46,16 @@ public class GaugeMeasurement {
     @DatabaseField(columnName = "Dane3")
     private BigDecimal data3;
 
-    public GaugeMeasurement tryGetGaugeMeasurement(String[] fileLine) throws NumberFormatException{
-        GaugeMeasurement gaugeMeasurement;
-            gaugeMeasurement = new GaugeMeasurement();
-            gaugeMeasurement.setGaugeID(Integer.parseInt(fileLine[0].replace("\"", "").trim()));
-            gaugeMeasurement.setGaugeName(fileLine[1].replace("\"", "").trim());
-            gaugeMeasurement.setRiverName(fileLine[2].replace("\"", "").trim());
-            gaugeMeasurement.setMeasurementYear(Short.parseShort(fileLine[3].replace("\"", "").trim()));
-            gaugeMeasurement.setMeasurementMonth(Short.parseShort(fileLine[4].replace("\"", "").trim()));
-            gaugeMeasurement.setMeasurementDay(Short.parseShort(fileLine[5].replace("\"", "").trim()));
-            gaugeMeasurement.setData1(new BigDecimal(fileLine[6].replace("\"", "").trim()));
-            gaugeMeasurement.setData2(new BigDecimal(fileLine[7].replace("\"", "").trim()));
-            gaugeMeasurement.setData3(new BigDecimal(fileLine[8].replace("\"", "").trim()));
-        return gaugeMeasurement;
+    public void tryGetGaugeMeasurement(String[] fileLine) throws NumberFormatException {
+        this.setGaugeID(Integer.parseInt(fileLine[0].replace("\"", "").trim()));
+        this.setGaugeName(fileLine[1].replace("\"", "").trim());
+        this.setRiverName(fileLine[2].replace("\"", "").trim());
+        this.setMeasurementYear(Short.parseShort(fileLine[3].replace("\"", "").trim()));
+        this.setMeasurementMonth(Short.parseShort(fileLine[4].replace("\"", "").trim()));
+        this.setMeasurementDay(Short.parseShort(fileLine[5].replace("\"", "").trim()));
+        this.setData1(new BigDecimal(fileLine[6].replace("\"", "").trim()));
+        this.setData2(new BigDecimal(fileLine[7].replace("\"", "").trim()));
+        this.setData3(new BigDecimal(fileLine[8].replace("\"", "").trim()));
     }
 
 }
