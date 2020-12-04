@@ -22,33 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/TownList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pomiary.db" beforeDir="false" afterPath="$PROJECT_DIR$/pomiary.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LeftMenuButtonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LeftMenuButtonsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/DbActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/DbActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/DbManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/FileImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/GaugeMeasurement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/ControllerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/ControllerHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/MediatorMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/MediatorMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Import.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/LeftMenuButtons.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/LeftMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/MainContainer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder$ControllerMediatorHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder$ControllerMediatorHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/MediatorMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/MediatorMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/LeftMenuButtons.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
