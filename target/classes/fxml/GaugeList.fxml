@@ -1,8 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.AnchorPane?>
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.JFXListView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
 
-
-<AnchorPane style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8.0.171"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GaugeListController">
+<AnchorPane prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: white;" stylesheets="@../css/leftMenuButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GaugeListController">
+    <children>
+        <FlowPane fx:id="buttonContainer" hgap="20.0" layoutX="50.0" layoutY="60.0" prefHeight="20.0" prefWidth="640.0" vgap="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="480.0" AnchorPane.topAnchor="30.0">
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </FlowPane>
+        <JFXListView fx:id="townListView" layoutX="722.0" layoutY="50.0" prefHeight="720.0" prefWidth="387.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
+        <Label layoutX="733.0" layoutY="760.0" text="%gauge.quantity" />
+        <Label fx:id="gaugeQuantity" alignment="CENTER_RIGHT" layoutX="1049.0" layoutY="760.0" text="%not.selected" textFill="#0095ff">
+            <font>
+                <Font name="System Bold" size="12.0" />
+            </font>
+        </Label>
+    </children>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
 </AnchorPane>

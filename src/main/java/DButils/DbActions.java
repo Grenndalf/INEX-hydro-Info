@@ -97,15 +97,16 @@ public class DbActions {
         return new ArrayList<>();
     }
 
-    public TownList queryForOneTown(Class<TownList> cls, String townName) {
+    public List<TownList> queryForOneTownStartedWithLetter(String townNameFirstLetter) {
         try {
-            return getQueryBuilderTownList(cls).where().idEq(townName).queryForFirst();
+            String letter = townNameFirstLetter +"%";
+            return getQueryBuilderTownList(TownList.class).where().like("Wodowskaz",letter).query();
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
         } finally {
             this.closeDbConnection();
         }
-        return new TownList();
+        return new ArrayList<>();
     }
 
     public Set<String> queryForAllTowns() {

@@ -24,7 +24,7 @@ public class DbManager {
     public static void initDatabase() throws SQLException {
         createConnectionSource();
         closeConnectionSource();
-        dropTable();
+//        dropTable();
         createTable();
     }
 

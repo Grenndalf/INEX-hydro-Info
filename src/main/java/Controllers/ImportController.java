@@ -3,6 +3,8 @@ package Controllers;
 
 import RegularClasses.FileImporter;
 import RegularClasses.FileImporterService;
+import RegularClasses.Utils.Utils;
+import com.jfoenix.controls.JFXProgressBar;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -42,19 +44,22 @@ public class ImportController {
     }
 
     private void showProgressBar() {
-        ProgressBar progressBar = new ProgressBar();
+        JFXProgressBar progressBar = new JFXProgressBar();
+        progressBar.setPrefWidth(180);
+        progressBar.setPrefHeight(40);
         progressBar.progressProperty().bind(FileImporter.myTask.progressProperty());
         Button button = new Button("Cancel");
         button.setOnAction(event -> {
             FileImporter.myTask.cancel();
             barContainer.getChildren().removeAll(progressBar, button);
             FileImporter.myTask = null;
+
         });
         FileImporter.myTask.runningProperty().addListener((observable, oldValue, newValue) -> {
             if (!newValue) {
                 barContainer.getChildren().clear();
                 if (!FileImporter.importErrors.isEmpty()) {
-                    Button showErrors = new Button(getResourceBundle().getString(ERROR_LIST));
+                    Button showErrors = new Button(Utils.getResourceBundle().getString(ERROR_LIST));
                     showErrors.setOnAction(event -> {
                         showNotImportedData();
                     });
@@ -71,15 +76,11 @@ public class ImportController {
 
     private void showNotImportedData() {
         Alert alert = new Alert(Alert.AlertType.ERROR);
-        alert.setHeaderText(getResourceBundle().getString(NOT_IMPORTED_LIST));
+        alert.setHeaderText(Utils.getResourceBundle().getString(NOT_IMPORTED_LIST));
         TextArea textArea = new TextArea();
         FileImporter.importErrors.forEach(line -> textArea.setText(textArea.getText() + line));
         alert.getDialogPane().setContent(textArea);
         alert.showAndWait();
-    }
-
-    private ResourceBundle getResourceBundle() {
-        return ResourceBundle.getBundle(BUNDLES);
     }
 
     private void alertTemplate(Alert.AlertType alertType, String s, String s2, String s3) {
@@ -92,7 +93,7 @@ public class ImportController {
 
     private void showInfoDialogWindow() {
         alertTemplate(Alert.AlertType.INFORMATION,
-                getResourceBundle().getString(TASK_EXECUTED),
+                Utils.getResourceBundle().getString(TASK_EXECUTED),
                 "wykonano zadanie.", "trolololo");
     }
 
@@ -107,9 +108,9 @@ public class ImportController {
                 Platform.runLater(this::showProgressBar);
             } else {
                 alertTemplate(Alert.AlertType.ERROR,
-                        getResourceBundle().getString(IMPORT_ON_GOING),
-                        getResourceBundle().getString(WAIT),
-                        getResourceBundle().getString(IMPORTING_ERROR));
+                        Utils.getResourceBundle().getString(IMPORT_ON_GOING),
+                        Utils.getResourceBundle().getString(WAIT),
+                        Utils.getResourceBundle().getString(IMPORTING_ERROR));
             }
         }
         selectFilesButton.disableProperty().set(false);

@@ -1,52 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.geometry.*?>
-<?import javafx.scene.layout.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.*?>
-
-<AnchorPane fx:id="leftMenuContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="220.0" styleClass="leftMenu" stylesheets="@../css/leftMenuButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LeftMenuButtonsController">
+<AnchorPane fx:id="leftMenuContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
+            minWidth="-Infinity" prefHeight="800.0" prefWidth="220.0" styleClass="leftMenu"
+            stylesheets="@../css/leftMenuButtons.css" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LeftMenuButtonsController">
     <children>
-        <VBox fx:id="buttonContainer" layoutX="10.0" layoutY="258.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <VBox fx:id="buttonContainer" layoutX="10.0" layoutY="258.0" spacing="10.0" AnchorPane.leftAnchor="10.0"
+              AnchorPane.rightAnchor="10.0">
             <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
             </padding>
             <children>
-                <ToggleButton fx:id="gaugeList" mnemonicParsing="false" onAction="#showGaugeList" prefHeight="30.0" prefWidth="180.0" selected="true" styleClass="toggleButtons" text="%gauge.list" textAlignment="CENTER">
+                <ToggleButton fx:id="gaugeList" mnemonicParsing="false" onAction="#showGaugeList" prefHeight="30.0"
+                              prefWidth="180.0" selected="true" styleClass="toggleButtons" text="%gauge.list"
+                              textAlignment="CENTER">
                     <toggleGroup>
-                        <ToggleGroup fx:id="leftMenuToggleGroup" />
+                        <ToggleGroup fx:id="leftMenuToggleGroup"/>
                     </toggleGroup>
                     <font>
-                        <Font name="System Bold" size="13.0" />
+                        <Font name="System Bold" size="13.0"/>
                     </font>
                 </ToggleButton>
-                <ToggleButton fx:id="Statistics" mnemonicParsing="false" onAction="#showStatistics" styleClass="toggleButtons" text="%statistics" textAlignment="CENTER" toggleGroup="$leftMenuToggleGroup">
+                <ToggleButton fx:id="Statistics" mnemonicParsing="false" onAction="#showStatistics"
+                              styleClass="toggleButtons" text="%statistics" textAlignment="CENTER"
+                              toggleGroup="$leftMenuToggleGroup">
                     <font>
-                        <Font name="Arial Black" size="13.0" />
+                        <Font name="Arial Black" size="13.0"/>
                     </font>
                 </ToggleButton>
-                <ToggleButton fx:id="exportToExcel" mnemonicParsing="false" onAction="#showTableToExport" styleClass="toggleButtons" text="%export.excel" textAlignment="CENTER" toggleGroup="$leftMenuToggleGroup">
+                <ToggleButton fx:id="exportToExcel" mnemonicParsing="false" onAction="#showTableToExport"
+                              styleClass="toggleButtons" text="%export.excel" textAlignment="CENTER"
+                              toggleGroup="$leftMenuToggleGroup">
                     <font>
-                        <Font name="Arial Black" size="13.0" />
+                        <Font name="Arial Black" size="13.0"/>
                     </font>
                 </ToggleButton>
-                <ToggleButton fx:id="importFile" mnemonicParsing="false" onAction="#selectFileForImport" styleClass="toggleButtons" text="%import" textAlignment="CENTER" toggleGroup="$leftMenuToggleGroup">
+                <ToggleButton fx:id="importFile" mnemonicParsing="false" onAction="#selectFileForImport"
+                              styleClass="toggleButtons" text="%import" textAlignment="CENTER"
+                              toggleGroup="$leftMenuToggleGroup">
                     <opaqueInsets>
-                        <Insets />
+                        <Insets/>
                     </opaqueInsets>
                     <font>
-                        <Font name="Arial Black" size="13.0" />
+                        <Font name="Arial Black" size="13.0"/>
                     </font>
                 </ToggleButton>
             </children>
         </VBox>
-        <Label fx:id="townName" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="35.0" prefHeight="82.0" prefWidth="167.0" text="Wybierz Wodowskaz" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+        <Label fx:id="townName" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="35.0"
+               prefHeight="82.0" prefWidth="167.0" text="%select.gauge" textAlignment="CENTER" textFill="WHITE"
+               wrapText="true">
             <font>
-                <Font name="System Bold" size="24.0" />
+                <Font name="System Bold" size="24.0"/>
             </font>
         </Label>
     </children>
