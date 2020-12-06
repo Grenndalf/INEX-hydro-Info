@@ -1,7 +1,7 @@
 package DButils;
 
-import RegularClasses.GaugeMeasurement;
-import RegularClasses.TownList;
+import RegularClasses.Tables.GaugeMeasurement;
+import RegularClasses.Tables.TownList;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;

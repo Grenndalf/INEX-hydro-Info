@@ -20,7 +20,7 @@
         </FlowPane>
         <JFXListView fx:id="townListView" layoutX="722.0" layoutY="50.0" prefHeight="720.0" prefWidth="387.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0" />
         <Label layoutX="733.0" layoutY="760.0" text="%gauge.quantity" />
-        <Label fx:id="gaugeQuantity" alignment="CENTER_RIGHT" layoutX="1049.0" layoutY="760.0" text="%not.selected" textFill="#0095ff">
+        <Label fx:id="gaugeQuantity" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="0.0" layoutX="1049.0" layoutY="760.0" text="%not.selected" textAlignment="RIGHT" textFill="#0095ff" AnchorPane.bottomAnchor="10.0" AnchorPane.rightAnchor="30.0">
             <font>
                 <Font name="System Bold" size="12.0" />
             </font>

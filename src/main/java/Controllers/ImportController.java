@@ -1,14 +1,17 @@
 package Controllers;
 
 
-import RegularClasses.FileImporter;
-import RegularClasses.FileImporterService;
+import RegularClasses.Multihreading.FileImporter;
+import RegularClasses.Multihreading.FileImporterService;
 import RegularClasses.Utils.Utils;
 import com.jfoenix.controls.JFXProgressBar;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.*;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
@@ -18,17 +21,17 @@ import javafx.stage.Stage;
 
 import java.io.File;
 import java.util.List;
-import java.util.ResourceBundle;
 
 public class ImportController {
 
     public static final String IMPORT_ON_GOING = "import.on.going";
     public static final String WAIT = "wait";
     public static final String IMPORTING_ERROR = "Importing.error";
-    public static final String BUNDLES = "Bundles.labels";
-    public static final String TASK_EXECUTED = "task.executed";
     public static final String ERROR_LIST = "error.list";
     public static final String NOT_IMPORTED_LIST = "not.imported.list";
+    public static final String CSV_FILES = "csv.files";
+    public static final String CSV = "*.csv";
+
     @FXML
     public HBox barContainer;
     @FXML
@@ -91,15 +94,12 @@ public class ImportController {
         alert.showAndWait();
     }
 
-    private void showInfoDialogWindow() {
-        alertTemplate(Alert.AlertType.INFORMATION,
-                Utils.getResourceBundle().getString(TASK_EXECUTED),
-                "wykonano zadanie.", "trolololo");
-    }
-
     public void chooseFiles() {
         selectFilesButton.disableProperty().set(true);
         FileChooser fileChooser = new FileChooser();
+        FileChooser.ExtensionFilter extFilter =
+                new FileChooser.ExtensionFilter(Utils.getResourceBundle().getString(CSV_FILES), CSV);
+        fileChooser.getExtensionFilters().add(extFilter);
         List<File> fileList = fileChooser.showOpenMultipleDialog(new Stage());
         if (fileList != null) {
             if (FileImporter.myTask == null) {

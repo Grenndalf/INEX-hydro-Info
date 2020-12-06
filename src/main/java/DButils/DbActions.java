@@ -1,14 +1,13 @@
 package DButils;
 
-import RegularClasses.GaugeMeasurement;
-import RegularClasses.TownList;
+import RegularClasses.Tables.GaugeMeasurement;
+import RegularClasses.Tables.TownList;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
 import com.j256.ormlite.stmt.QueryBuilder;
 import com.j256.ormlite.support.ConnectionSource;
-
 import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -62,29 +61,6 @@ public class DbActions {
         }
     }
 
-
-    public void refresh(GaugeMeasurement gaugeMeasurement) {
-        try {
-            Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement(GaugeMeasurement.class);
-            dao.refresh(gaugeMeasurement);
-        } catch (SQLException e) {
-            LOGGER.warn(e.getCause().getMessage());
-        } finally {
-            this.closeDbConnection();
-        }
-    }
-
-    public void delete(GaugeMeasurement gaugeMeasurement) {
-        try {
-            Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement(GaugeMeasurement.class);
-            dao.delete(gaugeMeasurement);
-        } catch (SQLException e) {
-            LOGGER.warn(e.getCause().getMessage());
-        } finally {
-            this.closeDbConnection();
-        }
-    }
-
     public List<GaugeMeasurement> queryForAll(Class<GaugeMeasurement> cls) {
         try {
             Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement(GaugeMeasurement.class);
@@ -96,11 +72,21 @@ public class DbActions {
         }
         return new ArrayList<>();
     }
+    public List<GaugeMeasurement> queryForDataOfSelectedTown(String selectedTown) {
+        try {
+            return getQueryBuilderGaugeMeasurement().where().eq("Nazwa_wodowskazu",selectedTown).query();
+        } catch (SQLException e) {
+            LOGGER.warn(e.getCause().getMessage());
+        } finally {
+            this.closeDbConnection();
+        }
+        return new ArrayList<>();
+    }
 
     public List<TownList> queryForOneTownStartedWithLetter(String townNameFirstLetter) {
         try {
-            String letter = townNameFirstLetter +"%";
-            return getQueryBuilderTownList(TownList.class).where().like("Wodowskaz",letter).query();
+            String letter = townNameFirstLetter + "%";
+            return getQueryBuilderTownList().where().like("Wodowskaz", letter).query();
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
         } finally {
@@ -145,12 +131,12 @@ public class DbActions {
         return null;
     }
 
-    public QueryBuilder<GaugeMeasurement, Integer> getQueryBuilderGaugeMeasurement(Class<GaugeMeasurement> cls) {
+    public QueryBuilder<GaugeMeasurement, Integer> getQueryBuilderGaugeMeasurement() {
         Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement(GaugeMeasurement.class);
         return dao.queryBuilder();
     }
 
-    public QueryBuilder<TownList, String> getQueryBuilderTownList(Class<TownList> cls) {
+    public QueryBuilder<TownList, String> getQueryBuilderTownList() {
         Dao<TownList, String> dao = getDaoTownList(TownList.class);
         return dao.queryBuilder();
     }

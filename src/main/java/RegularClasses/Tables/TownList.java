@@ -1,4 +1,4 @@
-package RegularClasses;
+package RegularClasses.Tables;
 
 
 import com.j256.ormlite.field.DatabaseField;

@@ -1,8 +1,9 @@
 package Controllers;
 
 import DButils.DbActions;
-import RegularClasses.Alphabet;
-import RegularClasses.TownList;
+import RegularClasses.Mediator.ControllerHolder;
+import RegularClasses.Tables.TownList;
+import RegularClasses.Utils.Alphabet;
 import com.jfoenix.controls.JFXListView;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -11,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.FlowPane;
+
 import java.util.Arrays;
 import java.util.Comparator;
 import java.util.stream.Collectors;
@@ -19,7 +21,7 @@ public class GaugeListController {
     @FXML
     public FlowPane buttonContainer;
     @FXML
-    public JFXListView townListView;
+    public JFXListView<String> townListView;
     @FXML
     public Label gaugeQuantity;
     ToggleGroup toggleGroup = new ToggleGroup();
@@ -34,18 +36,23 @@ public class GaugeListController {
         Arrays.stream(Alphabet.values()).forEach(letter -> {
             ToggleButton button = new ToggleButton(letter.name());
             button.getStyleClass().add("toggleButtons");
-            setListViewValues(letter, button);
             addToggleButtonListener();
+            setListViewValuesOnClickedButton(button);
             toggleGroup.getToggles().add(button);
             buttonContainer.getChildren().add(button);
+            townListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+                ControllerHolder.getInstance().setTownName(newValue);
+            });
         });
     }
 
-    private void setListViewValues(Alphabet letter, ToggleButton button) {
+    private void setListViewValuesOnClickedButton(ToggleButton button) {
         button.setOnMouseClicked(event -> {
-            ObservableList<String> items = FXCollections.observableArrayList(dbActions.queryForOneTownStartedWithLetter(letter.name())
+            ObservableList<String> items = FXCollections.observableArrayList(dbActions.queryForOneTownStartedWithLetter(button.getText())
                     .stream()
-                    .map(TownList::getTownName).sorted(Comparator.naturalOrder()).collect(Collectors.toList()));
+                    .map(TownList::getTownName)
+                    .sorted(Comparator.naturalOrder())
+                    .collect(Collectors.toList()));
             townListView.setItems(items);
             gaugeQuantity.setText(String.valueOf(items.size()));
         });

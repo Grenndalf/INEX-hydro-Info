@@ -9,5 +9,6 @@ public interface MediatorMethods {
     void registerButtonLeftMenuButtonController(LeftMenuButtonsController controller);
     void setMainContent(String pathToFxml);
     void setTownName(String townName);
+    String getTownName();
 
 }

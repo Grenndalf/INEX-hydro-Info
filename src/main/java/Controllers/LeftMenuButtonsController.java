@@ -20,6 +20,11 @@ public class LeftMenuButtonsController {
     void initialize() {
         ControllerHolder.getInstance().registerButtonLeftMenuButtonController(this);
         addToggleGroupListener();
+        townName.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue == null){
+                townName.setText(oldValue);
+            }
+        });
     }
 
     private void addToggleGroupListener() {
@@ -42,7 +47,7 @@ public class LeftMenuButtonsController {
 
     @FXML
     void showStatistics() throws IOException {
-        ControllerHolder.getInstance().setMainContent("/fxml/testPane.fxml");
+        ControllerHolder.getInstance().setMainContent("/fxml/Statistics.fxml");
     }
 
 

@@ -1,11 +1,11 @@
-package RegularClasses;
+package RegularClasses.Multihreading;
 
 import DButils.DbActions;
+import RegularClasses.Tables.GaugeMeasurement;
 import javafx.concurrent.Task;
 
 import java.io.File;
 import java.io.FileReader;
-import java.math.BigDecimal;
 import java.util.*;
 
 public class FileImporter extends Task {

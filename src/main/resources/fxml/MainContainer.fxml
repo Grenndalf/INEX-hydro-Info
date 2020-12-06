@@ -7,7 +7,7 @@
 <AnchorPane fx:id="mainParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
     <children>
         <AnchorPane fx:id="leftMenuContainer" prefHeight="800.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1160.0" AnchorPane.topAnchor="0.0" />
-        <AnchorPane fx:id="contentContainer" layoutX="214.0" prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane fx:id="contentContainer" layoutX="220.0" prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <opaqueInsets>
             <Insets />
          </opaqueInsets>

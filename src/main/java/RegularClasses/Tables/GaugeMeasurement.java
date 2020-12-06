@@ -1,4 +1,4 @@
-package RegularClasses;
+package RegularClasses.Tables;
 
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
@@ -19,7 +19,7 @@ public class GaugeMeasurement {
     @DatabaseField(generatedId = true, columnName = "ID")
     private int id;
 
-    @DatabaseField(columnName = "Nazwa_wodowskazu")
+    @DatabaseField(index = true, columnName = "Nazwa_wodowskazu")
     private String gaugeName;
 
     @DatabaseField(columnName = "Numer_wodowskazu")
