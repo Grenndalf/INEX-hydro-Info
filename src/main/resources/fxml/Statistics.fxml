@@ -12,7 +12,7 @@
 <?import javafx.scene.shape.Circle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StatisticsController">
+<AnchorPane fx:id="statisticsContainer" prefHeight="800.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StatisticsController">
     <children>
         <VBox layoutX="40.0" layoutY="491.0" prefHeight="280.0" prefWidth="220.0" spacing="20.0" AnchorPane.bottomAnchor="30.0" AnchorPane.leftAnchor="30.0">
             <children>
@@ -23,9 +23,9 @@
                 </Label>
                 <Pane prefHeight="200.0" prefWidth="200.0">
                     <children>
-                        <Arc fx:id="dataArc" fill="#ff1f1f" layoutX="100.0" layoutY="100.0" length="270.0" radiusX="100.0" radiusY="100.0" startAngle="180.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
+                        <Arc fx:id="dataArc" fill="#ff1f1f" layoutX="100.0" layoutY="100.0" radiusX="100.0" radiusY="100.0" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" type="ROUND" />
                         <Circle fill="WHITE" layoutX="100.0" layoutY="100.0" radius="90.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" />
-                        <Label fx:id="correctDataInfo" alignment="CENTER" contentDisplay="CENTER" layoutY="80.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0" text="20%" textAlignment="CENTER" />
+                        <Label fx:id="correctDataInfo" alignment="CENTER" contentDisplay="CENTER" layoutY="80.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0" prefWidth="200.0" text="0%" textAlignment="CENTER" />
                     </children>
                 </Pane>
             </children>

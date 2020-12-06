@@ -23,44 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/StatisticsController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/fxml/Statistics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/HoveredThresholdNode.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LeftMenuButtonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LeftMenuButtonsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MyTestScrollPane.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/DbActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/DbActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/DbManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Alphabet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/Alphabet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/FileImporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Tables/GaugeMeasurement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/ControllerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/ControllerHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/MediatorMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/MediatorMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/TownList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Tables/TownList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Bundles/labels.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Bundles/labels.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Bundles/labels_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Bundles/labels_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/GaugeList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/GaugeList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Import.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/LeftMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/LeftMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/MainContainer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Bundles/labels.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bundles/labels.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Bundles/labels_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bundles/labels_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MyTestScrollPane.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/DbActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/DbActions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/DbManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/DbManager.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Alphabet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/FileImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/FileImporterService.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/GaugeMeasurement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/TownList.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/fxml/Statistics.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,53 +123,71 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="529" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607075707483" />
-    <state width="1860" height="282" key="GridCell.Tab.0.bottom" timestamp="1607263415912">
+    <state width="1860" height="282" key="GridCell.Tab.0.bottom" timestamp="1607284299616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607263415912" />
-    <state width="1860" height="282" key="GridCell.Tab.0.center" timestamp="1607263415912">
+    <state width="1860" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607284299616" />
+    <state width="1860" height="282" key="GridCell.Tab.0.center" timestamp="1607284299616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607263415912" />
-    <state width="1860" height="282" key="GridCell.Tab.0.left" timestamp="1607263415912">
+    <state width="1860" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607284299616" />
+    <state width="1860" height="282" key="GridCell.Tab.0.left" timestamp="1607284299616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607263415912" />
-    <state width="1860" height="282" key="GridCell.Tab.0.right" timestamp="1607263415912">
+    <state width="1860" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607284299616" />
+    <state width="1860" height="282" key="GridCell.Tab.0.right" timestamp="1607284299616">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1860" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607263415912" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1607252310297">
+    <state width="1860" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607284299616" />
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1607264246182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607252310297" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1607252310296">
+    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607264246182" />
+    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1607264246182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607252310296" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1607252310296">
+    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607264246182" />
+    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1607264246182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607252310296" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1607252310296">
+    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607264246182" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1607264246182">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607252310296" />
+    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607264246182" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1607252051598">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1607252051598" />
-    <state x="690" y="280" key="extract.method.dialog" timestamp="1607262926434">
+    <state x="484" y="256" width="951" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1607276218048">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="690" y="280" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607262926434" />
+    <state x="484" y="256" width="951" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1607276218048" />
+    <state x="690" y="280" key="extract.method.dialog" timestamp="1607282670612">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="690" y="280" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607282670612" />
     <state x="666" y="119" width="587" height="801" key="find.popup" timestamp="1607170900341">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="666" y="119" width="587" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607170900341" />
+    <state x="551" y="181" key="new project wizard" timestamp="1607281880011">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="551" y="181" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607281880011" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1607075472941">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607075472941" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
