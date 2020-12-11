@@ -1,8 +1,8 @@
 package Controllers;
 
-import DButils.DbActions;
+import DButils.TableDBActions.TownDBActions;
 import RegularClasses.Mediator.ControllerHolder;
-import RegularClasses.Tables.TownList;
+import RegularClasses.Tables.Town;
 import RegularClasses.Utils.Alphabet;
 import com.jfoenix.controls.JFXListView;
 import javafx.collections.FXCollections;
@@ -14,7 +14,6 @@ import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.FlowPane;
 
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.stream.Collectors;
 
 public class GaugeListController {
@@ -25,7 +24,7 @@ public class GaugeListController {
     @FXML
     public Label gaugeQuantity;
     ToggleGroup toggleGroup = new ToggleGroup();
-    DbActions dbActions = new DbActions();
+    TownDBActions townDBActions = new TownDBActions();
 
     @FXML
     void initialize() {
@@ -47,12 +46,15 @@ public class GaugeListController {
     }
 
     private void setListViewValuesOnClickedButton(ToggleButton button) {
+        Town tw = new Town();
         button.setOnMouseClicked(event -> {
-            ObservableList<String> items = FXCollections.observableArrayList(dbActions.queryForOneTownStartedWithLetter(button.getText())
-                    .stream()
-                    .map(TownList::getTownName)
-                    .sorted(Comparator.naturalOrder())
-                    .collect(Collectors.toList()));
+            ObservableList<String> items =
+                    FXCollections.observableArrayList
+                            (townDBActions.queryForOneTownStartedWithLetter
+                                    (button.getText())
+                                    .stream()
+                                    .map(Town::getTownName)
+                                    .collect(Collectors.toList()));
             townListView.setItems(items);
             gaugeQuantity.setText(String.valueOf(items.size()));
         });

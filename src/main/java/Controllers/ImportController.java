@@ -8,14 +8,14 @@ import com.jfoenix.controls.JFXProgressBar;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.scene.control.Alert;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.control.TextArea;
+import javafx.scene.control.*;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
+import javafx.scene.paint.Paint;
+import javafx.scene.text.Font;
+import javafx.scene.text.FontWeight;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
@@ -47,7 +47,7 @@ public class ImportController {
     }
 
     private void showProgressBar() {
-        JFXProgressBar progressBar = new JFXProgressBar();
+        ProgressBar progressBar = new ProgressBar();
         progressBar.setPrefWidth(180);
         progressBar.setPrefHeight(40);
         progressBar.progressProperty().bind(FileImporter.myTask.progressProperty());
@@ -70,7 +70,12 @@ public class ImportController {
                     HBox.setHgrow(filler, Priority.ALWAYS);
                     barContainer.getChildren().addAll(showErrors, filler);
                 }
-                barContainer.getChildren().add(new Label("zadanie skoñczone"));
+                Label taskInfo = new Label("zadanie skoñczone");
+                taskInfo.setPrefHeight(30);
+                taskInfo.setPrefWidth(150);
+                taskInfo.setFont(Font.font("System", FontWeight.BOLD,16));
+                taskInfo.setTextFill(Paint.valueOf("#317FFF"));
+                barContainer.getChildren().add(taskInfo);
 
             }
         });

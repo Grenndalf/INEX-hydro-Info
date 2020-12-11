@@ -5,7 +5,7 @@
 <AnchorPane xmlns:fx="http://javafx.com/fxml/1" fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity"
             minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0"
-            style="-fx-background-color: white;" stylesheets="@../css/leftMenuButtons.css"
+            style="-fx-background-color: white;" stylesheets="@../Css/leftMenuButtons.css"
             xmlns="http://javafx.com/javafx/8" fx:controller="Controllers.ImportController">
     <Button fx:id="chooseFileButton" mnemonicParsing="false" onAction="#chooseFiles"
             text="Button"/>

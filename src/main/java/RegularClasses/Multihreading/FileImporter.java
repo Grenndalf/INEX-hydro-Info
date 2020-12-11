@@ -1,6 +1,7 @@
 package RegularClasses.Multihreading;
 
-import DButils.DbActions;
+import DButils.TableDBActions.GaugeDBActions;
+import DButils.TableDBActions.TownDBActions;
 import RegularClasses.Tables.GaugeMeasurement;
 import javafx.concurrent.Task;
 
@@ -20,7 +21,9 @@ public class FileImporter extends Task {
     }
 
     private List<File> fileList;
-    private final DbActions dbActions = new DbActions();
+    private final GaugeDBActions gaugeDBActions = new GaugeDBActions();
+    private final TownDBActions townDBActions = new TownDBActions();
+
 
     @Override
     protected Void call() {
@@ -28,6 +31,7 @@ public class FileImporter extends Task {
         importErrors.clear();
         int progress = 0;
         Set<String> townList = new HashSet<>();
+        Set<String> riverList = new HashSet<>();
         for (File file : this.fileList
         ) {
             List<GaugeMeasurement> gaugeMeasurementsListFromOneFile = new ArrayList<>();
@@ -41,6 +45,7 @@ public class FileImporter extends Task {
                         gaugeMeasurement.tryGetGaugeMeasurement(lineToAdd.split(","));
                         gaugeMeasurementsListFromOneFile.add(gaugeMeasurement);
                         townList.add(lineToAdd.split(",")[1].replace("\"", "").trim());
+                        riverList.add(lineToAdd.split(",")[2].replace("\"", "").trim());
                     } catch (Exception e) {
                         importErrors.add(lineToAdd
                                 + ResourceBundle.getBundle(BUNDLES_LABELS).getString(IN_FILE)
@@ -51,7 +56,7 @@ public class FileImporter extends Task {
 
                 if (isCancelled()) break;
 
-                dbActions.createOrUpdateMeasurementTable(gaugeMeasurementsListFromOneFile);
+                gaugeDBActions.createOrUpdateMeasurementTable(gaugeMeasurementsListFromOneFile);
 
                 progress++;
                 updateProgress(progress, this.fileList.size());
@@ -61,8 +66,9 @@ public class FileImporter extends Task {
             }
 
         }
-        townList.removeAll(dbActions.queryForAllTowns());
-        dbActions.createOrUpdateTownListTable(townList);
+
+        townList.removeAll(townDBActions.queryForAllTowns());
+        townDBActions.createOrUpdateTownListTable(townList);
         myTask = null;
         return null;
     }

@@ -11,14 +11,14 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane fx:id="leftMenuContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="220.0" styleClass="leftMenu" stylesheets="@../css/leftMenuButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LeftMenuButtonsController">
+<AnchorPane fx:id="leftMenuContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="220.0" styleClass="leftMenu" stylesheets="@../Css/leftMenuButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.LeftMenuButtonsController">
     <children>
         <VBox fx:id="buttonContainer" layoutX="10.0" layoutY="258.0" spacing="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
             <padding>
                 <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
             <children>
-                <ToggleButton fx:id="gaugeList" mnemonicParsing="false" onAction="#showGaugeList" prefHeight="30.0" prefWidth="180.0" selected="true" styleClass="toggleButtons" text="%gauge.list" textAlignment="CENTER">
+                <ToggleButton fx:id="gaugeList" mnemonicParsing="false" onAction="#showGaugeList" prefHeight="30.0" prefWidth="180.0" styleClass="toggleButtons" text="%gauge.list" textAlignment="CENTER">
                     <toggleGroup>
                         <ToggleGroup fx:id="leftMenuToggleGroup" />
                     </toggleGroup>

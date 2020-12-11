@@ -13,15 +13,10 @@ import lombok.ToString;
 @Setter
 @NoArgsConstructor
 @DatabaseTable(tableName = "Wodowskazy")
-public class TownList {
+public class Town {
 
-    public String getTownName() {
-        return townName;
-    }
-
-    public void setTownName(String townName) {
-        this.townName = townName;
-    }
+    @DatabaseField(generatedId = true, columnName = "ID")
+    private int id;
 
     @DatabaseField(columnName = "Wodowskaz")
     private String townName;

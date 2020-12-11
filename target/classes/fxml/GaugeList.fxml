@@ -11,7 +11,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: white;" stylesheets="@../css/leftMenuButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GaugeListController">
+<AnchorPane prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: white;" stylesheets="@../Css/leftMenuButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GaugeListController">
     <children>
         <FlowPane fx:id="buttonContainer" hgap="20.0" layoutX="50.0" layoutY="60.0" prefHeight="20.0" prefWidth="640.0" vgap="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="480.0" AnchorPane.topAnchor="30.0">
             <padding>

@@ -37,17 +37,17 @@ public class LeftMenuButtonsController {
 
     @FXML
     void selectFileForImport() throws IOException {
-        ControllerHolder.getInstance().setMainContent("/fxml/Import.fxml");
+        ControllerHolder.getInstance().setMainContent("/FXML/Import.fxml");
     }
 
     @FXML
     void showGaugeList() {
-        ControllerHolder.getInstance().setMainContent("/fxml/GaugeList.fxml");
+        ControllerHolder.getInstance().setMainContent("/FXML/GaugeList.fxml");
     }
 
     @FXML
     void showStatistics() throws IOException {
-        ControllerHolder.getInstance().setMainContent("/fxml/Statistics.fxml");
+        ControllerHolder.getInstance().setMainContent("/FXML/Statistics.fxml");
     }
 
 
