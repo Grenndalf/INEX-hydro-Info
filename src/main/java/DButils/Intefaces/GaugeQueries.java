@@ -11,11 +11,13 @@ public interface GaugeQueries {
 
     void createOrUpdateMeasurementTable(List<GaugeMeasurement> gaugeMeasurement);
 
-    public List<GaugeMeasurement> queryForDataOfSelectedTown(String selectedTown);
+    List<GaugeMeasurement> queryForDataOfSelectedTown(String selectedTown);
 
     List<GaugeMeasurement> queryForAllGaugeMeasurements();
 
     Dao<GaugeMeasurement, Integer> getDaoGaugeMeasurement();
 
     QueryBuilder<GaugeMeasurement, Integer> getQueryBuilderGaugeMeasurement();
+
+    List<GaugeMeasurement> getGaugeNameListForRiver(String river);
 }

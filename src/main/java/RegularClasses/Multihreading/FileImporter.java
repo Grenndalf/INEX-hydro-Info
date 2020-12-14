@@ -1,12 +1,16 @@
 package RegularClasses.Multihreading;
 
 import DButils.TableDBActions.GaugeDBActions;
+import DButils.TableDBActions.RiverDBActions;
 import DButils.TableDBActions.TownDBActions;
 import RegularClasses.Tables.GaugeMeasurement;
+import RegularClasses.Tables.River;
+import RegularClasses.Tables.Town;
 import javafx.concurrent.Task;
 
 import java.io.File;
 import java.io.FileReader;
+import java.sql.SQLException;
 import java.util.*;
 
 public class FileImporter extends Task {
@@ -15,15 +19,14 @@ public class FileImporter extends Task {
     public static final String BUNDLES_LABELS = "Bundles.labels";
     public static Task myTask;
     public static List<String> importErrors = new ArrayList<>();
+    private final GaugeDBActions gaugeDBActions = new GaugeDBActions();
+    private final TownDBActions townDBActions = new TownDBActions();
+    private final RiverDBActions riverDBActions = new RiverDBActions();
+    private List<File> fileList;
 
     public void setFileList(List<File> fileList) {
         this.fileList = fileList;
     }
-
-    private List<File> fileList;
-    private final GaugeDBActions gaugeDBActions = new GaugeDBActions();
-    private final TownDBActions townDBActions = new TownDBActions();
-
 
     @Override
     protected Void call() {
@@ -66,9 +69,21 @@ public class FileImporter extends Task {
             }
 
         }
-
-        townList.removeAll(townDBActions.queryForAllTowns());
+        riverList.removeAll(riverDBActions.queryForAllTownNames());
+        townList.removeAll(townDBActions.queryForAllTownNames());
+        riverDBActions.createOrUpdateRiverTable(riverList);
         townDBActions.createOrUpdateTownListTable(townList);
+
+        townDBActions.queryForAllTowns().forEach(town -> {
+            try {
+                GaugeMeasurement gg = gaugeDBActions.getDaoGaugeMeasurement().queryForEq("Nazwa_wodowskazu",town.getTownName()).get(0);
+                River river = riverDBActions.getDaoRiverList().queryForEq("Nazwa_rzeki",gg.getRiverName()).get(0);
+                town.setRiver(river);
+                townDBActions.getDaoTownList().createOrUpdate(town);
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        });
         myTask = null;
         return null;
     }

@@ -2,6 +2,7 @@ package RegularClasses.Tables;
 
 
 import com.j256.ormlite.field.DatabaseField;
+import com.j256.ormlite.field.ForeignCollectionField;
 import com.j256.ormlite.table.DatabaseTable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -21,5 +22,7 @@ public class Town {
     @DatabaseField(columnName = "Wodowskaz")
     private String townName;
 
+    @DatabaseField(foreign = true, foreignAutoRefresh = true)
+    private River river;
 }
 

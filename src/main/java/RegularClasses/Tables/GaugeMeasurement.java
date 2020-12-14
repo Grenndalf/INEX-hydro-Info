@@ -1,5 +1,6 @@
 package RegularClasses.Tables;
 
+
 import com.j256.ormlite.field.DatabaseField;
 import com.j256.ormlite.table.DatabaseTable;
 import lombok.Getter;
@@ -7,16 +8,23 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import java.math.BigDecimal;
 
 @ToString
 @Getter
 @Setter
 @NoArgsConstructor
+@Entity
 @DatabaseTable(tableName = "Wszystkie_Dane")
 public class GaugeMeasurement {
 
-    @DatabaseField(generatedId = true, columnName = "ID")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @DatabaseField(columnName = "ID",generatedId = true)
     private int id;
 
     @DatabaseField(index = true, columnName = "Nazwa_wodowskazu")

@@ -1,7 +1,9 @@
 package Controllers;
 
+import DButils.TableDBActions.RiverDBActions;
 import DButils.TableDBActions.TownDBActions;
 import RegularClasses.Mediator.ControllerHolder;
+import RegularClasses.Tables.River;
 import RegularClasses.Tables.Town;
 import RegularClasses.Utils.Alphabet;
 import com.jfoenix.controls.JFXListView;
@@ -25,10 +27,12 @@ public class GaugeListController {
     public Label gaugeQuantity;
     ToggleGroup toggleGroup = new ToggleGroup();
     TownDBActions townDBActions = new TownDBActions();
+    RiverDBActions riverDBActions = new RiverDBActions();
 
     @FXML
     void initialize() {
         createButtons();
+
     }
 
     private void createButtons() {
@@ -46,14 +50,13 @@ public class GaugeListController {
     }
 
     private void setListViewValuesOnClickedButton(ToggleButton button) {
-        Town tw = new Town();
         button.setOnMouseClicked(event -> {
             ObservableList<String> items =
                     FXCollections.observableArrayList
-                            (townDBActions.queryForOneTownStartedWithLetter
+                            (riverDBActions.queryForOneRiverStartedWithLetter
                                     (button.getText())
                                     .stream()
-                                    .map(Town::getTownName)
+                                    .map(River::getRiverName)
                                     .collect(Collectors.toList()));
             townListView.setItems(items);
             gaugeQuantity.setText(String.valueOf(items.size()));

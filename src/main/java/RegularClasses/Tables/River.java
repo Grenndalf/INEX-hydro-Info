@@ -8,22 +8,21 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.List;
+import java.util.Collection;
 
 @ToString
 @Getter
 @Setter
 @NoArgsConstructor
-@DatabaseTable(tableName = "Rzeki_wodowskazy")
+@DatabaseTable(tableName = "Rzeki")
 public class River {
 
     @DatabaseField(generatedId = true, columnName = "ID")
     private int id;
 
-    @DatabaseField(columnName = "Rzeka")
+    @DatabaseField(columnName = "Nazwa_rzeki")
     private String riverName;
 
-    @ForeignCollectionField(eager = false)
-    @DatabaseField(columnName = "Lista_punktow")
-    private List<Town> measurementPoints;
+    @ForeignCollectionField(eager = true, columnName = "lista_nazw_punktow")
+    private Collection<Town> measurementPoints;
 }

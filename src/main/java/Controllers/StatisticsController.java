@@ -67,7 +67,7 @@ public class StatisticsController {
         lineChart.setPrefHeight(400);
         lineChart.getData().add(series);
         xAxis.setUpperBound(dataMap.keySet().stream().max(Short::compareTo).orElse((short) 10) + 1);
-        xAxis.setLowerBound(dataMap.keySet().stream().min(Short::compareTo).orElse((short) 0));
+        xAxis.setLowerBound(dataMap.keySet().stream().min(Short::compareTo).orElse((short) 0)-1);
 
         lineChart.setLegendVisible(false);
         setSeries(xAxis, dataMap, series);
@@ -123,12 +123,6 @@ public class StatisticsController {
         return correctedDataList.stream().map(GaugeMeasurement::getMeasurementYear)
                 .sorted(Comparator.naturalOrder())
                 .collect(Collectors.toCollection(TreeSet::new));
-    }
-
-    private int returnMinYear() {
-        if (getYearRange().size() < 1) return 0;
-        return selectedTownData.stream().map(GaugeMeasurement::getMeasurementYear).min(Short::compareTo).orElse((short) 1950) - 1;
-
     }
 
     private void initCorrectDataInfo() {

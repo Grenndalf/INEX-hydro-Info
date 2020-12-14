@@ -1,5 +1,6 @@
 package DButils.TableDBActions;
 
+import DButils.DbManager;
 import DButils.Intefaces.TownQueries;
 import RegularClasses.Tables.Town;
 import com.j256.ormlite.dao.Dao;
@@ -14,7 +15,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class TownDBActions extends DbActions implements TownQueries {
-    private Dao<Town, Integer> dao = getDaoTownList();
+    private final Dao<Town, Integer> dao = getDaoTownList();
 
     @Override
     public void createOrUpdateTownListTable(Set<String> townList) {
@@ -45,9 +46,9 @@ public class TownDBActions extends DbActions implements TownQueries {
     }
 
     @Override
-    public Set<String> queryForAllTowns() {
+    public Set<String> queryForAllTownNames() {
         try {
-            return getDaoTownList().queryForAll().stream().map(Town::getTownName).collect(Collectors.toSet());
+            return dao.queryForAll().stream().map(Town::getTownName).collect(Collectors.toSet());
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
         } finally {
@@ -57,9 +58,21 @@ public class TownDBActions extends DbActions implements TownQueries {
     }
 
     @Override
+    public List<Town> queryForAllTowns() {
+        try {
+            return dao.queryForAll();
+        } catch (SQLException e) {
+            LOGGER.warn(e.getCause().getMessage());
+        } finally {
+            this.closeDbConnection();
+        }
+        return new ArrayList<>();
+    }
+
+    @Override
     public Dao<Town, Integer> getDaoTownList() {
         try {
-            return DaoManager.createDao(connectionSource, Town.class);
+            return DaoManager.createDao(DbManager.getConnectionSource(), Town.class);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
         } finally {
@@ -72,5 +85,19 @@ public class TownDBActions extends DbActions implements TownQueries {
     public QueryBuilder<Town, Integer> getQueryBuilderTownList() {
         Dao<Town, Integer> dao = getDaoTownList();
         return dao.queryBuilder();
+    }
+
+    @Override
+    public Town getSingleTown(String townName) {
+        try {
+            if (dao.queryForEq("Wodowskaz", townName).size() > 0) {
+                return dao.queryForEq("Wodowskaz", townName).get(0);
+            } else return null;
+        } catch (SQLException e) {
+            LOGGER.warn(e.getCause().getMessage());
+        } finally {
+            this.closeDbConnection();
+        }
+        return null;
     }
 }

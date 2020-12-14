@@ -9,13 +9,17 @@ import java.util.List;
 import java.util.Set;
 
 public interface TownQueries {
+
     void createOrUpdateTownListTable(Set<String> townList);
 
     List<Town> queryForOneTownStartedWithLetter(String townNameFirstLetter);
 
-    Set<String> queryForAllTowns();
+    Set<String> queryForAllTownNames();
 
     Dao<Town, Integer> getDaoTownList();
 
-    public QueryBuilder<Town, Integer> getQueryBuilderTownList();
+    QueryBuilder<Town, Integer> getQueryBuilderTownList();
+
+    Town getSingleTown(String townName);
+    List<Town> queryForAllTowns();
 }

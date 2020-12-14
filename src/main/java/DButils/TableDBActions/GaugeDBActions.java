@@ -36,7 +36,7 @@ public class GaugeDBActions extends DbActions implements GaugeQueries {
     @Override
     public List<GaugeMeasurement> queryForDataOfSelectedTown(String selectedTown) {
         try {
-            return getQueryBuilderGaugeMeasurement().where().eq("Nazwa_wodowskazu", selectedTown).query();
+           return dao.queryForEq("Nazwa_wodowskazu",selectedTown);
         } catch (SQLException e) {
             LOGGER.warn(e.getCause().getMessage());
         } finally {
@@ -73,5 +73,17 @@ public class GaugeDBActions extends DbActions implements GaugeQueries {
     public QueryBuilder<GaugeMeasurement, Integer> getQueryBuilderGaugeMeasurement() {
         Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement();
         return dao.queryBuilder();
+    }
+
+    @Override
+    public List<GaugeMeasurement> getGaugeNameListForRiver(String river) {
+        try {
+            dao.queryForEq("Nazwa_rzeki", river);
+        } catch (SQLException e) {
+            LOGGER.warn(e.getCause().getMessage());
+        } finally {
+            this.closeDbConnection();
+        }
+        return new ArrayList<>();
     }
 }
