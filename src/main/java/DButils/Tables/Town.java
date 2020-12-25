@@ -1,28 +1,25 @@
-package RegularClasses.Tables;
+package DButils.Tables;
 
 
 import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.field.ForeignCollectionField;
-import com.j256.ormlite.table.DatabaseTable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.persistence.Entity;
+
 @ToString
 @Getter
 @Setter
 @NoArgsConstructor
-@DatabaseTable(tableName = "Wodowskazy")
+@Entity(name = "Wodowskazy")
 public class Town {
 
     @DatabaseField(generatedId = true, columnName = "ID")
     private int id;
 
-    @DatabaseField(columnName = "Wodowskaz")
+    @DatabaseField(columnName = "Wodowskaz" )
     private String townName;
-
-    @DatabaseField(foreign = true, foreignAutoRefresh = true)
-    private River river;
 }
 

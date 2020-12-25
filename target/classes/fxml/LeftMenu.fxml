@@ -46,15 +46,12 @@
                 </ToggleButton>
             </children>
         </VBox>
-        <Label fx:id="townName" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="93.0" prefHeight="48.0" prefWidth="167.0" text="%initial.value.gauge" textAlignment="CENTER" textFill="#00f4ff" wrapText="true">
+        <Label fx:id="townName" alignment="CENTER" contentDisplay="CENTER" layoutX="27.0" layoutY="102.0" prefHeight="48.0" prefWidth="167.0" styleClass="labelBlue" text="%initial.value.gauge" textAlignment="CENTER" wrapText="true">
             <font>
-                <Font name="System Bold" size="14.0" />
+                <Font name="System Bold" size="15.0" />
             </font>
-         <effect>
-            <Glow level="1.0" />
-         </effect>
         </Label>
-      <Label alignment="CENTER" layoutY="-2.0" prefHeight="113.0" prefWidth="220.0" text="Wybrany Wodowskaz:" textAlignment="CENTER" textFill="WHITE" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+      <Label fx:id="chosenGaugeLabel" alignment="CENTER" layoutY="-2.0" prefHeight="113.0" prefWidth="220.0" styleClass="labelGreen" text="Wybrany Wodowskaz:" textAlignment="CENTER" wrapText="true" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
          <font>
             <Font name="System Bold" size="23.0" />
          </font>

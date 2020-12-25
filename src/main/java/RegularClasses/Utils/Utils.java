@@ -9,7 +9,7 @@ public class Utils {
         return ResourceBundle.getBundle(BUNDLES);
     }
 
-    public static Double divideIntegers(int a, int b) {
+    public static double divideIntegers(int a, int b) {
         if (b == 0) {
             return 0.0;
         } else {

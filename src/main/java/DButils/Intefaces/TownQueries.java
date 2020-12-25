@@ -1,7 +1,7 @@
 package DButils.Intefaces;
 
 
-import RegularClasses.Tables.Town;
+import DButils.Tables.Town;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.stmt.QueryBuilder;
 
@@ -12,7 +12,7 @@ public interface TownQueries {
 
     void createOrUpdateTownListTable(Set<String> townList);
 
-    List<Town> queryForOneTownStartedWithLetter(String townNameFirstLetter);
+    List<Town> queryForTownsStartedWithLetter(String townNameFirstLetter);
 
     Set<String> queryForAllTownNames();
 

@@ -1,7 +1,7 @@
 package DButils.TableDBActions;
 
 import DButils.Intefaces.RiverQueries;
-import RegularClasses.Tables.River;
+import DButils.Tables.River;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.stmt.QueryBuilder;
@@ -14,7 +14,7 @@ import java.util.Set;
 import java.util.stream.Collectors;
 
 public class RiverDBActions extends DbActions implements RiverQueries {
-    private final Dao <River,Integer> dao = getDaoRiverList();
+    private final Dao<River, Integer> dao = getDaoRiverList();
 
     @Override
     public Dao<River, Integer> getDaoRiverList() {
@@ -29,7 +29,7 @@ public class RiverDBActions extends DbActions implements RiverQueries {
     }
 
     @Override
-    public Set<String> queryForAllTownNames() {
+    public Set<String> queryForAllRiverNames() {
         try {
             return dao.queryForAll().stream().map(River::getRiverName).collect(Collectors.toSet());
         } catch (SQLException e) {

@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.*?>
 <?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
@@ -15,11 +17,11 @@
 
 <AnchorPane fx:id="statisticsContainer" prefHeight="800.0" prefWidth="1160.0" stylesheets="@../Css/leftMenuButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.StatisticsController">
     <children>
-      <JFXTabPane AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <JFXTabPane style="-fx-border-color: none;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <tabs>
           <Tab fx:id="tabGeneralInfo" text="General">
             <content>
-              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0" style="-fx-border-color: lightgrey;">
+              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                      <children>
                         <Pane fx:id="chartContainer" layoutX="22.0" layoutY="12.0" prefHeight="400.0" prefWidth="1120.0" style="-fx-border-radius: 20; -fx-border-color: #797979;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0" />
                           <VBox layoutX="20.0" layoutY="468.0" prefHeight="280.0" prefWidth="220.0" spacing="20.0">
@@ -58,7 +60,10 @@
                               <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                            </padding>
                            <children>
-                              <Label text="Całkowita ilość danych" />
+                              <Label text="Całkowita ilość danych">
+                                 <cursor>
+                                    <Cursor fx:constant="TEXT" />
+                                 </cursor></Label>
                               <Label text="Dane poprawne" GridPane.rowIndex="1" />
                               <Label text="Dane odrzucone" GridPane.rowIndex="2" />
                               <Label fx:id="totalDataQuantity" text="0" GridPane.columnIndex="1" />
@@ -66,6 +71,14 @@
                               <Label fx:id="IncorrectDataQuantity" text="0" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                            </children>
                         </GridPane>
+                        <Label layoutX="636.0" layoutY="480.0" text="Całkowity średni przepływ:" />
+                        <Label fx:id="averageFlowValue" alignment="CENTER_RIGHT" layoutX="799.0" layoutY="480.0" prefHeight="17.0" prefWidth="96.0" text="0" textAlignment="RIGHT" underline="true">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Label>
                      </children>
                   </AnchorPane>
             </content>

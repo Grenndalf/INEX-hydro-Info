@@ -1,7 +1,7 @@
 package DButils.TableDBActions;
 
 import DButils.Intefaces.GaugeQueries;
-import RegularClasses.Tables.GaugeMeasurement;
+import DButils.Tables.GaugeMeasurement;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.stmt.QueryBuilder;

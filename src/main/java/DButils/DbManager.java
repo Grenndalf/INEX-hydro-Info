@@ -1,8 +1,8 @@
 package DButils;
 
-import RegularClasses.Tables.GaugeMeasurement;
-import RegularClasses.Tables.River;
-import RegularClasses.Tables.Town;
+import DButils.Tables.GaugeMeasurement;
+import DButils.Tables.River;
+import DButils.Tables.Town;
 import com.j256.ormlite.jdbc.JdbcConnectionSource;
 import com.j256.ormlite.logger.Logger;
 import com.j256.ormlite.logger.LoggerFactory;
@@ -25,6 +25,7 @@ public class DbManager {
     public static void initDatabase() {
         createConnectionSource();
         closeConnectionSource();
+
        dropTable();
         createTable();
     }

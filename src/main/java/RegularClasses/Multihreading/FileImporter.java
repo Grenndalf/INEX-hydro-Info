@@ -3,14 +3,11 @@ package RegularClasses.Multihreading;
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.TableDBActions.RiverDBActions;
 import DButils.TableDBActions.TownDBActions;
-import RegularClasses.Tables.GaugeMeasurement;
-import RegularClasses.Tables.River;
-import RegularClasses.Tables.Town;
+import DButils.Tables.GaugeMeasurement;
 import javafx.concurrent.Task;
 
 import java.io.File;
 import java.io.FileReader;
-import java.sql.SQLException;
 import java.util.*;
 
 public class FileImporter extends Task {
@@ -29,7 +26,7 @@ public class FileImporter extends Task {
     }
 
     @Override
-    protected Void call() {
+    protected synchronized Void call() {
         myTask = this;
         importErrors.clear();
         int progress = 0;
@@ -58,7 +55,7 @@ public class FileImporter extends Task {
                 }
 
                 if (isCancelled()) break;
-
+ 
                 gaugeDBActions.createOrUpdateMeasurementTable(gaugeMeasurementsListFromOneFile);
 
                 progress++;
@@ -67,23 +64,11 @@ public class FileImporter extends Task {
             } catch (Exception e) {
                 e.printStackTrace();
             }
-
         }
-        riverList.removeAll(riverDBActions.queryForAllTownNames());
+        riverList.removeAll(riverDBActions.queryForAllRiverNames());
         townList.removeAll(townDBActions.queryForAllTownNames());
         riverDBActions.createOrUpdateRiverTable(riverList);
         townDBActions.createOrUpdateTownListTable(townList);
-
-        townDBActions.queryForAllTowns().forEach(town -> {
-            try {
-                GaugeMeasurement gg = gaugeDBActions.getDaoGaugeMeasurement().queryForEq("Nazwa_wodowskazu",town.getTownName()).get(0);
-                River river = riverDBActions.getDaoRiverList().queryForEq("Nazwa_rzeki",gg.getRiverName()).get(0);
-                town.setRiver(river);
-                townDBActions.getDaoTownList().createOrUpdate(town);
-            } catch (SQLException e) {
-                e.printStackTrace();
-            }
-        });
         myTask = null;
         return null;
     }

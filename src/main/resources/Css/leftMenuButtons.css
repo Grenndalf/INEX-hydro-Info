@@ -44,6 +44,7 @@
     .tab{
          -fx-pref-width : 370;
          -fx-pref-height : 50;
+         -fx-border-color: none;
     }
 
     .tab-header-background{
@@ -62,5 +63,11 @@
     .chart-line-symbol{
         -fx-background-color: #317FFF, White;
         -fx-background-radius: 5px;
+    }
+    .labelGreen{
+    -fx-text-fill: -fx-inex-green;
+    }
+    .labelBlue{
+    -fx-text-fill: -fx-inex-blue;
     }
 

@@ -1,20 +1,18 @@
-package RegularClasses.Tables;
+package DButils.Tables;
 
 import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.field.ForeignCollectionField;
-import com.j256.ormlite.table.DatabaseTable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import java.util.Collection;
+import javax.persistence.Entity;
 
 @ToString
 @Getter
 @Setter
 @NoArgsConstructor
-@DatabaseTable(tableName = "Rzeki")
+@Entity(name = "Rzeki")
 public class River {
 
     @DatabaseField(generatedId = true, columnName = "ID")
@@ -22,7 +20,4 @@ public class River {
 
     @DatabaseField(columnName = "Nazwa_rzeki")
     private String riverName;
-
-    @ForeignCollectionField(eager = true, columnName = "lista_nazw_punktow")
-    private Collection<Town> measurementPoints;
 }

@@ -2,7 +2,7 @@ package DButils.TableDBActions;
 
 import DButils.DbManager;
 import DButils.Intefaces.TownQueries;
-import RegularClasses.Tables.Town;
+import DButils.Tables.Town;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.dao.DaoManager;
 import com.j256.ormlite.stmt.QueryBuilder;
@@ -33,7 +33,7 @@ public class TownDBActions extends DbActions implements TownQueries {
     }
 
     @Override
-    public List<Town> queryForOneTownStartedWithLetter(String townNameFirstLetter) {
+    public List<Town> queryForTownsStartedWithLetter(String townNameFirstLetter) {
         try {
             String letter = townNameFirstLetter + "%";
             return getQueryBuilderTownList().where().like("Wodowskaz", letter).query();

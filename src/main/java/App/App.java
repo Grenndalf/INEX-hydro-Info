@@ -14,6 +14,7 @@ import static com.sun.org.apache.bcel.internal.util.SecuritySupport.getResourceA
 public class App extends Application {
 
 
+    private final String INEX_LOGO_PNG = "Images/inex_logo.png";
     private final String MAINFRAMEPATH = "/FXML/MainContainer.fxml";
 
     public static void main(String[] args) {
@@ -23,17 +24,14 @@ public class App extends Application {
     public void start(Stage primaryStage) throws Exception {
         DbManager.initDatabase();
         Locale.setDefault(Locale.forLanguageTag("pl"));
-        primaryStage.getIcons().add(new Image("Images/inex_logo.png"));
+        primaryStage.getIcons().add(new Image(INEX_LOGO_PNG));
         Scene scene = new Scene(initFxml().load());
-//        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
-
     }
 
     public FXMLLoader initFxml() {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(MAINFRAMEPATH), Utils.getResourceBundle());
-        return loader;
+        return new FXMLLoader(this.getClass().getResource(MAINFRAMEPATH), Utils.getResourceBundle());
     }
 
 

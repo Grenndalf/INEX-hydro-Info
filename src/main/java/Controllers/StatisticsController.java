@@ -1,8 +1,8 @@
 package Controllers;
 
 import DButils.TableDBActions.GaugeDBActions;
+import DButils.Tables.GaugeMeasurement;
 import RegularClasses.Mediator.ControllerHolder;
-import RegularClasses.Tables.GaugeMeasurement;
 import RegularClasses.Utils.Utils;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
@@ -15,11 +15,16 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Pane;
 import javafx.scene.shape.Arc;
 import javafx.scene.text.Font;
+
 import java.util.*;
 import java.util.stream.Collectors;
 
 
 public class StatisticsController {
+    private static final String YAXIS_TEXT = "statistics.chart.yaxis";
+    private static final String SSQ = "SSQ";
+    private static final String SYSTEM = "System";
+    private static final String M_3_S = " [m3]/s";
     @FXML
     public Arc dataArc;
     @FXML
@@ -36,7 +41,7 @@ public class StatisticsController {
     public Label correctDataQuantity;
     @FXML
     public Label IncorrectDataQuantity;
-
+    public Label averageFlowValue;
 
     GaugeDBActions gaugeDBActions = new GaugeDBActions();
     List<GaugeMeasurement> selectedTownData = gaugeDBActions.queryForDataOfSelectedTown(ControllerHolder.getInstance().getTownName());
@@ -48,6 +53,14 @@ public class StatisticsController {
         initCorrectDataInfo();
         chartContainer.getChildren().add(getLineChart());
         setQuantityInfo();
+        getAverageFlowValue();
+    }
+
+    private void getAverageFlowValue() {
+        averageFlowValue.setText(String.format("%.2f",
+                correctedDataList
+                        .stream()
+                        .collect(Collectors.averagingDouble(GaugeMeasurement::getData2))) + M_3_S);
     }
 
     private void setQuantityInfo() {
@@ -67,35 +80,31 @@ public class StatisticsController {
         lineChart.setPrefHeight(400);
         lineChart.getData().add(series);
         xAxis.setUpperBound(dataMap.keySet().stream().max(Short::compareTo).orElse((short) 10) + 1);
-        xAxis.setLowerBound(dataMap.keySet().stream().min(Short::compareTo).orElse((short) 0)-1);
-
+        xAxis.setLowerBound(dataMap.keySet().stream().min(Short::compareTo).orElse((short) 0) - 1);
         lineChart.setLegendVisible(false);
-        setSeries(xAxis, dataMap, series);
-        lineChart.getYAxis().setLabel("Przep³yw w [m3]/s");
-        lineChart.setTitle("SSQ");
+        setSeries(dataMap, series);
+        lineChart.getYAxis().setLabel(Utils.getResourceBundle().getString(YAXIS_TEXT));
+        lineChart.setTitle(SSQ);
         return lineChart;
     }
 
-    private void setSeries(NumberAxis xAxis, Map<Short, Double> dataMap, XYChart.Series<Number, Number> series) {
+    private void setSeries(Map<Short, Double> dataMap, XYChart.Series<Number, Number> series) {
         dataMap.forEach((aShort, aDouble) -> series.getData().add(new XYChart.Data<>(aShort, aDouble)));
-        series.getData().forEach(entry -> {
-            addTooltipToChart(entry);
-            removePointFromChartOnClicked(xAxis, series, entry);
-        });
+        series.getData().forEach(this::addTooltipToChart);
     }
 
     private void fillDataMap(Map<Short, Double> dataMap) {
         getYearRange().forEach(aShort -> {
             double average = correctedDataList.stream()
                     .filter(gaugeMeasurement -> gaugeMeasurement.getMeasurementYear() == aShort)
-                    .collect(Collectors.averagingDouble(value -> value.getData2().doubleValue()));
+                    .collect(Collectors.averagingDouble(GaugeMeasurement::getData2));
             dataMap.put(aShort, average);
         });
     }
 
     private void setXaxisParameters(NumberAxis xAxis) {
         xAxis.setTickLabelRotation(90);
-        xAxis.setTickLabelFont(Font.font("System", 15));
+        xAxis.setTickLabelFont(Font.font(SYSTEM, 15));
         xAxis.setAutoRanging(false);
         xAxis.setTickUnit(1);
         if (getYearRange().size() > 40) {
@@ -103,15 +112,6 @@ public class StatisticsController {
         }
         xAxis.setMinorTickVisible(false);
         xAxis.setLabel("Rok");
-    }
-
-    private void removePointFromChartOnClicked(NumberAxis xAxis, XYChart.Series<Number, Number> series, XYChart.Data<Number, Number> entry) {
-        entry.getNode().setOnMouseClicked(event -> {
-            series.getData().remove(entry);
-            XYChart.Data<Number, Number> maxYear = series.getData().stream().max(Comparator.comparingInt(o -> o.getXValue().shortValue())).get();
-            xAxis.setUpperBound(maxYear.getXValue().doubleValue() + 1);
-
-        });
     }
 
     private void addTooltipToChart(XYChart.Data<Number, Number> entry) {
@@ -137,7 +137,7 @@ public class StatisticsController {
     private List<GaugeMeasurement> correctData(List<GaugeMeasurement> dataToCorrect) {
         return dataToCorrect
                 .stream()
-                .filter(data -> data.getData2().doubleValue() < 99999.0)
+                .filter(data -> data.getData2() < 99999.0)
                 .collect(Collectors.toList());
     }
 

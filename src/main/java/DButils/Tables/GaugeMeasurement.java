@@ -1,8 +1,7 @@
-package RegularClasses.Tables;
+package DButils.Tables;
 
 
 import com.j256.ormlite.field.DatabaseField;
-import com.j256.ormlite.table.DatabaseTable;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
@@ -12,19 +11,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import java.math.BigDecimal;
+
+import static java.lang.Double.parseDouble;
 
 @ToString
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity
-@DatabaseTable(tableName = "Wszystkie_Dane")
+@Entity(name = "Wszystkie_Dane")
 public class GaugeMeasurement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @DatabaseField(columnName = "ID",generatedId = true)
+    @DatabaseField(columnName = "ID", generatedId = true)
     private int id;
 
     @DatabaseField(index = true, columnName = "Nazwa_wodowskazu")
@@ -46,13 +45,13 @@ public class GaugeMeasurement {
     private short measurementDay;
 
     @DatabaseField(columnName = "Dane1")
-    private BigDecimal data1;
+    private double data1;
 
     @DatabaseField(columnName = "Dane2")
-    private BigDecimal data2;
+    private double data2;
 
     @DatabaseField(columnName = "Dane3")
-    private BigDecimal data3;
+    private double data3;
 
     public void tryGetGaugeMeasurement(String[] fileLine) throws NumberFormatException {
         this.setGaugeID(Integer.parseInt(fileLine[0].replace("\"", "").trim()));
@@ -61,9 +60,9 @@ public class GaugeMeasurement {
         this.setMeasurementYear(Short.parseShort(fileLine[3].replace("\"", "").trim()));
         this.setMeasurementMonth(Short.parseShort(fileLine[4].replace("\"", "").trim()));
         this.setMeasurementDay(Short.parseShort(fileLine[5].replace("\"", "").trim()));
-        this.setData1(new BigDecimal(fileLine[6].replace("\"", "").trim()));
-        this.setData2(new BigDecimal(fileLine[7].replace("\"", "").trim()));
-        this.setData3(new BigDecimal(fileLine[8].replace("\"", "").trim()));
+        this.setData1(parseDouble(fileLine[6].replace("\"", "").trim()));
+        this.setData2(parseDouble(fileLine[7].replace("\"", "").trim()));
+        this.setData3(parseDouble(fileLine[8].replace("\"", "").trim()));
     }
 
 }
