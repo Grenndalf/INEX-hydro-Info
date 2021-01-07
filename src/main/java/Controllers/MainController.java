@@ -1,10 +1,14 @@
 package Controllers;
 
+import DButils.TableDBActions.GaugeDBActions;
+import DButils.Tables.GaugeMeasurement;
 import RegularClasses.Mediator.ControllerHolder;
 import RegularClasses.Utils.Utils;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 
@@ -12,6 +16,7 @@ import java.io.IOException;
 
 public class MainController {
 
+    public Button testy;
     @FXML
     private AnchorPane leftMenuContainer;
 
@@ -20,6 +25,8 @@ public class MainController {
 
     @FXML
     private AnchorPane mainParent;
+
+    GaugeDBActions gaugeDBActions = new GaugeDBActions();
 
     @FXML
     void initialize() throws IOException {
@@ -35,7 +42,7 @@ public class MainController {
     }
 
     public void setInMainWindow(String path) throws IOException {
-        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(path),Utils.getResourceBundle());
+        FXMLLoader loader = new FXMLLoader(this.getClass().getResource(path), Utils.getResourceBundle());
         contentContainer.getChildren().clear();
         // musi zostaæ region jako element do ktorego jest przypisany loader,
         // w jego przypadku mozna bindowac wlasciwosc prefWidthprop z prefWithprop rodzica itd.
@@ -43,5 +50,11 @@ public class MainController {
         contentContainer.getChildren().add(loadedContent);
         loadedContent.prefWidthProperty().bind(contentContainer.widthProperty());
         loadedContent.prefHeightProperty().bind(contentContainer.heightProperty());
+    }
+
+    public void runtest(ActionEvent event) {
+        GaugeMeasurement gg = new GaugeMeasurement();
+        gg.setGaugeName("dupa");
+        gaugeDBActions.createOrUpdateMeasurementTable(gg);
     }
 }

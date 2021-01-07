@@ -1,6 +1,5 @@
 package App;
 
-import DButils.DbManager;
 import RegularClasses.Utils.Utils;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
@@ -22,7 +21,6 @@ public class App extends Application {
     }
 
     public void start(Stage primaryStage) throws Exception {
-        DbManager.initDatabase();
         Locale.setDefault(Locale.forLanguageTag("pl"));
         primaryStage.getIcons().add(new Image(INEX_LOGO_PNG));
         Scene scene = new Scene(initFxml().load());

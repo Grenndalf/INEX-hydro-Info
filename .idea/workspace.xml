@@ -23,54 +23,45 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/Helpers/MyChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/BasicCrudOperator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/HibernateFactory.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/DbManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/DbManager.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/DbManager.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/GaugeQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/GaugeQueries.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/RiverQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/RiverQueries.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/TownQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/TownQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/DbActions.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/RiverDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/RiverDBActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/TownDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/TownDBActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Tables/GaugeMeasurement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/River.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Tables/River.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/Town.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Tables/Town.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Tables/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Tables/GaugeMeasurement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Tables/River.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Tables/River.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Tables/Town.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Tables/Town.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/Alphabet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/Alphabet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Bundles/labels.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Bundles/labels.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Bundles/labels_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Bundles/labels_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Css/leftMenuButtons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Css/leftMenuButtons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/GaugeList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/GaugeList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/LeftMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/LeftMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/testPane.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/App/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/App.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Bundles/labels.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bundles/labels.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Bundles/labels_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Bundles/labels_pl.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/DbManager.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/DbManager.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/DbManager.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/GaugeQueries.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Intefaces/GaugeQueries.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/RiverQueries.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Intefaces/RiverQueries.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/TownQueries.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Intefaces/TownQueries.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/DbActions.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/TownDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/TownDBActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/GaugeMeasurement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Tables/GaugeMeasurement.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/River.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Tables/River.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/Town.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Tables/Town.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Tables/GaugeMeasurement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Tables/River.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Tables/Town.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/css/leftMenuButtons.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/css/leftMenuButtons.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/GaugeList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/GaugeList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/LeftMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/LeftMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/testPane.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/wodowskazy.iml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,12 +84,13 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="MavenImportPreferences">
-    <option name="generalSettings">
-      <MavenGeneralSettings>
-        <option name="mavenHome" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2020.2.2\plugins\maven\lib\maven3" />
-      </MavenGeneralSettings>
-    </option>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
   </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
@@ -109,24 +101,37 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="LombokPluginEnabledInProject" value="true" />
+    <property name="LombokPluginIS_ANNOTATION_PROCESSING_CHECK_Enabled" value="true" />
+    <property name="LombokPluginIS_BUILDER_Enabled" value="true" />
+    <property name="LombokPluginIS_CONSTRUCTOR_Enabled" value="true" />
+    <property name="LombokPluginIS_DELEGATE_Enabled" value="true" />
+    <property name="LombokPluginIS_LOG_Enabled" value="true" />
+    <property name="LombokPluginIS_LOMBOK_VERSION_CHECK_Enabled" value="true" />
+    <property name="LombokPluginIS_MISSING_LOMBOK_CHECK_Enabled" value="true" />
+    <property name="LombokPluginIS_VAL_Enabled" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="D:/Stary projekt/BusService" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.35287356" />
-    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="settings.editor.selected.configurable" value="inlay.hints.JAVA" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ugnip\OneDrive\Pulpit\wodowskazy\projekt\test\transfer\src\main\resources" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Ugnip\OneDrive\Pulpit\wodowskazy\projekt\test\transfer\src\main\java\DButils\TableDBActions" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="App.App" />
-      <module name="transfer" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="App.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
+      <module name="wodowskazy" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -160,110 +165,16 @@
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="552" y="178" width="816" height="729" key="#Intentions" timestamp="1608029129247">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="552" y="178" width="816" height="729" key="#Intentions/0.0.1920.1040@0.0.1920.1040" timestamp="1608029129247" />
-    <state x="667" y="220" key="#com.intellij.ide.util.MemberChooser" timestamp="1608583101657">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="667" y="220" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1608583101657" />
-    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog" timestamp="1608474191944">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="640" y="256" key="#com.intellij.openapi.updateSettings.impl.PluginUpdateInfoDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608474191944" />
-    <state x="743" y="414" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes" timestamp="1608415897081">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="743" y="414" width="433" height="217" key="#com.intellij.refactoring.move.moveClassesOrPackages.MoveClassesOrPackagesDialog.classes/0.0.1920.1040@0.0.1920.1040" timestamp="1608415897081" />
-    <state x="529" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1607075707483">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="529" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607075707483" />
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1607685654657">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="690" y="267" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607685654657" />
-    <state x="740" y="275" key="FileChooserDialogImpl" timestamp="1608020803029">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="740" y="275" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1608020803029" />
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom" timestamp="1608478344584">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608478344584" />
-    <state width="1877" height="284" key="GridCell.Tab.0.center" timestamp="1608478344584">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608478344584" />
-    <state width="1877" height="284" key="GridCell.Tab.0.left" timestamp="1608478344584">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608478344584" />
-    <state width="1877" height="284" key="GridCell.Tab.0.right" timestamp="1608478344584">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="284" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608478344584" />
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom" timestamp="1608417971779">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1608417971779" />
-    <state width="1877" height="348" key="GridCell.Tab.1.center" timestamp="1608417971778">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1608417971778" />
-    <state width="1877" height="348" key="GridCell.Tab.1.left" timestamp="1608417971778">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1608417971778" />
-    <state width="1877" height="348" key="GridCell.Tab.1.right" timestamp="1608417971778">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state width="1877" height="348" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1608417971778" />
-    <state x="490" y="175" key="Maven.ArtifactSearchDialog" timestamp="1607779468638">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="490" y="175" key="Maven.ArtifactSearchDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607779468638" />
-    <state x="461" y="164" key="SettingsEditor" timestamp="1608034917541">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1608034917541" />
-    <state x="484" y="256" width="951" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2" timestamp="1607276218048">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="484" y="256" width="951" height="629" key="com.intellij.xdebugger.impl.breakpoints.ui.BreakpointsDialogFactory$2/0.0.1920.1040@0.0.1920.1040" timestamp="1607276218048" />
-    <state x="171" y="195" key="extract.method.dialog" timestamp="1608393697524">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="171" y="195" key="extract.method.dialog/0.0.1920.1040@0.0.1920.1040" timestamp="1608393697524" />
-    <state x="666" y="119" width="587" height="801" key="find.popup" timestamp="1607170900341">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="666" y="119" width="587" height="801" key="find.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607170900341" />
-    <state x="551" y="181" key="new project wizard" timestamp="1607281880011">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="551" y="181" key="new project wizard/0.0.1920.1040@0.0.1920.1040" timestamp="1607281880011" />
-    <state x="755" y="267" key="refactoring.ChangeSignatureDialog" timestamp="1607781439109">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="755" y="267" key="refactoring.ChangeSignatureDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1607781439109" />
-    <state x="616" y="240" key="run.anything.popup" timestamp="1607075472941">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607075472941" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607793749180">
-      <screen x="0" y="0" width="1920" height="1040" />
-    </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607793749180" />
-  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <breakpoint enabled="true" type="java-exception">
           <properties class="java.lang.IndexOutOfBoundsException" package="java.lang" />
           <option name="timeStamp" value="1" />
+        </breakpoint>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
+          <option name="timeStamp" value="2" />
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>

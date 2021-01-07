@@ -1,56 +1,55 @@
 package DButils.Tables;
 
 
-import com.j256.ormlite.field.DatabaseField;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 import static java.lang.Double.parseDouble;
+
 
 @ToString
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity(name = "Wszystkie_Dane")
+@Entity
+@Table(name = "Wszystkie_Dane", indexes = @Index(columnList = "Nazwa_wodowskazu",name="GaugeIndex"))
 public class GaugeMeasurement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @DatabaseField(columnName = "ID", generatedId = true)
+    @Column(name = "ID")
     private int id;
 
-    @DatabaseField(index = true, columnName = "Nazwa_wodowskazu")
+    @Column(name = "Nazwa_wodowskazu")
     private String gaugeName;
 
-    @DatabaseField(columnName = "Numer_wodowskazu")
+    @Column(name = "Numer_wodowskazu")
     private int gaugeID;
 
-    @DatabaseField(columnName = "Nazwa_rzeki")
+    @Column(name = "Nazwa_rzeki")
     private String riverName;
 
-    @DatabaseField(columnName = "Rok_pomiaru")
+    @Column(name = "Rok_pomiaru")
     private short measurementYear;
 
-    @DatabaseField(columnName = "Miesiac_pomiaru")
+
+    @Column(name = "Miesiac_pomiaru")
     private short measurementMonth;
 
-    @DatabaseField(columnName = "Dzien_pomiaru")
+    @Column(name = "Dzien_pomiaru")
     private short measurementDay;
 
-    @DatabaseField(columnName = "Dane1")
+    @Column(name = "Dane1")
     private double data1;
 
-    @DatabaseField(columnName = "Dane2")
+    @Column(name = "Dane2")
     private double data2;
 
-    @DatabaseField(columnName = "Dane3")
+    @Column(name = "Dane3")
     private double data3;
 
     public void tryGetGaugeMeasurement(String[] fileLine) throws NumberFormatException {
@@ -66,4 +65,3 @@ public class GaugeMeasurement {
     }
 
 }
-

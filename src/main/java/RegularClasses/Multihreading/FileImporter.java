@@ -4,6 +4,8 @@ import DButils.TableDBActions.GaugeDBActions;
 import DButils.TableDBActions.RiverDBActions;
 import DButils.TableDBActions.TownDBActions;
 import DButils.Tables.GaugeMeasurement;
+import DButils.Tables.River;
+import DButils.Tables.Town;
 import javafx.concurrent.Task;
 
 import java.io.File;
@@ -20,18 +22,19 @@ public class FileImporter extends Task {
     private final TownDBActions townDBActions = new TownDBActions();
     private final RiverDBActions riverDBActions = new RiverDBActions();
     private List<File> fileList;
+    private Set<String> townList = new HashSet<>();
+    private Set<String> riverList = new HashSet<>();
 
     public void setFileList(List<File> fileList) {
         this.fileList = fileList;
     }
 
     @Override
-    protected synchronized Void call() {
+    public Void call() {
         myTask = this;
         importErrors.clear();
         int progress = 0;
-        Set<String> townList = new HashSet<>();
-        Set<String> riverList = new HashSet<>();
+
         for (File file : this.fileList
         ) {
             List<GaugeMeasurement> gaugeMeasurementsListFromOneFile = new ArrayList<>();
@@ -55,21 +58,23 @@ public class FileImporter extends Task {
                 }
 
                 if (isCancelled()) break;
- 
-                gaugeDBActions.createOrUpdateMeasurementTable(gaugeMeasurementsListFromOneFile);
+
+                saveGaugeList(gaugeMeasurementsListFromOneFile);
 
                 progress++;
-                updateProgress(progress, this.fileList.size());
+                updateProgress(progress, fileList.size());
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-        riverList.removeAll(riverDBActions.queryForAllRiverNames());
-        townList.removeAll(townDBActions.queryForAllTownNames());
         riverDBActions.createOrUpdateRiverTable(riverList);
         townDBActions.createOrUpdateTownListTable(townList);
         myTask = null;
         return null;
+    }
+
+    private void saveGaugeList(List<GaugeMeasurement> gaugeMeasurementsListFromOneFile) {
+        gaugeDBActions.createOrUpdateMeasurementTable(gaugeMeasurementsListFromOneFile);
     }
 }

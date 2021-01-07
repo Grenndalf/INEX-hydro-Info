@@ -1,0 +1,27 @@
+﻿<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence
+             http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd"
+             version="2.1">
+    <persistence-unit name="gaugePersistenceUnit" transaction-type="RESOURCE_LOCAL">
+        <class>DButils.Tables.GaugeMeasurement</class>
+        <class>DButils.Tables.River</class>
+        <class>DButils.Tables.Town</class>
+        <properties>
+            <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:pomiary.db"/>
+            <property name="javax.persistence.jdbc.user" value="admina"/>
+            <property name="javax.persistence.jdbc.password" value="admin"/>
+            <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
+            <property name="javax.persistence.schema-generation.database.action" value="validate"/>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
+            <property name="hibernate.hbm2ddl.auto" value="true"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLiteDialect"/>
+            <property name="hibernate.connection.characterEncoding" value="utf8"/>
+            <property name="hibernate.jdbc.batch-size" value="50"/>
+            <property name="hibernate.order-updates" value="true"/>
+            <property name="hibernate.order-inserts" value="true"/>
+        </properties>
+    </persistence-unit>
+</persistence>

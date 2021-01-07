@@ -1,23 +1,41 @@
 package DButils.Tables;
 
-import com.j256.ormlite.field.DatabaseField;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @ToString
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity(name = "Rzeki")
+@Entity
+@Table(name = "Rzeki")
 public class River {
-
-    @DatabaseField(generatedId = true, columnName = "ID")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "ID")
     private int id;
 
-    @DatabaseField(columnName = "Nazwa_rzeki")
+    @Column(name = "Nazwa_rzeki", unique = true)
     private String riverName;
+
+//    @Override
+//    public boolean equals(Object obj) {
+//        if (obj == null) {
+//            return false;
+//        }
+//        if (obj instanceof River) {
+//            River river = (River) obj;
+//            return riverName.equals(river.riverName);
+//        }
+//        return false;
+//    }
+//
+//    @Override
+//    public int hashCode() {
+//        return 17 * riverName.hashCode();
+//    }
 }

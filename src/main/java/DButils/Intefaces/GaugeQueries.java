@@ -1,13 +1,10 @@
 package DButils.Intefaces;
 
 import DButils.Tables.GaugeMeasurement;
-import com.j256.ormlite.dao.Dao;
-import com.j256.ormlite.stmt.QueryBuilder;
 
 import java.util.List;
 
-public interface GaugeQueries
-{
+public interface GaugeQueries {
     void createOrUpdateMeasurementTable(GaugeMeasurement gaugeMeasurement);
 
     void createOrUpdateMeasurementTable(List<GaugeMeasurement> gaugeMeasurement);
@@ -16,9 +13,4 @@ public interface GaugeQueries
 
     List<GaugeMeasurement> queryForAllGaugeMeasurements();
 
-    Dao<GaugeMeasurement, Integer> getDaoGaugeMeasurement();
-
-    QueryBuilder<GaugeMeasurement, Integer> getQueryBuilderGaugeMeasurement();
-
-    List<GaugeMeasurement> getGaugeNameListForRiver(String river);
 }

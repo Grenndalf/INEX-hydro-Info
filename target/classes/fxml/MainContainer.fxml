@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.control.*?>
 <?import javafx.geometry.*?>
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
@@ -13,6 +14,9 @@
          </opaqueInsets>
          <padding>
             <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
-         </padding></AnchorPane>
+         </padding>
+         <children>
+            <Button fx:id="testy" layoutX="39.0" layoutY="123.0" mnemonicParsing="false" onAction="#runtest" text="Button" />
+         </children></AnchorPane>
     </children>
 </AnchorPane>

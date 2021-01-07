@@ -2,88 +2,67 @@ package DButils.TableDBActions;
 
 import DButils.Intefaces.GaugeQueries;
 import DButils.Tables.GaugeMeasurement;
-import com.j256.ormlite.dao.Dao;
-import com.j256.ormlite.dao.DaoManager;
-import com.j256.ormlite.stmt.QueryBuilder;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
-import java.sql.SQLException;
+import javax.persistence.EntityManager;
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
-public class GaugeDBActions extends DbActions implements GaugeQueries {
-    private final Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement();
+public class GaugeDBActions implements GaugeQueries {
+
+    private Logger logger = LogManager.getLogger(GaugeDBActions.class);
+
+    private EntityManager em = HibernateFactory.getEntityManagerFactory().createEntityManager();
+
+    private BasicCrudOperator<GaugeMeasurement> crudOperator = new BasicCrudOperator<>();
 
     @Override
     public void createOrUpdateMeasurementTable(GaugeMeasurement gaugeMeasurement) {
-        try {
-            dao.createOrUpdate(gaugeMeasurement);
-        } catch (SQLException e) {
-            LOGGER.warn(e.getCause().getMessage());
-        }
+        crudOperator.save(gaugeMeasurement);
     }
 
     @Override
-    public void createOrUpdateMeasurementTable(List<GaugeMeasurement> gaugeMeasurement) {
-        try {
-            dao.create(gaugeMeasurement);
-        } catch (SQLException e) {
-            LOGGER.warn(e.getCause().getMessage());
-        } finally {
-            this.closeDbConnection();
-        }
+    public void createOrUpdateMeasurementTable(List<GaugeMeasurement> gaugeMeasurements) {
+        crudOperator.saveMultiple(gaugeMeasurements);
     }
 
     @Override
     public List<GaugeMeasurement> queryForDataOfSelectedTown(String selectedTown) {
         try {
-           return dao.queryForEq("Nazwa_wodowskazu",selectedTown);
-        } catch (SQLException e) {
-            LOGGER.warn(e.getCause().getMessage());
+            em.getTransaction().begin();
+            List<GaugeMeasurement> result = em.createQuery("SELECT A FROM GaugeMeasurement A WHERE A.gaugeName = '" + selectedTown + "'", GaugeMeasurement.class).getResultList();
+            em.getTransaction().commit();
+            return result;
+        } catch (Exception ex) {
+            em.getTransaction().rollback();
+            logger.info(ex.getMessage());
         } finally {
-            this.closeDbConnection();
+            if (em.getTransaction().isActive()) em.close();
         }
         return new ArrayList<>();
     }
+
+    public Set<String> getTownListOfSelectedRiver(String riverName) {
+        try {
+            em.getTransaction().begin();
+            Set<String> result = new HashSet<>(em.createQuery("SELECT A.gaugeName FROM GaugeMeasurement A WHERE A.riverName = '" + riverName + "'", String.class).getResultList());
+            em.getTransaction().commit();
+            return result;
+        } catch (Exception ex) {
+            em.getTransaction().rollback();
+            logger.info(ex.getMessage());
+        } finally {
+            if (em.getTransaction().isActive()) em.close();
+        }
+        return new HashSet<>();
+    }
+
 
     @Override
     public List<GaugeMeasurement> queryForAllGaugeMeasurements() {
-        try {
-            return dao.queryForAll();
-        } catch (SQLException e) {
-            LOGGER.warn(e.getCause().getMessage());
-        } finally {
-            this.closeDbConnection();
-        }
-        return new ArrayList<>();
-    }
-
-    @Override
-    public Dao<GaugeMeasurement, Integer> getDaoGaugeMeasurement() {
-        try {
-            return DaoManager.createDao(connectionSource, GaugeMeasurement.class);
-        } catch (SQLException e) {
-            LOGGER.warn(e.getCause().getMessage());
-        } finally {
-            this.closeDbConnection();
-        }
-        return null;
-    }
-
-    @Override
-    public QueryBuilder<GaugeMeasurement, Integer> getQueryBuilderGaugeMeasurement() {
-        Dao<GaugeMeasurement, Integer> dao = getDaoGaugeMeasurement();
-        return dao.queryBuilder();
-    }
-
-    @Override
-    public List<GaugeMeasurement> getGaugeNameListForRiver(String river) {
-        try {
-            dao.queryForEq("Nazwa_rzeki", river);
-        } catch (SQLException e) {
-            LOGGER.warn(e.getCause().getMessage());
-        } finally {
-            this.closeDbConnection();
-        }
-        return new ArrayList<>();
+        return crudOperator.getAll(GaugeMeasurement.class);
     }
 }

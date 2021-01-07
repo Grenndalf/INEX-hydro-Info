@@ -2,10 +2,8 @@ package Controllers;
 
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.TableDBActions.RiverDBActions;
-import DButils.TableDBActions.TownDBActions;
-import RegularClasses.Mediator.ControllerHolder;
-import DButils.Tables.GaugeMeasurement;
 import DButils.Tables.River;
+import RegularClasses.Mediator.ControllerHolder;
 import RegularClasses.Utils.Alphabet;
 import com.jfoenix.controls.JFXListView;
 import javafx.beans.property.SimpleListProperty;
@@ -17,7 +15,6 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.FlowPane;
 
-import java.sql.SQLException;
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.stream.Collectors;
@@ -68,15 +65,11 @@ public class GaugeListController {
     private void setTownListView() {
         riverListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue != null) {
-                ObservableList<String> items = null;
-                try {
-                    items = FXCollections.observableArrayList(
-                            new HashSet<>(gaugeDBActions.getDaoGaugeMeasurement().queryForEq("Nazwa_rzeki", newValue).stream().map(GaugeMeasurement::getGaugeName).collect(Collectors.toSet())));
-                } catch (SQLException e) {
-                    e.printStackTrace();
-                }
+                ObservableList<String> items;
+                items = FXCollections.observableArrayList(
+                        new HashSet<>(gaugeDBActions.getTownListOfSelectedRiver(newValue)));
                 townListView.setItems(items);
-            }else {
+            } else {
                 ObservableList<String> emptyList = new SimpleListProperty<>();
                 townListView.setItems(emptyList);
             }

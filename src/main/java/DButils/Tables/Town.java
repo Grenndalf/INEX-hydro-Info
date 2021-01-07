@@ -1,25 +1,26 @@
 package DButils.Tables;
 
 
-import com.j256.ormlite.field.DatabaseField;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import lombok.ToString;
 
-import javax.persistence.Entity;
+import javax.persistence.*;
 
 @ToString
 @Getter
 @Setter
 @NoArgsConstructor
-@Entity(name = "Wodowskazy")
+@Table(name = "Wodowskazy")
+@Entity
 public class Town {
-
-    @DatabaseField(generatedId = true, columnName = "ID")
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column
     private int id;
 
-    @DatabaseField(columnName = "Wodowskaz" )
+    @Column(name = "Wodowskaz",unique = true)
     private String townName;
 }
 
