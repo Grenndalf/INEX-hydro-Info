@@ -6,6 +6,7 @@ import Controllers.MainController;
 import java.io.IOException;
 
 public class ControllerHolder implements MediatorMethods {
+
     private MainController mainController;
     private LeftMenuButtonsController menuButtonsController;
 

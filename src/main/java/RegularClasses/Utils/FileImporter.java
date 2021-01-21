@@ -1,4 +1,4 @@
-package RegularClasses.Multihreading;
+package RegularClasses.Utils;
 
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.TableDBActions.RiverDBActions;
@@ -68,7 +68,9 @@ public class FileImporter extends Task {
                 e.printStackTrace();
             }
         }
+        riverList.removeAll(riverDBActions.queryForAllRiverNames());
         riverDBActions.createOrUpdateRiverTable(riverList);
+        townList.removeAll(townDBActions.queryForAllTownNames());
         townDBActions.createOrUpdateTownListTable(townList);
         myTask = null;
         return null;

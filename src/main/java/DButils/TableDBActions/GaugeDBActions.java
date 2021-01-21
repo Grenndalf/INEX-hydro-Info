@@ -6,6 +6,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -15,9 +16,9 @@ public class GaugeDBActions implements GaugeQueries {
 
     private Logger logger = LogManager.getLogger(GaugeDBActions.class);
 
-    private EntityManager em = HibernateFactory.getEntityManagerFactory().createEntityManager();
+    private EntityManagerFactory emf = HibernateFactory.getEntityManagerFactory();
 
-    private BasicCrudOperator<GaugeMeasurement> crudOperator = new BasicCrudOperator<>();
+    private final BasicCrudOperator<GaugeMeasurement> crudOperator = new BasicCrudOperator<>();
 
     @Override
     public void createOrUpdateMeasurementTable(GaugeMeasurement gaugeMeasurement) {
@@ -31,6 +32,7 @@ public class GaugeDBActions implements GaugeQueries {
 
     @Override
     public List<GaugeMeasurement> queryForDataOfSelectedTown(String selectedTown) {
+        EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
             List<GaugeMeasurement> result = em.createQuery("SELECT A FROM GaugeMeasurement A WHERE A.gaugeName = '" + selectedTown + "'", GaugeMeasurement.class).getResultList();
@@ -46,6 +48,7 @@ public class GaugeDBActions implements GaugeQueries {
     }
 
     public Set<String> getTownListOfSelectedRiver(String riverName) {
+        EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
             Set<String> result = new HashSet<>(em.createQuery("SELECT A.gaugeName FROM GaugeMeasurement A WHERE A.riverName = '" + riverName + "'", String.class).getResultList());

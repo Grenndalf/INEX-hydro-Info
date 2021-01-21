@@ -12,7 +12,7 @@ public interface TownQueries {
 
     List<Town> queryForTownsStartedWithLetter(String townNameFirstLetter);
 
-    List<Town> queryForAllTownNames();
+    List<String> queryForAllTownNames();
 
     Town getSingleTown(String townName);
 

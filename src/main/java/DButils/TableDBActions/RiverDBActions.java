@@ -4,39 +4,38 @@ import DButils.Intefaces.RiverQueries;
 import DButils.Tables.River;
 
 import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.TypedQuery;
+import javax.persistence.criteria.CriteriaBuilder;
+import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Root;
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
 
 public class RiverDBActions implements RiverQueries {
 
-    private final EntityManager em = HibernateFactory.getEntityManagerFactory().createEntityManager();
+    private final EntityManagerFactory emf = HibernateFactory.getEntityManagerFactory();
+    private final BasicCrudOperator<River> crudOperator = new BasicCrudOperator<>();
 
     @Override
-    public Set<String> queryForAllRiverNames() {
-        try {
-            em.getTransaction();
-            Set<String> listOfRiverNames = em.createQuery("SELECT r FROM River r", River.class).getResultList()
-                    .stream().map(River::getRiverName).collect(Collectors.toSet());
-            em.getTransaction().commit();
-            return listOfRiverNames;
-        } catch (Exception ex) {
-            ex.printStackTrace();
-        } finally {
-            if (em.getTransaction().isActive()) em.close();
-        }
-        return new HashSet<>();
+    public List<String> queryForAllRiverNames() {
+        return crudOperator.getAll(River.class).stream().map(River::getRiverName).collect(Collectors.toList());
     }
 
     @Override
     public List<River> queryForOneRiverStartedWithLetter(String riverNameFirstLetter) {
-        String letter = "'" + riverNameFirstLetter + "%'";
+        String letter = riverNameFirstLetter + "%";
+        EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            List<River> result = em.createQuery("Select r from River r where r.riverName Like " + letter).getResultList();
-            System.out.println(result.size());
+            CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder();
+            CriteriaQuery<River> criteriaQuery = criteriaBuilder.createQuery(River.class);
+            Root<River> riverRootTable = criteriaQuery.from(River.class);
+            criteriaQuery.select(riverRootTable).where(criteriaBuilder.like(riverRootTable.get("riverName"), letter));
+            TypedQuery<River> query = em.createQuery(criteriaQuery);
+            List<River> result = query.getResultList();
             em.getTransaction().commit();
             return result;
         } catch (Exception ex) {
@@ -49,21 +48,13 @@ public class RiverDBActions implements RiverQueries {
 
     @Override
     public void createOrUpdateRiverTable(Set<String> riverList) {
+        EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
-            List<String> savedRivers = em.createQuery("SELECT sr FROM River sr", River.class)
-                    .getResultList().stream().map(River::getRiverName).collect(Collectors.toList());
-            System.out.println("dupa" + savedRivers.size());
-            riverList.removeAll(savedRivers);
-            List<String> riverToSave = new ArrayList<>(riverList);
-            for (int i = 0; i < riverToSave.size(); i++) {
+            for (String s : riverList) {
                 River river = new River();
-                river.setRiverName(riverToSave.get(i));
+                river.setRiverName(s);
                 em.persist(river);
-                if (i % 50 == 0) {
-                    em.flush();
-                    em.clear();
-                }
             }
             em.getTransaction().commit();
         } catch (Exception ex) {

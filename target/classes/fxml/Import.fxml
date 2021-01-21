@@ -2,14 +2,22 @@
 
 <?import java.lang.*?>
 <?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: White;" stylesheets="@../Css/leftMenuButtons.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ImportController">
+<AnchorPane prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: White;" stylesheets="@../Css/stylesGeneral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ImportController">
     <children>
-        <Button fx:id="selectFilesButton" layoutX="1094.0" layoutY="14.0" mnemonicParsing="false" onAction="#selectFiles" text="Import" />
-        <HBox fx:id="barContainer" alignment="CENTER" layoutX="305.0" layoutY="342.0" prefHeight="50.0" prefWidth="500.0" spacing="30.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="330.0" AnchorPane.rightAnchor="330.0" />
+        <HBox fx:id="barContainer" alignment="CENTER" layoutX="230.0" layoutY="350.0" prefHeight="50.0" prefWidth="700.0" spacing="30.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="230.0" />
+        <Rectangle fx:id="greenSqr" arcHeight="50.0" arcWidth="50.0" fill="#22b954" height="100.0" layoutX="481.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" styleClass="greenSqr" width="250.0" AnchorPane.topAnchor="80.0" />
+        <Rectangle fx:id="blueSqr" arcHeight="50.0" arcWidth="50.0" fill="#2176a5" height="100.0" layoutX="481.0" layoutY="64.0" onMouseClicked="#selectFiles" stroke="BLACK" strokeType="INSIDE" styleClass="blueSqr" width="250.0" AnchorPane.topAnchor="60.0" />
+        <Label fx:id="importLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="545.0" layoutY="79.0" onMouseClicked="#selectFiles" prefHeight="63.0" prefWidth="123.0" text="Import" textAlignment="CENTER" textFill="WHITE">
+            <font>
+                <Font name="Wingdings 2" size="36.0" />
+            </font>
+        </Label>
     </children>
 </AnchorPane>

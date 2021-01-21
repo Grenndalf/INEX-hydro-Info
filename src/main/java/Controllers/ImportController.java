@@ -1,23 +1,23 @@
 package Controllers;
 
 
-import RegularClasses.Multihreading.FileImporter;
+import RegularClasses.Utils.FileImporter;
 import RegularClasses.Multihreading.FileImporterService;
 import RegularClasses.Utils.Utils;
-import com.jfoenix.controls.JFXProgressBar;
+import javafx.animation.FadeTransition;
 import javafx.application.Platform;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Paint;
+import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.File;
 import java.util.List;
@@ -35,15 +35,29 @@ public class ImportController {
     @FXML
     public HBox barContainer;
     @FXML
-    public Button selectFilesButton;
+    public Rectangle blueSqr;
     @FXML
-    AnchorPane pane;
+    Label importLabel;
 
     @FXML
     void initialize() {
+        test();
         if (FileImporter.myTask != null) {
             showProgressBar();
         }
+    }
+
+    private void test() {
+        final FadeTransition fadeIn = new FadeTransition(Duration.millis(100));
+        fadeIn.setNode(blueSqr);
+        fadeIn.setToValue(0.7);
+        final FadeTransition fadeOut = new FadeTransition(Duration.millis(100));
+        fadeOut.setNode(blueSqr);
+        fadeOut.setToValue(1);
+        blueSqr.setOnMouseEntered(e -> fadeIn.playFromStart());
+        blueSqr.setOnMouseExited(e -> fadeOut.playFromStart());
+        importLabel.setOnMouseEntered(e -> fadeIn.playFromStart());
+        importLabel.setOnMouseExited(e -> fadeOut.playFromStart());
     }
 
     private void showProgressBar() {
@@ -63,9 +77,7 @@ public class ImportController {
                 barContainer.getChildren().clear();
                 if (!FileImporter.importErrors.isEmpty()) {
                     Button showErrors = new Button(Utils.getResourceBundle().getString(ERROR_LIST));
-                    showErrors.setOnAction(event -> {
-                        showNotImportedData();
-                    });
+                    showErrors.setOnAction(event -> showNotImportedData());
                     Region filler = new Region();
                     HBox.setHgrow(filler, Priority.ALWAYS);
                     barContainer.getChildren().addAll(showErrors, filler);
@@ -73,7 +85,7 @@ public class ImportController {
                 Label taskInfo = new Label("zadanie skoñczone");
                 taskInfo.setPrefHeight(30);
                 taskInfo.setPrefWidth(150);
-                taskInfo.setFont(Font.font("System", FontWeight.BOLD,16));
+                taskInfo.setFont(Font.font("System", FontWeight.BOLD, 16));
                 taskInfo.setTextFill(Paint.valueOf("#317FFF"));
                 barContainer.getChildren().add(taskInfo);
 
@@ -100,7 +112,8 @@ public class ImportController {
     }
 
     public void chooseFiles() {
-        selectFilesButton.disableProperty().set(true);
+        blueSqr.disableProperty().set(true);
+        importLabel.disableProperty().set(true);
         FileChooser fileChooser = new FileChooser();
         FileChooser.ExtensionFilter extFilter =
                 new FileChooser.ExtensionFilter(Utils.getResourceBundle().getString(CSV_FILES), CSV);
@@ -118,10 +131,12 @@ public class ImportController {
                         Utils.getResourceBundle().getString(IMPORTING_ERROR));
             }
         }
-        selectFilesButton.disableProperty().set(false);
+        blueSqr.disableProperty().set(false);
+        importLabel.disableProperty().set(false);
     }
 
-    public void selectFiles(ActionEvent event) {
+    public void selectFiles() {
         chooseFiles();
     }
+
 }

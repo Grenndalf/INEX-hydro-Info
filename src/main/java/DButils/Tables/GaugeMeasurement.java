@@ -16,7 +16,7 @@ import static java.lang.Double.parseDouble;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "Wszystkie_Dane", indexes = @Index(columnList = "Nazwa_wodowskazu",name="GaugeIndex"))
+@Table(name = "Wszystkie_Dane", indexes = @Index(columnList = "Nazwa_wodowskazu", name = "GaugeIndex"))
 public class GaugeMeasurement {
 
     @Id

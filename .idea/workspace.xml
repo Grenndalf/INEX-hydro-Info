@@ -23,45 +23,50 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/BasicCrudOperator.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/HibernateFactory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controllers/ExportController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/FileExporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/App.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LeftMenuButtonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/LeftMenuButtonsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/DbManager.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/GaugeQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/GaugeQueries.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/RiverQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/RiverQueries.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/TownQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/TownQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/DbActions.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/BasicCrudOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/BasicCrudOperator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/RiverDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/RiverDBActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/TownDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/TownDBActions.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Tables/GaugeMeasurement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/River.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Tables/River.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/Town.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/Tables/Town.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/App/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/ControllerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/ControllerHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/FileImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Css/leftMenuButtons.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/GaugeList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/GaugeList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Import.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/LeftMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/LeftMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/DbManager.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/GaugeQueries.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Intefaces/GaugeQueries.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/RiverQueries.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Intefaces/RiverQueries.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/TownQueries.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Intefaces/TownQueries.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/DbActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/BasicCrudOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/BasicCrudOperator.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/TownDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/TownDBActions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/GaugeMeasurement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Tables/GaugeMeasurement.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/River.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Tables/River.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/Town.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Tables/Town.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/wodowskazy.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/css/leftMenuButtons.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/GaugeList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/GaugeList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/LeftMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/LeftMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

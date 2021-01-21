@@ -70,4 +70,11 @@
     .labelBlue{
     -fx-text-fill: -fx-inex-blue;
     }
+    .blueSqr{
+    -fx-fill: -fx-inex-blue;
+    }
+    .greenSqr{
+    -fx-fill: -fx-inex-green;
+    }
+
 

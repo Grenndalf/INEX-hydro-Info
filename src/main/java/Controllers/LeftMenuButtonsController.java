@@ -50,8 +50,8 @@ public class LeftMenuButtonsController {
         ControllerHolder.getInstance().setMainContent("/FXML/Statistics.fxml");
     }
 
-
     @FXML
     void showTableToExport() {
+        ControllerHolder.getInstance().setMainContent("/FXML/Export.fxml");
     }
 }
