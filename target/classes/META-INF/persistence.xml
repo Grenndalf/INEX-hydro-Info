@@ -12,8 +12,8 @@
             <property name="javax.persistence.jdbc.user" value="admina"/>
             <property name="javax.persistence.jdbc.password" value="admin"/>
             <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
-            <property name="javax.persistence.schema-generation.database.action" value="drop-and-create"/>
-            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <property name="hibernate.hbm2ddl.auto" value="validate"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="false"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.SQLiteDialect"/>

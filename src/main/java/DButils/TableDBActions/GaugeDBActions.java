@@ -58,9 +58,53 @@ public class GaugeDBActions implements GaugeQueries {
             em.getTransaction().rollback();
             logger.info(ex.getMessage());
         } finally {
-            if (em.getTransaction().isActive()) em.close();
+            if (em.getTransaction().isActive()) {
+                em.flush();
+                em.clear();
+                em.close();
+            }
         }
         return new HashSet<>();
+    }
+
+    public Set<Short> getYearListOfSelectedTown(String townName) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            Set<Short> result = new HashSet<>(em.createQuery("SELECT A.measurementYear FROM GaugeMeasurement A  Where A.townName = '" + townName + "' ORDER BY A.measurementYear ASC", Short.class).getResultList());
+            em.getTransaction().commit();
+            return result;
+        } catch (Exception ex) {
+            em.getTransaction().rollback();
+            logger.info(ex.getMessage());
+        } finally {
+            if (em.getTransaction().isActive()) {
+                em.flush();
+                em.clear();
+                em.close();
+            }
+        }
+        return new HashSet<>();
+    }
+
+    public List<Double> getDataOfOneYearOfSelectedTown(String townName, Short year) {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            List<Double> result = em.createQuery("SELECT g.data2 FROM GaugeMeasurement g Where g.townName ='" + townName + "' AND g.measurementYear = '" + year + "' ORDER BY g.measurementYear, g.measurementMonth, g.measurementDay ASC ", Double.class).getResultList();
+            em.getTransaction().commit();
+            return result;
+        } catch (Exception ex) {
+            em.getTransaction().rollback();
+            logger.info(ex.getMessage());
+        } finally {
+            if (em.getTransaction().isActive()) {
+                em.flush();
+                em.clear();
+                em.close();
+            }
+        }
+        return new ArrayList<>();
     }
 
 
