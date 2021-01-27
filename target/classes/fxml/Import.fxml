@@ -1,23 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
 <?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
-<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.layout.*?>
-<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: White;" stylesheets="@../Css/stylesGeneral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ImportController">
+<AnchorPane prefHeight="800.0" prefWidth="1160.0" stylesheets="@../Css/stylesGeneral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ImportController">
     <children>
-        <HBox fx:id="barContainer" alignment="CENTER" layoutX="230.0" layoutY="350.0" prefHeight="50.0" prefWidth="700.0" spacing="30.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="230.0" />
-        <Rectangle fx:id="greenSqr" arcHeight="50.0" arcWidth="50.0" fill="#22b954" height="100.0" layoutX="481.0" layoutY="82.0" stroke="BLACK" strokeType="INSIDE" styleClass="greenSqr" width="250.0" AnchorPane.topAnchor="80.0" />
-        <Rectangle fx:id="blueSqr" arcHeight="50.0" arcWidth="50.0" fill="#2176a5" height="100.0" layoutX="481.0" layoutY="64.0" onMouseClicked="#selectFiles" stroke="BLACK" strokeType="INSIDE" styleClass="blueSqr" width="250.0" AnchorPane.topAnchor="60.0" />
-        <Label fx:id="importLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="545.0" layoutY="79.0" onMouseClicked="#selectFiles" prefHeight="63.0" prefWidth="123.0" text="Import" textAlignment="CENTER" textFill="WHITE">
+        <HBox fx:id="barContainer" alignment="CENTER" layoutX="230.0" layoutY="350.0" prefHeight="50.0" prefWidth="750.0" spacing="30.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="180.0" />
+        <JFXButton fx:id="importButton" alignment="CENTER" buttonType="RAISED" layoutX="511.0" layoutY="103.0" onAction="#chooseFiles" ripplerFill="#339e32" styleClass="buttonBG" stylesheets="@../Css/stylesGeneral.css" text="IMPORT" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="100.0">
             <font>
-                <Font name="Wingdings 2" size="36.0" />
+                <Font name="System Bold" size="36.0" />
             </font>
-        </Label>
+        </JFXButton>
+        <JFXButton fx:id="downloadButton" buttonType="RAISED" layoutX="101.0" layoutY="252.0" onAction="#download" ripplerFill="BLACK" text="download" textFill="#8800ff">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
     </children>
 </AnchorPane>

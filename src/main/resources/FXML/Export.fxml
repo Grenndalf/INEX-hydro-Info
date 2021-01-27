@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-<?import javafx.scene.control.Button?>
+<?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ExportController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0"
+            prefWidth="1160.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controllers.ExportController">
     <children>
-        <Button fx:id="dupa" layoutX="563.0" layoutY="330.0" mnemonicParsing="false" onAction="#pritner" text="Button" textFill="#f20808">
+        <JFXButton fx:id="exportButton" alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER"
+                   graphicTextGap="6.0" layoutX="488.0" layoutY="574.0" onAction="#selectDestinationAndSaveFile"
+                   ripplerFill="#2176a5" styleClass="buttonGB" stylesheets="@../Css/stylesGeneral.css" text="EXPORT"
+                   textAlignment="CENTER" textFill="WHITE" AnchorPane.bottomAnchor="100.0">
             <font>
-                <Font name="Bell MT Bold" size="25.0" />
+                <Font name="System Bold" size="36.0"/>
             </font>
-        </Button>
+        </JFXButton>
     </children>
 </AnchorPane>

@@ -1,12 +1,12 @@
 package RegularClasses.Utils;
 
-import DButils.TableDBActions.GaugeDBActions;
 import DButils.Tables.GaugeMeasurement;
 import RegularClasses.Mediator.ControllerHolder;
 import org.apache.poi.ss.usermodel.Row;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,14 +16,20 @@ import java.util.Map;
 import java.util.stream.Collectors;
 
 public class FileExporter {
-    private GaugeDBActions gg = new GaugeDBActions();
 
-    public void createWorkBook(List<GaugeMeasurement> spreadsheetData) {
+
+    public static final String DANE_CA£OŒÆ = "Dane Ca³oœæ";
+    public static final String DANE_UPORZ¥DKOWANE = "Dane Uporz¹dkowane";
+    public static final String DANE_POSORTOWANE = "Dane Posortowane";
+    public static final String XLSX = ".xlsx";
+
+    public void createWorkBook(List<GaugeMeasurement> spreadsheetData, String absolutePath) {
 
         XSSFWorkbook workbook = new XSSFWorkbook();
-        XSSFSheet sheet1 = workbook.createSheet("Dane Ca³oœæ");
-        XSSFSheet sheet2 = workbook.createSheet("Dane Uporz¹dkowane");
-        XSSFSheet sheet3 = workbook.createSheet("Dane Posortowane");
+        XSSFSheet sheet1 = workbook.createSheet(DANE_CA£OŒÆ);
+        XSSFSheet sheet2 = workbook.createSheet(DANE_UPORZ¥DKOWANE);
+        XSSFSheet sheet3 = workbook.createSheet(DANE_POSORTOWANE);
+        Map<Short, List<Double>> dataMap = new HashMap<>();
 
         createHeadersInSheet(sheet1);
 
@@ -42,40 +48,66 @@ public class FileExporter {
 
 
         //tworzenie wierszy w drugim arkuszu
-        List<Row> rowListInSheet2 = new ArrayList<>();
-        for (short i = 0; i < 366; i++) {
-            Row row = sheet2.createRow(i + 1);
-            row.createCell(0).setCellValue(i + 1);
-            rowListInSheet2.add(row);
-        }
+        List<Row> rowListInSheet2 = getRowListInSheet(sheet2);
 
-        Map<Short, List<Double>> dataMap = new HashMap<>();
-        List<GaugeMeasurement> totalData = gg.queryForDataOfSelectedTown(ControllerHolder.getInstance().getTownName());
-        List<Short> yearList = totalData.stream().map(GaugeMeasurement::getMeasurementYear).distinct().collect(Collectors.toList());
+
+
+        List<Short> yearList = spreadsheetData.stream()
+                .map(GaugeMeasurement::getMeasurementYear)
+                .distinct()
+                .collect(Collectors.toList());
+
         yearList.forEach(aShort -> {
-            List<Double> dataList = totalData.stream().filter(gaugeMeasurement -> gaugeMeasurement.getMeasurementYear() == aShort).map(GaugeMeasurement::getData2).collect(Collectors.toList());
+            List<Double> dataList = spreadsheetData.stream()
+                    .filter(gaugeMeasurement -> gaugeMeasurement.getMeasurementYear() == aShort)
+                    .map(GaugeMeasurement::getData2)
+                    .collect(Collectors.toList());
             dataMap.put(aShort, dataList);
         });
 
-        Row row = sheet2.createRow(0);
+        //uzupe³nianie danych w drugim arkuszu
+        Row firstRowSheet2 = sheet2.createRow(0);
         for (int i = 0; i < yearList.size(); i++) {
             List<Double> dataByYear = dataMap.get(yearList.get(i));
-            row.createCell(i+1).setCellValue(yearList.get(i));
+            firstRowSheet2.createCell(i + 1).setCellValue(yearList.get(i));
             int dataSize = Math.min(dataByYear.size(), 366);
             for (int j = 0; j < dataSize; j++) {
                 rowListInSheet2.get(j).createCell(i + 1).setCellValue(dataByYear.get(j));
             }
         }
 
+        //tworzenie wierszy w trzecim arkuszu
+        List<Row> rowListInSheet3 = getRowListInSheet(sheet3);
+        Row firstRowSheet3 = sheet3.createRow(0);
+        for (int i = 0; i < yearList.size(); i++) {
+            List<Double> dataByYear = dataMap.get(yearList.get(i));
+            dataByYear.sort(Double::compareTo);
+            firstRowSheet3.createCell(i + 1).setCellValue(yearList.get(i));
+            int dataSize = Math.min(dataByYear.size(), 366);
+            for (int j = 0; j < dataSize; j++) {
+                rowListInSheet3.get(j).createCell(i + 1).setCellValue(dataByYear.get(j));
+            }
+        }
+
+        //zapis do pliku
         try {
-            FileOutputStream path = new FileOutputStream(ControllerHolder.getInstance().getTownName() + ".xlsx");
+            File file = new File(absolutePath + "\\" + ControllerHolder.getInstance().getTownName() + XLSX);
+            FileOutputStream path = new FileOutputStream(file);
             workbook.write(path);
-            path.close();
-            workbook.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
+    }
+
+    private List<Row> getRowListInSheet(XSSFSheet sheet) {
+        List<Row> rowListInSheet2 = new ArrayList<>();
+        for (short i = 0; i < 366; i++) {
+            Row row = sheet.createRow(i + 1);
+            row.createCell(0).setCellValue(i + 1);
+            rowListInSheet2.add(row);
+        }
+        return rowListInSheet2;
     }
 
     private void createHeadersInSheet(XSSFSheet sheet1) {

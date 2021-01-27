@@ -1,11 +1,8 @@
-package RegularClasses.Utils;
+package RegularClasses.Multihreading;
 
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.TableDBActions.RiverDBActions;
-import DButils.TableDBActions.TownDBActions;
 import DButils.Tables.GaugeMeasurement;
-import DButils.Tables.River;
-import DButils.Tables.Town;
 import javafx.concurrent.Task;
 
 import java.io.File;
@@ -19,11 +16,10 @@ public class FileImporter extends Task {
     public static Task myTask;
     public static List<String> importErrors = new ArrayList<>();
     private final GaugeDBActions gaugeDBActions = new GaugeDBActions();
-    private final TownDBActions townDBActions = new TownDBActions();
     private final RiverDBActions riverDBActions = new RiverDBActions();
     private List<File> fileList;
-    private Set<String> townList = new HashSet<>();
-    private Set<String> riverList = new HashSet<>();
+
+    private final Set<String> riverList = new HashSet<>();
 
     public void setFileList(List<File> fileList) {
         this.fileList = fileList;
@@ -47,7 +43,6 @@ public class FileImporter extends Task {
                     try {
                         gaugeMeasurement.tryGetGaugeMeasurement(lineToAdd.split(","));
                         gaugeMeasurementsListFromOneFile.add(gaugeMeasurement);
-                        townList.add(lineToAdd.split(",")[1].replace("\"", "").trim());
                         riverList.add(lineToAdd.split(",")[2].replace("\"", "").trim());
                     } catch (Exception e) {
                         importErrors.add(lineToAdd
@@ -70,8 +65,7 @@ public class FileImporter extends Task {
         }
         riverList.removeAll(riverDBActions.queryForAllRiverNames());
         riverDBActions.createOrUpdateRiverTable(riverList);
-        townList.removeAll(townDBActions.queryForAllTownNames());
-        townDBActions.createOrUpdateTownListTable(townList);
+
         myTask = null;
         return null;
     }

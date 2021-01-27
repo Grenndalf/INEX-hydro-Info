@@ -1,13 +1,12 @@
 package RegularClasses.Multihreading;
 
-import RegularClasses.Utils.FileImporter;
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;
 
 import java.io.File;
-import java.util.List;
+import java.util.*;
 
-public class FileImporterService extends Service<Void> {
+public class FileImporterService extends Service {
 
     private final List<File> fileList;
 
@@ -21,4 +20,5 @@ public class FileImporterService extends Service<Void> {
         fileImporter.setFileList(fileList);
         return fileImporter;
     }
+
 }

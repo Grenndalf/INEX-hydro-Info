@@ -1,10 +1,12 @@
 package Controllers;
 
 
-import RegularClasses.Utils.FileImporter;
+import RegularClasses.Multihreading.FIleDownloader;
+import RegularClasses.Multihreading.FileDownloaderService;
+import RegularClasses.Multihreading.FileImporter;
 import RegularClasses.Multihreading.FileImporterService;
 import RegularClasses.Utils.Utils;
-import javafx.animation.FadeTransition;
+import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
@@ -12,13 +14,10 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Priority;
 import javafx.scene.layout.Region;
 import javafx.scene.paint.Paint;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-import javafx.util.Duration;
-
 import java.io.File;
 import java.util.List;
 
@@ -31,33 +30,19 @@ public class ImportController {
     public static final String NOT_IMPORTED_LIST = "not.imported.list";
     public static final String CSV_FILES = "csv.files";
     public static final String CSV = "*.csv";
+    @FXML
+    public JFXButton downloadButton;
 
     @FXML
-    public HBox barContainer;
+    private HBox barContainer;
     @FXML
-    public Rectangle blueSqr;
-    @FXML
-    Label importLabel;
+    private JFXButton importButton;
 
     @FXML
     void initialize() {
-        test();
         if (FileImporter.myTask != null) {
             showProgressBar();
         }
-    }
-
-    private void test() {
-        final FadeTransition fadeIn = new FadeTransition(Duration.millis(100));
-        fadeIn.setNode(blueSqr);
-        fadeIn.setToValue(0.7);
-        final FadeTransition fadeOut = new FadeTransition(Duration.millis(100));
-        fadeOut.setNode(blueSqr);
-        fadeOut.setToValue(1);
-        blueSqr.setOnMouseEntered(e -> fadeIn.playFromStart());
-        blueSqr.setOnMouseExited(e -> fadeOut.playFromStart());
-        importLabel.setOnMouseEntered(e -> fadeIn.playFromStart());
-        importLabel.setOnMouseExited(e -> fadeOut.playFromStart());
     }
 
     private void showProgressBar() {
@@ -112,8 +97,7 @@ public class ImportController {
     }
 
     public void chooseFiles() {
-        blueSqr.disableProperty().set(true);
-        importLabel.disableProperty().set(true);
+        importButton.disableProperty().set(true);
         FileChooser fileChooser = new FileChooser();
         FileChooser.ExtensionFilter extFilter =
                 new FileChooser.ExtensionFilter(Utils.getResourceBundle().getString(CSV_FILES), CSV);
@@ -131,12 +115,22 @@ public class ImportController {
                         Utils.getResourceBundle().getString(IMPORTING_ERROR));
             }
         }
-        blueSqr.disableProperty().set(false);
-        importLabel.disableProperty().set(false);
+        importButton.disableProperty().set(false);
     }
 
-    public void selectFiles() {
-        chooseFiles();
-    }
+    public void download() {
+        if (FIleDownloader.myTask == null) {
+            FileDownloaderService fileDownloaderService = new FileDownloaderService();
+            fileDownloaderService.start();
+        } else {
+            alertTemplate(Alert.AlertType.CONFIRMATION,
+                    "trwa pobieranie",
+                    "proszê czekaæ",
+                    "pobieranie w toku.");
 
+        }
+
+        //Platform.runLater(() -> alertTemplate(Alert.AlertType.CONFIRMATION,"test","test","test"));
+    }
 }
+

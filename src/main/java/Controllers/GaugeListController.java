@@ -4,7 +4,6 @@ import DButils.TableDBActions.GaugeDBActions;
 import DButils.TableDBActions.RiverDBActions;
 import DButils.Tables.River;
 import RegularClasses.Mediator.ControllerHolder;
-import RegularClasses.Utils.Alphabet;
 import com.jfoenix.controls.JFXListView;
 import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
@@ -15,18 +14,18 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.FlowPane;
 
-import java.util.Arrays;
 import java.util.HashSet;
 
 public class GaugeListController {
+    private static final String TOGGLE_BUTTONS = "toggleButtons";
     @FXML
-    public FlowPane buttonContainer;
+    private FlowPane buttonContainer;
     @FXML
-    public JFXListView<String> townListView;
+    private JFXListView<String> townListView;
     @FXML
-    public Label gaugeQuantity;
+    private Label gaugeQuantity;
     @FXML
-    public JFXListView<River> riverListView;
+    private JFXListView<River> riverListView;
     ToggleGroup toggleGroup = new ToggleGroup();
     RiverDBActions riverDBActions = new RiverDBActions();
     GaugeDBActions gaugeDBActions = new GaugeDBActions();
@@ -39,14 +38,15 @@ public class GaugeListController {
     }
 
     private void createButtons() {
-        Arrays.stream(Alphabet.values()).forEach(letter -> {
-            ToggleButton button = new ToggleButton(letter.name());
-            button.getStyleClass().add("toggleButtons");
+        final char[] input = "A•BCDE FGHIJKL£MNO”PRSåTUWYZèØ".toCharArray();
+        for (char c : input) {
+            ToggleButton button = new ToggleButton(String.valueOf(c));
+            button.getStyleClass().add(TOGGLE_BUTTONS);
             addToggleButtonListener();
             setListViewValuesOnClickedButton(button);
             toggleGroup.getToggles().add(button);
             buttonContainer.getChildren().add(button);
-        });
+        }
     }
 
     private void setListViewValuesOnClickedButton(ToggleButton button) {

@@ -77,4 +77,12 @@
     -fx-fill: -fx-inex-green;
     }
 
+    .buttonBG {
+    -fx-background-color: rgba(33,118,165,0.8);
+    jfx-rippler-fill:-fx-inex-green;
+    }
+    .buttonGB {
+    -fx-background-color: rgba(51,158,50,0.8);
+    jfx-rippler-fill:-fx-inex-blue;
+    }
 
