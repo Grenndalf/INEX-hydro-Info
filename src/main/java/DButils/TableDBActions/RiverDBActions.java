@@ -5,6 +5,7 @@ import DButils.Tables.River;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Query;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
@@ -56,6 +57,22 @@ public class RiverDBActions implements RiverQueries {
                 river.setRiverName(s);
                 em.persist(river);
             }
+            em.getTransaction().commit();
+        } catch (Exception ex) {
+            em.getTransaction().rollback();
+            ex.printStackTrace();
+        } finally {
+            if (em.getTransaction().isActive()) em.close();
+        }
+    }
+
+    public void removeAllRivers() {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            String stringQuery = "DELETE FROM River";
+            Query query = em.createQuery(stringQuery);
+            query.executeUpdate();
             em.getTransaction().commit();
         } catch (Exception ex) {
             em.getTransaction().rollback();

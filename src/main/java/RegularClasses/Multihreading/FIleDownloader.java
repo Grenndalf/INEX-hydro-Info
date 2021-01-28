@@ -1,6 +1,9 @@
 package RegularClasses.Multihreading;
 
+import javafx.application.Platform;
 import javafx.concurrent.Task;
+import javafx.scene.control.Alert;
+import javafx.scene.control.TextArea;
 import net.lingala.zip4j.core.ZipFile;
 import net.lingala.zip4j.io.ZipInputStream;
 import net.lingala.zip4j.model.FileHeader;
@@ -11,6 +14,7 @@ import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.time.Year;
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -20,6 +24,7 @@ public class FIleDownloader extends Task {
 
     private static final String DANE_HYDROLOGICZNE_DOBOWE = "https://danepubliczne.imgw.pl/data/dane_pomiarowo_obserwacyjne/dane_hydrologiczne/dobowe/";
     public static final String PATHNAME = "downloaded_files/";
+    public static List<String> errorList = new ArrayList<>();
     public static Task myTask;
 
     private static boolean test(File file) {
@@ -52,18 +57,16 @@ public class FIleDownloader extends Task {
                 if (Files.exists(Paths.get(PATHNAME + fileName.toString()))) {
                     continue;
                 }
-                URL url;
+                URL url = null;
                 try {
                     StringBuilder urlAppender = new StringBuilder();
                     urlAppender.append(DANE_HYDROLOGICZNE_DOBOWE);
                     urlAppender.append(year);
-                    urlAppender.append("/");
+                    urlAppender.append(System.getProperty("file.separator"));
                     urlAppender.append(fileName);
-                    System.out.println(urlAppender.toString());
                     url = new URL(urlAppender.toString());
                     HttpURLConnection httpConnection = (HttpURLConnection) url.openConnection();
                     int statusCode = httpConnection.getResponseCode(); //get response code
-                    System.out.println(statusCode);
                     if (statusCode != HttpURLConnection.HTTP_OK) { // if file downloadStream moved, then pick new URL
                         String returnedUrl = httpConnection.getHeaderField("Location");
                         url = new URL(returnedUrl);
@@ -80,18 +83,17 @@ public class FIleDownloader extends Task {
                     bufferedInputStream.close();
                     outputStream.close();
                 } catch (Exception e) {
-                    System.out.println("brak pliku " + e.getMessage());
+                    if (url != null) errorList.add(e.getCause() + " link: " + url.toString());
+                    else errorList.add(e.getCause() + " link: " + "is null");
                 }
             }
         }
         File zippedFilesDirectory = new File(PATHNAME);
         List<File> zippedFileList = Arrays.stream(zippedFilesDirectory.listFiles()).filter(FIleDownloader::test).collect(Collectors.toList());
-        zippedFileList.forEach(System.out::println);
         zippedFileList.forEach(file -> {
             ZipInputStream is = null;
             OutputStream os = null;
             try {
-                // Initiate the ZipFile
                 ZipFile zipFile = new ZipFile(file);
                 // Get a list of FileHeader. FileHeader is the header information
                 // for all the files in the ZipFile
@@ -108,7 +110,7 @@ public class FIleDownloader extends Task {
                         is = zipFile.getInputStream(fileHeader);
                         // Initialize the output stream
                         os = new FileOutputStream(outFile);
-                        int readLen = -1;
+                        int readLen;
                         byte[] buff = new byte[4096];
                         // Loop until End of File and write the contents to the
                         // output stream
@@ -118,29 +120,36 @@ public class FIleDownloader extends Task {
 
                         closeFileHandlers(is, os);
                     } else {
-                        System.err.println("fileheader is null. Shouldn't be here");
+                        errorList.add("plik uszkodzony lub pusty: " + file.getName());
                     }
                 }
             } catch (Exception e) {
-                e.printStackTrace();
+                errorList.add(e.getMessage() + " plik: " + file.getName());
             } finally {
                 try {
                     closeFileHandlers(is, os);
                 } catch (IOException e) {
-                    e.printStackTrace();
+                    errorList.add(e.getMessage() + "plik: " + file.getName());
                 }
             }
         });
+        showAlertWindow();
+    }
+
+    private void showAlertWindow() {
+        if (!errorList.isEmpty()) {
+            Platform.runLater(() -> {
+                Alert alert = new Alert(Alert.AlertType.ERROR);
+                TextArea textArea = new TextArea();
+                errorList.forEach(line -> textArea.setText(textArea.getText() + line + "\n"));
+                alert.getDialogPane().setContent(textArea);
+            });
+        }
     }
 
     private void closeFileHandlers(ZipInputStream is, OutputStream os)
             throws IOException {
-        if (os != null) {
-            os.close();
-        }
-
-        if (is != null) {
-            is.close();
-        }
+        if (os != null) os.close();
+        if (is != null) is.close();
     }
 }

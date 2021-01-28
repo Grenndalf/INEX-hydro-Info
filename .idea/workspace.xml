@@ -23,38 +23,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FIleDownloader.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileDownloaderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ExportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ExportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/TownQueries.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/TownDBActions.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/Town.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/Alphabet.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/FileExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/FileImporter.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Export.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Export.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/RiverDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/RiverDBActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FIleDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FIleDownloader.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Import.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Css/stylesGeneral.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Css/stylesGeneral.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/TownQueries.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/TownDBActions.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/Town.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Utils/Alphabet.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Utils/FileExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Utils/FileExporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Utils/FileImporter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Export.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Export.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FIleDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FIleDownloader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,7 +107,33 @@
       <recent name="RegularClasses.Multihreading" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Application.App">
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.App" />
+      <module name="wodowskazy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.App" />
+      <module name="wodowskazy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />

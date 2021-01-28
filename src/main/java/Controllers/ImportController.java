@@ -1,6 +1,9 @@
 package Controllers;
 
 
+import DButils.TableDBActions.GaugeDBActions;
+import DButils.TableDBActions.HibernateFactory;
+import DButils.TableDBActions.RiverDBActions;
 import RegularClasses.Multihreading.FIleDownloader;
 import RegularClasses.Multihreading.FileDownloaderService;
 import RegularClasses.Multihreading.FileImporter;
@@ -8,6 +11,7 @@ import RegularClasses.Multihreading.FileImporterService;
 import RegularClasses.Utils.Utils;
 import com.jfoenix.controls.JFXButton;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.layout.HBox;
@@ -18,6 +22,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import javax.persistence.EntityManager;
+import javax.persistence.Query;
 import java.io.File;
 import java.util.List;
 
@@ -32,14 +39,18 @@ public class ImportController {
     public static final String CSV = "*.csv";
     @FXML
     public JFXButton downloadButton;
-
     @FXML
-    private HBox barContainer;
+    public JFXButton removeDataButton;
     @FXML
     private JFXButton importButton;
+    @FXML
+    private HBox barContainer;
+    GaugeDBActions gaugeDBActions = new GaugeDBActions();
+    RiverDBActions riverDBActions  = new RiverDBActions();
 
     @FXML
     void initialize() {
+
         if (FileImporter.myTask != null) {
             showProgressBar();
         }
@@ -129,8 +140,11 @@ public class ImportController {
                     "pobieranie w toku.");
 
         }
+    }
 
-        //Platform.runLater(() -> alertTemplate(Alert.AlertType.CONFIRMATION,"test","test","test"));
+    public void removeDataFromDataBase() {
+        gaugeDBActions.removeAllMeasurements();
+        riverDBActions.removeAllRivers();
     }
 }
 

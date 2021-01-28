@@ -7,6 +7,7 @@ import org.apache.logging.log4j.Logger;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
+import javax.persistence.Query;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
@@ -105,6 +106,28 @@ public class GaugeDBActions implements GaugeQueries {
             }
         }
         return new ArrayList<>();
+    }
+
+    public int removeAllMeasurements() {
+        EntityManager em = emf.createEntityManager();
+        try {
+            em.getTransaction().begin();
+            String stringQuery = "DELETE FROM GaugeMeasurement";
+            Query query = em.createQuery(stringQuery);
+            final int i = query.executeUpdate();
+            em.getTransaction().commit();
+            return i;
+        } catch (Exception ex) {
+            em.getTransaction().rollback();
+            logger.info(ex.getMessage());
+        } finally {
+            if (em.getTransaction().isActive()) {
+                em.flush();
+                em.clear();
+                em.close();
+            }
+        }
+        return 0;
     }
 
 
