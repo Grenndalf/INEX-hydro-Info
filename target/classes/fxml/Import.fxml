@@ -1,23 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.jfoenix.controls.*?>
-<?import java.lang.*?>
-<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-
-<AnchorPane prefHeight="800.0" prefWidth="1160.0" stylesheets="@../Css/stylesGeneral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.ImportController">
+<AnchorPane prefHeight="800.0" prefWidth="1160.0" stylesheets="@../Css/stylesGeneral.css"
+            xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="Controllers.ImportController">
     <children>
-        <HBox fx:id="barContainer" alignment="CENTER" layoutX="230.0" layoutY="350.0" prefHeight="50.0" prefWidth="750.0" spacing="30.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="230.0" AnchorPane.rightAnchor="180.0" />
-        <JFXButton fx:id="importButton" alignment="CENTER" buttonType="RAISED" layoutX="511.0" layoutY="103.0" onAction="#chooseFiles" ripplerFill="#339e32" styleClass="buttonBG" stylesheets="@../Css/stylesGeneral.css" text="IMPORT" textAlignment="CENTER" textFill="WHITE" AnchorPane.topAnchor="100.0">
+        <HBox fx:id="barContainer" alignment="CENTER" layoutX="230.0" layoutY="350.0" prefHeight="50.0"
+              prefWidth="750.0" spacing="30.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="230.0"
+              AnchorPane.rightAnchor="180.0"/>
+        <JFXButton fx:id="importButton" alignment="CENTER" buttonType="RAISED" layoutX="389.0" layoutY="100.0"
+                   onAction="#chooseFiles" ripplerFill="#339e32" styleClass="buttonBG"
+                   stylesheets="@../Css/stylesGeneral.css" text="Importuj dane do bazy" textAlignment="CENTER"
+                   textFill="WHITE" AnchorPane.topAnchor="100.0">
             <font>
-                <Font name="System Bold" size="36.0" />
+                <Font name="System Bold" size="36.0"/>
             </font>
         </JFXButton>
-        <JFXButton fx:id="downloadButton" buttonType="RAISED" layoutX="101.0" layoutY="252.0" onAction="#download" ripplerFill="BLACK" text="download" textFill="#8800ff">
+        <JFXButton fx:id="downloadButton" buttonType="RAISED" layoutX="163.0" layoutY="119.0" onAction="#download"
+                   ripplerFill="#339e32" styleClass="buttonBG" text="pobierz dane" textFill="WHITE">
             <font>
-                <Font name="System Bold" size="18.0" />
+                <Font name="System Bold" size="18.0"/>
+            </font>
+        </JFXButton>
+        <JFXButton fx:id="removeDataButton" buttonType="RAISED" layoutX="895.0" layoutY="119.0"
+                   onAction="#removeDataFromDataBase" ripplerFill="#339e32" styleClass="buttonBG"
+                   text="Usuń dane z bazy" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0"/>
             </font>
         </JFXButton>
     </children>
