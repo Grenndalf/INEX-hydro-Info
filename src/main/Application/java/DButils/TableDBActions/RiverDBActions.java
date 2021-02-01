@@ -10,15 +10,21 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Set;
+import java.util.logging.FileHandler;
+import java.util.logging.Level;
+import java.util.logging.LogManager;
+import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class RiverDBActions implements RiverQueries {
 
     private final EntityManagerFactory emf = HibernateFactory.getEntityManagerFactory();
     private final BasicCrudOperator<River> crudOperator = new BasicCrudOperator<>();
+
 
     @Override
     public List<String> queryForAllRiverNames() {
@@ -66,20 +72,22 @@ public class RiverDBActions implements RiverQueries {
         }
     }
 
-    public void removeAllRivers() {
+    public int removeAllRivers() {
         EntityManager em = emf.createEntityManager();
         try {
             em.getTransaction().begin();
             String stringQuery = "DELETE FROM River";
             Query query = em.createQuery(stringQuery);
-            query.executeUpdate();
+            final int i = query.executeUpdate();
             em.getTransaction().commit();
+            return i;
         } catch (Exception ex) {
             em.getTransaction().rollback();
             ex.printStackTrace();
         } finally {
             if (em.getTransaction().isActive()) em.close();
         }
+        return 0;
     }
 
     @Override

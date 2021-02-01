@@ -9,11 +9,11 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.*;
 
-public class FileImporter extends Task {
+public class FileImporter extends Task<Void> {
 
     public static final String IN_FILE = "in.file";
     public static final String BUNDLES_LABELS = "Bundles.labels";
-    public static Task myTask;
+    public static Task<Void> myTask;
     public static List<String> importErrors = new ArrayList<>();
     private final GaugeDBActions gaugeDBActions = new GaugeDBActions();
     private final RiverDBActions riverDBActions = new RiverDBActions();
@@ -61,6 +61,8 @@ public class FileImporter extends Task {
 
             } catch (Exception e) {
                 e.printStackTrace();
+                System.out.println(e.getMessage());
+                System.out.println(e.getCause());
             }
         }
         riverList.removeAll(riverDBActions.queryForAllRiverNames());

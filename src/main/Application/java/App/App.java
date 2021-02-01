@@ -2,10 +2,14 @@ package App;
 
 import RegularClasses.Utils.Utils;
 import javafx.application.Application;
+import javafx.application.Platform;
+import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
+import javafx.stage.WindowEvent;
+
 import java.util.Locale;
 
 import static com.sun.org.apache.bcel.internal.util.SecuritySupport.getResourceAsStream;
@@ -24,6 +28,10 @@ public class App extends Application {
         Locale.setDefault(Locale.forLanguageTag("pl"));
         primaryStage.getIcons().add(new Image(INEX_LOGO_PNG));
         Scene scene = new Scene(initFxml().load());
+        primaryStage.setOnCloseRequest(t -> {
+            Platform.exit();
+            System.exit(0);
+        });
         primaryStage.setScene(scene);
         primaryStage.show();
     }

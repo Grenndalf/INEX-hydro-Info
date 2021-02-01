@@ -7,9 +7,9 @@
             xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="Controllers.ImportController">
     <children>
-        <HBox fx:id="barContainer" alignment="CENTER" layoutX="230.0" layoutY="350.0" prefHeight="50.0"
-              prefWidth="750.0" spacing="30.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="230.0"
-              AnchorPane.rightAnchor="180.0"/>
+        <HBox fx:id="barContainer" alignment="CENTER" layoutX="231.0" layoutY="350.0" prefHeight="50.0"
+              prefWidth="750.0" spacing="30.0" AnchorPane.bottomAnchor="400.0" AnchorPane.leftAnchor="231.0"
+              AnchorPane.rightAnchor="179.0"/>
         <JFXButton fx:id="importButton" alignment="CENTER" buttonType="RAISED" layoutX="389.0" layoutY="100.0"
                    onAction="#chooseFiles" ripplerFill="#339e32" styleClass="buttonBG"
                    stylesheets="@../Css/stylesGeneral.css" text="Importuj dane do bazy" textAlignment="CENTER"
@@ -31,5 +31,8 @@
                 <Font name="System Bold" size="18.0"/>
             </font>
         </JFXButton>
+        <HBox fx:id="downloadInfoContainer" alignment="CENTER" layoutX="231.0" layoutY="428.0" prefHeight="50.0"
+              prefWidth="750.0" spacing="30.0" AnchorPane.bottomAnchor="300.0" AnchorPane.leftAnchor="230.0"
+              AnchorPane.rightAnchor="180.0"/>
     </children>
 </AnchorPane>

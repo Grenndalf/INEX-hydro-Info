@@ -6,13 +6,12 @@
     <persistence-unit name="gaugePersistenceUnit" transaction-type="RESOURCE_LOCAL">
         <class>DButils.Tables.GaugeMeasurement</class>
         <class>DButils.Tables.River</class>
-        <class>DButils.Tables.Town</class>
         <properties>
             <property name="javax.persistence.jdbc.url" value="jdbc:sqlite:pomiary.db"/>
-            <property name="javax.persistence.jdbc.user" value="admina"/>
+            <property name="javax.persistence.jdbc.user" value="admin"/>
             <property name="javax.persistence.jdbc.password" value="admin"/>
             <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
-            <property name="javax.persistence.schema-generation.database.action" value="create"/>
+            <property name="javax.persistence.schema-generation.database.action" value="none"/>
             <property name="hibernate.hbm2ddl.auto" value="validate"/>
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="false"/>
@@ -21,9 +20,6 @@
             <property name="hibernate.jdbc.batch-size" value="50"/>
             <property name="hibernate.order-updates" value="true"/>
             <property name="hibernate.order-inserts" value="true"/>
-<!--            <property name="eclipselink.persistence-context.flush-mode" value="commit"/>-->
-<!--            <property name="eclipselink.persistence-context.close-on-commit" value="true"/>-->
-<!--            <property name="eclipselink.persistence-context.persist-on-commit" value="false"/>-->
             <property name="hibernate.highlight_sql" value="true"/>
         </properties>
     </persistence-unit>

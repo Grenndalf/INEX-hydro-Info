@@ -22,15 +22,52 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="">
+    <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
+      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/_template__of_Application.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/RiverDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/RiverDBActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FIleDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FIleDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/App/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ExportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ExportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Helpers/MyChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/Helpers/MyChart.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LeftMenuButtonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/LeftMenuButtonsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/GaugeQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Intefaces/GaugeQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/RiverQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Intefaces/RiverQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/BasicCrudOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/BasicCrudOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/HibernateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/HibernateFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/RiverDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/RiverDBActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/GaugeMeasurement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/River.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/River.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/ControllerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Mediator/ControllerHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/MediatorMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Mediator/MediatorMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FIleDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FIleDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileDownloaderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FileDownloaderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FileImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FileImporterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Utils/FileExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Import.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/App/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/HibernateFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/HibernateFactory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FIleDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FIleDownloader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +138,9 @@
       <recent name="C:\Users\Ugnip\OneDrive\Pulpit\wodowskazy\projekt\test\transfer\src\main\java\DButils\TableDBActions" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Ugnip\OneDrive\Pulpit\wodowskazy\projekt\test\transfer\src\main\Application" />
       <recent name="C:\Users\Ugnip\OneDrive\Pulpit\wodowskazy\projekt\test\transfer\src\main\resources" />
+      <recent name="C:\Users\Ugnip\OneDrive\Pulpit\wodowskazy\projekt\test\transfer\src" />
     </key>
     <key name="MoveInnerDialog.RECENTS_KEY">
       <recent name="RegularClasses.Multihreading" />
@@ -135,6 +174,54 @@
       </method>
     </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.App" />
+      <module name="wodowskazy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8 (2)" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
+      <option name="MAIN_CLASS_NAME" value="App.App" />
+      <module name="wodowskazy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application">
+      <option name="MAIN_CLASS_NAME" value="App.App" />
+      <module name="wodowskazy" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="App.App" />
+      <module name="wodowskazy" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="App.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="App.App" />
@@ -143,6 +230,9 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <list>
+      <item itemvalue="Application.App" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
@@ -158,6 +248,21 @@
       <option name="presentableId" value="Default" />
       <updated>1606996742201</updated>
     </task>
+    <task id="LOCAL-00001" summary="some small improvements">
+      <created>1611869219445</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1611869219445</updated>
+    </task>
+    <task id="LOCAL-00002" summary="some small improvements">
+      <created>1611869232428</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611869232428</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -171,6 +276,11 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="some small improvements" />
+    <MESSAGE value="&quot;downloading files improvement&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;downloading files improvement&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
