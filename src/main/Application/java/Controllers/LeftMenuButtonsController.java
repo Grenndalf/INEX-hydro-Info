@@ -36,7 +36,7 @@ public class LeftMenuButtonsController {
     }
 
     @FXML
-    void selectFileForImport() throws IOException {
+    void selectFileForImport() {
         ControllerHolder.getInstance().setMainContent("/FXML/Import.fxml");
     }
 
@@ -46,7 +46,7 @@ public class LeftMenuButtonsController {
     }
 
     @FXML
-    void showStatistics() throws IOException {
+    void showStatistics() {
         ControllerHolder.getInstance().setMainContent("/FXML/Statistics.fxml");
     }
 

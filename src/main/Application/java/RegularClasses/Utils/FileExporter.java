@@ -18,16 +18,16 @@ import java.util.stream.Collectors;
 public class FileExporter {
 
 
-    public static final String DANE_CA£OŒÆ = "Dane Ca³oœæ";
-    public static final String DANE_UPORZ¥DKOWANE = "Dane Uporz¹dkowane";
+    public static final String DANE_CA£OSC = "Dane Ca³oœæ";
+    public static final String DANE_UPORZADKOWANE = "Dane Uporz¹dkowane";
     public static final String DANE_POSORTOWANE = "Dane Posortowane";
     public static final String XLSX = ".xlsx";
 
     public void createWorkBook(List<GaugeMeasurement> spreadsheetData, String absolutePath) {
 
         XSSFWorkbook workbook = new XSSFWorkbook();
-        XSSFSheet sheet1 = workbook.createSheet(DANE_CA£OŒÆ);
-        XSSFSheet sheet2 = workbook.createSheet(DANE_UPORZ¥DKOWANE);
+        XSSFSheet sheet1 = workbook.createSheet(DANE_CA£OSC);
+        XSSFSheet sheet2 = workbook.createSheet(DANE_UPORZADKOWANE);
         XSSFSheet sheet3 = workbook.createSheet(DANE_POSORTOWANE);
         Map<Short, List<Double>> dataMap = new HashMap<>();
 

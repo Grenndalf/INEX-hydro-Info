@@ -57,7 +57,5 @@ public class MainController {
     }
 
     public void runtest(ActionEvent event) {
-        char a = 'a';
-        System.out.println((char) a+1);
     }
 }

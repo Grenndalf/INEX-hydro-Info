@@ -6,7 +6,7 @@ import javafx.concurrent.Task;
 import java.io.File;
 import java.util.*;
 
-public class FileImporterService extends Service {
+public class FileImporterService extends Service<Void> {
 
     private final List<File> fileList;
 
@@ -15,7 +15,7 @@ public class FileImporterService extends Service {
     }
 
     @Override
-    protected Task createTask() {
+    protected Task<Void> createTask() {
         FileImporter fileImporter = new FileImporter();
         fileImporter.setFileList(fileList);
         return fileImporter;
