@@ -1,10 +1,8 @@
 package Controllers;
 
 import DButils.TableDBActions.GaugeDBActions;
-import DButils.TableDBActions.HibernateFactory;
-import DButils.Tables.River;
-import RegularClasses.Mediator.ControllerHolder;
-import RegularClasses.Utils.Utils;
+import Others.Mediator.ControllerHolder;
+import Others.Utils.Utils;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -13,10 +11,7 @@ import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 
-import javax.persistence.EntityManager;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainController {
 
@@ -56,6 +51,4 @@ public class MainController {
         loadedContent.prefHeightProperty().bind(contentContainer.heightProperty());
     }
 
-    public void runtest(ActionEvent event) {
-    }
 }

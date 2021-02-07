@@ -1,9 +1,11 @@
-package RegularClasses.Multihreading;
+package Others.Multihreading;
 
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.TableDBActions.RiverDBActions;
 import DButils.Tables.GaugeMeasurement;
 import javafx.concurrent.Task;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.io.File;
 import java.io.FileReader;
@@ -24,7 +26,7 @@ public class FileImporter extends Task<Void> {
     public void setFileList(List<File> fileList) {
         this.fileList = fileList;
     }
-
+    private static final Logger logger = LogManager.getLogger(FileImporter.class);
     @Override
     public Void call() {
         myTask = this;
@@ -35,8 +37,7 @@ public class FileImporter extends Task<Void> {
         ) {
             List<GaugeMeasurement> gaugeMeasurementsListFromOneFile = new ArrayList<>();
 
-            try {
-                Scanner scanner = new Scanner(new FileReader(file));
+            try (Scanner scanner = new Scanner(new FileReader(file))){
                 while (scanner.hasNextLine()) {
                     String lineToAdd = scanner.nextLine();
                     GaugeMeasurement gaugeMeasurement = new GaugeMeasurement();
@@ -51,9 +52,7 @@ public class FileImporter extends Task<Void> {
                                 + "\n");
                     }
                 }
-
                 if (isCancelled()) break;
-
                 saveGaugeList(gaugeMeasurementsListFromOneFile);
 
                 progress++;
@@ -61,8 +60,7 @@ public class FileImporter extends Task<Void> {
 
             } catch (Exception e) {
                 e.printStackTrace();
-                System.out.println(e.getMessage());
-                System.out.println(e.getCause());
+                e.getCause();
             }
         }
         riverList.removeAll(riverDBActions.queryForAllRiverNames());

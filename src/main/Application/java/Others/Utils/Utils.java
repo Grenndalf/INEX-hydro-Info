@@ -1,4 +1,4 @@
-package RegularClasses.Utils;
+package Others.Utils;
 
 import java.util.ResourceBundle;
 

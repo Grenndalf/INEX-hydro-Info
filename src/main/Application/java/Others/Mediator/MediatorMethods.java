@@ -1,4 +1,4 @@
-package RegularClasses.Mediator;
+package Others.Mediator;
 
 import Controllers.LeftMenuButtonsController;
 import Controllers.MainController;

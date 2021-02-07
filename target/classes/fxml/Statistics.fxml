@@ -23,7 +23,7 @@
                                       prefWidth="1120.0" style="-fx-border-radius: 20; -fx-border-color: #797979;"
                                       AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
                                       AnchorPane.topAnchor="20.0"/>
-                                <VBox layoutX="20.0" layoutY="468.0" prefHeight="280.0" prefWidth="220.0"
+                                <VBox layoutX="20.0" layoutY="470.0" prefHeight="280.0" prefWidth="220.0"
                                       spacing="20.0">
                                     <children>
                                         <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0"
@@ -101,12 +101,19 @@
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="dane szczegółowe">
+                <Tab fx:id="secLineChartTab" text="dane szczegółowe">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Pane fx:id="secLineChartContainer" layoutX="20.0" layoutY="25.0" prefHeight="400.0"
+                                      prefWidth="1120.0" style="-fx-border-radius: 20; -fx-border-color: #797979;"
+                                      AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
+                                      AnchorPane.topAnchor="25.0"/>
+                            </children>
+                        </AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="cośtam jeszcze">
+                <Tab text="TODO">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
                     </content>

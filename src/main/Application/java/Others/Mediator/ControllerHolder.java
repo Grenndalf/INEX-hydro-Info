@@ -1,11 +1,11 @@
-package RegularClasses.Mediator;
+package Others.Mediator;
 
 import Controllers.LeftMenuButtonsController;
 import Controllers.MainController;
 
 import java.io.IOException;
 
-public class ControllerHolder implements MediatorMethods {
+public final class ControllerHolder implements MediatorMethods {
 
     private MainController mainController;
     private LeftMenuButtonsController menuButtonsController;

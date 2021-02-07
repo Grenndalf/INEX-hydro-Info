@@ -1,12 +1,10 @@
 package Controllers;
 
-import RegularClasses.Mediator.ControllerHolder;
+import Others.Mediator.ControllerHolder;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.AnchorPane;
-
-import java.io.IOException;
 
 public class LeftMenuButtonsController {
     @FXML

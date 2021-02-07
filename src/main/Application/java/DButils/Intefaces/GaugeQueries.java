@@ -13,4 +13,7 @@ public interface GaugeQueries {
 
     List<GaugeMeasurement> queryForAllGaugeMeasurements();
 
+    int removeAllMeasurements();
+
+    List<String> getTownListOfSelectedRiver(String riverName);
 }

@@ -16,7 +16,10 @@ import static java.lang.Double.parseDouble;
 @Setter
 @NoArgsConstructor
 @Entity
-@Table(name = "Wszystkie_Dane", indexes = @Index(columnList = "Nazwa_wodowskazu", name = "GaugeIndex"))
+@Table(name = "Wszystkie_Dane", indexes = {
+        @Index(columnList = "Nazwa_wodowskazu", name = "GaugeNameIndex"),
+        @Index(columnList = "Nazwa_rzeki", name = "RiverNameIndex")
+        })
 public class GaugeMeasurement {
 
     @Id
@@ -52,16 +55,16 @@ public class GaugeMeasurement {
     @Column(name = "Dane3")
     private double data3;
 
-    public void tryGetGaugeMeasurement(String[] fileLine) throws NumberFormatException {
-        this.setGaugeID(Integer.parseInt(fileLine[0].replace("\"", "").trim()));
-        this.setGaugeName(fileLine[1].replace("\"", "").trim());
-        this.setRiverName(fileLine[2].replace("\"", "").trim());
-        this.setMeasurementYear(Short.parseShort(fileLine[3].replace("\"", "").trim()));
-        this.setMeasurementMonth(Short.parseShort(fileLine[4].replace("\"", "").trim()));
-        this.setMeasurementDay(Short.parseShort(fileLine[5].replace("\"", "").trim()));
-        this.setData1(parseDouble(fileLine[6].replace("\"", "").trim()));
-        this.setData2(parseDouble(fileLine[7].replace("\"", "").trim()));
-        this.setData3(parseDouble(fileLine[8].replace("\"", "").trim()));
+    public void tryGetGaugeMeasurement (String[] fileLine) throws NumberFormatException {
+        this.setGaugeID (Integer.parseInt (fileLine[0].replace ("\"", "").trim ()));
+        this.setGaugeName (fileLine[1].replace ("\"", "").trim ());
+        this.setRiverName (fileLine[2].replace ("\"", "").trim ());
+        this.setMeasurementYear (Short.parseShort (fileLine[3].replace ("\"", "").trim ()));
+        this.setMeasurementMonth (Short.parseShort (fileLine[4].replace ("\"", "").trim ()));
+        this.setMeasurementDay (Short.parseShort (fileLine[5].replace ("\"", "").trim ()));
+        this.setData1 (parseDouble (fileLine[6].replace ("\"", "").trim ()));
+        this.setData2 (parseDouble (fileLine[7].replace ("\"", "").trim ()));
+        this.setData3 (parseDouble (fileLine[8].replace ("\"", "").trim ()));
     }
 
 }

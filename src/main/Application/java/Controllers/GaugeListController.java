@@ -3,7 +3,7 @@ package Controllers;
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.TableDBActions.RiverDBActions;
 import DButils.Tables.River;
-import RegularClasses.Mediator.ControllerHolder;
+import Others.Mediator.ControllerHolder;
 import com.jfoenix.controls.JFXListView;
 import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
@@ -14,10 +14,14 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.FlowPane;
 
+import java.util.ArrayList;
 import java.util.HashSet;
 
 public class GaugeListController {
     private static final String TOGGLE_BUTTONS = "toggleButtons";
+    ToggleGroup toggleGroup = new ToggleGroup ();
+    RiverDBActions riverDBActions = new RiverDBActions ();
+    GaugeDBActions gaugeDBActions = new GaugeDBActions ();
     @FXML
     private FlowPane buttonContainer;
     @FXML
@@ -26,61 +30,58 @@ public class GaugeListController {
     private Label gaugeQuantity;
     @FXML
     private JFXListView<River> riverListView;
-    ToggleGroup toggleGroup = new ToggleGroup();
-    RiverDBActions riverDBActions = new RiverDBActions();
-    GaugeDBActions gaugeDBActions = new GaugeDBActions();
 
     @FXML
-    void initialize() {
-        createButtons();
-        addRiverListViewListener();
-        addTownListViewListener();
+    void initialize () {
+        createButtons ();
+        addRiverListViewListener ();
+        addTownListViewListener ();
     }
 
-    private void createButtons() {
-        final char[] input = "A¥BCDEÊFGHIJKL£MNOÓPRSŒTUWYZ¯".toCharArray();
+    private void createButtons () {
+        final char[] input = "A¥BCDEÊFGHIJKL£MNOÓPRSŒTUWYZ¯".toCharArray ();
         for (char c : input) {
-            ToggleButton button = new ToggleButton(String.valueOf(c));
-            button.getStyleClass().add(TOGGLE_BUTTONS);
-            addToggleButtonListener();
-            setListViewValuesOnClickedButton(button);
-            toggleGroup.getToggles().add(button);
-            buttonContainer.getChildren().add(button);
+            ToggleButton button = new ToggleButton (String.valueOf (c));
+            button.getStyleClass ().add (TOGGLE_BUTTONS);
+            addToggleButtonListener ();
+            setListViewValuesOnClickedButton (button);
+            toggleGroup.getToggles ().add (button);
+            buttonContainer.getChildren ().add (button);
         }
     }
 
-    private void setListViewValuesOnClickedButton(ToggleButton button) {
-        button.setOnMouseClicked(event -> {
+    private void setListViewValuesOnClickedButton (ToggleButton button) {
+        button.setOnMouseClicked (event -> {
             ObservableList<River> items = FXCollections.observableArrayList
-                    (riverDBActions.queryForOneRiverStartedWithLetter(button.getText()));
-            riverListView.setItems(items);
-            gaugeQuantity.setText(String.valueOf(items.size()));
+                    (riverDBActions.queryForOneRiverStartedWithLetter (button.getText ()));
+            riverListView.setItems (items);
+            gaugeQuantity.setText (String.valueOf (items.size ()));
         });
     }
 
-    private void addTownListViewListener() {
-        townListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) ->
-                ControllerHolder.getInstance().setTownName(newValue));
+    private void addTownListViewListener () {
+        townListView.getSelectionModel ().selectedItemProperty ().addListener ((observable, oldValue, newValue) ->
+                                                                                       ControllerHolder.getInstance ().setTownName (newValue));
     }
 
-    private void addRiverListViewListener() {
-        riverListView.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
+    private void addRiverListViewListener () {
+        riverListView.getSelectionModel ().selectedItemProperty ().addListener ((observable, oldValue, newValue) -> {
             if (newValue != null) {
                 ObservableList<String> items;
-                items = FXCollections.observableArrayList(
-                        new HashSet<>(gaugeDBActions.getTownListOfSelectedRiver(newValue.getRiverName())));
-                townListView.setItems(items);
+                items = FXCollections.observableArrayList (
+                        new HashSet<> (gaugeDBActions.getTownListOfSelectedRiver (newValue.getRiverName ())));
+                townListView.setItems (items);
             } else {
-                ObservableList<String> emptyList = new SimpleListProperty<>();
-                townListView.setItems(emptyList);
+                ObservableList<String> emptyList = new SimpleListProperty<> ();
+                townListView.setItems (emptyList);
             }
         });
     }
 
-    private void addToggleButtonListener() {
-        toggleGroup.selectedToggleProperty().addListener((observable, oldValue, newValue) -> {
+    private void addToggleButtonListener () {
+        toggleGroup.selectedToggleProperty ().addListener ((observable, oldValue, newValue) -> {
             if (newValue == null) {
-                toggleGroup.selectToggle(oldValue);
+                toggleGroup.selectToggle (oldValue);
             }
         });
     }

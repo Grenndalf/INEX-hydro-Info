@@ -23,51 +23,62 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
-      <change afterPath="$PROJECT_DIR$/.idea/runConfigurations/_template__of_Application.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/FileExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/codeStyles/Project.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/_template__of_Application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/_template__of_Application.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/App/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ExportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ExportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/Helpers/MyChart.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/Helpers/MyChart.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/LeftMenuButtonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/LeftMenuButtonsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/GaugeQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Intefaces/GaugeQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Intefaces/RiverQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Intefaces/RiverQueries.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/BasicCrudOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/BasicCrudOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/HibernateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/HibernateFactory.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/TableDBActions/RiverDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/RiverDBActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/GaugeMeasurement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DButils/Tables/River.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/River.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/ControllerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Mediator/ControllerHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Mediator/MediatorMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Mediator/MediatorMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FIleDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FIleDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileDownloaderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FileDownloaderService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FileImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Multihreading/FileImporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FileImporterService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Utils/FileExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/RegularClasses/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/App/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/App/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ExportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ExportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/Helpers/MyChart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/LeftMenuButtonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/LeftMenuButtonsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/Intefaces/GaugeQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Intefaces/GaugeQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/GaugeMeasurement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Mediator/ControllerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/ControllerHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Mediator/MediatorMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/MediatorMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FIleDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FIleDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FileDownloaderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileDownloaderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Multihreading/FileImporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileImporterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Utils/FileExporter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/RegularClasses/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Import.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/App/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Helpers/MyChart$MyXaxis.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/Helpers/MyChart.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Css/stylesGeneral.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Css/stylesGeneral.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/GaugeQueries.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Intefaces/GaugeQueries.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/HibernateFactory.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/HibernateFactory.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/GaugeMeasurement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Tables/GaugeMeasurement.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FIleDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FIleDownloader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder$ControllerMediatorHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/ControllerHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Mediator/MediatorMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FIleDownloader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileDownloaderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Multihreading/FileImporterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Utils/FileExporter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/RegularClasses/Utils/Utils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/inputFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,9 +137,9 @@
     <property name="last.edited.regexp" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="SDKs" />
-    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.35287356" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -146,7 +157,7 @@
       <recent name="RegularClasses.Multihreading" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
+  <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.App" />
       <module name="wodowskazy" />
@@ -230,9 +241,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.App" />
-    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Application.App" />
@@ -262,7 +270,21 @@
       <option name="project" value="LOCAL" />
       <updated>1611869232428</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="&quot;downloading files improvement&quot;">
+      <created>1612171402820</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1612171402820</updated>
+    </task>
+    <task id="LOCAL-00004" summary="&quot;downloading files improvement&quot;">
+      <created>1612171422243</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1612171422243</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

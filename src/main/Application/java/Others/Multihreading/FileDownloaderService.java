@@ -1,4 +1,4 @@
-package RegularClasses.Multihreading;
+package Others.Multihreading;
 
 import javafx.concurrent.Service;
 import javafx.concurrent.Task;

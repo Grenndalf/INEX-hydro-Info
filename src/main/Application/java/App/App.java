@@ -1,14 +1,12 @@
 package App;
 
-import RegularClasses.Utils.Utils;
+import Others.Utils.Utils;
 import javafx.application.Application;
 import javafx.application.Platform;
-import javafx.event.EventHandler;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-import javafx.stage.WindowEvent;
 
 import java.util.Locale;
 
@@ -17,7 +15,7 @@ import static com.sun.org.apache.bcel.internal.util.SecuritySupport.getResourceA
 public class App extends Application {
 
 
-    private final String INEX_LOGO_PNG = "Images/inex_logo.png";
+    public static final String INEX_LOGO_PNG = "Images/inex_logo.png";
     private final String MAINFRAMEPATH = "/FXML/MainContainer.fxml";
 
     public static void main(String[] args) {

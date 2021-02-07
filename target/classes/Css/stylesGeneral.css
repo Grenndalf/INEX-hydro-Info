@@ -81,8 +81,34 @@
     -fx-background-color: rgba(33,118,165,0.8);
     jfx-rippler-fill:-fx-inex-green;
     }
+    .buttonBG:hover {
+        -fx-background-color: -fx-inex-green;
+        }
     .buttonGB {
     -fx-background-color: rgba(51,158,50,0.8);
     jfx-rippler-fill:-fx-inex-blue;
     }
+
+    .chart {
+    -fx-effect: dropshadow( gaussian , rgba(0,0,0,0.8) , 10, 0.0 , 0 , 2 );
+    }
+
+    .sec-line-chart .chart-line-symbol{
+            -fx-background-color: transparent;
+            -fx-background-radius: 0px;
+        }
+
+        .sec-line-chart .chart-series-line{
+                -fx-stroke-width: 2px;
+                -fx-stroke: -fx-inex-blue;
+            }
+    }
+    .text-area .text {
+        -fx-padding: 10px;
+        -fx-line-spacing: 5px;
+    }
+
+
+
+
 
