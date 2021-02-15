@@ -29,6 +29,7 @@ public class FIleDownloader extends Task<Void> {
     private static final String DANE_HYDROLOGICZNE_DOBOWE = "https://danepubliczne.imgw" +
             ".pl/data/dane_pomiarowo_obserwacyjne/dane_hydrologiczne/dobowe/";
     private static final Logger logger = LogManager.getLogger (FIleDownloader.class);
+    public static final String FILE_SEPARATOR = System.getProperty ("file.separator");
     public static String PATHNAME;
     public static ArrayList<String> errorList = new ArrayList<> ();
     public static Task<Void> myTask;
@@ -37,16 +38,15 @@ public class FIleDownloader extends Task<Void> {
         return file.getName ().matches ("(.*)\\.(zip)");
     }
 
+   private String beforeMonth;
     @Override
     public Void call () {
+
         myTask = this;
-        String beforeMonth;
-        updateMessage ("Pobieranie");
-        for (int year = 1950; year < Year.now ().getValue (); year++) {
+        for (int year = 1951; year < Year.now ().getValue (); year++) {
             if (isCancelled ()) break;
             for (int month = 1; month < 13; month++) {
                 if (isCancelled ()) break;
-                logger.info (year + " " + month);
                 beforeMonth = month < 10 ? "0" : "";
                 StringBuilder fileName = new StringBuilder ();
                 fileName.append ("codz_");
@@ -74,7 +74,7 @@ public class FIleDownloader extends Task<Void> {
                     }
                     InputStream downloadStream = httpConnection.getInputStream ();
                     BufferedInputStream bufferedInputStream = new BufferedInputStream (downloadStream);
-                    FileOutputStream outputStream = new FileOutputStream (PATHNAME + "/" + fileName);
+                    FileOutputStream outputStream = new FileOutputStream (new StringBuilder ().append (PATHNAME).append (FILE_SEPARATOR).append (fileName).toString ());
                     int bytes;
                     while ((bytes = bufferedInputStream.read ()) != -1) {
                         outputStream.write (bytes);
@@ -95,7 +95,6 @@ public class FIleDownloader extends Task<Void> {
         File zippedFilesDirectory = new File (PATHNAME);
         List<File> zippedFileList =
                 Arrays.stream (Objects.requireNonNull (zippedFilesDirectory.listFiles ())).filter (FIleDownloader::test).collect (Collectors.toList ());
-        updateMessage ("Rozpakowywanie");
         zippedFileList.forEach (file -> {
             ZipInputStream is = null;
             OutputStream os = null;
@@ -103,10 +102,9 @@ public class FIleDownloader extends Task<Void> {
                 ZipFile zipFile = new ZipFile (file);
                 List<FileHeader> fileHeaderList = zipFile.getFileHeaders ();
                 for (FileHeader fileHeader : fileHeaderList) {
-                    System.out.println ();
                     if (fileHeader != null) {
                         String outFilePath = PATHNAME
-                                + System.getProperty ("file.separator")
+                                + FILE_SEPARATOR
                                 + fileHeader.getFileName ();
                         File outFile = new File (outFilePath);
                         is = zipFile.getInputStream (fileHeader);

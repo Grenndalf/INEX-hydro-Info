@@ -218,7 +218,6 @@ public class ImportController {
 
     public void popup () {
         final Stage dialog = new Stage ();
-
         Button answerYes = new Button ("Tak");
         Button answerCancel = new Button ("Anuluj");
 
@@ -254,6 +253,15 @@ public class ImportController {
 //        dialogScene.getStylesheets ().add ("//style sheet of your choice");
         dialog.setScene (dialogScene);
         dialog.show ();
+        Runnable runnable = () -> {
+            try {
+                Thread.sleep (3000);
+                Platform.runLater (dialog::close);
+            } catch (InterruptedException e) {
+                e.printStackTrace ();
+            }
+        };
+        Platform.runLater (runnable);
     }
 }
 

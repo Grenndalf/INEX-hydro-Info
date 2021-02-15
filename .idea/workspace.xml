@@ -23,7 +23,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
+      <change afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Dialogs.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/App/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/App/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FIleDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FIleDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/App/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FIleDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Multihreading/FIleDownloader.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +244,21 @@
       <option name="project" value="LOCAL" />
       <updated>1612697648445</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="fxml update">
+      <created>1613076701508</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1613076701508</updated>
+    </task>
+    <task id="LOCAL-00007" summary="updates">
+      <created>1613076727537</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1613076727537</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -255,7 +277,9 @@
     <MESSAGE value="some small improvements" />
     <MESSAGE value="&quot;downloading files improvement&quot;" />
     <MESSAGE value="Added hover info in import module + other small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added hover info in import module + other small changes" />
+    <MESSAGE value="fxml update" />
+    <MESSAGE value="updates" />
+    <option name="LAST_COMMIT_MESSAGE" value="updates" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

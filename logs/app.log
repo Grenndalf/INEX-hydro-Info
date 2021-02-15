@@ -5285,3 +5285,2192 @@
 [INFO ] 2021-02-07 14:23:46.304 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
 [INFO ] 2021-02-07 14:23:46.639 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a82c5da] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 [INFO ] 2021-02-07 14:23:49.523 [JavaFX Application Thread] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-02-15 12:21:03.078 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:21:03.173 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:21:03.175 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:21:03.214 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:21:03.379 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:21:03.384 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:21:03.385 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:21:03.385 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:21:03.388 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:21:03.804 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:21:03.832 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:21:04.194 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1c731cd5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:23:17.504 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:23:17.584 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:23:17.587 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:23:17.628 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:23:17.762 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:23:17.766 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:23:17.767 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:23:17.767 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:23:17.770 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:23:18.161 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:23:18.180 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:23:18.481 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6a7905b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:24:10.099 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:24:10.169 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:24:10.171 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:24:10.203 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:24:10.305 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:24:10.308 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:24:10.308 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:24:10.308 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:24:10.310 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:24:10.690 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:24:10.709 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:24:11.002 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66a5e2b5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:25:35.805 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:25:35.875 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:25:35.876 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:25:35.911 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:25:36.039 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:25:36.044 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:25:36.044 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:25:36.044 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:25:36.046 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:25:36.438 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:25:36.456 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:25:36.751 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66a5e2b5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:26:21.928 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:26:22.009 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:26:22.010 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:26:22.050 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:26:22.188 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:26:22.192 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:26:22.192 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:26:22.192 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:26:22.194 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:26:22.573 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:26:22.593 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:26:22.899 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6a7905b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:26:51.288 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:26:51.343 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:26:51.345 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:26:51.375 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:26:51.523 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:26:51.526 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:26:51.527 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:26:51.527 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:26:51.529 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:26:51.933 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:26:51.952 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:26:52.242 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@5a82c5da] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:27:37.564 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:27:37.620 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:27:37.621 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:27:37.649 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:27:37.810 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:27:37.815 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:27:37.815 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:27:37.815 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:27:37.817 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:27:38.216 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:27:38.235 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:27:38.547 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66a5e2b5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:28:31.428 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:28:31.482 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:28:31.483 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:28:31.511 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:28:31.627 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:28:31.632 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:28:31.633 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:28:31.633 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:28:31.636 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:28:32.102 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:28:32.128 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:28:32.445 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1944b91f] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:28:55.508 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:28:55.570 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:28:55.571 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:28:55.601 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:28:55.744 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:28:55.748 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:28:55.748 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:28:55.748 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:28:55.750 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:28:56.130 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:28:56.149 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:28:56.439 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6a7905b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:36:07.750 [Thread-5] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-02-15 12:36:44.764 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:36:44.823 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:36:44.825 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:36:44.856 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:36:44.977 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:36:44.980 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:36:44.980 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:36:44.980 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:36:44.983 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:36:45.360 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:36:45.378 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:36:45.669 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6a7905b] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:36:53.721 [Thread-5] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-02-15 12:37:11.250 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:37:11.302 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:37:11.303 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:37:11.330 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:37:11.456 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:37:11.460 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:37:11.461 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:37:11.461 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:37:11.464 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:37:11.954 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:37:11.974 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:37:12.298 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66a5e2b5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:37:22.177 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:37:22.227 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:37:22.229 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:37:22.258 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:37:22.378 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:37:22.382 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:37:22.382 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:37:22.383 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:37:22.385 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:37:22.806 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:37:22.833 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:37:23.157 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66a5e2b5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:37:38.162 [Thread-5] FIleDownloader - 1950 1
+[WARN ] 2021-02-15 12:37:38.706 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:38.707 [Thread-5] FIleDownloader - 1950 2
+[WARN ] 2021-02-15 12:37:38.868 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:38.869 [Thread-5] FIleDownloader - 1950 3
+[WARN ] 2021-02-15 12:37:38.946 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:38.946 [Thread-5] FIleDownloader - 1950 4
+[WARN ] 2021-02-15 12:37:39.009 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.009 [Thread-5] FIleDownloader - 1950 5
+[WARN ] 2021-02-15 12:37:39.090 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.090 [Thread-5] FIleDownloader - 1950 6
+[WARN ] 2021-02-15 12:37:39.159 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.159 [Thread-5] FIleDownloader - 1950 7
+[WARN ] 2021-02-15 12:37:39.225 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.225 [Thread-5] FIleDownloader - 1950 8
+[WARN ] 2021-02-15 12:37:39.288 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.288 [Thread-5] FIleDownloader - 1950 9
+[WARN ] 2021-02-15 12:37:39.344 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.345 [Thread-5] FIleDownloader - 1950 10
+[WARN ] 2021-02-15 12:37:39.404 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.404 [Thread-5] FIleDownloader - 1950 11
+[WARN ] 2021-02-15 12:37:39.464 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.464 [Thread-5] FIleDownloader - 1950 12
+[WARN ] 2021-02-15 12:37:39.526 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.527 [Thread-5] FIleDownloader - 1951 1
+[INFO ] 2021-02-15 12:37:39.528 [Thread-5] FIleDownloader - 1951 2
+[INFO ] 2021-02-15 12:37:39.529 [Thread-5] FIleDownloader - 1951 3
+[INFO ] 2021-02-15 12:37:39.529 [Thread-5] FIleDownloader - 1951 4
+[INFO ] 2021-02-15 12:37:39.529 [Thread-5] FIleDownloader - 1951 5
+[INFO ] 2021-02-15 12:37:39.530 [Thread-5] FIleDownloader - 1951 6
+[INFO ] 2021-02-15 12:37:39.530 [Thread-5] FIleDownloader - 1951 7
+[INFO ] 2021-02-15 12:37:39.530 [Thread-5] FIleDownloader - 1951 8
+[INFO ] 2021-02-15 12:37:39.530 [Thread-5] FIleDownloader - 1951 9
+[INFO ] 2021-02-15 12:37:39.531 [Thread-5] FIleDownloader - 1951 10
+[INFO ] 2021-02-15 12:37:39.531 [Thread-5] FIleDownloader - 1951 11
+[INFO ] 2021-02-15 12:37:39.531 [Thread-5] FIleDownloader - 1951 12
+[INFO ] 2021-02-15 12:37:39.531 [Thread-5] FIleDownloader - 1952 1
+[INFO ] 2021-02-15 12:37:39.532 [Thread-5] FIleDownloader - 1952 2
+[INFO ] 2021-02-15 12:37:39.532 [Thread-5] FIleDownloader - 1952 3
+[INFO ] 2021-02-15 12:37:39.532 [Thread-5] FIleDownloader - 1952 4
+[INFO ] 2021-02-15 12:37:39.532 [Thread-5] FIleDownloader - 1952 5
+[INFO ] 2021-02-15 12:37:39.532 [Thread-5] FIleDownloader - 1952 6
+[INFO ] 2021-02-15 12:37:39.533 [Thread-5] FIleDownloader - 1952 7
+[INFO ] 2021-02-15 12:37:39.533 [Thread-5] FIleDownloader - 1952 8
+[INFO ] 2021-02-15 12:37:39.533 [Thread-5] FIleDownloader - 1952 9
+[INFO ] 2021-02-15 12:37:39.533 [Thread-5] FIleDownloader - 1952 10
+[INFO ] 2021-02-15 12:37:39.534 [Thread-5] FIleDownloader - 1952 11
+[INFO ] 2021-02-15 12:37:39.534 [Thread-5] FIleDownloader - 1952 12
+[INFO ] 2021-02-15 12:37:39.534 [Thread-5] FIleDownloader - 1953 1
+[INFO ] 2021-02-15 12:37:39.535 [Thread-5] FIleDownloader - 1953 2
+[INFO ] 2021-02-15 12:37:39.535 [Thread-5] FIleDownloader - 1953 3
+[INFO ] 2021-02-15 12:37:39.535 [Thread-5] FIleDownloader - 1953 4
+[INFO ] 2021-02-15 12:37:39.535 [Thread-5] FIleDownloader - 1953 5
+[INFO ] 2021-02-15 12:37:39.536 [Thread-5] FIleDownloader - 1953 6
+[INFO ] 2021-02-15 12:37:39.536 [Thread-5] FIleDownloader - 1953 7
+[INFO ] 2021-02-15 12:37:39.536 [Thread-5] FIleDownloader - 1953 8
+[INFO ] 2021-02-15 12:37:39.536 [Thread-5] FIleDownloader - 1953 9
+[INFO ] 2021-02-15 12:37:39.537 [Thread-5] FIleDownloader - 1953 10
+[INFO ] 2021-02-15 12:37:39.537 [Thread-5] FIleDownloader - 1953 11
+[INFO ] 2021-02-15 12:37:39.537 [Thread-5] FIleDownloader - 1953 12
+[INFO ] 2021-02-15 12:37:39.537 [Thread-5] FIleDownloader - 1954 1
+[INFO ] 2021-02-15 12:37:39.537 [Thread-5] FIleDownloader - 1954 2
+[INFO ] 2021-02-15 12:37:39.537 [Thread-5] FIleDownloader - 1954 3
+[INFO ] 2021-02-15 12:37:39.537 [Thread-5] FIleDownloader - 1954 4
+[INFO ] 2021-02-15 12:37:39.537 [Thread-5] FIleDownloader - 1954 5
+[INFO ] 2021-02-15 12:37:39.538 [Thread-5] FIleDownloader - 1954 6
+[INFO ] 2021-02-15 12:37:39.538 [Thread-5] FIleDownloader - 1954 7
+[INFO ] 2021-02-15 12:37:39.538 [Thread-5] FIleDownloader - 1954 8
+[INFO ] 2021-02-15 12:37:39.538 [Thread-5] FIleDownloader - 1954 9
+[INFO ] 2021-02-15 12:37:39.538 [Thread-5] FIleDownloader - 1954 10
+[INFO ] 2021-02-15 12:37:39.539 [Thread-5] FIleDownloader - 1954 11
+[INFO ] 2021-02-15 12:37:39.539 [Thread-5] FIleDownloader - 1954 12
+[INFO ] 2021-02-15 12:37:39.539 [Thread-5] FIleDownloader - 1955 1
+[INFO ] 2021-02-15 12:37:39.540 [Thread-5] FIleDownloader - 1955 2
+[INFO ] 2021-02-15 12:37:39.540 [Thread-5] FIleDownloader - 1955 3
+[INFO ] 2021-02-15 12:37:39.540 [Thread-5] FIleDownloader - 1955 4
+[INFO ] 2021-02-15 12:37:39.540 [Thread-5] FIleDownloader - 1955 5
+[INFO ] 2021-02-15 12:37:39.541 [Thread-5] FIleDownloader - 1955 6
+[INFO ] 2021-02-15 12:37:39.541 [Thread-5] FIleDownloader - 1955 7
+[INFO ] 2021-02-15 12:37:39.541 [Thread-5] FIleDownloader - 1955 8
+[INFO ] 2021-02-15 12:37:39.541 [Thread-5] FIleDownloader - 1955 9
+[INFO ] 2021-02-15 12:37:39.542 [Thread-5] FIleDownloader - 1955 10
+[INFO ] 2021-02-15 12:37:39.542 [Thread-5] FIleDownloader - 1955 11
+[INFO ] 2021-02-15 12:37:39.542 [Thread-5] FIleDownloader - 1955 12
+[INFO ] 2021-02-15 12:37:39.542 [Thread-5] FIleDownloader - 1956 1
+[INFO ] 2021-02-15 12:37:39.542 [Thread-5] FIleDownloader - 1956 2
+[INFO ] 2021-02-15 12:37:39.543 [Thread-5] FIleDownloader - 1956 3
+[INFO ] 2021-02-15 12:37:39.543 [Thread-5] FIleDownloader - 1956 4
+[INFO ] 2021-02-15 12:37:39.543 [Thread-5] FIleDownloader - 1956 5
+[INFO ] 2021-02-15 12:37:39.543 [Thread-5] FIleDownloader - 1956 6
+[INFO ] 2021-02-15 12:37:39.543 [Thread-5] FIleDownloader - 1956 7
+[INFO ] 2021-02-15 12:37:39.543 [Thread-5] FIleDownloader - 1956 8
+[INFO ] 2021-02-15 12:37:39.543 [Thread-5] FIleDownloader - 1956 9
+[INFO ] 2021-02-15 12:37:39.543 [Thread-5] FIleDownloader - 1956 10
+[INFO ] 2021-02-15 12:37:39.544 [Thread-5] FIleDownloader - 1956 11
+[INFO ] 2021-02-15 12:37:39.544 [Thread-5] FIleDownloader - 1956 12
+[INFO ] 2021-02-15 12:37:39.544 [Thread-5] FIleDownloader - 1957 1
+[INFO ] 2021-02-15 12:37:39.544 [Thread-5] FIleDownloader - 1957 2
+[INFO ] 2021-02-15 12:37:39.544 [Thread-5] FIleDownloader - 1957 3
+[INFO ] 2021-02-15 12:37:39.545 [Thread-5] FIleDownloader - 1957 4
+[INFO ] 2021-02-15 12:37:39.545 [Thread-5] FIleDownloader - 1957 5
+[INFO ] 2021-02-15 12:37:39.545 [Thread-5] FIleDownloader - 1957 6
+[INFO ] 2021-02-15 12:37:39.546 [Thread-5] FIleDownloader - 1957 7
+[INFO ] 2021-02-15 12:37:39.546 [Thread-5] FIleDownloader - 1957 8
+[INFO ] 2021-02-15 12:37:39.546 [Thread-5] FIleDownloader - 1957 9
+[INFO ] 2021-02-15 12:37:39.546 [Thread-5] FIleDownloader - 1957 10
+[INFO ] 2021-02-15 12:37:39.546 [Thread-5] FIleDownloader - 1957 11
+[INFO ] 2021-02-15 12:37:39.546 [Thread-5] FIleDownloader - 1957 12
+[INFO ] 2021-02-15 12:37:39.547 [Thread-5] FIleDownloader - 1958 1
+[INFO ] 2021-02-15 12:37:39.547 [Thread-5] FIleDownloader - 1958 2
+[INFO ] 2021-02-15 12:37:39.547 [Thread-5] FIleDownloader - 1958 3
+[INFO ] 2021-02-15 12:37:39.547 [Thread-5] FIleDownloader - 1958 4
+[INFO ] 2021-02-15 12:37:39.547 [Thread-5] FIleDownloader - 1958 5
+[INFO ] 2021-02-15 12:37:39.547 [Thread-5] FIleDownloader - 1958 6
+[INFO ] 2021-02-15 12:37:39.547 [Thread-5] FIleDownloader - 1958 7
+[INFO ] 2021-02-15 12:37:39.547 [Thread-5] FIleDownloader - 1958 8
+[INFO ] 2021-02-15 12:37:39.548 [Thread-5] FIleDownloader - 1958 9
+[INFO ] 2021-02-15 12:37:39.548 [Thread-5] FIleDownloader - 1958 10
+[INFO ] 2021-02-15 12:37:39.548 [Thread-5] FIleDownloader - 1958 11
+[INFO ] 2021-02-15 12:37:39.548 [Thread-5] FIleDownloader - 1958 12
+[INFO ] 2021-02-15 12:37:39.548 [Thread-5] FIleDownloader - 1959 1
+[INFO ] 2021-02-15 12:37:39.549 [Thread-5] FIleDownloader - 1959 2
+[INFO ] 2021-02-15 12:37:39.549 [Thread-5] FIleDownloader - 1959 3
+[INFO ] 2021-02-15 12:37:39.549 [Thread-5] FIleDownloader - 1959 4
+[INFO ] 2021-02-15 12:37:39.549 [Thread-5] FIleDownloader - 1959 5
+[INFO ] 2021-02-15 12:37:39.550 [Thread-5] FIleDownloader - 1959 6
+[INFO ] 2021-02-15 12:37:39.551 [Thread-5] FIleDownloader - 1959 7
+[INFO ] 2021-02-15 12:37:39.551 [Thread-5] FIleDownloader - 1959 8
+[INFO ] 2021-02-15 12:37:39.551 [Thread-5] FIleDownloader - 1959 9
+[INFO ] 2021-02-15 12:37:39.551 [Thread-5] FIleDownloader - 1959 10
+[INFO ] 2021-02-15 12:37:39.551 [Thread-5] FIleDownloader - 1959 11
+[INFO ] 2021-02-15 12:37:39.551 [Thread-5] FIleDownloader - 1959 12
+[INFO ] 2021-02-15 12:37:39.551 [Thread-5] FIleDownloader - 1960 1
+[INFO ] 2021-02-15 12:37:39.552 [Thread-5] FIleDownloader - 1960 2
+[INFO ] 2021-02-15 12:37:39.552 [Thread-5] FIleDownloader - 1960 3
+[INFO ] 2021-02-15 12:37:39.552 [Thread-5] FIleDownloader - 1960 4
+[INFO ] 2021-02-15 12:37:39.552 [Thread-5] FIleDownloader - 1960 5
+[INFO ] 2021-02-15 12:37:39.553 [Thread-5] FIleDownloader - 1960 6
+[INFO ] 2021-02-15 12:37:39.553 [Thread-5] FIleDownloader - 1960 7
+[INFO ] 2021-02-15 12:37:39.553 [Thread-5] FIleDownloader - 1960 8
+[INFO ] 2021-02-15 12:37:39.553 [Thread-5] FIleDownloader - 1960 9
+[INFO ] 2021-02-15 12:37:39.553 [Thread-5] FIleDownloader - 1960 10
+[INFO ] 2021-02-15 12:37:39.553 [Thread-5] FIleDownloader - 1960 11
+[INFO ] 2021-02-15 12:37:39.553 [Thread-5] FIleDownloader - 1960 12
+[INFO ] 2021-02-15 12:37:39.554 [Thread-5] FIleDownloader - 1961 1
+[INFO ] 2021-02-15 12:37:39.554 [Thread-5] FIleDownloader - 1961 2
+[INFO ] 2021-02-15 12:37:39.554 [Thread-5] FIleDownloader - 1961 3
+[INFO ] 2021-02-15 12:37:39.554 [Thread-5] FIleDownloader - 1961 4
+[INFO ] 2021-02-15 12:37:39.554 [Thread-5] FIleDownloader - 1961 5
+[INFO ] 2021-02-15 12:37:39.555 [Thread-5] FIleDownloader - 1961 6
+[INFO ] 2021-02-15 12:37:39.555 [Thread-5] FIleDownloader - 1961 7
+[INFO ] 2021-02-15 12:37:39.555 [Thread-5] FIleDownloader - 1961 8
+[INFO ] 2021-02-15 12:37:39.556 [Thread-5] FIleDownloader - 1961 9
+[INFO ] 2021-02-15 12:37:39.556 [Thread-5] FIleDownloader - 1961 10
+[INFO ] 2021-02-15 12:37:39.556 [Thread-5] FIleDownloader - 1961 11
+[INFO ] 2021-02-15 12:37:39.556 [Thread-5] FIleDownloader - 1961 12
+[INFO ] 2021-02-15 12:37:39.556 [Thread-5] FIleDownloader - 1962 1
+[INFO ] 2021-02-15 12:37:39.557 [Thread-5] FIleDownloader - 1962 2
+[INFO ] 2021-02-15 12:37:39.557 [Thread-5] FIleDownloader - 1962 3
+[INFO ] 2021-02-15 12:37:39.557 [Thread-5] FIleDownloader - 1962 4
+[INFO ] 2021-02-15 12:37:39.557 [Thread-5] FIleDownloader - 1962 5
+[INFO ] 2021-02-15 12:37:39.557 [Thread-5] FIleDownloader - 1962 6
+[INFO ] 2021-02-15 12:37:39.558 [Thread-5] FIleDownloader - 1962 7
+[INFO ] 2021-02-15 12:37:39.558 [Thread-5] FIleDownloader - 1962 8
+[INFO ] 2021-02-15 12:37:39.558 [Thread-5] FIleDownloader - 1962 9
+[INFO ] 2021-02-15 12:37:39.559 [Thread-5] FIleDownloader - 1962 10
+[INFO ] 2021-02-15 12:37:39.559 [Thread-5] FIleDownloader - 1962 11
+[INFO ] 2021-02-15 12:37:39.559 [Thread-5] FIleDownloader - 1962 12
+[INFO ] 2021-02-15 12:37:39.559 [Thread-5] FIleDownloader - 1963 1
+[INFO ] 2021-02-15 12:37:39.560 [Thread-5] FIleDownloader - 1963 2
+[INFO ] 2021-02-15 12:37:39.560 [Thread-5] FIleDownloader - 1963 3
+[INFO ] 2021-02-15 12:37:39.560 [Thread-5] FIleDownloader - 1963 4
+[INFO ] 2021-02-15 12:37:39.560 [Thread-5] FIleDownloader - 1963 5
+[INFO ] 2021-02-15 12:37:39.560 [Thread-5] FIleDownloader - 1963 6
+[INFO ] 2021-02-15 12:37:39.561 [Thread-5] FIleDownloader - 1963 7
+[INFO ] 2021-02-15 12:37:39.561 [Thread-5] FIleDownloader - 1963 8
+[INFO ] 2021-02-15 12:37:39.561 [Thread-5] FIleDownloader - 1963 9
+[INFO ] 2021-02-15 12:37:39.561 [Thread-5] FIleDownloader - 1963 10
+[INFO ] 2021-02-15 12:37:39.561 [Thread-5] FIleDownloader - 1963 11
+[INFO ] 2021-02-15 12:37:39.561 [Thread-5] FIleDownloader - 1963 12
+[INFO ] 2021-02-15 12:37:39.561 [Thread-5] FIleDownloader - 1964 1
+[INFO ] 2021-02-15 12:37:39.562 [Thread-5] FIleDownloader - 1964 2
+[INFO ] 2021-02-15 12:37:39.562 [Thread-5] FIleDownloader - 1964 3
+[INFO ] 2021-02-15 12:37:39.562 [Thread-5] FIleDownloader - 1964 4
+[INFO ] 2021-02-15 12:37:39.562 [Thread-5] FIleDownloader - 1964 5
+[INFO ] 2021-02-15 12:37:39.563 [Thread-5] FIleDownloader - 1964 6
+[INFO ] 2021-02-15 12:37:39.563 [Thread-5] FIleDownloader - 1964 7
+[INFO ] 2021-02-15 12:37:39.563 [Thread-5] FIleDownloader - 1964 8
+[INFO ] 2021-02-15 12:37:39.563 [Thread-5] FIleDownloader - 1964 9
+[INFO ] 2021-02-15 12:37:39.563 [Thread-5] FIleDownloader - 1964 10
+[INFO ] 2021-02-15 12:37:39.563 [Thread-5] FIleDownloader - 1964 11
+[INFO ] 2021-02-15 12:37:39.563 [Thread-5] FIleDownloader - 1964 12
+[INFO ] 2021-02-15 12:37:39.563 [Thread-5] FIleDownloader - 1965 1
+[INFO ] 2021-02-15 12:37:39.564 [Thread-5] FIleDownloader - 1965 2
+[INFO ] 2021-02-15 12:37:39.564 [Thread-5] FIleDownloader - 1965 3
+[INFO ] 2021-02-15 12:37:39.564 [Thread-5] FIleDownloader - 1965 4
+[INFO ] 2021-02-15 12:37:39.564 [Thread-5] FIleDownloader - 1965 5
+[INFO ] 2021-02-15 12:37:39.564 [Thread-5] FIleDownloader - 1965 6
+[INFO ] 2021-02-15 12:37:39.564 [Thread-5] FIleDownloader - 1965 7
+[INFO ] 2021-02-15 12:37:39.565 [Thread-5] FIleDownloader - 1965 8
+[INFO ] 2021-02-15 12:37:39.565 [Thread-5] FIleDownloader - 1965 9
+[INFO ] 2021-02-15 12:37:39.565 [Thread-5] FIleDownloader - 1965 10
+[INFO ] 2021-02-15 12:37:39.565 [Thread-5] FIleDownloader - 1965 11
+[INFO ] 2021-02-15 12:37:39.565 [Thread-5] FIleDownloader - 1965 12
+[INFO ] 2021-02-15 12:37:39.565 [Thread-5] FIleDownloader - 1966 1
+[INFO ] 2021-02-15 12:37:39.566 [Thread-5] FIleDownloader - 1966 2
+[INFO ] 2021-02-15 12:37:39.566 [Thread-5] FIleDownloader - 1966 3
+[INFO ] 2021-02-15 12:37:39.566 [Thread-5] FIleDownloader - 1966 4
+[INFO ] 2021-02-15 12:37:39.567 [Thread-5] FIleDownloader - 1966 5
+[INFO ] 2021-02-15 12:37:39.567 [Thread-5] FIleDownloader - 1966 6
+[INFO ] 2021-02-15 12:37:39.567 [Thread-5] FIleDownloader - 1966 7
+[INFO ] 2021-02-15 12:37:39.567 [Thread-5] FIleDownloader - 1966 8
+[INFO ] 2021-02-15 12:37:39.567 [Thread-5] FIleDownloader - 1966 9
+[INFO ] 2021-02-15 12:37:39.568 [Thread-5] FIleDownloader - 1966 10
+[INFO ] 2021-02-15 12:37:39.568 [Thread-5] FIleDownloader - 1966 11
+[INFO ] 2021-02-15 12:37:39.568 [Thread-5] FIleDownloader - 1966 12
+[INFO ] 2021-02-15 12:37:39.568 [Thread-5] FIleDownloader - 1967 1
+[INFO ] 2021-02-15 12:37:39.568 [Thread-5] FIleDownloader - 1967 2
+[INFO ] 2021-02-15 12:37:39.568 [Thread-5] FIleDownloader - 1967 3
+[INFO ] 2021-02-15 12:37:39.568 [Thread-5] FIleDownloader - 1967 4
+[INFO ] 2021-02-15 12:37:39.568 [Thread-5] FIleDownloader - 1967 5
+[INFO ] 2021-02-15 12:37:39.569 [Thread-5] FIleDownloader - 1967 6
+[INFO ] 2021-02-15 12:37:39.569 [Thread-5] FIleDownloader - 1967 7
+[INFO ] 2021-02-15 12:37:39.569 [Thread-5] FIleDownloader - 1967 8
+[INFO ] 2021-02-15 12:37:39.569 [Thread-5] FIleDownloader - 1967 9
+[INFO ] 2021-02-15 12:37:39.569 [Thread-5] FIleDownloader - 1967 10
+[INFO ] 2021-02-15 12:37:39.569 [Thread-5] FIleDownloader - 1967 11
+[INFO ] 2021-02-15 12:37:39.569 [Thread-5] FIleDownloader - 1967 12
+[INFO ] 2021-02-15 12:37:39.570 [Thread-5] FIleDownloader - 1968 1
+[INFO ] 2021-02-15 12:37:39.570 [Thread-5] FIleDownloader - 1968 2
+[INFO ] 2021-02-15 12:37:39.570 [Thread-5] FIleDownloader - 1968 3
+[INFO ] 2021-02-15 12:37:39.570 [Thread-5] FIleDownloader - 1968 4
+[INFO ] 2021-02-15 12:37:39.570 [Thread-5] FIleDownloader - 1968 5
+[INFO ] 2021-02-15 12:37:39.571 [Thread-5] FIleDownloader - 1968 6
+[INFO ] 2021-02-15 12:37:39.571 [Thread-5] FIleDownloader - 1968 7
+[INFO ] 2021-02-15 12:37:39.571 [Thread-5] FIleDownloader - 1968 8
+[INFO ] 2021-02-15 12:37:39.572 [Thread-5] FIleDownloader - 1968 9
+[INFO ] 2021-02-15 12:37:39.572 [Thread-5] FIleDownloader - 1968 10
+[INFO ] 2021-02-15 12:37:39.572 [Thread-5] FIleDownloader - 1968 11
+[INFO ] 2021-02-15 12:37:39.572 [Thread-5] FIleDownloader - 1968 12
+[INFO ] 2021-02-15 12:37:39.572 [Thread-5] FIleDownloader - 1969 1
+[INFO ] 2021-02-15 12:37:39.573 [Thread-5] FIleDownloader - 1969 2
+[INFO ] 2021-02-15 12:37:39.573 [Thread-5] FIleDownloader - 1969 3
+[INFO ] 2021-02-15 12:37:39.573 [Thread-5] FIleDownloader - 1969 4
+[INFO ] 2021-02-15 12:37:39.573 [Thread-5] FIleDownloader - 1969 5
+[INFO ] 2021-02-15 12:37:39.573 [Thread-5] FIleDownloader - 1969 6
+[INFO ] 2021-02-15 12:37:39.573 [Thread-5] FIleDownloader - 1969 7
+[INFO ] 2021-02-15 12:37:39.573 [Thread-5] FIleDownloader - 1969 8
+[INFO ] 2021-02-15 12:37:39.574 [Thread-5] FIleDownloader - 1969 9
+[INFO ] 2021-02-15 12:37:39.574 [Thread-5] FIleDownloader - 1969 10
+[INFO ] 2021-02-15 12:37:39.574 [Thread-5] FIleDownloader - 1969 11
+[INFO ] 2021-02-15 12:37:39.575 [Thread-5] FIleDownloader - 1969 12
+[INFO ] 2021-02-15 12:37:39.575 [Thread-5] FIleDownloader - 1970 1
+[INFO ] 2021-02-15 12:37:39.575 [Thread-5] FIleDownloader - 1970 2
+[INFO ] 2021-02-15 12:37:39.575 [Thread-5] FIleDownloader - 1970 3
+[INFO ] 2021-02-15 12:37:39.575 [Thread-5] FIleDownloader - 1970 4
+[INFO ] 2021-02-15 12:37:39.575 [Thread-5] FIleDownloader - 1970 5
+[INFO ] 2021-02-15 12:37:39.575 [Thread-5] FIleDownloader - 1970 6
+[INFO ] 2021-02-15 12:37:39.576 [Thread-5] FIleDownloader - 1970 7
+[INFO ] 2021-02-15 12:37:39.576 [Thread-5] FIleDownloader - 1970 8
+[INFO ] 2021-02-15 12:37:39.576 [Thread-5] FIleDownloader - 1970 9
+[INFO ] 2021-02-15 12:37:39.576 [Thread-5] FIleDownloader - 1970 10
+[INFO ] 2021-02-15 12:37:39.576 [Thread-5] FIleDownloader - 1970 11
+[INFO ] 2021-02-15 12:37:39.577 [Thread-5] FIleDownloader - 1970 12
+[INFO ] 2021-02-15 12:37:39.577 [Thread-5] FIleDownloader - 1971 1
+[INFO ] 2021-02-15 12:37:39.577 [Thread-5] FIleDownloader - 1971 2
+[INFO ] 2021-02-15 12:37:39.577 [Thread-5] FIleDownloader - 1971 3
+[INFO ] 2021-02-15 12:37:39.577 [Thread-5] FIleDownloader - 1971 4
+[INFO ] 2021-02-15 12:37:39.577 [Thread-5] FIleDownloader - 1971 5
+[INFO ] 2021-02-15 12:37:39.578 [Thread-5] FIleDownloader - 1971 6
+[INFO ] 2021-02-15 12:37:39.578 [Thread-5] FIleDownloader - 1971 7
+[INFO ] 2021-02-15 12:37:39.578 [Thread-5] FIleDownloader - 1971 8
+[INFO ] 2021-02-15 12:37:39.578 [Thread-5] FIleDownloader - 1971 9
+[INFO ] 2021-02-15 12:37:39.578 [Thread-5] FIleDownloader - 1971 10
+[INFO ] 2021-02-15 12:37:39.579 [Thread-5] FIleDownloader - 1971 11
+[INFO ] 2021-02-15 12:37:39.579 [Thread-5] FIleDownloader - 1971 12
+[INFO ] 2021-02-15 12:37:39.579 [Thread-5] FIleDownloader - 1972 1
+[INFO ] 2021-02-15 12:37:39.579 [Thread-5] FIleDownloader - 1972 2
+[INFO ] 2021-02-15 12:37:39.579 [Thread-5] FIleDownloader - 1972 3
+[INFO ] 2021-02-15 12:37:39.579 [Thread-5] FIleDownloader - 1972 4
+[INFO ] 2021-02-15 12:37:39.580 [Thread-5] FIleDownloader - 1972 5
+[INFO ] 2021-02-15 12:37:39.580 [Thread-5] FIleDownloader - 1972 6
+[INFO ] 2021-02-15 12:37:39.580 [Thread-5] FIleDownloader - 1972 7
+[INFO ] 2021-02-15 12:37:39.580 [Thread-5] FIleDownloader - 1972 8
+[INFO ] 2021-02-15 12:37:39.580 [Thread-5] FIleDownloader - 1972 9
+[INFO ] 2021-02-15 12:37:39.580 [Thread-5] FIleDownloader - 1972 10
+[INFO ] 2021-02-15 12:37:39.580 [Thread-5] FIleDownloader - 1972 11
+[INFO ] 2021-02-15 12:37:39.580 [Thread-5] FIleDownloader - 1972 12
+[INFO ] 2021-02-15 12:37:39.580 [Thread-5] FIleDownloader - 1973 1
+[INFO ] 2021-02-15 12:37:39.581 [Thread-5] FIleDownloader - 1973 2
+[INFO ] 2021-02-15 12:37:39.581 [Thread-5] FIleDownloader - 1973 3
+[INFO ] 2021-02-15 12:37:39.581 [Thread-5] FIleDownloader - 1973 4
+[INFO ] 2021-02-15 12:37:39.581 [Thread-5] FIleDownloader - 1973 5
+[INFO ] 2021-02-15 12:37:39.582 [Thread-5] FIleDownloader - 1973 6
+[INFO ] 2021-02-15 12:37:39.582 [Thread-5] FIleDownloader - 1973 7
+[INFO ] 2021-02-15 12:37:39.582 [Thread-5] FIleDownloader - 1973 8
+[INFO ] 2021-02-15 12:37:39.582 [Thread-5] FIleDownloader - 1973 9
+[INFO ] 2021-02-15 12:37:39.583 [Thread-5] FIleDownloader - 1973 10
+[INFO ] 2021-02-15 12:37:39.583 [Thread-5] FIleDownloader - 1973 11
+[INFO ] 2021-02-15 12:37:39.583 [Thread-5] FIleDownloader - 1973 12
+[INFO ] 2021-02-15 12:37:39.583 [Thread-5] FIleDownloader - 1974 1
+[INFO ] 2021-02-15 12:37:39.583 [Thread-5] FIleDownloader - 1974 2
+[INFO ] 2021-02-15 12:37:39.583 [Thread-5] FIleDownloader - 1974 3
+[INFO ] 2021-02-15 12:37:39.584 [Thread-5] FIleDownloader - 1974 4
+[INFO ] 2021-02-15 12:37:39.584 [Thread-5] FIleDownloader - 1974 5
+[INFO ] 2021-02-15 12:37:39.584 [Thread-5] FIleDownloader - 1974 6
+[INFO ] 2021-02-15 12:37:39.584 [Thread-5] FIleDownloader - 1974 7
+[INFO ] 2021-02-15 12:37:39.584 [Thread-5] FIleDownloader - 1974 8
+[INFO ] 2021-02-15 12:37:39.584 [Thread-5] FIleDownloader - 1974 9
+[INFO ] 2021-02-15 12:37:39.585 [Thread-5] FIleDownloader - 1974 10
+[INFO ] 2021-02-15 12:37:39.585 [Thread-5] FIleDownloader - 1974 11
+[INFO ] 2021-02-15 12:37:39.585 [Thread-5] FIleDownloader - 1974 12
+[INFO ] 2021-02-15 12:37:39.585 [Thread-5] FIleDownloader - 1975 1
+[INFO ] 2021-02-15 12:37:39.585 [Thread-5] FIleDownloader - 1975 2
+[INFO ] 2021-02-15 12:37:39.585 [Thread-5] FIleDownloader - 1975 3
+[INFO ] 2021-02-15 12:37:39.585 [Thread-5] FIleDownloader - 1975 4
+[INFO ] 2021-02-15 12:37:39.585 [Thread-5] FIleDownloader - 1975 5
+[INFO ] 2021-02-15 12:37:39.586 [Thread-5] FIleDownloader - 1975 6
+[INFO ] 2021-02-15 12:37:39.586 [Thread-5] FIleDownloader - 1975 7
+[INFO ] 2021-02-15 12:37:39.586 [Thread-5] FIleDownloader - 1975 8
+[INFO ] 2021-02-15 12:37:39.586 [Thread-5] FIleDownloader - 1975 9
+[INFO ] 2021-02-15 12:37:39.586 [Thread-5] FIleDownloader - 1975 10
+[INFO ] 2021-02-15 12:37:39.586 [Thread-5] FIleDownloader - 1975 11
+[INFO ] 2021-02-15 12:37:39.587 [Thread-5] FIleDownloader - 1975 12
+[INFO ] 2021-02-15 12:37:39.587 [Thread-5] FIleDownloader - 1976 1
+[INFO ] 2021-02-15 12:37:39.587 [Thread-5] FIleDownloader - 1976 2
+[INFO ] 2021-02-15 12:37:39.588 [Thread-5] FIleDownloader - 1976 3
+[INFO ] 2021-02-15 12:37:39.588 [Thread-5] FIleDownloader - 1976 4
+[INFO ] 2021-02-15 12:37:39.588 [Thread-5] FIleDownloader - 1976 5
+[INFO ] 2021-02-15 12:37:39.588 [Thread-5] FIleDownloader - 1976 6
+[INFO ] 2021-02-15 12:37:39.588 [Thread-5] FIleDownloader - 1976 7
+[INFO ] 2021-02-15 12:37:39.588 [Thread-5] FIleDownloader - 1976 8
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1976 9
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1976 10
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1976 11
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1976 12
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1977 1
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1977 2
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1977 3
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1977 4
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1977 5
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1977 6
+[INFO ] 2021-02-15 12:37:39.589 [Thread-5] FIleDownloader - 1977 7
+[INFO ] 2021-02-15 12:37:39.591 [Thread-5] FIleDownloader - 1977 8
+[INFO ] 2021-02-15 12:37:39.591 [Thread-5] FIleDownloader - 1977 9
+[INFO ] 2021-02-15 12:37:39.591 [Thread-5] FIleDownloader - 1977 10
+[INFO ] 2021-02-15 12:37:39.591 [Thread-5] FIleDownloader - 1977 11
+[INFO ] 2021-02-15 12:37:39.591 [Thread-5] FIleDownloader - 1977 12
+[INFO ] 2021-02-15 12:37:39.591 [Thread-5] FIleDownloader - 1978 1
+[INFO ] 2021-02-15 12:37:39.592 [Thread-5] FIleDownloader - 1978 2
+[INFO ] 2021-02-15 12:37:39.592 [Thread-5] FIleDownloader - 1978 3
+[INFO ] 2021-02-15 12:37:39.592 [Thread-5] FIleDownloader - 1978 4
+[INFO ] 2021-02-15 12:37:39.592 [Thread-5] FIleDownloader - 1978 5
+[INFO ] 2021-02-15 12:37:39.592 [Thread-5] FIleDownloader - 1978 6
+[INFO ] 2021-02-15 12:37:39.592 [Thread-5] FIleDownloader - 1978 7
+[INFO ] 2021-02-15 12:37:39.593 [Thread-5] FIleDownloader - 1978 8
+[INFO ] 2021-02-15 12:37:39.593 [Thread-5] FIleDownloader - 1978 9
+[INFO ] 2021-02-15 12:37:39.593 [Thread-5] FIleDownloader - 1978 10
+[INFO ] 2021-02-15 12:37:39.593 [Thread-5] FIleDownloader - 1978 11
+[INFO ] 2021-02-15 12:37:39.593 [Thread-5] FIleDownloader - 1978 12
+[INFO ] 2021-02-15 12:37:39.593 [Thread-5] FIleDownloader - 1979 1
+[INFO ] 2021-02-15 12:37:39.594 [Thread-5] FIleDownloader - 1979 2
+[INFO ] 2021-02-15 12:37:39.594 [Thread-5] FIleDownloader - 1979 3
+[INFO ] 2021-02-15 12:37:39.594 [Thread-5] FIleDownloader - 1979 4
+[INFO ] 2021-02-15 12:37:39.594 [Thread-5] FIleDownloader - 1979 5
+[INFO ] 2021-02-15 12:37:39.594 [Thread-5] FIleDownloader - 1979 6
+[INFO ] 2021-02-15 12:37:39.594 [Thread-5] FIleDownloader - 1979 7
+[INFO ] 2021-02-15 12:37:39.595 [Thread-5] FIleDownloader - 1979 8
+[INFO ] 2021-02-15 12:37:39.595 [Thread-5] FIleDownloader - 1979 9
+[INFO ] 2021-02-15 12:37:39.595 [Thread-5] FIleDownloader - 1979 10
+[INFO ] 2021-02-15 12:37:39.595 [Thread-5] FIleDownloader - 1979 11
+[INFO ] 2021-02-15 12:37:39.595 [Thread-5] FIleDownloader - 1979 12
+[INFO ] 2021-02-15 12:37:39.595 [Thread-5] FIleDownloader - 1980 1
+[INFO ] 2021-02-15 12:37:39.595 [Thread-5] FIleDownloader - 1980 2
+[INFO ] 2021-02-15 12:37:39.595 [Thread-5] FIleDownloader - 1980 3
+[INFO ] 2021-02-15 12:37:39.595 [Thread-5] FIleDownloader - 1980 4
+[INFO ] 2021-02-15 12:37:39.595 [Thread-5] FIleDownloader - 1980 5
+[INFO ] 2021-02-15 12:37:39.596 [Thread-5] FIleDownloader - 1980 6
+[INFO ] 2021-02-15 12:37:39.596 [Thread-5] FIleDownloader - 1980 7
+[INFO ] 2021-02-15 12:37:39.596 [Thread-5] FIleDownloader - 1980 8
+[INFO ] 2021-02-15 12:37:39.596 [Thread-5] FIleDownloader - 1980 9
+[INFO ] 2021-02-15 12:37:39.596 [Thread-5] FIleDownloader - 1980 10
+[INFO ] 2021-02-15 12:37:39.596 [Thread-5] FIleDownloader - 1980 11
+[INFO ] 2021-02-15 12:37:39.597 [Thread-5] FIleDownloader - 1980 12
+[INFO ] 2021-02-15 12:37:39.597 [Thread-5] FIleDownloader - 1981 1
+[INFO ] 2021-02-15 12:37:39.597 [Thread-5] FIleDownloader - 1981 2
+[INFO ] 2021-02-15 12:37:39.597 [Thread-5] FIleDownloader - 1981 3
+[INFO ] 2021-02-15 12:37:39.597 [Thread-5] FIleDownloader - 1981 4
+[INFO ] 2021-02-15 12:37:39.598 [Thread-5] FIleDownloader - 1981 5
+[INFO ] 2021-02-15 12:37:39.598 [Thread-5] FIleDownloader - 1981 6
+[INFO ] 2021-02-15 12:37:39.598 [Thread-5] FIleDownloader - 1981 7
+[INFO ] 2021-02-15 12:37:39.598 [Thread-5] FIleDownloader - 1981 8
+[INFO ] 2021-02-15 12:37:39.599 [Thread-5] FIleDownloader - 1981 9
+[INFO ] 2021-02-15 12:37:39.599 [Thread-5] FIleDownloader - 1981 10
+[INFO ] 2021-02-15 12:37:39.599 [Thread-5] FIleDownloader - 1981 11
+[INFO ] 2021-02-15 12:37:39.600 [Thread-5] FIleDownloader - 1981 12
+[INFO ] 2021-02-15 12:37:39.600 [Thread-5] FIleDownloader - 1982 1
+[INFO ] 2021-02-15 12:37:39.600 [Thread-5] FIleDownloader - 1982 2
+[INFO ] 2021-02-15 12:37:39.600 [Thread-5] FIleDownloader - 1982 3
+[INFO ] 2021-02-15 12:37:39.600 [Thread-5] FIleDownloader - 1982 4
+[INFO ] 2021-02-15 12:37:39.600 [Thread-5] FIleDownloader - 1982 5
+[INFO ] 2021-02-15 12:37:39.601 [Thread-5] FIleDownloader - 1982 6
+[INFO ] 2021-02-15 12:37:39.601 [Thread-5] FIleDownloader - 1982 7
+[INFO ] 2021-02-15 12:37:39.601 [Thread-5] FIleDownloader - 1982 8
+[INFO ] 2021-02-15 12:37:39.602 [Thread-5] FIleDownloader - 1982 9
+[INFO ] 2021-02-15 12:37:39.602 [Thread-5] FIleDownloader - 1982 10
+[INFO ] 2021-02-15 12:37:39.602 [Thread-5] FIleDownloader - 1982 11
+[INFO ] 2021-02-15 12:37:39.603 [Thread-5] FIleDownloader - 1982 12
+[INFO ] 2021-02-15 12:37:39.603 [Thread-5] FIleDownloader - 1983 1
+[INFO ] 2021-02-15 12:37:39.603 [Thread-5] FIleDownloader - 1983 2
+[INFO ] 2021-02-15 12:37:39.603 [Thread-5] FIleDownloader - 1983 3
+[INFO ] 2021-02-15 12:37:39.603 [Thread-5] FIleDownloader - 1983 4
+[INFO ] 2021-02-15 12:37:39.603 [Thread-5] FIleDownloader - 1983 5
+[INFO ] 2021-02-15 12:37:39.604 [Thread-5] FIleDownloader - 1983 6
+[INFO ] 2021-02-15 12:37:39.604 [Thread-5] FIleDownloader - 1983 7
+[INFO ] 2021-02-15 12:37:39.604 [Thread-5] FIleDownloader - 1983 8
+[INFO ] 2021-02-15 12:37:39.604 [Thread-5] FIleDownloader - 1983 9
+[INFO ] 2021-02-15 12:37:39.604 [Thread-5] FIleDownloader - 1983 10
+[INFO ] 2021-02-15 12:37:39.605 [Thread-5] FIleDownloader - 1983 11
+[INFO ] 2021-02-15 12:37:39.605 [Thread-5] FIleDownloader - 1983 12
+[INFO ] 2021-02-15 12:37:39.605 [Thread-5] FIleDownloader - 1984 1
+[INFO ] 2021-02-15 12:37:39.605 [Thread-5] FIleDownloader - 1984 2
+[INFO ] 2021-02-15 12:37:39.605 [Thread-5] FIleDownloader - 1984 3
+[INFO ] 2021-02-15 12:37:39.605 [Thread-5] FIleDownloader - 1984 4
+[INFO ] 2021-02-15 12:37:39.605 [Thread-5] FIleDownloader - 1984 5
+[INFO ] 2021-02-15 12:37:39.606 [Thread-5] FIleDownloader - 1984 6
+[INFO ] 2021-02-15 12:37:39.606 [Thread-5] FIleDownloader - 1984 7
+[INFO ] 2021-02-15 12:37:39.606 [Thread-5] FIleDownloader - 1984 8
+[INFO ] 2021-02-15 12:37:39.606 [Thread-5] FIleDownloader - 1984 9
+[INFO ] 2021-02-15 12:37:39.606 [Thread-5] FIleDownloader - 1984 10
+[INFO ] 2021-02-15 12:37:39.606 [Thread-5] FIleDownloader - 1984 11
+[INFO ] 2021-02-15 12:37:39.607 [Thread-5] FIleDownloader - 1984 12
+[INFO ] 2021-02-15 12:37:39.607 [Thread-5] FIleDownloader - 1985 1
+[INFO ] 2021-02-15 12:37:39.607 [Thread-5] FIleDownloader - 1985 2
+[INFO ] 2021-02-15 12:37:39.607 [Thread-5] FIleDownloader - 1985 3
+[INFO ] 2021-02-15 12:37:39.607 [Thread-5] FIleDownloader - 1985 4
+[INFO ] 2021-02-15 12:37:39.607 [Thread-5] FIleDownloader - 1985 5
+[INFO ] 2021-02-15 12:37:39.608 [Thread-5] FIleDownloader - 1985 6
+[INFO ] 2021-02-15 12:37:39.608 [Thread-5] FIleDownloader - 1985 7
+[INFO ] 2021-02-15 12:37:39.608 [Thread-5] FIleDownloader - 1985 8
+[INFO ] 2021-02-15 12:37:39.608 [Thread-5] FIleDownloader - 1985 9
+[INFO ] 2021-02-15 12:37:39.609 [Thread-5] FIleDownloader - 1985 10
+[INFO ] 2021-02-15 12:37:39.609 [Thread-5] FIleDownloader - 1985 11
+[INFO ] 2021-02-15 12:37:39.609 [Thread-5] FIleDownloader - 1985 12
+[INFO ] 2021-02-15 12:37:39.609 [Thread-5] FIleDownloader - 1986 1
+[INFO ] 2021-02-15 12:37:39.610 [Thread-5] FIleDownloader - 1986 2
+[INFO ] 2021-02-15 12:37:39.610 [Thread-5] FIleDownloader - 1986 3
+[INFO ] 2021-02-15 12:37:39.610 [Thread-5] FIleDownloader - 1986 4
+[INFO ] 2021-02-15 12:37:39.610 [Thread-5] FIleDownloader - 1986 5
+[INFO ] 2021-02-15 12:37:39.610 [Thread-5] FIleDownloader - 1986 6
+[INFO ] 2021-02-15 12:37:39.610 [Thread-5] FIleDownloader - 1986 7
+[INFO ] 2021-02-15 12:37:39.610 [Thread-5] FIleDownloader - 1986 8
+[INFO ] 2021-02-15 12:37:39.611 [Thread-5] FIleDownloader - 1986 9
+[INFO ] 2021-02-15 12:37:39.611 [Thread-5] FIleDownloader - 1986 10
+[INFO ] 2021-02-15 12:37:39.611 [Thread-5] FIleDownloader - 1986 11
+[INFO ] 2021-02-15 12:37:39.611 [Thread-5] FIleDownloader - 1986 12
+[INFO ] 2021-02-15 12:37:39.611 [Thread-5] FIleDownloader - 1987 1
+[INFO ] 2021-02-15 12:37:39.612 [Thread-5] FIleDownloader - 1987 2
+[INFO ] 2021-02-15 12:37:39.612 [Thread-5] FIleDownloader - 1987 3
+[INFO ] 2021-02-15 12:37:39.612 [Thread-5] FIleDownloader - 1987 4
+[INFO ] 2021-02-15 12:37:39.612 [Thread-5] FIleDownloader - 1987 5
+[INFO ] 2021-02-15 12:37:39.612 [Thread-5] FIleDownloader - 1987 6
+[INFO ] 2021-02-15 12:37:39.612 [Thread-5] FIleDownloader - 1987 7
+[INFO ] 2021-02-15 12:37:39.612 [Thread-5] FIleDownloader - 1987 8
+[INFO ] 2021-02-15 12:37:39.612 [Thread-5] FIleDownloader - 1987 9
+[INFO ] 2021-02-15 12:37:39.612 [Thread-5] FIleDownloader - 1987 10
+[INFO ] 2021-02-15 12:37:39.613 [Thread-5] FIleDownloader - 1987 11
+[INFO ] 2021-02-15 12:37:39.613 [Thread-5] FIleDownloader - 1987 12
+[INFO ] 2021-02-15 12:37:39.613 [Thread-5] FIleDownloader - 1988 1
+[INFO ] 2021-02-15 12:37:39.613 [Thread-5] FIleDownloader - 1988 2
+[INFO ] 2021-02-15 12:37:39.613 [Thread-5] FIleDownloader - 1988 3
+[INFO ] 2021-02-15 12:37:39.613 [Thread-5] FIleDownloader - 1988 4
+[INFO ] 2021-02-15 12:37:39.613 [Thread-5] FIleDownloader - 1988 5
+[INFO ] 2021-02-15 12:37:39.614 [Thread-5] FIleDownloader - 1988 6
+[INFO ] 2021-02-15 12:37:39.614 [Thread-5] FIleDownloader - 1988 7
+[INFO ] 2021-02-15 12:37:39.614 [Thread-5] FIleDownloader - 1988 8
+[INFO ] 2021-02-15 12:37:39.615 [Thread-5] FIleDownloader - 1988 9
+[INFO ] 2021-02-15 12:37:39.615 [Thread-5] FIleDownloader - 1988 10
+[INFO ] 2021-02-15 12:37:39.615 [Thread-5] FIleDownloader - 1988 11
+[INFO ] 2021-02-15 12:37:39.615 [Thread-5] FIleDownloader - 1988 12
+[INFO ] 2021-02-15 12:37:39.615 [Thread-5] FIleDownloader - 1989 1
+[INFO ] 2021-02-15 12:37:39.615 [Thread-5] FIleDownloader - 1989 2
+[INFO ] 2021-02-15 12:37:39.615 [Thread-5] FIleDownloader - 1989 3
+[INFO ] 2021-02-15 12:37:39.615 [Thread-5] FIleDownloader - 1989 4
+[INFO ] 2021-02-15 12:37:39.615 [Thread-5] FIleDownloader - 1989 5
+[INFO ] 2021-02-15 12:37:39.616 [Thread-5] FIleDownloader - 1989 6
+[INFO ] 2021-02-15 12:37:39.616 [Thread-5] FIleDownloader - 1989 7
+[INFO ] 2021-02-15 12:37:39.616 [Thread-5] FIleDownloader - 1989 8
+[INFO ] 2021-02-15 12:37:39.616 [Thread-5] FIleDownloader - 1989 9
+[INFO ] 2021-02-15 12:37:39.616 [Thread-5] FIleDownloader - 1989 10
+[INFO ] 2021-02-15 12:37:39.616 [Thread-5] FIleDownloader - 1989 11
+[INFO ] 2021-02-15 12:37:39.617 [Thread-5] FIleDownloader - 1989 12
+[INFO ] 2021-02-15 12:37:39.617 [Thread-5] FIleDownloader - 1990 1
+[INFO ] 2021-02-15 12:37:39.617 [Thread-5] FIleDownloader - 1990 2
+[INFO ] 2021-02-15 12:37:39.617 [Thread-5] FIleDownloader - 1990 3
+[INFO ] 2021-02-15 12:37:39.617 [Thread-5] FIleDownloader - 1990 4
+[INFO ] 2021-02-15 12:37:39.617 [Thread-5] FIleDownloader - 1990 5
+[INFO ] 2021-02-15 12:37:39.618 [Thread-5] FIleDownloader - 1990 6
+[INFO ] 2021-02-15 12:37:39.618 [Thread-5] FIleDownloader - 1990 7
+[INFO ] 2021-02-15 12:37:39.618 [Thread-5] FIleDownloader - 1990 8
+[INFO ] 2021-02-15 12:37:39.618 [Thread-5] FIleDownloader - 1990 9
+[INFO ] 2021-02-15 12:37:39.618 [Thread-5] FIleDownloader - 1990 10
+[INFO ] 2021-02-15 12:37:39.618 [Thread-5] FIleDownloader - 1990 11
+[INFO ] 2021-02-15 12:37:39.618 [Thread-5] FIleDownloader - 1990 12
+[INFO ] 2021-02-15 12:37:39.619 [Thread-5] FIleDownloader - 1991 1
+[INFO ] 2021-02-15 12:37:39.619 [Thread-5] FIleDownloader - 1991 2
+[INFO ] 2021-02-15 12:37:39.619 [Thread-5] FIleDownloader - 1991 3
+[INFO ] 2021-02-15 12:37:39.619 [Thread-5] FIleDownloader - 1991 4
+[INFO ] 2021-02-15 12:37:39.619 [Thread-5] FIleDownloader - 1991 5
+[INFO ] 2021-02-15 12:37:39.619 [Thread-5] FIleDownloader - 1991 6
+[INFO ] 2021-02-15 12:37:39.620 [Thread-5] FIleDownloader - 1991 7
+[INFO ] 2021-02-15 12:37:39.620 [Thread-5] FIleDownloader - 1991 8
+[INFO ] 2021-02-15 12:37:39.620 [Thread-5] FIleDownloader - 1991 9
+[INFO ] 2021-02-15 12:37:39.620 [Thread-5] FIleDownloader - 1991 10
+[INFO ] 2021-02-15 12:37:39.620 [Thread-5] FIleDownloader - 1991 11
+[INFO ] 2021-02-15 12:37:39.620 [Thread-5] FIleDownloader - 1991 12
+[INFO ] 2021-02-15 12:37:39.621 [Thread-5] FIleDownloader - 1992 1
+[INFO ] 2021-02-15 12:37:39.621 [Thread-5] FIleDownloader - 1992 2
+[INFO ] 2021-02-15 12:37:39.622 [Thread-5] FIleDownloader - 1992 3
+[INFO ] 2021-02-15 12:37:39.622 [Thread-5] FIleDownloader - 1992 4
+[INFO ] 2021-02-15 12:37:39.622 [Thread-5] FIleDownloader - 1992 5
+[INFO ] 2021-02-15 12:37:39.622 [Thread-5] FIleDownloader - 1992 6
+[INFO ] 2021-02-15 12:37:39.622 [Thread-5] FIleDownloader - 1992 7
+[INFO ] 2021-02-15 12:37:39.623 [Thread-5] FIleDownloader - 1992 8
+[INFO ] 2021-02-15 12:37:39.632 [Thread-5] FIleDownloader - 1992 9
+[INFO ] 2021-02-15 12:37:39.633 [Thread-5] FIleDownloader - 1992 10
+[INFO ] 2021-02-15 12:37:39.633 [Thread-5] FIleDownloader - 1992 11
+[INFO ] 2021-02-15 12:37:39.633 [Thread-5] FIleDownloader - 1992 12
+[INFO ] 2021-02-15 12:37:39.633 [Thread-5] FIleDownloader - 1993 1
+[INFO ] 2021-02-15 12:37:39.633 [Thread-5] FIleDownloader - 1993 2
+[INFO ] 2021-02-15 12:37:39.633 [Thread-5] FIleDownloader - 1993 3
+[INFO ] 2021-02-15 12:37:39.634 [Thread-5] FIleDownloader - 1993 4
+[INFO ] 2021-02-15 12:37:39.634 [Thread-5] FIleDownloader - 1993 5
+[INFO ] 2021-02-15 12:37:39.634 [Thread-5] FIleDownloader - 1993 6
+[INFO ] 2021-02-15 12:37:39.634 [Thread-5] FIleDownloader - 1993 7
+[INFO ] 2021-02-15 12:37:39.634 [Thread-5] FIleDownloader - 1993 8
+[INFO ] 2021-02-15 12:37:39.635 [Thread-5] FIleDownloader - 1993 9
+[INFO ] 2021-02-15 12:37:39.635 [Thread-5] FIleDownloader - 1993 10
+[INFO ] 2021-02-15 12:37:39.635 [Thread-5] FIleDownloader - 1993 11
+[INFO ] 2021-02-15 12:37:39.635 [Thread-5] FIleDownloader - 1993 12
+[INFO ] 2021-02-15 12:37:39.635 [Thread-5] FIleDownloader - 1994 1
+[INFO ] 2021-02-15 12:37:39.635 [Thread-5] FIleDownloader - 1994 2
+[INFO ] 2021-02-15 12:37:39.636 [Thread-5] FIleDownloader - 1994 3
+[INFO ] 2021-02-15 12:37:39.636 [Thread-5] FIleDownloader - 1994 4
+[INFO ] 2021-02-15 12:37:39.636 [Thread-5] FIleDownloader - 1994 5
+[INFO ] 2021-02-15 12:37:39.636 [Thread-5] FIleDownloader - 1994 6
+[INFO ] 2021-02-15 12:37:39.636 [Thread-5] FIleDownloader - 1994 7
+[INFO ] 2021-02-15 12:37:39.636 [Thread-5] FIleDownloader - 1994 8
+[INFO ] 2021-02-15 12:37:39.636 [Thread-5] FIleDownloader - 1994 9
+[INFO ] 2021-02-15 12:37:39.637 [Thread-5] FIleDownloader - 1994 10
+[INFO ] 2021-02-15 12:37:39.637 [Thread-5] FIleDownloader - 1994 11
+[INFO ] 2021-02-15 12:37:39.637 [Thread-5] FIleDownloader - 1994 12
+[INFO ] 2021-02-15 12:37:39.637 [Thread-5] FIleDownloader - 1995 1
+[INFO ] 2021-02-15 12:37:39.637 [Thread-5] FIleDownloader - 1995 2
+[INFO ] 2021-02-15 12:37:39.637 [Thread-5] FIleDownloader - 1995 3
+[INFO ] 2021-02-15 12:37:39.638 [Thread-5] FIleDownloader - 1995 4
+[INFO ] 2021-02-15 12:37:39.638 [Thread-5] FIleDownloader - 1995 5
+[INFO ] 2021-02-15 12:37:39.638 [Thread-5] FIleDownloader - 1995 6
+[INFO ] 2021-02-15 12:37:39.638 [Thread-5] FIleDownloader - 1995 7
+[INFO ] 2021-02-15 12:37:39.638 [Thread-5] FIleDownloader - 1995 8
+[INFO ] 2021-02-15 12:37:39.638 [Thread-5] FIleDownloader - 1995 9
+[INFO ] 2021-02-15 12:37:39.639 [Thread-5] FIleDownloader - 1995 10
+[INFO ] 2021-02-15 12:37:39.639 [Thread-5] FIleDownloader - 1995 11
+[INFO ] 2021-02-15 12:37:39.639 [Thread-5] FIleDownloader - 1995 12
+[INFO ] 2021-02-15 12:37:39.639 [Thread-5] FIleDownloader - 1996 1
+[INFO ] 2021-02-15 12:37:39.639 [Thread-5] FIleDownloader - 1996 2
+[INFO ] 2021-02-15 12:37:39.639 [Thread-5] FIleDownloader - 1996 3
+[INFO ] 2021-02-15 12:37:39.639 [Thread-5] FIleDownloader - 1996 4
+[INFO ] 2021-02-15 12:37:39.640 [Thread-5] FIleDownloader - 1996 5
+[INFO ] 2021-02-15 12:37:39.640 [Thread-5] FIleDownloader - 1996 6
+[INFO ] 2021-02-15 12:37:39.640 [Thread-5] FIleDownloader - 1996 7
+[INFO ] 2021-02-15 12:37:39.640 [Thread-5] FIleDownloader - 1996 8
+[INFO ] 2021-02-15 12:37:39.640 [Thread-5] FIleDownloader - 1996 9
+[INFO ] 2021-02-15 12:37:39.640 [Thread-5] FIleDownloader - 1996 10
+[INFO ] 2021-02-15 12:37:39.641 [Thread-5] FIleDownloader - 1996 11
+[INFO ] 2021-02-15 12:37:39.641 [Thread-5] FIleDownloader - 1996 12
+[INFO ] 2021-02-15 12:37:39.641 [Thread-5] FIleDownloader - 1997 1
+[INFO ] 2021-02-15 12:37:39.641 [Thread-5] FIleDownloader - 1997 2
+[INFO ] 2021-02-15 12:37:39.641 [Thread-5] FIleDownloader - 1997 3
+[INFO ] 2021-02-15 12:37:39.641 [Thread-5] FIleDownloader - 1997 4
+[INFO ] 2021-02-15 12:37:39.641 [Thread-5] FIleDownloader - 1997 5
+[INFO ] 2021-02-15 12:37:39.642 [Thread-5] FIleDownloader - 1997 6
+[INFO ] 2021-02-15 12:37:39.642 [Thread-5] FIleDownloader - 1997 7
+[INFO ] 2021-02-15 12:37:39.642 [Thread-5] FIleDownloader - 1997 8
+[INFO ] 2021-02-15 12:37:39.642 [Thread-5] FIleDownloader - 1997 9
+[INFO ] 2021-02-15 12:37:39.642 [Thread-5] FIleDownloader - 1997 10
+[INFO ] 2021-02-15 12:37:39.642 [Thread-5] FIleDownloader - 1997 11
+[INFO ] 2021-02-15 12:37:39.643 [Thread-5] FIleDownloader - 1997 12
+[INFO ] 2021-02-15 12:37:39.643 [Thread-5] FIleDownloader - 1998 1
+[INFO ] 2021-02-15 12:37:39.643 [Thread-5] FIleDownloader - 1998 2
+[INFO ] 2021-02-15 12:37:39.643 [Thread-5] FIleDownloader - 1998 3
+[INFO ] 2021-02-15 12:37:39.643 [Thread-5] FIleDownloader - 1998 4
+[INFO ] 2021-02-15 12:37:39.643 [Thread-5] FIleDownloader - 1998 5
+[INFO ] 2021-02-15 12:37:39.643 [Thread-5] FIleDownloader - 1998 6
+[INFO ] 2021-02-15 12:37:39.644 [Thread-5] FIleDownloader - 1998 7
+[INFO ] 2021-02-15 12:37:39.644 [Thread-5] FIleDownloader - 1998 8
+[INFO ] 2021-02-15 12:37:39.644 [Thread-5] FIleDownloader - 1998 9
+[INFO ] 2021-02-15 12:37:39.644 [Thread-5] FIleDownloader - 1998 10
+[INFO ] 2021-02-15 12:37:39.644 [Thread-5] FIleDownloader - 1998 11
+[INFO ] 2021-02-15 12:37:39.644 [Thread-5] FIleDownloader - 1998 12
+[INFO ] 2021-02-15 12:37:39.644 [Thread-5] FIleDownloader - 1999 1
+[INFO ] 2021-02-15 12:37:39.644 [Thread-5] FIleDownloader - 1999 2
+[INFO ] 2021-02-15 12:37:39.644 [Thread-5] FIleDownloader - 1999 3
+[INFO ] 2021-02-15 12:37:39.645 [Thread-5] FIleDownloader - 1999 4
+[INFO ] 2021-02-15 12:37:39.645 [Thread-5] FIleDownloader - 1999 5
+[INFO ] 2021-02-15 12:37:39.645 [Thread-5] FIleDownloader - 1999 6
+[INFO ] 2021-02-15 12:37:39.645 [Thread-5] FIleDownloader - 1999 7
+[INFO ] 2021-02-15 12:37:39.645 [Thread-5] FIleDownloader - 1999 8
+[INFO ] 2021-02-15 12:37:39.645 [Thread-5] FIleDownloader - 1999 9
+[INFO ] 2021-02-15 12:37:39.645 [Thread-5] FIleDownloader - 1999 10
+[INFO ] 2021-02-15 12:37:39.646 [Thread-5] FIleDownloader - 1999 11
+[INFO ] 2021-02-15 12:37:39.646 [Thread-5] FIleDownloader - 1999 12
+[INFO ] 2021-02-15 12:37:39.646 [Thread-5] FIleDownloader - 2000 1
+[INFO ] 2021-02-15 12:37:39.646 [Thread-5] FIleDownloader - 2000 2
+[INFO ] 2021-02-15 12:37:39.647 [Thread-5] FIleDownloader - 2000 3
+[INFO ] 2021-02-15 12:37:39.647 [Thread-5] FIleDownloader - 2000 4
+[INFO ] 2021-02-15 12:37:39.648 [Thread-5] FIleDownloader - 2000 5
+[INFO ] 2021-02-15 12:37:39.648 [Thread-5] FIleDownloader - 2000 6
+[INFO ] 2021-02-15 12:37:39.648 [Thread-5] FIleDownloader - 2000 7
+[INFO ] 2021-02-15 12:37:39.648 [Thread-5] FIleDownloader - 2000 8
+[INFO ] 2021-02-15 12:37:39.649 [Thread-5] FIleDownloader - 2000 9
+[INFO ] 2021-02-15 12:37:39.649 [Thread-5] FIleDownloader - 2000 10
+[INFO ] 2021-02-15 12:37:39.649 [Thread-5] FIleDownloader - 2000 11
+[INFO ] 2021-02-15 12:37:39.649 [Thread-5] FIleDownloader - 2000 12
+[INFO ] 2021-02-15 12:37:39.649 [Thread-5] FIleDownloader - 2001 1
+[INFO ] 2021-02-15 12:37:39.649 [Thread-5] FIleDownloader - 2001 2
+[INFO ] 2021-02-15 12:37:39.650 [Thread-5] FIleDownloader - 2001 3
+[INFO ] 2021-02-15 12:37:39.650 [Thread-5] FIleDownloader - 2001 4
+[INFO ] 2021-02-15 12:37:39.650 [Thread-5] FIleDownloader - 2001 5
+[INFO ] 2021-02-15 12:37:39.650 [Thread-5] FIleDownloader - 2001 6
+[INFO ] 2021-02-15 12:37:39.650 [Thread-5] FIleDownloader - 2001 7
+[INFO ] 2021-02-15 12:37:39.650 [Thread-5] FIleDownloader - 2001 8
+[INFO ] 2021-02-15 12:37:39.650 [Thread-5] FIleDownloader - 2001 9
+[INFO ] 2021-02-15 12:37:39.650 [Thread-5] FIleDownloader - 2001 10
+[INFO ] 2021-02-15 12:37:39.651 [Thread-5] FIleDownloader - 2001 11
+[INFO ] 2021-02-15 12:37:39.651 [Thread-5] FIleDownloader - 2001 12
+[INFO ] 2021-02-15 12:37:39.651 [Thread-5] FIleDownloader - 2002 1
+[INFO ] 2021-02-15 12:37:39.651 [Thread-5] FIleDownloader - 2002 2
+[INFO ] 2021-02-15 12:37:39.651 [Thread-5] FIleDownloader - 2002 3
+[INFO ] 2021-02-15 12:37:39.651 [Thread-5] FIleDownloader - 2002 4
+[INFO ] 2021-02-15 12:37:39.652 [Thread-5] FIleDownloader - 2002 5
+[INFO ] 2021-02-15 12:37:39.652 [Thread-5] FIleDownloader - 2002 6
+[INFO ] 2021-02-15 12:37:39.652 [Thread-5] FIleDownloader - 2002 7
+[INFO ] 2021-02-15 12:37:39.652 [Thread-5] FIleDownloader - 2002 8
+[INFO ] 2021-02-15 12:37:39.653 [Thread-5] FIleDownloader - 2002 9
+[INFO ] 2021-02-15 12:37:39.653 [Thread-5] FIleDownloader - 2002 10
+[INFO ] 2021-02-15 12:37:39.653 [Thread-5] FIleDownloader - 2002 11
+[INFO ] 2021-02-15 12:37:39.653 [Thread-5] FIleDownloader - 2002 12
+[INFO ] 2021-02-15 12:37:39.653 [Thread-5] FIleDownloader - 2003 1
+[INFO ] 2021-02-15 12:37:39.653 [Thread-5] FIleDownloader - 2003 2
+[INFO ] 2021-02-15 12:37:39.654 [Thread-5] FIleDownloader - 2003 3
+[INFO ] 2021-02-15 12:37:39.654 [Thread-5] FIleDownloader - 2003 4
+[INFO ] 2021-02-15 12:37:39.654 [Thread-5] FIleDownloader - 2003 5
+[INFO ] 2021-02-15 12:37:39.654 [Thread-5] FIleDownloader - 2003 6
+[INFO ] 2021-02-15 12:37:39.654 [Thread-5] FIleDownloader - 2003 7
+[INFO ] 2021-02-15 12:37:39.654 [Thread-5] FIleDownloader - 2003 8
+[INFO ] 2021-02-15 12:37:39.654 [Thread-5] FIleDownloader - 2003 9
+[INFO ] 2021-02-15 12:37:39.655 [Thread-5] FIleDownloader - 2003 10
+[INFO ] 2021-02-15 12:37:39.655 [Thread-5] FIleDownloader - 2003 11
+[INFO ] 2021-02-15 12:37:39.655 [Thread-5] FIleDownloader - 2003 12
+[INFO ] 2021-02-15 12:37:39.655 [Thread-5] FIleDownloader - 2004 1
+[INFO ] 2021-02-15 12:37:39.655 [Thread-5] FIleDownloader - 2004 2
+[INFO ] 2021-02-15 12:37:39.656 [Thread-5] FIleDownloader - 2004 3
+[INFO ] 2021-02-15 12:37:39.656 [Thread-5] FIleDownloader - 2004 4
+[INFO ] 2021-02-15 12:37:39.656 [Thread-5] FIleDownloader - 2004 5
+[INFO ] 2021-02-15 12:37:39.656 [Thread-5] FIleDownloader - 2004 6
+[INFO ] 2021-02-15 12:37:39.656 [Thread-5] FIleDownloader - 2004 7
+[INFO ] 2021-02-15 12:37:39.656 [Thread-5] FIleDownloader - 2004 8
+[INFO ] 2021-02-15 12:37:39.656 [Thread-5] FIleDownloader - 2004 9
+[INFO ] 2021-02-15 12:37:39.657 [Thread-5] FIleDownloader - 2004 10
+[INFO ] 2021-02-15 12:37:39.657 [Thread-5] FIleDownloader - 2004 11
+[INFO ] 2021-02-15 12:37:39.657 [Thread-5] FIleDownloader - 2004 12
+[INFO ] 2021-02-15 12:37:39.657 [Thread-5] FIleDownloader - 2005 1
+[INFO ] 2021-02-15 12:37:39.657 [Thread-5] FIleDownloader - 2005 2
+[INFO ] 2021-02-15 12:37:39.657 [Thread-5] FIleDownloader - 2005 3
+[INFO ] 2021-02-15 12:37:39.657 [Thread-5] FIleDownloader - 2005 4
+[INFO ] 2021-02-15 12:37:39.658 [Thread-5] FIleDownloader - 2005 5
+[INFO ] 2021-02-15 12:37:39.658 [Thread-5] FIleDownloader - 2005 6
+[INFO ] 2021-02-15 12:37:39.658 [Thread-5] FIleDownloader - 2005 7
+[INFO ] 2021-02-15 12:37:39.658 [Thread-5] FIleDownloader - 2005 8
+[INFO ] 2021-02-15 12:37:39.658 [Thread-5] FIleDownloader - 2005 9
+[INFO ] 2021-02-15 12:37:39.658 [Thread-5] FIleDownloader - 2005 10
+[INFO ] 2021-02-15 12:37:39.659 [Thread-5] FIleDownloader - 2005 11
+[INFO ] 2021-02-15 12:37:39.659 [Thread-5] FIleDownloader - 2005 12
+[INFO ] 2021-02-15 12:37:39.659 [Thread-5] FIleDownloader - 2006 1
+[INFO ] 2021-02-15 12:37:39.659 [Thread-5] FIleDownloader - 2006 2
+[INFO ] 2021-02-15 12:37:39.659 [Thread-5] FIleDownloader - 2006 3
+[INFO ] 2021-02-15 12:37:39.659 [Thread-5] FIleDownloader - 2006 4
+[INFO ] 2021-02-15 12:37:39.659 [Thread-5] FIleDownloader - 2006 5
+[INFO ] 2021-02-15 12:37:39.660 [Thread-5] FIleDownloader - 2006 6
+[INFO ] 2021-02-15 12:37:39.660 [Thread-5] FIleDownloader - 2006 7
+[INFO ] 2021-02-15 12:37:39.660 [Thread-5] FIleDownloader - 2006 8
+[INFO ] 2021-02-15 12:37:39.660 [Thread-5] FIleDownloader - 2006 9
+[INFO ] 2021-02-15 12:37:39.660 [Thread-5] FIleDownloader - 2006 10
+[INFO ] 2021-02-15 12:37:39.660 [Thread-5] FIleDownloader - 2006 11
+[INFO ] 2021-02-15 12:37:39.660 [Thread-5] FIleDownloader - 2006 12
+[INFO ] 2021-02-15 12:37:39.660 [Thread-5] FIleDownloader - 2007 1
+[INFO ] 2021-02-15 12:37:39.660 [Thread-5] FIleDownloader - 2007 2
+[INFO ] 2021-02-15 12:37:39.660 [Thread-5] FIleDownloader - 2007 3
+[INFO ] 2021-02-15 12:37:39.661 [Thread-5] FIleDownloader - 2007 4
+[INFO ] 2021-02-15 12:37:39.661 [Thread-5] FIleDownloader - 2007 5
+[INFO ] 2021-02-15 12:37:39.661 [Thread-5] FIleDownloader - 2007 6
+[INFO ] 2021-02-15 12:37:39.662 [Thread-5] FIleDownloader - 2007 7
+[INFO ] 2021-02-15 12:37:39.662 [Thread-5] FIleDownloader - 2007 8
+[INFO ] 2021-02-15 12:37:39.662 [Thread-5] FIleDownloader - 2007 9
+[INFO ] 2021-02-15 12:37:39.662 [Thread-5] FIleDownloader - 2007 10
+[INFO ] 2021-02-15 12:37:39.662 [Thread-5] FIleDownloader - 2007 11
+[INFO ] 2021-02-15 12:37:39.662 [Thread-5] FIleDownloader - 2007 12
+[INFO ] 2021-02-15 12:37:39.662 [Thread-5] FIleDownloader - 2008 1
+[INFO ] 2021-02-15 12:37:39.663 [Thread-5] FIleDownloader - 2008 2
+[INFO ] 2021-02-15 12:37:39.663 [Thread-5] FIleDownloader - 2008 3
+[INFO ] 2021-02-15 12:37:39.663 [Thread-5] FIleDownloader - 2008 4
+[INFO ] 2021-02-15 12:37:39.663 [Thread-5] FIleDownloader - 2008 5
+[INFO ] 2021-02-15 12:37:39.663 [Thread-5] FIleDownloader - 2008 6
+[INFO ] 2021-02-15 12:37:39.663 [Thread-5] FIleDownloader - 2008 7
+[INFO ] 2021-02-15 12:37:39.663 [Thread-5] FIleDownloader - 2008 8
+[INFO ] 2021-02-15 12:37:39.664 [Thread-5] FIleDownloader - 2008 9
+[INFO ] 2021-02-15 12:37:39.664 [Thread-5] FIleDownloader - 2008 10
+[INFO ] 2021-02-15 12:37:39.664 [Thread-5] FIleDownloader - 2008 11
+[INFO ] 2021-02-15 12:37:39.664 [Thread-5] FIleDownloader - 2008 12
+[INFO ] 2021-02-15 12:37:39.664 [Thread-5] FIleDownloader - 2009 1
+[INFO ] 2021-02-15 12:37:39.664 [Thread-5] FIleDownloader - 2009 2
+[INFO ] 2021-02-15 12:37:39.664 [Thread-5] FIleDownloader - 2009 3
+[INFO ] 2021-02-15 12:37:39.664 [Thread-5] FIleDownloader - 2009 4
+[INFO ] 2021-02-15 12:37:39.665 [Thread-5] FIleDownloader - 2009 5
+[INFO ] 2021-02-15 12:37:39.665 [Thread-5] FIleDownloader - 2009 6
+[INFO ] 2021-02-15 12:37:39.665 [Thread-5] FIleDownloader - 2009 7
+[INFO ] 2021-02-15 12:37:39.665 [Thread-5] FIleDownloader - 2009 8
+[INFO ] 2021-02-15 12:37:39.665 [Thread-5] FIleDownloader - 2009 9
+[INFO ] 2021-02-15 12:37:39.665 [Thread-5] FIleDownloader - 2009 10
+[INFO ] 2021-02-15 12:37:39.665 [Thread-5] FIleDownloader - 2009 11
+[INFO ] 2021-02-15 12:37:39.666 [Thread-5] FIleDownloader - 2009 12
+[INFO ] 2021-02-15 12:37:39.666 [Thread-5] FIleDownloader - 2010 1
+[INFO ] 2021-02-15 12:37:39.666 [Thread-5] FIleDownloader - 2010 2
+[INFO ] 2021-02-15 12:37:39.666 [Thread-5] FIleDownloader - 2010 3
+[INFO ] 2021-02-15 12:37:39.666 [Thread-5] FIleDownloader - 2010 4
+[INFO ] 2021-02-15 12:37:39.666 [Thread-5] FIleDownloader - 2010 5
+[INFO ] 2021-02-15 12:37:39.666 [Thread-5] FIleDownloader - 2010 6
+[INFO ] 2021-02-15 12:37:39.667 [Thread-5] FIleDownloader - 2010 7
+[INFO ] 2021-02-15 12:37:39.667 [Thread-5] FIleDownloader - 2010 8
+[INFO ] 2021-02-15 12:37:39.667 [Thread-5] FIleDownloader - 2010 9
+[INFO ] 2021-02-15 12:37:39.667 [Thread-5] FIleDownloader - 2010 10
+[INFO ] 2021-02-15 12:37:39.667 [Thread-5] FIleDownloader - 2010 11
+[INFO ] 2021-02-15 12:37:39.667 [Thread-5] FIleDownloader - 2010 12
+[INFO ] 2021-02-15 12:37:39.667 [Thread-5] FIleDownloader - 2011 1
+[INFO ] 2021-02-15 12:37:39.667 [Thread-5] FIleDownloader - 2011 2
+[INFO ] 2021-02-15 12:37:39.668 [Thread-5] FIleDownloader - 2011 3
+[INFO ] 2021-02-15 12:37:39.668 [Thread-5] FIleDownloader - 2011 4
+[INFO ] 2021-02-15 12:37:39.668 [Thread-5] FIleDownloader - 2011 5
+[INFO ] 2021-02-15 12:37:39.669 [Thread-5] FIleDownloader - 2011 6
+[INFO ] 2021-02-15 12:37:39.669 [Thread-5] FIleDownloader - 2011 7
+[INFO ] 2021-02-15 12:37:39.669 [Thread-5] FIleDownloader - 2011 8
+[INFO ] 2021-02-15 12:37:39.669 [Thread-5] FIleDownloader - 2011 9
+[INFO ] 2021-02-15 12:37:39.669 [Thread-5] FIleDownloader - 2011 10
+[INFO ] 2021-02-15 12:37:39.669 [Thread-5] FIleDownloader - 2011 11
+[INFO ] 2021-02-15 12:37:39.670 [Thread-5] FIleDownloader - 2011 12
+[INFO ] 2021-02-15 12:37:39.670 [Thread-5] FIleDownloader - 2012 1
+[INFO ] 2021-02-15 12:37:39.670 [Thread-5] FIleDownloader - 2012 2
+[INFO ] 2021-02-15 12:37:39.670 [Thread-5] FIleDownloader - 2012 3
+[INFO ] 2021-02-15 12:37:39.670 [Thread-5] FIleDownloader - 2012 4
+[INFO ] 2021-02-15 12:37:39.670 [Thread-5] FIleDownloader - 2012 5
+[INFO ] 2021-02-15 12:37:39.670 [Thread-5] FIleDownloader - 2012 6
+[INFO ] 2021-02-15 12:37:39.671 [Thread-5] FIleDownloader - 2012 7
+[INFO ] 2021-02-15 12:37:39.671 [Thread-5] FIleDownloader - 2012 8
+[INFO ] 2021-02-15 12:37:39.671 [Thread-5] FIleDownloader - 2012 9
+[INFO ] 2021-02-15 12:37:39.671 [Thread-5] FIleDownloader - 2012 10
+[INFO ] 2021-02-15 12:37:39.671 [Thread-5] FIleDownloader - 2012 11
+[INFO ] 2021-02-15 12:37:39.671 [Thread-5] FIleDownloader - 2012 12
+[INFO ] 2021-02-15 12:37:39.671 [Thread-5] FIleDownloader - 2013 1
+[INFO ] 2021-02-15 12:37:39.672 [Thread-5] FIleDownloader - 2013 2
+[INFO ] 2021-02-15 12:37:39.672 [Thread-5] FIleDownloader - 2013 3
+[INFO ] 2021-02-15 12:37:39.672 [Thread-5] FIleDownloader - 2013 4
+[INFO ] 2021-02-15 12:37:39.672 [Thread-5] FIleDownloader - 2013 5
+[INFO ] 2021-02-15 12:37:39.672 [Thread-5] FIleDownloader - 2013 6
+[INFO ] 2021-02-15 12:37:39.672 [Thread-5] FIleDownloader - 2013 7
+[INFO ] 2021-02-15 12:37:39.673 [Thread-5] FIleDownloader - 2013 8
+[INFO ] 2021-02-15 12:37:39.673 [Thread-5] FIleDownloader - 2013 9
+[INFO ] 2021-02-15 12:37:39.673 [Thread-5] FIleDownloader - 2013 10
+[INFO ] 2021-02-15 12:37:39.673 [Thread-5] FIleDownloader - 2013 11
+[INFO ] 2021-02-15 12:37:39.673 [Thread-5] FIleDownloader - 2013 12
+[INFO ] 2021-02-15 12:37:39.673 [Thread-5] FIleDownloader - 2014 1
+[INFO ] 2021-02-15 12:37:39.673 [Thread-5] FIleDownloader - 2014 2
+[INFO ] 2021-02-15 12:37:39.674 [Thread-5] FIleDownloader - 2014 3
+[INFO ] 2021-02-15 12:37:39.674 [Thread-5] FIleDownloader - 2014 4
+[INFO ] 2021-02-15 12:37:39.674 [Thread-5] FIleDownloader - 2014 5
+[INFO ] 2021-02-15 12:37:39.674 [Thread-5] FIleDownloader - 2014 6
+[INFO ] 2021-02-15 12:37:39.674 [Thread-5] FIleDownloader - 2014 7
+[INFO ] 2021-02-15 12:37:39.674 [Thread-5] FIleDownloader - 2014 8
+[INFO ] 2021-02-15 12:37:39.674 [Thread-5] FIleDownloader - 2014 9
+[INFO ] 2021-02-15 12:37:39.675 [Thread-5] FIleDownloader - 2014 10
+[INFO ] 2021-02-15 12:37:39.675 [Thread-5] FIleDownloader - 2014 11
+[INFO ] 2021-02-15 12:37:39.675 [Thread-5] FIleDownloader - 2014 12
+[INFO ] 2021-02-15 12:37:39.675 [Thread-5] FIleDownloader - 2015 1
+[INFO ] 2021-02-15 12:37:39.675 [Thread-5] FIleDownloader - 2015 2
+[INFO ] 2021-02-15 12:37:39.675 [Thread-5] FIleDownloader - 2015 3
+[INFO ] 2021-02-15 12:37:39.676 [Thread-5] FIleDownloader - 2015 4
+[INFO ] 2021-02-15 12:37:39.676 [Thread-5] FIleDownloader - 2015 5
+[INFO ] 2021-02-15 12:37:39.676 [Thread-5] FIleDownloader - 2015 6
+[INFO ] 2021-02-15 12:37:39.676 [Thread-5] FIleDownloader - 2015 7
+[INFO ] 2021-02-15 12:37:39.676 [Thread-5] FIleDownloader - 2015 8
+[INFO ] 2021-02-15 12:37:39.676 [Thread-5] FIleDownloader - 2015 9
+[INFO ] 2021-02-15 12:37:39.676 [Thread-5] FIleDownloader - 2015 10
+[INFO ] 2021-02-15 12:37:39.677 [Thread-5] FIleDownloader - 2015 11
+[INFO ] 2021-02-15 12:37:39.677 [Thread-5] FIleDownloader - 2015 12
+[INFO ] 2021-02-15 12:37:39.677 [Thread-5] FIleDownloader - 2016 1
+[INFO ] 2021-02-15 12:37:39.677 [Thread-5] FIleDownloader - 2016 2
+[INFO ] 2021-02-15 12:37:39.677 [Thread-5] FIleDownloader - 2016 3
+[INFO ] 2021-02-15 12:37:39.677 [Thread-5] FIleDownloader - 2016 4
+[INFO ] 2021-02-15 12:37:39.677 [Thread-5] FIleDownloader - 2016 5
+[INFO ] 2021-02-15 12:37:39.678 [Thread-5] FIleDownloader - 2016 6
+[INFO ] 2021-02-15 12:37:39.678 [Thread-5] FIleDownloader - 2016 7
+[INFO ] 2021-02-15 12:37:39.678 [Thread-5] FIleDownloader - 2016 8
+[INFO ] 2021-02-15 12:37:39.678 [Thread-5] FIleDownloader - 2016 9
+[INFO ] 2021-02-15 12:37:39.678 [Thread-5] FIleDownloader - 2016 10
+[INFO ] 2021-02-15 12:37:39.678 [Thread-5] FIleDownloader - 2016 11
+[INFO ] 2021-02-15 12:37:39.678 [Thread-5] FIleDownloader - 2016 12
+[INFO ] 2021-02-15 12:37:39.679 [Thread-5] FIleDownloader - 2017 1
+[INFO ] 2021-02-15 12:37:39.679 [Thread-5] FIleDownloader - 2017 2
+[INFO ] 2021-02-15 12:37:39.679 [Thread-5] FIleDownloader - 2017 3
+[INFO ] 2021-02-15 12:37:39.679 [Thread-5] FIleDownloader - 2017 4
+[INFO ] 2021-02-15 12:37:39.679 [Thread-5] FIleDownloader - 2017 5
+[INFO ] 2021-02-15 12:37:39.679 [Thread-5] FIleDownloader - 2017 6
+[INFO ] 2021-02-15 12:37:39.680 [Thread-5] FIleDownloader - 2017 7
+[INFO ] 2021-02-15 12:37:39.680 [Thread-5] FIleDownloader - 2017 8
+[INFO ] 2021-02-15 12:37:39.680 [Thread-5] FIleDownloader - 2017 9
+[INFO ] 2021-02-15 12:37:39.680 [Thread-5] FIleDownloader - 2017 10
+[INFO ] 2021-02-15 12:37:39.680 [Thread-5] FIleDownloader - 2017 11
+[INFO ] 2021-02-15 12:37:39.680 [Thread-5] FIleDownloader - 2017 12
+[INFO ] 2021-02-15 12:37:39.680 [Thread-5] FIleDownloader - 2018 1
+[INFO ] 2021-02-15 12:37:39.681 [Thread-5] FIleDownloader - 2018 2
+[INFO ] 2021-02-15 12:37:39.681 [Thread-5] FIleDownloader - 2018 3
+[INFO ] 2021-02-15 12:37:39.681 [Thread-5] FIleDownloader - 2018 4
+[INFO ] 2021-02-15 12:37:39.681 [Thread-5] FIleDownloader - 2018 5
+[INFO ] 2021-02-15 12:37:39.681 [Thread-5] FIleDownloader - 2018 6
+[INFO ] 2021-02-15 12:37:39.681 [Thread-5] FIleDownloader - 2018 7
+[INFO ] 2021-02-15 12:37:39.681 [Thread-5] FIleDownloader - 2018 8
+[INFO ] 2021-02-15 12:37:39.682 [Thread-5] FIleDownloader - 2018 9
+[INFO ] 2021-02-15 12:37:39.682 [Thread-5] FIleDownloader - 2018 10
+[INFO ] 2021-02-15 12:37:39.682 [Thread-5] FIleDownloader - 2018 11
+[INFO ] 2021-02-15 12:37:39.682 [Thread-5] FIleDownloader - 2018 12
+[INFO ] 2021-02-15 12:37:39.682 [Thread-5] FIleDownloader - 2019 1
+[INFO ] 2021-02-15 12:37:39.682 [Thread-5] FIleDownloader - 2019 2
+[INFO ] 2021-02-15 12:37:39.683 [Thread-5] FIleDownloader - 2019 3
+[INFO ] 2021-02-15 12:37:39.683 [Thread-5] FIleDownloader - 2019 4
+[INFO ] 2021-02-15 12:37:39.683 [Thread-5] FIleDownloader - 2019 5
+[INFO ] 2021-02-15 12:37:39.683 [Thread-5] FIleDownloader - 2019 6
+[INFO ] 2021-02-15 12:37:39.683 [Thread-5] FIleDownloader - 2019 7
+[INFO ] 2021-02-15 12:37:39.683 [Thread-5] FIleDownloader - 2019 8
+[INFO ] 2021-02-15 12:37:39.684 [Thread-5] FIleDownloader - 2019 9
+[INFO ] 2021-02-15 12:37:39.684 [Thread-5] FIleDownloader - 2019 10
+[INFO ] 2021-02-15 12:37:39.684 [Thread-5] FIleDownloader - 2019 11
+[INFO ] 2021-02-15 12:37:39.684 [Thread-5] FIleDownloader - 2019 12
+[INFO ] 2021-02-15 12:37:39.684 [Thread-5] FIleDownloader - 2020 1
+[WARN ] 2021-02-15 12:37:39.747 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.747 [Thread-5] FIleDownloader - 2020 2
+[WARN ] 2021-02-15 12:37:39.807 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.807 [Thread-5] FIleDownloader - 2020 3
+[WARN ] 2021-02-15 12:37:39.872 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.873 [Thread-5] FIleDownloader - 2020 4
+[WARN ] 2021-02-15 12:37:39.948 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:39.948 [Thread-5] FIleDownloader - 2020 5
+[WARN ] 2021-02-15 12:37:40.013 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:40.013 [Thread-5] FIleDownloader - 2020 6
+[WARN ] 2021-02-15 12:37:40.341 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:40.341 [Thread-5] FIleDownloader - 2020 7
+[WARN ] 2021-02-15 12:37:40.411 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:40.411 [Thread-5] FIleDownloader - 2020 8
+[WARN ] 2021-02-15 12:37:40.517 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:40.518 [Thread-5] FIleDownloader - 2020 9
+[WARN ] 2021-02-15 12:37:40.609 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:40.610 [Thread-5] FIleDownloader - 2020 10
+[WARN ] 2021-02-15 12:37:40.674 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:40.674 [Thread-5] FIleDownloader - 2020 11
+[WARN ] 2021-02-15 12:37:40.905 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:37:40.905 [Thread-5] FIleDownloader - 2020 12
+[WARN ] 2021-02-15 12:37:41.011 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:06.086 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:39:06.139 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:39:06.140 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:39:06.171 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:39:06.311 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:39:06.317 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:39:06.317 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:39:06.318 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:39:06.320 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:39:06.722 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:39:06.742 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:39:07.065 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66a5e2b5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:39:11.432 [Thread-5] FIleDownloader - 1950 1
+[WARN ] 2021-02-15 12:39:11.904 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:11.904 [Thread-5] FIleDownloader - 1950 2
+[WARN ] 2021-02-15 12:39:11.959 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:11.959 [Thread-5] FIleDownloader - 1950 3
+[WARN ] 2021-02-15 12:39:12.012 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.012 [Thread-5] FIleDownloader - 1950 4
+[WARN ] 2021-02-15 12:39:12.065 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.065 [Thread-5] FIleDownloader - 1950 5
+[WARN ] 2021-02-15 12:39:12.118 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.118 [Thread-5] FIleDownloader - 1950 6
+[WARN ] 2021-02-15 12:39:12.180 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.180 [Thread-5] FIleDownloader - 1950 7
+[WARN ] 2021-02-15 12:39:12.242 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.242 [Thread-5] FIleDownloader - 1950 8
+[WARN ] 2021-02-15 12:39:12.297 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.297 [Thread-5] FIleDownloader - 1950 9
+[WARN ] 2021-02-15 12:39:12.353 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.354 [Thread-5] FIleDownloader - 1950 10
+[WARN ] 2021-02-15 12:39:12.413 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.413 [Thread-5] FIleDownloader - 1950 11
+[WARN ] 2021-02-15 12:39:12.468 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.468 [Thread-5] FIleDownloader - 1950 12
+[WARN ] 2021-02-15 12:39:12.526 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.526 [Thread-5] FIleDownloader - 1951 1
+[INFO ] 2021-02-15 12:39:12.526 [Thread-5] FIleDownloader - 1951 2
+[INFO ] 2021-02-15 12:39:12.526 [Thread-5] FIleDownloader - 1951 3
+[INFO ] 2021-02-15 12:39:12.527 [Thread-5] FIleDownloader - 1951 4
+[INFO ] 2021-02-15 12:39:12.528 [Thread-5] FIleDownloader - 1951 5
+[INFO ] 2021-02-15 12:39:12.528 [Thread-5] FIleDownloader - 1951 6
+[INFO ] 2021-02-15 12:39:12.528 [Thread-5] FIleDownloader - 1951 7
+[INFO ] 2021-02-15 12:39:12.528 [Thread-5] FIleDownloader - 1951 8
+[INFO ] 2021-02-15 12:39:12.528 [Thread-5] FIleDownloader - 1951 9
+[INFO ] 2021-02-15 12:39:12.529 [Thread-5] FIleDownloader - 1951 10
+[INFO ] 2021-02-15 12:39:12.529 [Thread-5] FIleDownloader - 1951 11
+[INFO ] 2021-02-15 12:39:12.529 [Thread-5] FIleDownloader - 1951 12
+[INFO ] 2021-02-15 12:39:12.529 [Thread-5] FIleDownloader - 1952 1
+[INFO ] 2021-02-15 12:39:12.530 [Thread-5] FIleDownloader - 1952 2
+[INFO ] 2021-02-15 12:39:12.530 [Thread-5] FIleDownloader - 1952 3
+[INFO ] 2021-02-15 12:39:12.530 [Thread-5] FIleDownloader - 1952 4
+[INFO ] 2021-02-15 12:39:12.530 [Thread-5] FIleDownloader - 1952 5
+[INFO ] 2021-02-15 12:39:12.530 [Thread-5] FIleDownloader - 1952 6
+[INFO ] 2021-02-15 12:39:12.531 [Thread-5] FIleDownloader - 1952 7
+[INFO ] 2021-02-15 12:39:12.531 [Thread-5] FIleDownloader - 1952 8
+[INFO ] 2021-02-15 12:39:12.531 [Thread-5] FIleDownloader - 1952 9
+[INFO ] 2021-02-15 12:39:12.531 [Thread-5] FIleDownloader - 1952 10
+[INFO ] 2021-02-15 12:39:12.532 [Thread-5] FIleDownloader - 1952 11
+[INFO ] 2021-02-15 12:39:12.532 [Thread-5] FIleDownloader - 1952 12
+[INFO ] 2021-02-15 12:39:12.532 [Thread-5] FIleDownloader - 1953 1
+[INFO ] 2021-02-15 12:39:12.532 [Thread-5] FIleDownloader - 1953 2
+[INFO ] 2021-02-15 12:39:12.532 [Thread-5] FIleDownloader - 1953 3
+[INFO ] 2021-02-15 12:39:12.532 [Thread-5] FIleDownloader - 1953 4
+[INFO ] 2021-02-15 12:39:12.532 [Thread-5] FIleDownloader - 1953 5
+[INFO ] 2021-02-15 12:39:12.532 [Thread-5] FIleDownloader - 1953 6
+[INFO ] 2021-02-15 12:39:12.532 [Thread-5] FIleDownloader - 1953 7
+[INFO ] 2021-02-15 12:39:12.533 [Thread-5] FIleDownloader - 1953 8
+[INFO ] 2021-02-15 12:39:12.534 [Thread-5] FIleDownloader - 1953 9
+[INFO ] 2021-02-15 12:39:12.534 [Thread-5] FIleDownloader - 1953 10
+[INFO ] 2021-02-15 12:39:12.534 [Thread-5] FIleDownloader - 1953 11
+[INFO ] 2021-02-15 12:39:12.534 [Thread-5] FIleDownloader - 1953 12
+[INFO ] 2021-02-15 12:39:12.534 [Thread-5] FIleDownloader - 1954 1
+[INFO ] 2021-02-15 12:39:12.535 [Thread-5] FIleDownloader - 1954 2
+[INFO ] 2021-02-15 12:39:12.535 [Thread-5] FIleDownloader - 1954 3
+[INFO ] 2021-02-15 12:39:12.535 [Thread-5] FIleDownloader - 1954 4
+[INFO ] 2021-02-15 12:39:12.535 [Thread-5] FIleDownloader - 1954 5
+[INFO ] 2021-02-15 12:39:12.535 [Thread-5] FIleDownloader - 1954 6
+[INFO ] 2021-02-15 12:39:12.535 [Thread-5] FIleDownloader - 1954 7
+[INFO ] 2021-02-15 12:39:12.535 [Thread-5] FIleDownloader - 1954 8
+[INFO ] 2021-02-15 12:39:12.535 [Thread-5] FIleDownloader - 1954 9
+[INFO ] 2021-02-15 12:39:12.535 [Thread-5] FIleDownloader - 1954 10
+[INFO ] 2021-02-15 12:39:12.535 [Thread-5] FIleDownloader - 1954 11
+[INFO ] 2021-02-15 12:39:12.536 [Thread-5] FIleDownloader - 1954 12
+[INFO ] 2021-02-15 12:39:12.536 [Thread-5] FIleDownloader - 1955 1
+[INFO ] 2021-02-15 12:39:12.536 [Thread-5] FIleDownloader - 1955 2
+[INFO ] 2021-02-15 12:39:12.536 [Thread-5] FIleDownloader - 1955 3
+[INFO ] 2021-02-15 12:39:12.536 [Thread-5] FIleDownloader - 1955 4
+[INFO ] 2021-02-15 12:39:12.536 [Thread-5] FIleDownloader - 1955 5
+[INFO ] 2021-02-15 12:39:12.536 [Thread-5] FIleDownloader - 1955 6
+[INFO ] 2021-02-15 12:39:12.537 [Thread-5] FIleDownloader - 1955 7
+[INFO ] 2021-02-15 12:39:12.537 [Thread-5] FIleDownloader - 1955 8
+[INFO ] 2021-02-15 12:39:12.538 [Thread-5] FIleDownloader - 1955 9
+[INFO ] 2021-02-15 12:39:12.538 [Thread-5] FIleDownloader - 1955 10
+[INFO ] 2021-02-15 12:39:12.538 [Thread-5] FIleDownloader - 1955 11
+[INFO ] 2021-02-15 12:39:12.538 [Thread-5] FIleDownloader - 1955 12
+[INFO ] 2021-02-15 12:39:12.538 [Thread-5] FIleDownloader - 1956 1
+[INFO ] 2021-02-15 12:39:12.538 [Thread-5] FIleDownloader - 1956 2
+[INFO ] 2021-02-15 12:39:12.538 [Thread-5] FIleDownloader - 1956 3
+[INFO ] 2021-02-15 12:39:12.539 [Thread-5] FIleDownloader - 1956 4
+[INFO ] 2021-02-15 12:39:12.539 [Thread-5] FIleDownloader - 1956 5
+[INFO ] 2021-02-15 12:39:12.539 [Thread-5] FIleDownloader - 1956 6
+[INFO ] 2021-02-15 12:39:12.539 [Thread-5] FIleDownloader - 1956 7
+[INFO ] 2021-02-15 12:39:12.539 [Thread-5] FIleDownloader - 1956 8
+[INFO ] 2021-02-15 12:39:12.539 [Thread-5] FIleDownloader - 1956 9
+[INFO ] 2021-02-15 12:39:12.539 [Thread-5] FIleDownloader - 1956 10
+[INFO ] 2021-02-15 12:39:12.540 [Thread-5] FIleDownloader - 1956 11
+[INFO ] 2021-02-15 12:39:12.540 [Thread-5] FIleDownloader - 1956 12
+[INFO ] 2021-02-15 12:39:12.540 [Thread-5] FIleDownloader - 1957 1
+[INFO ] 2021-02-15 12:39:12.540 [Thread-5] FIleDownloader - 1957 2
+[INFO ] 2021-02-15 12:39:12.540 [Thread-5] FIleDownloader - 1957 3
+[INFO ] 2021-02-15 12:39:12.540 [Thread-5] FIleDownloader - 1957 4
+[INFO ] 2021-02-15 12:39:12.540 [Thread-5] FIleDownloader - 1957 5
+[INFO ] 2021-02-15 12:39:12.541 [Thread-5] FIleDownloader - 1957 6
+[INFO ] 2021-02-15 12:39:12.541 [Thread-5] FIleDownloader - 1957 7
+[INFO ] 2021-02-15 12:39:12.541 [Thread-5] FIleDownloader - 1957 8
+[INFO ] 2021-02-15 12:39:12.541 [Thread-5] FIleDownloader - 1957 9
+[INFO ] 2021-02-15 12:39:12.541 [Thread-5] FIleDownloader - 1957 10
+[INFO ] 2021-02-15 12:39:12.541 [Thread-5] FIleDownloader - 1957 11
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1957 12
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 1
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 2
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 3
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 4
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 5
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 6
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 7
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 8
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 9
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 10
+[INFO ] 2021-02-15 12:39:12.542 [Thread-5] FIleDownloader - 1958 11
+[INFO ] 2021-02-15 12:39:12.543 [Thread-5] FIleDownloader - 1958 12
+[INFO ] 2021-02-15 12:39:12.543 [Thread-5] FIleDownloader - 1959 1
+[INFO ] 2021-02-15 12:39:12.543 [Thread-5] FIleDownloader - 1959 2
+[INFO ] 2021-02-15 12:39:12.543 [Thread-5] FIleDownloader - 1959 3
+[INFO ] 2021-02-15 12:39:12.543 [Thread-5] FIleDownloader - 1959 4
+[INFO ] 2021-02-15 12:39:12.543 [Thread-5] FIleDownloader - 1959 5
+[INFO ] 2021-02-15 12:39:12.543 [Thread-5] FIleDownloader - 1959 6
+[INFO ] 2021-02-15 12:39:12.544 [Thread-5] FIleDownloader - 1959 7
+[INFO ] 2021-02-15 12:39:12.544 [Thread-5] FIleDownloader - 1959 8
+[INFO ] 2021-02-15 12:39:12.544 [Thread-5] FIleDownloader - 1959 9
+[INFO ] 2021-02-15 12:39:12.544 [Thread-5] FIleDownloader - 1959 10
+[INFO ] 2021-02-15 12:39:12.544 [Thread-5] FIleDownloader - 1959 11
+[INFO ] 2021-02-15 12:39:12.544 [Thread-5] FIleDownloader - 1959 12
+[INFO ] 2021-02-15 12:39:12.544 [Thread-5] FIleDownloader - 1960 1
+[INFO ] 2021-02-15 12:39:12.546 [Thread-5] FIleDownloader - 1960 2
+[INFO ] 2021-02-15 12:39:12.546 [Thread-5] FIleDownloader - 1960 3
+[INFO ] 2021-02-15 12:39:12.546 [Thread-5] FIleDownloader - 1960 4
+[INFO ] 2021-02-15 12:39:12.546 [Thread-5] FIleDownloader - 1960 5
+[INFO ] 2021-02-15 12:39:12.546 [Thread-5] FIleDownloader - 1960 6
+[INFO ] 2021-02-15 12:39:12.546 [Thread-5] FIleDownloader - 1960 7
+[INFO ] 2021-02-15 12:39:12.546 [Thread-5] FIleDownloader - 1960 8
+[INFO ] 2021-02-15 12:39:12.547 [Thread-5] FIleDownloader - 1960 9
+[INFO ] 2021-02-15 12:39:12.547 [Thread-5] FIleDownloader - 1960 10
+[INFO ] 2021-02-15 12:39:12.547 [Thread-5] FIleDownloader - 1960 11
+[INFO ] 2021-02-15 12:39:12.547 [Thread-5] FIleDownloader - 1960 12
+[INFO ] 2021-02-15 12:39:12.547 [Thread-5] FIleDownloader - 1961 1
+[INFO ] 2021-02-15 12:39:12.547 [Thread-5] FIleDownloader - 1961 2
+[INFO ] 2021-02-15 12:39:12.547 [Thread-5] FIleDownloader - 1961 3
+[INFO ] 2021-02-15 12:39:12.547 [Thread-5] FIleDownloader - 1961 4
+[INFO ] 2021-02-15 12:39:12.547 [Thread-5] FIleDownloader - 1961 5
+[INFO ] 2021-02-15 12:39:12.548 [Thread-5] FIleDownloader - 1961 6
+[INFO ] 2021-02-15 12:39:12.548 [Thread-5] FIleDownloader - 1961 7
+[INFO ] 2021-02-15 12:39:12.548 [Thread-5] FIleDownloader - 1961 8
+[INFO ] 2021-02-15 12:39:12.548 [Thread-5] FIleDownloader - 1961 9
+[INFO ] 2021-02-15 12:39:12.548 [Thread-5] FIleDownloader - 1961 10
+[INFO ] 2021-02-15 12:39:12.548 [Thread-5] FIleDownloader - 1961 11
+[INFO ] 2021-02-15 12:39:12.549 [Thread-5] FIleDownloader - 1961 12
+[INFO ] 2021-02-15 12:39:12.549 [Thread-5] FIleDownloader - 1962 1
+[INFO ] 2021-02-15 12:39:12.549 [Thread-5] FIleDownloader - 1962 2
+[INFO ] 2021-02-15 12:39:12.549 [Thread-5] FIleDownloader - 1962 3
+[INFO ] 2021-02-15 12:39:12.549 [Thread-5] FIleDownloader - 1962 4
+[INFO ] 2021-02-15 12:39:12.549 [Thread-5] FIleDownloader - 1962 5
+[INFO ] 2021-02-15 12:39:12.549 [Thread-5] FIleDownloader - 1962 6
+[INFO ] 2021-02-15 12:39:12.549 [Thread-5] FIleDownloader - 1962 7
+[INFO ] 2021-02-15 12:39:12.550 [Thread-5] FIleDownloader - 1962 8
+[INFO ] 2021-02-15 12:39:12.550 [Thread-5] FIleDownloader - 1962 9
+[INFO ] 2021-02-15 12:39:12.550 [Thread-5] FIleDownloader - 1962 10
+[INFO ] 2021-02-15 12:39:12.550 [Thread-5] FIleDownloader - 1962 11
+[INFO ] 2021-02-15 12:39:12.550 [Thread-5] FIleDownloader - 1962 12
+[INFO ] 2021-02-15 12:39:12.550 [Thread-5] FIleDownloader - 1963 1
+[INFO ] 2021-02-15 12:39:12.551 [Thread-5] FIleDownloader - 1963 2
+[INFO ] 2021-02-15 12:39:12.551 [Thread-5] FIleDownloader - 1963 3
+[INFO ] 2021-02-15 12:39:12.551 [Thread-5] FIleDownloader - 1963 4
+[INFO ] 2021-02-15 12:39:12.551 [Thread-5] FIleDownloader - 1963 5
+[INFO ] 2021-02-15 12:39:12.551 [Thread-5] FIleDownloader - 1963 6
+[INFO ] 2021-02-15 12:39:12.551 [Thread-5] FIleDownloader - 1963 7
+[INFO ] 2021-02-15 12:39:12.552 [Thread-5] FIleDownloader - 1963 8
+[INFO ] 2021-02-15 12:39:12.552 [Thread-5] FIleDownloader - 1963 9
+[INFO ] 2021-02-15 12:39:12.552 [Thread-5] FIleDownloader - 1963 10
+[INFO ] 2021-02-15 12:39:12.552 [Thread-5] FIleDownloader - 1963 11
+[INFO ] 2021-02-15 12:39:12.552 [Thread-5] FIleDownloader - 1963 12
+[INFO ] 2021-02-15 12:39:12.552 [Thread-5] FIleDownloader - 1964 1
+[INFO ] 2021-02-15 12:39:12.552 [Thread-5] FIleDownloader - 1964 2
+[INFO ] 2021-02-15 12:39:12.552 [Thread-5] FIleDownloader - 1964 3
+[INFO ] 2021-02-15 12:39:12.553 [Thread-5] FIleDownloader - 1964 4
+[INFO ] 2021-02-15 12:39:12.553 [Thread-5] FIleDownloader - 1964 5
+[INFO ] 2021-02-15 12:39:12.553 [Thread-5] FIleDownloader - 1964 6
+[INFO ] 2021-02-15 12:39:12.553 [Thread-5] FIleDownloader - 1964 7
+[INFO ] 2021-02-15 12:39:12.553 [Thread-5] FIleDownloader - 1964 8
+[INFO ] 2021-02-15 12:39:12.553 [Thread-5] FIleDownloader - 1964 9
+[INFO ] 2021-02-15 12:39:12.553 [Thread-5] FIleDownloader - 1964 10
+[INFO ] 2021-02-15 12:39:12.553 [Thread-5] FIleDownloader - 1964 11
+[INFO ] 2021-02-15 12:39:12.554 [Thread-5] FIleDownloader - 1964 12
+[INFO ] 2021-02-15 12:39:12.554 [Thread-5] FIleDownloader - 1965 1
+[INFO ] 2021-02-15 12:39:12.554 [Thread-5] FIleDownloader - 1965 2
+[INFO ] 2021-02-15 12:39:12.554 [Thread-5] FIleDownloader - 1965 3
+[INFO ] 2021-02-15 12:39:12.554 [Thread-5] FIleDownloader - 1965 4
+[INFO ] 2021-02-15 12:39:12.554 [Thread-5] FIleDownloader - 1965 5
+[INFO ] 2021-02-15 12:39:12.554 [Thread-5] FIleDownloader - 1965 6
+[INFO ] 2021-02-15 12:39:12.554 [Thread-5] FIleDownloader - 1965 7
+[INFO ] 2021-02-15 12:39:12.554 [Thread-5] FIleDownloader - 1965 8
+[INFO ] 2021-02-15 12:39:12.554 [Thread-5] FIleDownloader - 1965 9
+[INFO ] 2021-02-15 12:39:12.555 [Thread-5] FIleDownloader - 1965 10
+[INFO ] 2021-02-15 12:39:12.555 [Thread-5] FIleDownloader - 1965 11
+[INFO ] 2021-02-15 12:39:12.555 [Thread-5] FIleDownloader - 1965 12
+[INFO ] 2021-02-15 12:39:12.555 [Thread-5] FIleDownloader - 1966 1
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 2
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 3
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 4
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 5
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 6
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 7
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 8
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 9
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 10
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 11
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1966 12
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1967 1
+[INFO ] 2021-02-15 12:39:12.556 [Thread-5] FIleDownloader - 1967 2
+[INFO ] 2021-02-15 12:39:12.557 [Thread-5] FIleDownloader - 1967 3
+[INFO ] 2021-02-15 12:39:12.557 [Thread-5] FIleDownloader - 1967 4
+[INFO ] 2021-02-15 12:39:12.557 [Thread-5] FIleDownloader - 1967 5
+[INFO ] 2021-02-15 12:39:12.557 [Thread-5] FIleDownloader - 1967 6
+[INFO ] 2021-02-15 12:39:12.557 [Thread-5] FIleDownloader - 1967 7
+[INFO ] 2021-02-15 12:39:12.557 [Thread-5] FIleDownloader - 1967 8
+[INFO ] 2021-02-15 12:39:12.557 [Thread-5] FIleDownloader - 1967 9
+[INFO ] 2021-02-15 12:39:12.558 [Thread-5] FIleDownloader - 1967 10
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1967 11
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1967 12
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 1
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 2
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 3
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 4
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 5
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 6
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 7
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 8
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 9
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 10
+[INFO ] 2021-02-15 12:39:12.559 [Thread-5] FIleDownloader - 1968 11
+[INFO ] 2021-02-15 12:39:12.560 [Thread-5] FIleDownloader - 1968 12
+[INFO ] 2021-02-15 12:39:12.560 [Thread-5] FIleDownloader - 1969 1
+[INFO ] 2021-02-15 12:39:12.560 [Thread-5] FIleDownloader - 1969 2
+[INFO ] 2021-02-15 12:39:12.560 [Thread-5] FIleDownloader - 1969 3
+[INFO ] 2021-02-15 12:39:12.560 [Thread-5] FIleDownloader - 1969 4
+[INFO ] 2021-02-15 12:39:12.560 [Thread-5] FIleDownloader - 1969 5
+[INFO ] 2021-02-15 12:39:12.560 [Thread-5] FIleDownloader - 1969 6
+[INFO ] 2021-02-15 12:39:12.561 [Thread-5] FIleDownloader - 1969 7
+[INFO ] 2021-02-15 12:39:12.561 [Thread-5] FIleDownloader - 1969 8
+[INFO ] 2021-02-15 12:39:12.561 [Thread-5] FIleDownloader - 1969 9
+[INFO ] 2021-02-15 12:39:12.561 [Thread-5] FIleDownloader - 1969 10
+[INFO ] 2021-02-15 12:39:12.561 [Thread-5] FIleDownloader - 1969 11
+[INFO ] 2021-02-15 12:39:12.561 [Thread-5] FIleDownloader - 1969 12
+[INFO ] 2021-02-15 12:39:12.562 [Thread-5] FIleDownloader - 1970 1
+[INFO ] 2021-02-15 12:39:12.562 [Thread-5] FIleDownloader - 1970 2
+[INFO ] 2021-02-15 12:39:12.562 [Thread-5] FIleDownloader - 1970 3
+[INFO ] 2021-02-15 12:39:12.562 [Thread-5] FIleDownloader - 1970 4
+[INFO ] 2021-02-15 12:39:12.562 [Thread-5] FIleDownloader - 1970 5
+[INFO ] 2021-02-15 12:39:12.562 [Thread-5] FIleDownloader - 1970 6
+[INFO ] 2021-02-15 12:39:12.562 [Thread-5] FIleDownloader - 1970 7
+[INFO ] 2021-02-15 12:39:12.563 [Thread-5] FIleDownloader - 1970 8
+[INFO ] 2021-02-15 12:39:12.563 [Thread-5] FIleDownloader - 1970 9
+[INFO ] 2021-02-15 12:39:12.563 [Thread-5] FIleDownloader - 1970 10
+[INFO ] 2021-02-15 12:39:12.564 [Thread-5] FIleDownloader - 1970 11
+[INFO ] 2021-02-15 12:39:12.564 [Thread-5] FIleDownloader - 1970 12
+[INFO ] 2021-02-15 12:39:12.564 [Thread-5] FIleDownloader - 1971 1
+[INFO ] 2021-02-15 12:39:12.564 [Thread-5] FIleDownloader - 1971 2
+[INFO ] 2021-02-15 12:39:12.564 [Thread-5] FIleDownloader - 1971 3
+[INFO ] 2021-02-15 12:39:12.564 [Thread-5] FIleDownloader - 1971 4
+[INFO ] 2021-02-15 12:39:12.564 [Thread-5] FIleDownloader - 1971 5
+[INFO ] 2021-02-15 12:39:12.564 [Thread-5] FIleDownloader - 1971 6
+[INFO ] 2021-02-15 12:39:12.564 [Thread-5] FIleDownloader - 1971 7
+[INFO ] 2021-02-15 12:39:12.565 [Thread-5] FIleDownloader - 1971 8
+[INFO ] 2021-02-15 12:39:12.565 [Thread-5] FIleDownloader - 1971 9
+[INFO ] 2021-02-15 12:39:12.565 [Thread-5] FIleDownloader - 1971 10
+[INFO ] 2021-02-15 12:39:12.565 [Thread-5] FIleDownloader - 1971 11
+[INFO ] 2021-02-15 12:39:12.565 [Thread-5] FIleDownloader - 1971 12
+[INFO ] 2021-02-15 12:39:12.565 [Thread-5] FIleDownloader - 1972 1
+[INFO ] 2021-02-15 12:39:12.565 [Thread-5] FIleDownloader - 1972 2
+[INFO ] 2021-02-15 12:39:12.565 [Thread-5] FIleDownloader - 1972 3
+[INFO ] 2021-02-15 12:39:12.566 [Thread-5] FIleDownloader - 1972 4
+[INFO ] 2021-02-15 12:39:12.566 [Thread-5] FIleDownloader - 1972 5
+[INFO ] 2021-02-15 12:39:12.566 [Thread-5] FIleDownloader - 1972 6
+[INFO ] 2021-02-15 12:39:12.567 [Thread-5] FIleDownloader - 1972 7
+[INFO ] 2021-02-15 12:39:12.567 [Thread-5] FIleDownloader - 1972 8
+[INFO ] 2021-02-15 12:39:12.567 [Thread-5] FIleDownloader - 1972 9
+[INFO ] 2021-02-15 12:39:12.567 [Thread-5] FIleDownloader - 1972 10
+[INFO ] 2021-02-15 12:39:12.567 [Thread-5] FIleDownloader - 1972 11
+[INFO ] 2021-02-15 12:39:12.567 [Thread-5] FIleDownloader - 1972 12
+[INFO ] 2021-02-15 12:39:12.567 [Thread-5] FIleDownloader - 1973 1
+[INFO ] 2021-02-15 12:39:12.567 [Thread-5] FIleDownloader - 1973 2
+[INFO ] 2021-02-15 12:39:12.568 [Thread-5] FIleDownloader - 1973 3
+[INFO ] 2021-02-15 12:39:12.568 [Thread-5] FIleDownloader - 1973 4
+[INFO ] 2021-02-15 12:39:12.568 [Thread-5] FIleDownloader - 1973 5
+[INFO ] 2021-02-15 12:39:12.568 [Thread-5] FIleDownloader - 1973 6
+[INFO ] 2021-02-15 12:39:12.568 [Thread-5] FIleDownloader - 1973 7
+[INFO ] 2021-02-15 12:39:12.568 [Thread-5] FIleDownloader - 1973 8
+[INFO ] 2021-02-15 12:39:12.568 [Thread-5] FIleDownloader - 1973 9
+[INFO ] 2021-02-15 12:39:12.569 [Thread-5] FIleDownloader - 1973 10
+[INFO ] 2021-02-15 12:39:12.569 [Thread-5] FIleDownloader - 1973 11
+[INFO ] 2021-02-15 12:39:12.569 [Thread-5] FIleDownloader - 1973 12
+[INFO ] 2021-02-15 12:39:12.569 [Thread-5] FIleDownloader - 1974 1
+[INFO ] 2021-02-15 12:39:12.569 [Thread-5] FIleDownloader - 1974 2
+[INFO ] 2021-02-15 12:39:12.569 [Thread-5] FIleDownloader - 1974 3
+[INFO ] 2021-02-15 12:39:12.569 [Thread-5] FIleDownloader - 1974 4
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1974 5
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1974 6
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1974 7
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1974 8
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1974 9
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1974 10
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1974 11
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1974 12
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1975 1
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1975 2
+[INFO ] 2021-02-15 12:39:12.570 [Thread-5] FIleDownloader - 1975 3
+[INFO ] 2021-02-15 12:39:12.571 [Thread-5] FIleDownloader - 1975 4
+[INFO ] 2021-02-15 12:39:12.571 [Thread-5] FIleDownloader - 1975 5
+[INFO ] 2021-02-15 12:39:12.571 [Thread-5] FIleDownloader - 1975 6
+[INFO ] 2021-02-15 12:39:12.571 [Thread-5] FIleDownloader - 1975 7
+[INFO ] 2021-02-15 12:39:12.571 [Thread-5] FIleDownloader - 1975 8
+[INFO ] 2021-02-15 12:39:12.571 [Thread-5] FIleDownloader - 1975 9
+[INFO ] 2021-02-15 12:39:12.571 [Thread-5] FIleDownloader - 1975 10
+[INFO ] 2021-02-15 12:39:12.571 [Thread-5] FIleDownloader - 1975 11
+[INFO ] 2021-02-15 12:39:12.572 [Thread-5] FIleDownloader - 1975 12
+[INFO ] 2021-02-15 12:39:12.572 [Thread-5] FIleDownloader - 1976 1
+[INFO ] 2021-02-15 12:39:12.572 [Thread-5] FIleDownloader - 1976 2
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1976 3
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1976 4
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1976 5
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1976 6
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1976 7
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1976 8
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1976 9
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1976 10
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1976 11
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1976 12
+[INFO ] 2021-02-15 12:39:12.573 [Thread-5] FIleDownloader - 1977 1
+[INFO ] 2021-02-15 12:39:12.574 [Thread-5] FIleDownloader - 1977 2
+[INFO ] 2021-02-15 12:39:12.574 [Thread-5] FIleDownloader - 1977 3
+[INFO ] 2021-02-15 12:39:12.574 [Thread-5] FIleDownloader - 1977 4
+[INFO ] 2021-02-15 12:39:12.574 [Thread-5] FIleDownloader - 1977 5
+[INFO ] 2021-02-15 12:39:12.574 [Thread-5] FIleDownloader - 1977 6
+[INFO ] 2021-02-15 12:39:12.574 [Thread-5] FIleDownloader - 1977 7
+[INFO ] 2021-02-15 12:39:12.574 [Thread-5] FIleDownloader - 1977 8
+[INFO ] 2021-02-15 12:39:12.575 [Thread-5] FIleDownloader - 1977 9
+[INFO ] 2021-02-15 12:39:12.575 [Thread-5] FIleDownloader - 1977 10
+[INFO ] 2021-02-15 12:39:12.575 [Thread-5] FIleDownloader - 1977 11
+[INFO ] 2021-02-15 12:39:12.575 [Thread-5] FIleDownloader - 1977 12
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 1
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 2
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 3
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 4
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 5
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 6
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 7
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 8
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 9
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 10
+[INFO ] 2021-02-15 12:39:12.576 [Thread-5] FIleDownloader - 1978 11
+[INFO ] 2021-02-15 12:39:12.577 [Thread-5] FIleDownloader - 1978 12
+[INFO ] 2021-02-15 12:39:12.577 [Thread-5] FIleDownloader - 1979 1
+[INFO ] 2021-02-15 12:39:12.577 [Thread-5] FIleDownloader - 1979 2
+[INFO ] 2021-02-15 12:39:12.577 [Thread-5] FIleDownloader - 1979 3
+[INFO ] 2021-02-15 12:39:12.577 [Thread-5] FIleDownloader - 1979 4
+[INFO ] 2021-02-15 12:39:12.577 [Thread-5] FIleDownloader - 1979 5
+[INFO ] 2021-02-15 12:39:12.577 [Thread-5] FIleDownloader - 1979 6
+[INFO ] 2021-02-15 12:39:12.577 [Thread-5] FIleDownloader - 1979 7
+[INFO ] 2021-02-15 12:39:12.578 [Thread-5] FIleDownloader - 1979 8
+[INFO ] 2021-02-15 12:39:12.578 [Thread-5] FIleDownloader - 1979 9
+[INFO ] 2021-02-15 12:39:12.578 [Thread-5] FIleDownloader - 1979 10
+[INFO ] 2021-02-15 12:39:12.578 [Thread-5] FIleDownloader - 1979 11
+[INFO ] 2021-02-15 12:39:12.578 [Thread-5] FIleDownloader - 1979 12
+[INFO ] 2021-02-15 12:39:12.578 [Thread-5] FIleDownloader - 1980 1
+[INFO ] 2021-02-15 12:39:12.578 [Thread-5] FIleDownloader - 1980 2
+[INFO ] 2021-02-15 12:39:12.579 [Thread-5] FIleDownloader - 1980 3
+[INFO ] 2021-02-15 12:39:12.579 [Thread-5] FIleDownloader - 1980 4
+[INFO ] 2021-02-15 12:39:12.579 [Thread-5] FIleDownloader - 1980 5
+[INFO ] 2021-02-15 12:39:12.579 [Thread-5] FIleDownloader - 1980 6
+[INFO ] 2021-02-15 12:39:12.579 [Thread-5] FIleDownloader - 1980 7
+[INFO ] 2021-02-15 12:39:12.579 [Thread-5] FIleDownloader - 1980 8
+[INFO ] 2021-02-15 12:39:12.579 [Thread-5] FIleDownloader - 1980 9
+[INFO ] 2021-02-15 12:39:12.580 [Thread-5] FIleDownloader - 1980 10
+[INFO ] 2021-02-15 12:39:12.580 [Thread-5] FIleDownloader - 1980 11
+[INFO ] 2021-02-15 12:39:12.580 [Thread-5] FIleDownloader - 1980 12
+[INFO ] 2021-02-15 12:39:12.580 [Thread-5] FIleDownloader - 1981 1
+[INFO ] 2021-02-15 12:39:12.580 [Thread-5] FIleDownloader - 1981 2
+[INFO ] 2021-02-15 12:39:12.580 [Thread-5] FIleDownloader - 1981 3
+[INFO ] 2021-02-15 12:39:12.580 [Thread-5] FIleDownloader - 1981 4
+[INFO ] 2021-02-15 12:39:12.580 [Thread-5] FIleDownloader - 1981 5
+[INFO ] 2021-02-15 12:39:12.581 [Thread-5] FIleDownloader - 1981 6
+[INFO ] 2021-02-15 12:39:12.581 [Thread-5] FIleDownloader - 1981 7
+[INFO ] 2021-02-15 12:39:12.581 [Thread-5] FIleDownloader - 1981 8
+[INFO ] 2021-02-15 12:39:12.581 [Thread-5] FIleDownloader - 1981 9
+[INFO ] 2021-02-15 12:39:12.581 [Thread-5] FIleDownloader - 1981 10
+[INFO ] 2021-02-15 12:39:12.581 [Thread-5] FIleDownloader - 1981 11
+[INFO ] 2021-02-15 12:39:12.581 [Thread-5] FIleDownloader - 1981 12
+[INFO ] 2021-02-15 12:39:12.582 [Thread-5] FIleDownloader - 1982 1
+[INFO ] 2021-02-15 12:39:12.582 [Thread-5] FIleDownloader - 1982 2
+[INFO ] 2021-02-15 12:39:12.582 [Thread-5] FIleDownloader - 1982 3
+[INFO ] 2021-02-15 12:39:12.582 [Thread-5] FIleDownloader - 1982 4
+[INFO ] 2021-02-15 12:39:12.582 [Thread-5] FIleDownloader - 1982 5
+[INFO ] 2021-02-15 12:39:12.582 [Thread-5] FIleDownloader - 1982 6
+[INFO ] 2021-02-15 12:39:12.582 [Thread-5] FIleDownloader - 1982 7
+[INFO ] 2021-02-15 12:39:12.582 [Thread-5] FIleDownloader - 1982 8
+[INFO ] 2021-02-15 12:39:12.583 [Thread-5] FIleDownloader - 1982 9
+[INFO ] 2021-02-15 12:39:12.583 [Thread-5] FIleDownloader - 1982 10
+[INFO ] 2021-02-15 12:39:12.583 [Thread-5] FIleDownloader - 1982 11
+[INFO ] 2021-02-15 12:39:12.583 [Thread-5] FIleDownloader - 1982 12
+[INFO ] 2021-02-15 12:39:12.583 [Thread-5] FIleDownloader - 1983 1
+[INFO ] 2021-02-15 12:39:12.583 [Thread-5] FIleDownloader - 1983 2
+[INFO ] 2021-02-15 12:39:12.583 [Thread-5] FIleDownloader - 1983 3
+[INFO ] 2021-02-15 12:39:12.583 [Thread-5] FIleDownloader - 1983 4
+[INFO ] 2021-02-15 12:39:12.584 [Thread-5] FIleDownloader - 1983 5
+[INFO ] 2021-02-15 12:39:12.584 [Thread-5] FIleDownloader - 1983 6
+[INFO ] 2021-02-15 12:39:12.584 [Thread-5] FIleDownloader - 1983 7
+[INFO ] 2021-02-15 12:39:12.584 [Thread-5] FIleDownloader - 1983 8
+[INFO ] 2021-02-15 12:39:12.584 [Thread-5] FIleDownloader - 1983 9
+[INFO ] 2021-02-15 12:39:12.584 [Thread-5] FIleDownloader - 1983 10
+[INFO ] 2021-02-15 12:39:12.585 [Thread-5] FIleDownloader - 1983 11
+[INFO ] 2021-02-15 12:39:12.585 [Thread-5] FIleDownloader - 1983 12
+[INFO ] 2021-02-15 12:39:12.585 [Thread-5] FIleDownloader - 1984 1
+[INFO ] 2021-02-15 12:39:12.586 [Thread-5] FIleDownloader - 1984 2
+[INFO ] 2021-02-15 12:39:12.586 [Thread-5] FIleDownloader - 1984 3
+[INFO ] 2021-02-15 12:39:12.586 [Thread-5] FIleDownloader - 1984 4
+[INFO ] 2021-02-15 12:39:12.586 [Thread-5] FIleDownloader - 1984 5
+[INFO ] 2021-02-15 12:39:12.586 [Thread-5] FIleDownloader - 1984 6
+[INFO ] 2021-02-15 12:39:12.586 [Thread-5] FIleDownloader - 1984 7
+[INFO ] 2021-02-15 12:39:12.586 [Thread-5] FIleDownloader - 1984 8
+[INFO ] 2021-02-15 12:39:12.587 [Thread-5] FIleDownloader - 1984 9
+[INFO ] 2021-02-15 12:39:12.587 [Thread-5] FIleDownloader - 1984 10
+[INFO ] 2021-02-15 12:39:12.587 [Thread-5] FIleDownloader - 1984 11
+[INFO ] 2021-02-15 12:39:12.587 [Thread-5] FIleDownloader - 1984 12
+[INFO ] 2021-02-15 12:39:12.587 [Thread-5] FIleDownloader - 1985 1
+[INFO ] 2021-02-15 12:39:12.587 [Thread-5] FIleDownloader - 1985 2
+[INFO ] 2021-02-15 12:39:12.587 [Thread-5] FIleDownloader - 1985 3
+[INFO ] 2021-02-15 12:39:12.587 [Thread-5] FIleDownloader - 1985 4
+[INFO ] 2021-02-15 12:39:12.588 [Thread-5] FIleDownloader - 1985 5
+[INFO ] 2021-02-15 12:39:12.588 [Thread-5] FIleDownloader - 1985 6
+[INFO ] 2021-02-15 12:39:12.588 [Thread-5] FIleDownloader - 1985 7
+[INFO ] 2021-02-15 12:39:12.588 [Thread-5] FIleDownloader - 1985 8
+[INFO ] 2021-02-15 12:39:12.588 [Thread-5] FIleDownloader - 1985 9
+[INFO ] 2021-02-15 12:39:12.588 [Thread-5] FIleDownloader - 1985 10
+[INFO ] 2021-02-15 12:39:12.589 [Thread-5] FIleDownloader - 1985 11
+[INFO ] 2021-02-15 12:39:12.589 [Thread-5] FIleDownloader - 1985 12
+[INFO ] 2021-02-15 12:39:12.589 [Thread-5] FIleDownloader - 1986 1
+[INFO ] 2021-02-15 12:39:12.589 [Thread-5] FIleDownloader - 1986 2
+[INFO ] 2021-02-15 12:39:12.589 [Thread-5] FIleDownloader - 1986 3
+[INFO ] 2021-02-15 12:39:12.589 [Thread-5] FIleDownloader - 1986 4
+[INFO ] 2021-02-15 12:39:12.589 [Thread-5] FIleDownloader - 1986 5
+[INFO ] 2021-02-15 12:39:12.589 [Thread-5] FIleDownloader - 1986 6
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1986 7
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1986 8
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1986 9
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1986 10
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1986 11
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1986 12
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1987 1
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1987 2
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1987 3
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1987 4
+[INFO ] 2021-02-15 12:39:12.590 [Thread-5] FIleDownloader - 1987 5
+[INFO ] 2021-02-15 12:39:12.591 [Thread-5] FIleDownloader - 1987 6
+[INFO ] 2021-02-15 12:39:12.591 [Thread-5] FIleDownloader - 1987 7
+[INFO ] 2021-02-15 12:39:12.591 [Thread-5] FIleDownloader - 1987 8
+[INFO ] 2021-02-15 12:39:12.591 [Thread-5] FIleDownloader - 1987 9
+[INFO ] 2021-02-15 12:39:12.592 [Thread-5] FIleDownloader - 1987 10
+[INFO ] 2021-02-15 12:39:12.592 [Thread-5] FIleDownloader - 1987 11
+[INFO ] 2021-02-15 12:39:12.592 [Thread-5] FIleDownloader - 1987 12
+[INFO ] 2021-02-15 12:39:12.592 [Thread-5] FIleDownloader - 1988 1
+[INFO ] 2021-02-15 12:39:12.592 [Thread-5] FIleDownloader - 1988 2
+[INFO ] 2021-02-15 12:39:12.592 [Thread-5] FIleDownloader - 1988 3
+[INFO ] 2021-02-15 12:39:12.592 [Thread-5] FIleDownloader - 1988 4
+[INFO ] 2021-02-15 12:39:12.592 [Thread-5] FIleDownloader - 1988 5
+[INFO ] 2021-02-15 12:39:12.593 [Thread-5] FIleDownloader - 1988 6
+[INFO ] 2021-02-15 12:39:12.593 [Thread-5] FIleDownloader - 1988 7
+[INFO ] 2021-02-15 12:39:12.593 [Thread-5] FIleDownloader - 1988 8
+[INFO ] 2021-02-15 12:39:12.593 [Thread-5] FIleDownloader - 1988 9
+[INFO ] 2021-02-15 12:39:12.593 [Thread-5] FIleDownloader - 1988 10
+[INFO ] 2021-02-15 12:39:12.593 [Thread-5] FIleDownloader - 1988 11
+[INFO ] 2021-02-15 12:39:12.593 [Thread-5] FIleDownloader - 1988 12
+[INFO ] 2021-02-15 12:39:12.594 [Thread-5] FIleDownloader - 1989 1
+[INFO ] 2021-02-15 12:39:12.594 [Thread-5] FIleDownloader - 1989 2
+[INFO ] 2021-02-15 12:39:12.594 [Thread-5] FIleDownloader - 1989 3
+[INFO ] 2021-02-15 12:39:12.594 [Thread-5] FIleDownloader - 1989 4
+[INFO ] 2021-02-15 12:39:12.594 [Thread-5] FIleDownloader - 1989 5
+[INFO ] 2021-02-15 12:39:12.594 [Thread-5] FIleDownloader - 1989 6
+[INFO ] 2021-02-15 12:39:12.594 [Thread-5] FIleDownloader - 1989 7
+[INFO ] 2021-02-15 12:39:12.594 [Thread-5] FIleDownloader - 1989 8
+[INFO ] 2021-02-15 12:39:12.595 [Thread-5] FIleDownloader - 1989 9
+[INFO ] 2021-02-15 12:39:12.595 [Thread-5] FIleDownloader - 1989 10
+[INFO ] 2021-02-15 12:39:12.595 [Thread-5] FIleDownloader - 1989 11
+[INFO ] 2021-02-15 12:39:12.595 [Thread-5] FIleDownloader - 1989 12
+[INFO ] 2021-02-15 12:39:12.595 [Thread-5] FIleDownloader - 1990 1
+[INFO ] 2021-02-15 12:39:12.595 [Thread-5] FIleDownloader - 1990 2
+[INFO ] 2021-02-15 12:39:12.595 [Thread-5] FIleDownloader - 1990 3
+[INFO ] 2021-02-15 12:39:12.595 [Thread-5] FIleDownloader - 1990 4
+[INFO ] 2021-02-15 12:39:12.595 [Thread-5] FIleDownloader - 1990 5
+[INFO ] 2021-02-15 12:39:12.596 [Thread-5] FIleDownloader - 1990 6
+[INFO ] 2021-02-15 12:39:12.596 [Thread-5] FIleDownloader - 1990 7
+[INFO ] 2021-02-15 12:39:12.596 [Thread-5] FIleDownloader - 1990 8
+[INFO ] 2021-02-15 12:39:12.596 [Thread-5] FIleDownloader - 1990 9
+[INFO ] 2021-02-15 12:39:12.596 [Thread-5] FIleDownloader - 1990 10
+[INFO ] 2021-02-15 12:39:12.596 [Thread-5] FIleDownloader - 1990 11
+[INFO ] 2021-02-15 12:39:12.596 [Thread-5] FIleDownloader - 1990 12
+[INFO ] 2021-02-15 12:39:12.596 [Thread-5] FIleDownloader - 1991 1
+[INFO ] 2021-02-15 12:39:12.597 [Thread-5] FIleDownloader - 1991 2
+[INFO ] 2021-02-15 12:39:12.597 [Thread-5] FIleDownloader - 1991 3
+[INFO ] 2021-02-15 12:39:12.597 [Thread-5] FIleDownloader - 1991 4
+[INFO ] 2021-02-15 12:39:12.597 [Thread-5] FIleDownloader - 1991 5
+[INFO ] 2021-02-15 12:39:12.597 [Thread-5] FIleDownloader - 1991 6
+[INFO ] 2021-02-15 12:39:12.597 [Thread-5] FIleDownloader - 1991 7
+[INFO ] 2021-02-15 12:39:12.597 [Thread-5] FIleDownloader - 1991 8
+[INFO ] 2021-02-15 12:39:12.597 [Thread-5] FIleDownloader - 1991 9
+[INFO ] 2021-02-15 12:39:12.597 [Thread-5] FIleDownloader - 1991 10
+[INFO ] 2021-02-15 12:39:12.598 [Thread-5] FIleDownloader - 1991 11
+[INFO ] 2021-02-15 12:39:12.598 [Thread-5] FIleDownloader - 1991 12
+[INFO ] 2021-02-15 12:39:12.598 [Thread-5] FIleDownloader - 1992 1
+[INFO ] 2021-02-15 12:39:12.598 [Thread-5] FIleDownloader - 1992 2
+[INFO ] 2021-02-15 12:39:12.598 [Thread-5] FIleDownloader - 1992 3
+[INFO ] 2021-02-15 12:39:12.598 [Thread-5] FIleDownloader - 1992 4
+[INFO ] 2021-02-15 12:39:12.598 [Thread-5] FIleDownloader - 1992 5
+[INFO ] 2021-02-15 12:39:12.598 [Thread-5] FIleDownloader - 1992 6
+[INFO ] 2021-02-15 12:39:12.599 [Thread-5] FIleDownloader - 1992 7
+[INFO ] 2021-02-15 12:39:12.599 [Thread-5] FIleDownloader - 1992 8
+[INFO ] 2021-02-15 12:39:12.609 [Thread-5] FIleDownloader - 1992 9
+[INFO ] 2021-02-15 12:39:12.609 [Thread-5] FIleDownloader - 1992 10
+[INFO ] 2021-02-15 12:39:12.609 [Thread-5] FIleDownloader - 1992 11
+[INFO ] 2021-02-15 12:39:12.609 [Thread-5] FIleDownloader - 1992 12
+[INFO ] 2021-02-15 12:39:12.610 [Thread-5] FIleDownloader - 1993 1
+[INFO ] 2021-02-15 12:39:12.610 [Thread-5] FIleDownloader - 1993 2
+[INFO ] 2021-02-15 12:39:12.610 [Thread-5] FIleDownloader - 1993 3
+[INFO ] 2021-02-15 12:39:12.610 [Thread-5] FIleDownloader - 1993 4
+[INFO ] 2021-02-15 12:39:12.610 [Thread-5] FIleDownloader - 1993 5
+[INFO ] 2021-02-15 12:39:12.610 [Thread-5] FIleDownloader - 1993 6
+[INFO ] 2021-02-15 12:39:12.611 [Thread-5] FIleDownloader - 1993 7
+[INFO ] 2021-02-15 12:39:12.612 [Thread-5] FIleDownloader - 1993 8
+[INFO ] 2021-02-15 12:39:12.612 [Thread-5] FIleDownloader - 1993 9
+[INFO ] 2021-02-15 12:39:12.612 [Thread-5] FIleDownloader - 1993 10
+[INFO ] 2021-02-15 12:39:12.612 [Thread-5] FIleDownloader - 1993 11
+[INFO ] 2021-02-15 12:39:12.612 [Thread-5] FIleDownloader - 1993 12
+[INFO ] 2021-02-15 12:39:12.612 [Thread-5] FIleDownloader - 1994 1
+[INFO ] 2021-02-15 12:39:12.613 [Thread-5] FIleDownloader - 1994 2
+[INFO ] 2021-02-15 12:39:12.613 [Thread-5] FIleDownloader - 1994 3
+[INFO ] 2021-02-15 12:39:12.613 [Thread-5] FIleDownloader - 1994 4
+[INFO ] 2021-02-15 12:39:12.614 [Thread-5] FIleDownloader - 1994 5
+[INFO ] 2021-02-15 12:39:12.614 [Thread-5] FIleDownloader - 1994 6
+[INFO ] 2021-02-15 12:39:12.614 [Thread-5] FIleDownloader - 1994 7
+[INFO ] 2021-02-15 12:39:12.614 [Thread-5] FIleDownloader - 1994 8
+[INFO ] 2021-02-15 12:39:12.614 [Thread-5] FIleDownloader - 1994 9
+[INFO ] 2021-02-15 12:39:12.614 [Thread-5] FIleDownloader - 1994 10
+[INFO ] 2021-02-15 12:39:12.614 [Thread-5] FIleDownloader - 1994 11
+[INFO ] 2021-02-15 12:39:12.614 [Thread-5] FIleDownloader - 1994 12
+[INFO ] 2021-02-15 12:39:12.615 [Thread-5] FIleDownloader - 1995 1
+[INFO ] 2021-02-15 12:39:12.615 [Thread-5] FIleDownloader - 1995 2
+[INFO ] 2021-02-15 12:39:12.615 [Thread-5] FIleDownloader - 1995 3
+[INFO ] 2021-02-15 12:39:12.615 [Thread-5] FIleDownloader - 1995 4
+[INFO ] 2021-02-15 12:39:12.615 [Thread-5] FIleDownloader - 1995 5
+[INFO ] 2021-02-15 12:39:12.615 [Thread-5] FIleDownloader - 1995 6
+[INFO ] 2021-02-15 12:39:12.615 [Thread-5] FIleDownloader - 1995 7
+[INFO ] 2021-02-15 12:39:12.615 [Thread-5] FIleDownloader - 1995 8
+[INFO ] 2021-02-15 12:39:12.615 [Thread-5] FIleDownloader - 1995 9
+[INFO ] 2021-02-15 12:39:12.616 [Thread-5] FIleDownloader - 1995 10
+[INFO ] 2021-02-15 12:39:12.616 [Thread-5] FIleDownloader - 1995 11
+[INFO ] 2021-02-15 12:39:12.616 [Thread-5] FIleDownloader - 1995 12
+[INFO ] 2021-02-15 12:39:12.616 [Thread-5] FIleDownloader - 1996 1
+[INFO ] 2021-02-15 12:39:12.616 [Thread-5] FIleDownloader - 1996 2
+[INFO ] 2021-02-15 12:39:12.616 [Thread-5] FIleDownloader - 1996 3
+[INFO ] 2021-02-15 12:39:12.616 [Thread-5] FIleDownloader - 1996 4
+[INFO ] 2021-02-15 12:39:12.616 [Thread-5] FIleDownloader - 1996 5
+[INFO ] 2021-02-15 12:39:12.616 [Thread-5] FIleDownloader - 1996 6
+[INFO ] 2021-02-15 12:39:12.617 [Thread-5] FIleDownloader - 1996 7
+[INFO ] 2021-02-15 12:39:12.617 [Thread-5] FIleDownloader - 1996 8
+[INFO ] 2021-02-15 12:39:12.617 [Thread-5] FIleDownloader - 1996 9
+[INFO ] 2021-02-15 12:39:12.617 [Thread-5] FIleDownloader - 1996 10
+[INFO ] 2021-02-15 12:39:12.617 [Thread-5] FIleDownloader - 1996 11
+[INFO ] 2021-02-15 12:39:12.617 [Thread-5] FIleDownloader - 1996 12
+[INFO ] 2021-02-15 12:39:12.617 [Thread-5] FIleDownloader - 1997 1
+[INFO ] 2021-02-15 12:39:12.617 [Thread-5] FIleDownloader - 1997 2
+[INFO ] 2021-02-15 12:39:12.617 [Thread-5] FIleDownloader - 1997 3
+[INFO ] 2021-02-15 12:39:12.618 [Thread-5] FIleDownloader - 1997 4
+[INFO ] 2021-02-15 12:39:12.618 [Thread-5] FIleDownloader - 1997 5
+[INFO ] 2021-02-15 12:39:12.618 [Thread-5] FIleDownloader - 1997 6
+[INFO ] 2021-02-15 12:39:12.618 [Thread-5] FIleDownloader - 1997 7
+[INFO ] 2021-02-15 12:39:12.618 [Thread-5] FIleDownloader - 1997 8
+[INFO ] 2021-02-15 12:39:12.618 [Thread-5] FIleDownloader - 1997 9
+[INFO ] 2021-02-15 12:39:12.618 [Thread-5] FIleDownloader - 1997 10
+[INFO ] 2021-02-15 12:39:12.618 [Thread-5] FIleDownloader - 1997 11
+[INFO ] 2021-02-15 12:39:12.618 [Thread-5] FIleDownloader - 1997 12
+[INFO ] 2021-02-15 12:39:12.619 [Thread-5] FIleDownloader - 1998 1
+[INFO ] 2021-02-15 12:39:12.619 [Thread-5] FIleDownloader - 1998 2
+[INFO ] 2021-02-15 12:39:12.619 [Thread-5] FIleDownloader - 1998 3
+[INFO ] 2021-02-15 12:39:12.619 [Thread-5] FIleDownloader - 1998 4
+[INFO ] 2021-02-15 12:39:12.619 [Thread-5] FIleDownloader - 1998 5
+[INFO ] 2021-02-15 12:39:12.619 [Thread-5] FIleDownloader - 1998 6
+[INFO ] 2021-02-15 12:39:12.619 [Thread-5] FIleDownloader - 1998 7
+[INFO ] 2021-02-15 12:39:12.619 [Thread-5] FIleDownloader - 1998 8
+[INFO ] 2021-02-15 12:39:12.619 [Thread-5] FIleDownloader - 1998 9
+[INFO ] 2021-02-15 12:39:12.620 [Thread-5] FIleDownloader - 1998 10
+[INFO ] 2021-02-15 12:39:12.620 [Thread-5] FIleDownloader - 1998 11
+[INFO ] 2021-02-15 12:39:12.620 [Thread-5] FIleDownloader - 1998 12
+[INFO ] 2021-02-15 12:39:12.620 [Thread-5] FIleDownloader - 1999 1
+[INFO ] 2021-02-15 12:39:12.620 [Thread-5] FIleDownloader - 1999 2
+[INFO ] 2021-02-15 12:39:12.620 [Thread-5] FIleDownloader - 1999 3
+[INFO ] 2021-02-15 12:39:12.620 [Thread-5] FIleDownloader - 1999 4
+[INFO ] 2021-02-15 12:39:12.620 [Thread-5] FIleDownloader - 1999 5
+[INFO ] 2021-02-15 12:39:12.620 [Thread-5] FIleDownloader - 1999 6
+[INFO ] 2021-02-15 12:39:12.621 [Thread-5] FIleDownloader - 1999 7
+[INFO ] 2021-02-15 12:39:12.621 [Thread-5] FIleDownloader - 1999 8
+[INFO ] 2021-02-15 12:39:12.621 [Thread-5] FIleDownloader - 1999 9
+[INFO ] 2021-02-15 12:39:12.621 [Thread-5] FIleDownloader - 1999 10
+[INFO ] 2021-02-15 12:39:12.621 [Thread-5] FIleDownloader - 1999 11
+[INFO ] 2021-02-15 12:39:12.621 [Thread-5] FIleDownloader - 1999 12
+[INFO ] 2021-02-15 12:39:12.621 [Thread-5] FIleDownloader - 2000 1
+[INFO ] 2021-02-15 12:39:12.622 [Thread-5] FIleDownloader - 2000 2
+[INFO ] 2021-02-15 12:39:12.622 [Thread-5] FIleDownloader - 2000 3
+[INFO ] 2021-02-15 12:39:12.622 [Thread-5] FIleDownloader - 2000 4
+[INFO ] 2021-02-15 12:39:12.622 [Thread-5] FIleDownloader - 2000 5
+[INFO ] 2021-02-15 12:39:12.622 [Thread-5] FIleDownloader - 2000 6
+[INFO ] 2021-02-15 12:39:12.622 [Thread-5] FIleDownloader - 2000 7
+[INFO ] 2021-02-15 12:39:12.622 [Thread-5] FIleDownloader - 2000 8
+[INFO ] 2021-02-15 12:39:12.622 [Thread-5] FIleDownloader - 2000 9
+[INFO ] 2021-02-15 12:39:12.622 [Thread-5] FIleDownloader - 2000 10
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2000 11
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2000 12
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 1
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 2
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 3
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 4
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 5
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 6
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 7
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 8
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 9
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 10
+[INFO ] 2021-02-15 12:39:12.623 [Thread-5] FIleDownloader - 2001 11
+[INFO ] 2021-02-15 12:39:12.624 [Thread-5] FIleDownloader - 2001 12
+[INFO ] 2021-02-15 12:39:12.624 [Thread-5] FIleDownloader - 2002 1
+[INFO ] 2021-02-15 12:39:12.624 [Thread-5] FIleDownloader - 2002 2
+[INFO ] 2021-02-15 12:39:12.624 [Thread-5] FIleDownloader - 2002 3
+[INFO ] 2021-02-15 12:39:12.624 [Thread-5] FIleDownloader - 2002 4
+[INFO ] 2021-02-15 12:39:12.624 [Thread-5] FIleDownloader - 2002 5
+[INFO ] 2021-02-15 12:39:12.624 [Thread-5] FIleDownloader - 2002 6
+[INFO ] 2021-02-15 12:39:12.624 [Thread-5] FIleDownloader - 2002 7
+[INFO ] 2021-02-15 12:39:12.624 [Thread-5] FIleDownloader - 2002 8
+[INFO ] 2021-02-15 12:39:12.625 [Thread-5] FIleDownloader - 2002 9
+[INFO ] 2021-02-15 12:39:12.625 [Thread-5] FIleDownloader - 2002 10
+[INFO ] 2021-02-15 12:39:12.625 [Thread-5] FIleDownloader - 2002 11
+[INFO ] 2021-02-15 12:39:12.625 [Thread-5] FIleDownloader - 2002 12
+[INFO ] 2021-02-15 12:39:12.625 [Thread-5] FIleDownloader - 2003 1
+[INFO ] 2021-02-15 12:39:12.626 [Thread-5] FIleDownloader - 2003 2
+[INFO ] 2021-02-15 12:39:12.626 [Thread-5] FIleDownloader - 2003 3
+[INFO ] 2021-02-15 12:39:12.626 [Thread-5] FIleDownloader - 2003 4
+[INFO ] 2021-02-15 12:39:12.626 [Thread-5] FIleDownloader - 2003 5
+[INFO ] 2021-02-15 12:39:12.626 [Thread-5] FIleDownloader - 2003 6
+[INFO ] 2021-02-15 12:39:12.626 [Thread-5] FIleDownloader - 2003 7
+[INFO ] 2021-02-15 12:39:12.627 [Thread-5] FIleDownloader - 2003 8
+[INFO ] 2021-02-15 12:39:12.627 [Thread-5] FIleDownloader - 2003 9
+[INFO ] 2021-02-15 12:39:12.627 [Thread-5] FIleDownloader - 2003 10
+[INFO ] 2021-02-15 12:39:12.627 [Thread-5] FIleDownloader - 2003 11
+[INFO ] 2021-02-15 12:39:12.627 [Thread-5] FIleDownloader - 2003 12
+[INFO ] 2021-02-15 12:39:12.627 [Thread-5] FIleDownloader - 2004 1
+[INFO ] 2021-02-15 12:39:12.627 [Thread-5] FIleDownloader - 2004 2
+[INFO ] 2021-02-15 12:39:12.627 [Thread-5] FIleDownloader - 2004 3
+[INFO ] 2021-02-15 12:39:12.627 [Thread-5] FIleDownloader - 2004 4
+[INFO ] 2021-02-15 12:39:12.628 [Thread-5] FIleDownloader - 2004 5
+[INFO ] 2021-02-15 12:39:12.628 [Thread-5] FIleDownloader - 2004 6
+[INFO ] 2021-02-15 12:39:12.628 [Thread-5] FIleDownloader - 2004 7
+[INFO ] 2021-02-15 12:39:12.628 [Thread-5] FIleDownloader - 2004 8
+[INFO ] 2021-02-15 12:39:12.628 [Thread-5] FIleDownloader - 2004 9
+[INFO ] 2021-02-15 12:39:12.628 [Thread-5] FIleDownloader - 2004 10
+[INFO ] 2021-02-15 12:39:12.628 [Thread-5] FIleDownloader - 2004 11
+[INFO ] 2021-02-15 12:39:12.628 [Thread-5] FIleDownloader - 2004 12
+[INFO ] 2021-02-15 12:39:12.628 [Thread-5] FIleDownloader - 2005 1
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 2
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 3
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 4
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 5
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 6
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 7
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 8
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 9
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 10
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 11
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2005 12
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2006 1
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2006 2
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2006 3
+[INFO ] 2021-02-15 12:39:12.629 [Thread-5] FIleDownloader - 2006 4
+[INFO ] 2021-02-15 12:39:12.630 [Thread-5] FIleDownloader - 2006 5
+[INFO ] 2021-02-15 12:39:12.630 [Thread-5] FIleDownloader - 2006 6
+[INFO ] 2021-02-15 12:39:12.630 [Thread-5] FIleDownloader - 2006 7
+[INFO ] 2021-02-15 12:39:12.630 [Thread-5] FIleDownloader - 2006 8
+[INFO ] 2021-02-15 12:39:12.630 [Thread-5] FIleDownloader - 2006 9
+[INFO ] 2021-02-15 12:39:12.630 [Thread-5] FIleDownloader - 2006 10
+[INFO ] 2021-02-15 12:39:12.630 [Thread-5] FIleDownloader - 2006 11
+[INFO ] 2021-02-15 12:39:12.630 [Thread-5] FIleDownloader - 2006 12
+[INFO ] 2021-02-15 12:39:12.630 [Thread-5] FIleDownloader - 2007 1
+[INFO ] 2021-02-15 12:39:12.631 [Thread-5] FIleDownloader - 2007 2
+[INFO ] 2021-02-15 12:39:12.631 [Thread-5] FIleDownloader - 2007 3
+[INFO ] 2021-02-15 12:39:12.631 [Thread-5] FIleDownloader - 2007 4
+[INFO ] 2021-02-15 12:39:12.632 [Thread-5] FIleDownloader - 2007 5
+[INFO ] 2021-02-15 12:39:12.632 [Thread-5] FIleDownloader - 2007 6
+[INFO ] 2021-02-15 12:39:12.632 [Thread-5] FIleDownloader - 2007 7
+[INFO ] 2021-02-15 12:39:12.632 [Thread-5] FIleDownloader - 2007 8
+[INFO ] 2021-02-15 12:39:12.632 [Thread-5] FIleDownloader - 2007 9
+[INFO ] 2021-02-15 12:39:12.632 [Thread-5] FIleDownloader - 2007 10
+[INFO ] 2021-02-15 12:39:12.632 [Thread-5] FIleDownloader - 2007 11
+[INFO ] 2021-02-15 12:39:12.632 [Thread-5] FIleDownloader - 2007 12
+[INFO ] 2021-02-15 12:39:12.632 [Thread-5] FIleDownloader - 2008 1
+[INFO ] 2021-02-15 12:39:12.633 [Thread-5] FIleDownloader - 2008 2
+[INFO ] 2021-02-15 12:39:12.633 [Thread-5] FIleDownloader - 2008 3
+[INFO ] 2021-02-15 12:39:12.633 [Thread-5] FIleDownloader - 2008 4
+[INFO ] 2021-02-15 12:39:12.633 [Thread-5] FIleDownloader - 2008 5
+[INFO ] 2021-02-15 12:39:12.633 [Thread-5] FIleDownloader - 2008 6
+[INFO ] 2021-02-15 12:39:12.633 [Thread-5] FIleDownloader - 2008 7
+[INFO ] 2021-02-15 12:39:12.633 [Thread-5] FIleDownloader - 2008 8
+[INFO ] 2021-02-15 12:39:12.633 [Thread-5] FIleDownloader - 2008 9
+[INFO ] 2021-02-15 12:39:12.633 [Thread-5] FIleDownloader - 2008 10
+[INFO ] 2021-02-15 12:39:12.634 [Thread-5] FIleDownloader - 2008 11
+[INFO ] 2021-02-15 12:39:12.634 [Thread-5] FIleDownloader - 2008 12
+[INFO ] 2021-02-15 12:39:12.634 [Thread-5] FIleDownloader - 2009 1
+[INFO ] 2021-02-15 12:39:12.634 [Thread-5] FIleDownloader - 2009 2
+[INFO ] 2021-02-15 12:39:12.634 [Thread-5] FIleDownloader - 2009 3
+[INFO ] 2021-02-15 12:39:12.634 [Thread-5] FIleDownloader - 2009 4
+[INFO ] 2021-02-15 12:39:12.634 [Thread-5] FIleDownloader - 2009 5
+[INFO ] 2021-02-15 12:39:12.634 [Thread-5] FIleDownloader - 2009 6
+[INFO ] 2021-02-15 12:39:12.635 [Thread-5] FIleDownloader - 2009 7
+[INFO ] 2021-02-15 12:39:12.635 [Thread-5] FIleDownloader - 2009 8
+[INFO ] 2021-02-15 12:39:12.635 [Thread-5] FIleDownloader - 2009 9
+[INFO ] 2021-02-15 12:39:12.635 [Thread-5] FIleDownloader - 2009 10
+[INFO ] 2021-02-15 12:39:12.635 [Thread-5] FIleDownloader - 2009 11
+[INFO ] 2021-02-15 12:39:12.635 [Thread-5] FIleDownloader - 2009 12
+[INFO ] 2021-02-15 12:39:12.635 [Thread-5] FIleDownloader - 2010 1
+[INFO ] 2021-02-15 12:39:12.635 [Thread-5] FIleDownloader - 2010 2
+[INFO ] 2021-02-15 12:39:12.635 [Thread-5] FIleDownloader - 2010 3
+[INFO ] 2021-02-15 12:39:12.636 [Thread-5] FIleDownloader - 2010 4
+[INFO ] 2021-02-15 12:39:12.636 [Thread-5] FIleDownloader - 2010 5
+[INFO ] 2021-02-15 12:39:12.636 [Thread-5] FIleDownloader - 2010 6
+[INFO ] 2021-02-15 12:39:12.636 [Thread-5] FIleDownloader - 2010 7
+[INFO ] 2021-02-15 12:39:12.636 [Thread-5] FIleDownloader - 2010 8
+[INFO ] 2021-02-15 12:39:12.636 [Thread-5] FIleDownloader - 2010 9
+[INFO ] 2021-02-15 12:39:12.636 [Thread-5] FIleDownloader - 2010 10
+[INFO ] 2021-02-15 12:39:12.636 [Thread-5] FIleDownloader - 2010 11
+[INFO ] 2021-02-15 12:39:12.636 [Thread-5] FIleDownloader - 2010 12
+[INFO ] 2021-02-15 12:39:12.637 [Thread-5] FIleDownloader - 2011 1
+[INFO ] 2021-02-15 12:39:12.637 [Thread-5] FIleDownloader - 2011 2
+[INFO ] 2021-02-15 12:39:12.637 [Thread-5] FIleDownloader - 2011 3
+[INFO ] 2021-02-15 12:39:12.637 [Thread-5] FIleDownloader - 2011 4
+[INFO ] 2021-02-15 12:39:12.637 [Thread-5] FIleDownloader - 2011 5
+[INFO ] 2021-02-15 12:39:12.637 [Thread-5] FIleDownloader - 2011 6
+[INFO ] 2021-02-15 12:39:12.637 [Thread-5] FIleDownloader - 2011 7
+[INFO ] 2021-02-15 12:39:12.637 [Thread-5] FIleDownloader - 2011 8
+[INFO ] 2021-02-15 12:39:12.637 [Thread-5] FIleDownloader - 2011 9
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2011 10
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2011 11
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2011 12
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2012 1
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2012 2
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2012 3
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2012 4
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2012 5
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2012 6
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2012 7
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2012 8
+[INFO ] 2021-02-15 12:39:12.638 [Thread-5] FIleDownloader - 2012 9
+[INFO ] 2021-02-15 12:39:12.639 [Thread-5] FIleDownloader - 2012 10
+[INFO ] 2021-02-15 12:39:12.639 [Thread-5] FIleDownloader - 2012 11
+[INFO ] 2021-02-15 12:39:12.639 [Thread-5] FIleDownloader - 2012 12
+[INFO ] 2021-02-15 12:39:12.639 [Thread-5] FIleDownloader - 2013 1
+[INFO ] 2021-02-15 12:39:12.639 [Thread-5] FIleDownloader - 2013 2
+[INFO ] 2021-02-15 12:39:12.639 [Thread-5] FIleDownloader - 2013 3
+[INFO ] 2021-02-15 12:39:12.639 [Thread-5] FIleDownloader - 2013 4
+[INFO ] 2021-02-15 12:39:12.639 [Thread-5] FIleDownloader - 2013 5
+[INFO ] 2021-02-15 12:39:12.639 [Thread-5] FIleDownloader - 2013 6
+[INFO ] 2021-02-15 12:39:12.640 [Thread-5] FIleDownloader - 2013 7
+[INFO ] 2021-02-15 12:39:12.640 [Thread-5] FIleDownloader - 2013 8
+[INFO ] 2021-02-15 12:39:12.640 [Thread-5] FIleDownloader - 2013 9
+[INFO ] 2021-02-15 12:39:12.640 [Thread-5] FIleDownloader - 2013 10
+[INFO ] 2021-02-15 12:39:12.640 [Thread-5] FIleDownloader - 2013 11
+[INFO ] 2021-02-15 12:39:12.640 [Thread-5] FIleDownloader - 2013 12
+[INFO ] 2021-02-15 12:39:12.640 [Thread-5] FIleDownloader - 2014 1
+[INFO ] 2021-02-15 12:39:12.640 [Thread-5] FIleDownloader - 2014 2
+[INFO ] 2021-02-15 12:39:12.641 [Thread-5] FIleDownloader - 2014 3
+[INFO ] 2021-02-15 12:39:12.641 [Thread-5] FIleDownloader - 2014 4
+[INFO ] 2021-02-15 12:39:12.641 [Thread-5] FIleDownloader - 2014 5
+[INFO ] 2021-02-15 12:39:12.641 [Thread-5] FIleDownloader - 2014 6
+[INFO ] 2021-02-15 12:39:12.641 [Thread-5] FIleDownloader - 2014 7
+[INFO ] 2021-02-15 12:39:12.641 [Thread-5] FIleDownloader - 2014 8
+[INFO ] 2021-02-15 12:39:12.641 [Thread-5] FIleDownloader - 2014 9
+[INFO ] 2021-02-15 12:39:12.641 [Thread-5] FIleDownloader - 2014 10
+[INFO ] 2021-02-15 12:39:12.641 [Thread-5] FIleDownloader - 2014 11
+[INFO ] 2021-02-15 12:39:12.642 [Thread-5] FIleDownloader - 2014 12
+[INFO ] 2021-02-15 12:39:12.642 [Thread-5] FIleDownloader - 2015 1
+[INFO ] 2021-02-15 12:39:12.642 [Thread-5] FIleDownloader - 2015 2
+[INFO ] 2021-02-15 12:39:12.642 [Thread-5] FIleDownloader - 2015 3
+[INFO ] 2021-02-15 12:39:12.642 [Thread-5] FIleDownloader - 2015 4
+[INFO ] 2021-02-15 12:39:12.642 [Thread-5] FIleDownloader - 2015 5
+[INFO ] 2021-02-15 12:39:12.642 [Thread-5] FIleDownloader - 2015 6
+[INFO ] 2021-02-15 12:39:12.642 [Thread-5] FIleDownloader - 2015 7
+[INFO ] 2021-02-15 12:39:12.642 [Thread-5] FIleDownloader - 2015 8
+[INFO ] 2021-02-15 12:39:12.643 [Thread-5] FIleDownloader - 2015 9
+[INFO ] 2021-02-15 12:39:12.643 [Thread-5] FIleDownloader - 2015 10
+[INFO ] 2021-02-15 12:39:12.643 [Thread-5] FIleDownloader - 2015 11
+[INFO ] 2021-02-15 12:39:12.643 [Thread-5] FIleDownloader - 2015 12
+[INFO ] 2021-02-15 12:39:12.643 [Thread-5] FIleDownloader - 2016 1
+[INFO ] 2021-02-15 12:39:12.643 [Thread-5] FIleDownloader - 2016 2
+[INFO ] 2021-02-15 12:39:12.643 [Thread-5] FIleDownloader - 2016 3
+[INFO ] 2021-02-15 12:39:12.643 [Thread-5] FIleDownloader - 2016 4
+[INFO ] 2021-02-15 12:39:12.643 [Thread-5] FIleDownloader - 2016 5
+[INFO ] 2021-02-15 12:39:12.644 [Thread-5] FIleDownloader - 2016 6
+[INFO ] 2021-02-15 12:39:12.644 [Thread-5] FIleDownloader - 2016 7
+[INFO ] 2021-02-15 12:39:12.644 [Thread-5] FIleDownloader - 2016 8
+[INFO ] 2021-02-15 12:39:12.644 [Thread-5] FIleDownloader - 2016 9
+[INFO ] 2021-02-15 12:39:12.644 [Thread-5] FIleDownloader - 2016 10
+[INFO ] 2021-02-15 12:39:12.644 [Thread-5] FIleDownloader - 2016 11
+[INFO ] 2021-02-15 12:39:12.644 [Thread-5] FIleDownloader - 2016 12
+[INFO ] 2021-02-15 12:39:12.644 [Thread-5] FIleDownloader - 2017 1
+[INFO ] 2021-02-15 12:39:12.644 [Thread-5] FIleDownloader - 2017 2
+[INFO ] 2021-02-15 12:39:12.645 [Thread-5] FIleDownloader - 2017 3
+[INFO ] 2021-02-15 12:39:12.645 [Thread-5] FIleDownloader - 2017 4
+[INFO ] 2021-02-15 12:39:12.645 [Thread-5] FIleDownloader - 2017 5
+[INFO ] 2021-02-15 12:39:12.645 [Thread-5] FIleDownloader - 2017 6
+[INFO ] 2021-02-15 12:39:12.645 [Thread-5] FIleDownloader - 2017 7
+[INFO ] 2021-02-15 12:39:12.645 [Thread-5] FIleDownloader - 2017 8
+[INFO ] 2021-02-15 12:39:12.645 [Thread-5] FIleDownloader - 2017 9
+[INFO ] 2021-02-15 12:39:12.645 [Thread-5] FIleDownloader - 2017 10
+[INFO ] 2021-02-15 12:39:12.645 [Thread-5] FIleDownloader - 2017 11
+[INFO ] 2021-02-15 12:39:12.645 [Thread-5] FIleDownloader - 2017 12
+[INFO ] 2021-02-15 12:39:12.646 [Thread-5] FIleDownloader - 2018 1
+[INFO ] 2021-02-15 12:39:12.646 [Thread-5] FIleDownloader - 2018 2
+[INFO ] 2021-02-15 12:39:12.646 [Thread-5] FIleDownloader - 2018 3
+[INFO ] 2021-02-15 12:39:12.646 [Thread-5] FIleDownloader - 2018 4
+[INFO ] 2021-02-15 12:39:12.646 [Thread-5] FIleDownloader - 2018 5
+[INFO ] 2021-02-15 12:39:12.646 [Thread-5] FIleDownloader - 2018 6
+[INFO ] 2021-02-15 12:39:12.646 [Thread-5] FIleDownloader - 2018 7
+[INFO ] 2021-02-15 12:39:12.646 [Thread-5] FIleDownloader - 2018 8
+[INFO ] 2021-02-15 12:39:12.646 [Thread-5] FIleDownloader - 2018 9
+[INFO ] 2021-02-15 12:39:12.647 [Thread-5] FIleDownloader - 2018 10
+[INFO ] 2021-02-15 12:39:12.647 [Thread-5] FIleDownloader - 2018 11
+[INFO ] 2021-02-15 12:39:12.647 [Thread-5] FIleDownloader - 2018 12
+[INFO ] 2021-02-15 12:39:12.647 [Thread-5] FIleDownloader - 2019 1
+[INFO ] 2021-02-15 12:39:12.647 [Thread-5] FIleDownloader - 2019 2
+[INFO ] 2021-02-15 12:39:12.647 [Thread-5] FIleDownloader - 2019 3
+[INFO ] 2021-02-15 12:39:12.647 [Thread-5] FIleDownloader - 2019 4
+[INFO ] 2021-02-15 12:39:12.647 [Thread-5] FIleDownloader - 2019 5
+[INFO ] 2021-02-15 12:39:12.647 [Thread-5] FIleDownloader - 2019 6
+[INFO ] 2021-02-15 12:39:12.648 [Thread-5] FIleDownloader - 2019 7
+[INFO ] 2021-02-15 12:39:12.648 [Thread-5] FIleDownloader - 2019 8
+[INFO ] 2021-02-15 12:39:12.648 [Thread-5] FIleDownloader - 2019 9
+[INFO ] 2021-02-15 12:39:12.648 [Thread-5] FIleDownloader - 2019 10
+[INFO ] 2021-02-15 12:39:12.648 [Thread-5] FIleDownloader - 2019 11
+[INFO ] 2021-02-15 12:39:12.648 [Thread-5] FIleDownloader - 2019 12
+[INFO ] 2021-02-15 12:39:12.648 [Thread-5] FIleDownloader - 2020 1
+[WARN ] 2021-02-15 12:39:12.698 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.698 [Thread-5] FIleDownloader - 2020 2
+[WARN ] 2021-02-15 12:39:12.752 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.752 [Thread-5] FIleDownloader - 2020 3
+[WARN ] 2021-02-15 12:39:12.801 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.801 [Thread-5] FIleDownloader - 2020 4
+[WARN ] 2021-02-15 12:39:12.866 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.866 [Thread-5] FIleDownloader - 2020 5
+[WARN ] 2021-02-15 12:39:12.921 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.921 [Thread-5] FIleDownloader - 2020 6
+[WARN ] 2021-02-15 12:39:12.973 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:12.974 [Thread-5] FIleDownloader - 2020 7
+[WARN ] 2021-02-15 12:39:13.031 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:13.031 [Thread-5] FIleDownloader - 2020 8
+[WARN ] 2021-02-15 12:39:13.093 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:13.093 [Thread-5] FIleDownloader - 2020 9
+[WARN ] 2021-02-15 12:39:13.147 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:13.147 [Thread-5] FIleDownloader - 2020 10
+[WARN ] 2021-02-15 12:39:13.198 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:13.198 [Thread-5] FIleDownloader - 2020 11
+[WARN ] 2021-02-15 12:39:13.256 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:39:13.256 [Thread-5] FIleDownloader - 2020 12
+[WARN ] 2021-02-15 12:39:13.315 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:09.886 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:40:09.937 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:40:09.939 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:40:09.972 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:40:10.095 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:40:10.098 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:40:10.099 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:40:10.099 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:40:10.101 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:40:10.553 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:40:10.576 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:40:10.907 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66a5e2b5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:40:36.695 [Thread-5] FIleDownloader - 1950 1
+[WARN ] 2021-02-15 12:40:37.733 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:37.733 [Thread-5] FIleDownloader - 1950 2
+[WARN ] 2021-02-15 12:40:37.801 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:37.802 [Thread-5] FIleDownloader - 1950 3
+[WARN ] 2021-02-15 12:40:37.866 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:37.866 [Thread-5] FIleDownloader - 1950 4
+[WARN ] 2021-02-15 12:40:37.937 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:37.937 [Thread-5] FIleDownloader - 1950 5
+[WARN ] 2021-02-15 12:40:37.999 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:37.999 [Thread-5] FIleDownloader - 1950 6
+[WARN ] 2021-02-15 12:40:38.086 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:38.086 [Thread-5] FIleDownloader - 1950 7
+[WARN ] 2021-02-15 12:40:38.143 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:38.143 [Thread-5] FIleDownloader - 1950 8
+[WARN ] 2021-02-15 12:40:38.211 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:38.211 [Thread-5] FIleDownloader - 1950 9
+[WARN ] 2021-02-15 12:40:38.284 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:38.284 [Thread-5] FIleDownloader - 1950 10
+[WARN ] 2021-02-15 12:40:38.347 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:38.347 [Thread-5] FIleDownloader - 1950 11
+[WARN ] 2021-02-15 12:40:38.429 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:38.429 [Thread-5] FIleDownloader - 1950 12
+[WARN ] 2021-02-15 12:40:38.490 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:40:38.490 [Thread-5] FIleDownloader - 1951 1
+[INFO ] 2021-02-15 12:40:40.609 [Thread-5] FIleDownloader - 1951 2
+[INFO ] 2021-02-15 12:40:42.856 [Thread-5] FIleDownloader - 1951 3
+[INFO ] 2021-02-15 12:40:45.013 [Thread-5] FIleDownloader - 1951 4
+[INFO ] 2021-02-15 12:40:47.005 [Thread-5] FIleDownloader - 1951 5
+[INFO ] 2021-02-15 12:40:49.227 [Thread-5] FIleDownloader - 1951 6
+[INFO ] 2021-02-15 12:40:51.847 [Thread-5] FIleDownloader - 1951 7
+[INFO ] 2021-02-15 12:40:54.065 [Thread-5] FIleDownloader - 1951 8
+[INFO ] 2021-02-15 12:40:56.228 [Thread-5] FIleDownloader - 1951 9
+[INFO ] 2021-02-15 12:40:58.468 [Thread-5] FIleDownloader - 1951 10
+[INFO ] 2021-02-15 12:41:00.790 [Thread-5] FIleDownloader - 1951 11
+[INFO ] 2021-02-15 12:41:02.669 [Thread-5] FIleDownloader - 1951 12
+[INFO ] 2021-02-15 12:41:04.709 [Thread-5] FIleDownloader - 1952 1
+[INFO ] 2021-02-15 12:41:06.637 [Thread-5] FIleDownloader - 1952 2
+[INFO ] 2021-02-15 12:41:08.737 [Thread-5] FIleDownloader - 1952 3
+[INFO ] 2021-02-15 12:41:11.267 [Thread-5] FIleDownloader - 1952 4
+[INFO ] 2021-02-15 12:41:13.351 [Thread-5] FIleDownloader - 1952 5
+[INFO ] 2021-02-15 12:41:15.572 [Thread-5] FIleDownloader - 1952 6
+[INFO ] 2021-02-15 12:41:17.955 [Thread-5] FIleDownloader - 1952 7
+[INFO ] 2021-02-15 12:41:20.095 [Thread-5] FIleDownloader - 1952 8
+[INFO ] 2021-02-15 12:41:22.571 [Thread-5] FIleDownloader - 1952 9
+[INFO ] 2021-02-15 12:41:25.699 [Thread-5] FIleDownloader - 1952 10
+[INFO ] 2021-02-15 12:41:27.615 [Thread-5] FIleDownloader - 1952 11
+[INFO ] 2021-02-15 12:41:29.724 [Thread-5] FIleDownloader - 1952 12
+[INFO ] 2021-02-15 12:41:32.168 [Thread-5] FIleDownloader - 1953 1
+[INFO ] 2021-02-15 12:41:34.510 [Thread-5] FIleDownloader - 1953 2
+[INFO ] 2021-02-15 12:41:37.414 [Thread-5] FIleDownloader - 1953 3
+[INFO ] 2021-02-15 12:41:39.572 [Thread-5] FIleDownloader - 1953 4
+[INFO ] 2021-02-15 12:41:42.417 [Thread-5] FIleDownloader - 1953 5
+[INFO ] 2021-02-15 12:41:44.660 [Thread-5] FIleDownloader - 1953 6
+[INFO ] 2021-02-15 12:41:46.754 [Thread-5] FIleDownloader - 1953 7
+[INFO ] 2021-02-15 12:41:49.176 [Thread-5] FIleDownloader - 1953 8
+[INFO ] 2021-02-15 12:41:51.627 [Thread-5] FIleDownloader - 1953 9
+[INFO ] 2021-02-15 12:41:53.614 [Thread-5] FIleDownloader - 1953 10
+[INFO ] 2021-02-15 12:41:56.011 [Thread-5] FIleDownloader - 1953 11
+[INFO ] 2021-02-15 12:41:58.091 [Thread-5] FIleDownloader - 1953 12
+[INFO ] 2021-02-15 12:42:00.161 [Thread-5] FIleDownloader - 1954 1
+[INFO ] 2021-02-15 12:42:03.236 [Thread-5] FIleDownloader - 1954 2
+[INFO ] 2021-02-15 12:42:05.743 [Thread-5] FIleDownloader - 1954 3
+[INFO ] 2021-02-15 12:42:07.788 [Thread-5] FIleDownloader - 1954 4
+[INFO ] 2021-02-15 12:42:09.661 [Thread-5] FIleDownloader - 1954 5
+[INFO ] 2021-02-15 12:42:12.494 [Thread-5] FIleDownloader - 1954 6
+[INFO ] 2021-02-15 12:42:14.734 [Thread-5] FIleDownloader - 1954 7
+[INFO ] 2021-02-15 12:42:17.816 [Thread-5] FIleDownloader - 1954 8
+[INFO ] 2021-02-15 12:42:20.069 [Thread-5] FIleDownloader - 1954 9
+[INFO ] 2021-02-15 12:42:22.269 [Thread-5] FIleDownloader - 1954 10
+[INFO ] 2021-02-15 12:42:25.282 [Thread-5] FIleDownloader - 1954 11
+[INFO ] 2021-02-15 12:42:27.201 [Thread-5] FIleDownloader - 1954 12
+[INFO ] 2021-02-15 12:42:29.941 [Thread-5] FIleDownloader - 1955 1
+[INFO ] 2021-02-15 12:42:31.962 [Thread-5] FIleDownloader - 1955 2
+[INFO ] 2021-02-15 12:42:34.208 [Thread-5] FIleDownloader - 1955 3
+[INFO ] 2021-02-15 12:42:37.120 [Thread-5] FIleDownloader - 1955 4
+[INFO ] 2021-02-15 12:42:41.464 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:42:41.517 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:42:41.518 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:42:41.551 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:42:41.725 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:42:41.730 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:42:41.730 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:42:41.730 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:42:41.732 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:42:42.178 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:42:42.203 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:42:42.550 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@66a5e2b5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:42:58.548 [Thread-5] FIleDownloader - 1950 1
+[WARN ] 2021-02-15 12:42:59.016 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.016 [Thread-5] FIleDownloader - 1950 2
+[WARN ] 2021-02-15 12:42:59.076 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.076 [Thread-5] FIleDownloader - 1950 3
+[WARN ] 2021-02-15 12:42:59.141 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.141 [Thread-5] FIleDownloader - 1950 4
+[WARN ] 2021-02-15 12:42:59.200 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.200 [Thread-5] FIleDownloader - 1950 5
+[WARN ] 2021-02-15 12:42:59.253 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.253 [Thread-5] FIleDownloader - 1950 6
+[WARN ] 2021-02-15 12:42:59.309 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.309 [Thread-5] FIleDownloader - 1950 7
+[WARN ] 2021-02-15 12:42:59.367 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.367 [Thread-5] FIleDownloader - 1950 8
+[WARN ] 2021-02-15 12:42:59.427 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.427 [Thread-5] FIleDownloader - 1950 9
+[WARN ] 2021-02-15 12:42:59.486 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.486 [Thread-5] FIleDownloader - 1950 10
+[WARN ] 2021-02-15 12:42:59.608 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.609 [Thread-5] FIleDownloader - 1950 11
+[WARN ] 2021-02-15 12:42:59.671 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.671 [Thread-5] FIleDownloader - 1950 12
+[WARN ] 2021-02-15 12:42:59.802 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:42:59.802 [Thread-5] FIleDownloader - 1951 1
+[INFO ] 2021-02-15 12:43:01.946 [Thread-5] FIleDownloader - 1951 2
+[INFO ] 2021-02-15 12:43:04.679 [Thread-5] FIleDownloader - 1951 3
+[INFO ] 2021-02-15 12:43:06.903 [Thread-5] FIleDownloader - 1951 4
+[INFO ] 2021-02-15 12:43:08.893 [Thread-5] FIleDownloader - 1951 5
+[INFO ] 2021-02-15 12:43:11.209 [Thread-5] FIleDownloader - 1951 6
+[INFO ] 2021-02-15 12:44:15.021 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:44:15.083 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:44:15.084 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:44:15.118 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:44:15.263 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:44:15.267 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:44:15.267 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:44:15.267 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:44:15.269 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:44:15.711 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:44:15.738 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:44:16.091 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1c731cd5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:44:22.388 [Thread-5] FIleDownloader - 1950 1
+[WARN ] 2021-02-15 12:44:23.074 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.075 [Thread-5] FIleDownloader - 1950 2
+[WARN ] 2021-02-15 12:44:23.214 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.214 [Thread-5] FIleDownloader - 1950 3
+[WARN ] 2021-02-15 12:44:23.272 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.272 [Thread-5] FIleDownloader - 1950 4
+[WARN ] 2021-02-15 12:44:23.336 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.336 [Thread-5] FIleDownloader - 1950 5
+[WARN ] 2021-02-15 12:44:23.407 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.407 [Thread-5] FIleDownloader - 1950 6
+[WARN ] 2021-02-15 12:44:23.465 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.465 [Thread-5] FIleDownloader - 1950 7
+[WARN ] 2021-02-15 12:44:23.519 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.519 [Thread-5] FIleDownloader - 1950 8
+[WARN ] 2021-02-15 12:44:23.585 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.586 [Thread-5] FIleDownloader - 1950 9
+[WARN ] 2021-02-15 12:44:23.648 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.648 [Thread-5] FIleDownloader - 1950 10
+[WARN ] 2021-02-15 12:44:23.703 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.703 [Thread-5] FIleDownloader - 1950 11
+[WARN ] 2021-02-15 12:44:23.758 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.758 [Thread-5] FIleDownloader - 1950 12
+[WARN ] 2021-02-15 12:44:23.822 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:44:23.823 [Thread-5] FIleDownloader - 1951 1
+[INFO ] 2021-02-15 12:44:25.933 [Thread-5] FIleDownloader - 1951 2
+[INFO ] 2021-02-15 12:44:28.094 [Thread-5] FIleDownloader - 1951 3
+[INFO ] 2021-02-15 12:44:30.767 [Thread-5] FIleDownloader - 1951 4
+[INFO ] 2021-02-15 12:44:32.833 [Thread-5] FIleDownloader - 1951 5
+[INFO ] 2021-02-15 12:44:35.126 [Thread-5] FIleDownloader - 1951 6
+[INFO ] 2021-02-15 12:44:37.373 [Thread-5] FIleDownloader - 1951 7
+[INFO ] 2021-02-15 12:44:42.790 [Thread-5] FIleDownloader - 1951 8
+[INFO ] 2021-02-15 12:44:44.903 [Thread-5] FIleDownloader - 1951 9
+[INFO ] 2021-02-15 12:44:47.096 [Thread-5] FIleDownloader - 1951 10
+[INFO ] 2021-02-15 12:44:49.128 [Thread-5] FIleDownloader - 1951 11
+[INFO ] 2021-02-15 12:44:50.934 [Thread-5] FIleDownloader - 1951 12
+[INFO ] 2021-02-15 12:44:52.943 [Thread-5] FIleDownloader - 1952 1
+[INFO ] 2021-02-15 12:44:54.813 [Thread-5] FIleDownloader - 1952 2
+[INFO ] 2021-02-15 12:44:56.838 [Thread-5] FIleDownloader - 1952 3
+[INFO ] 2021-02-15 12:44:58.893 [Thread-5] FIleDownloader - 1952 4
+[INFO ] 2021-02-15 12:45:00.861 [Thread-5] FIleDownloader - 1952 5
+[INFO ] 2021-02-15 12:45:47.740 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:45:47.806 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:45:47.807 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:45:47.848 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:45:48.045 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:45:48.051 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:45:48.052 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:45:48.052 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:45:48.054 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:45:48.470 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:45:48.489 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:45:48.780 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@4b89e860] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:49:03.425 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-02-15 12:49:03.493 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-02-15 12:49:03.494 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-02-15 12:49:03.523 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-02-15 12:49:03.636 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-02-15 12:49:03.639 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-02-15 12:49:03.639 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {user=admin, password=****, characterEncoding=utf8}
+[INFO ] 2021-02-15 12:49:03.640 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-02-15 12:49:03.642 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-02-15 12:49:04.020 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-02-15 12:49:04.039 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-02-15 12:49:04.330 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@1c731cd5] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-02-15 12:49:11.314 [Thread-5] FIleDownloader - 2019 1
+[INFO ] 2021-02-15 12:49:19.652 [Thread-5] FIleDownloader - 2019 2
+[INFO ] 2021-02-15 12:49:28.685 [Thread-5] FIleDownloader - 2019 3
+[INFO ] 2021-02-15 12:49:37.952 [Thread-5] FIleDownloader - 2019 4
+[INFO ] 2021-02-15 12:49:46.044 [Thread-5] FIleDownloader - 2019 5
+[INFO ] 2021-02-15 12:49:55.396 [Thread-5] FIleDownloader - 2019 6
+[INFO ] 2021-02-15 12:50:03.944 [Thread-5] FIleDownloader - 2019 7
+[INFO ] 2021-02-15 12:50:13.184 [Thread-5] FIleDownloader - 2019 8
+[INFO ] 2021-02-15 12:50:22.019 [Thread-5] FIleDownloader - 2019 9
+[INFO ] 2021-02-15 12:50:30.108 [Thread-5] FIleDownloader - 2019 10
+[INFO ] 2021-02-15 12:50:38.287 [Thread-5] FIleDownloader - 2019 11
+[INFO ] 2021-02-15 12:50:46.551 [Thread-5] FIleDownloader - 2019 12
+[INFO ] 2021-02-15 12:50:55.987 [Thread-5] FIleDownloader - 2020 1
+[WARN ] 2021-02-15 12:50:56.067 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:56.067 [Thread-5] FIleDownloader - 2020 2
+[WARN ] 2021-02-15 12:50:56.140 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:56.140 [Thread-5] FIleDownloader - 2020 3
+[WARN ] 2021-02-15 12:50:56.200 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:56.200 [Thread-5] FIleDownloader - 2020 4
+[WARN ] 2021-02-15 12:50:56.289 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:56.289 [Thread-5] FIleDownloader - 2020 5
+[WARN ] 2021-02-15 12:50:56.350 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:56.350 [Thread-5] FIleDownloader - 2020 6
+[WARN ] 2021-02-15 12:50:56.419 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:56.419 [Thread-5] FIleDownloader - 2020 7
+[WARN ] 2021-02-15 12:50:56.477 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:56.478 [Thread-5] FIleDownloader - 2020 8
+[WARN ] 2021-02-15 12:50:56.542 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:56.543 [Thread-5] FIleDownloader - 2020 9
+[WARN ] 2021-02-15 12:50:56.624 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:56.624 [Thread-5] FIleDownloader - 2020 10
+[WARN ] 2021-02-15 12:50:57.510 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:57.510 [Thread-5] FIleDownloader - 2020 11
+[WARN ] 2021-02-15 12:50:57.745 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null
+[INFO ] 2021-02-15 12:50:57.745 [Thread-5] FIleDownloader - 2020 12
+[WARN ] 2021-02-15 12:50:57.837 [Thread-5] FIleDownloader - error during file downloading: java.lang.NullPointerException null

@@ -30,6 +30,7 @@ public class App extends Application {
             Platform.exit();
             System.exit(0);
         });
+        System.out.println (System.getProperty ("file.separator"));
         primaryStage.setScene(scene);
         primaryStage.show();
     }
