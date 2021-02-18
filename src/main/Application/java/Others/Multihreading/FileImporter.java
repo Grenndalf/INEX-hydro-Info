@@ -31,8 +31,7 @@ public class FileImporter extends Task<Void> {
     public Void call() {
         myTask = this;
         importErrors.clear();
-        int progress = 0;
-
+        int progress = 1;
         for (File file : this.fileList
         ) {
             List<GaugeMeasurement> gaugeMeasurementsListFromOneFile = new ArrayList<>();

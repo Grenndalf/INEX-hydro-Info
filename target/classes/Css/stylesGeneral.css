@@ -107,6 +107,11 @@
         -fx-padding: 10px;
         -fx-line-spacing: 5px;
     }
+    .table-view .column-header{
+       -fx-pref-height: 50px;
+       -fx-font-weight: bold;
+       -fx-alignment: CENTER_LEFT;
+    }
 
 
 

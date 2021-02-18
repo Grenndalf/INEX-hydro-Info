@@ -23,15 +23,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
-      <change afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Dialogs.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/TableViewData.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/App/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/App/App.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FIleDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FIleDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/App/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/App/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/FileExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Css/stylesGeneral.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Css/stylesGeneral.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FIleDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Multihreading/FIleDownloader.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileImporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Utils/FileExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Utils/FileExporter.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +101,7 @@
     <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.35287356" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Java" />
+    <property name="settings.editor.selected.configurable" value="aws" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -258,7 +267,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613076727537</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="cosmetical changes">
+      <created>1613391718024</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1613391718024</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,7 +295,8 @@
     <MESSAGE value="Added hover info in import module + other small changes" />
     <MESSAGE value="fxml update" />
     <MESSAGE value="updates" />
-    <option name="LAST_COMMIT_MESSAGE" value="updates" />
+    <MESSAGE value="cosmetical changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="cosmetical changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -290,5 +307,9 @@
         </breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

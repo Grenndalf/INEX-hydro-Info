@@ -19,6 +19,7 @@ import java.util.HashSet;
 
 public class GaugeListController {
     private static final String TOGGLE_BUTTONS = "toggleButtons";
+    public static final String ALPHABET = "A•BCDE FGHIJKL£MNO”PRSåTUWYZèØ";
     ToggleGroup toggleGroup = new ToggleGroup ();
     RiverDBActions riverDBActions = new RiverDBActions ();
     GaugeDBActions gaugeDBActions = new GaugeDBActions ();
@@ -39,7 +40,7 @@ public class GaugeListController {
     }
 
     private void createButtons () {
-        final char[] input = "A•BCDE FGHIJKL£MNO”PRSåTUWYZèØ".toCharArray ();
+        final char[] input = ALPHABET.toCharArray ();
         for (char c : input) {
             ToggleButton button = new ToggleButton (String.valueOf (c));
             button.getStyleClass ().add (TOGGLE_BUTTONS);

@@ -197,7 +197,6 @@ public class ImportController {
     }
 
     public void setLabelProperty () {
-
         downloadInfoContainer.getChildren ().clear ();
         Label label = new Label ();
         label.textProperty ().bind (FIleDownloader.myTask.messageProperty ());
@@ -250,7 +249,6 @@ public class ImportController {
 
         dialogHbox.getChildren ().addAll (dialogVbox1, dialogVbox2);
         Scene dialogScene = new Scene (dialogHbox, 500, 40);
-//        dialogScene.getStylesheets ().add ("//style sheet of your choice");
         dialog.setScene (dialogScene);
         dialog.show ();
         Runnable runnable = () -> {

@@ -104,7 +104,7 @@ public class FileExporter {
             Row row2 = rowListInSheet3.get (0);
             Cell cell = row.createCell (yearList.size () + 1);
             String address = row2.getCell (yearList.size ()).getAddress ().formatAsString ().split ("[0-9]")[0];
-            cell.setCellFormula (new StringBuilder ().append ("AVERAGE(B").append (row.getRowNum () + 1).append (":").append (address).append (row.getRowNum () + 1).append (")").toString ());
+            cell.setCellFormula (new StringBuilder ().append ("ROUND(AVERAGE(B").append (row.getRowNum () + 1).append (":").append (address).append (row.getRowNum () + 1).append ("),2)").toString ());
         }
 
 
