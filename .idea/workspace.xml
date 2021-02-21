@@ -23,23 +23,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
-      <change afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/TableViewData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/FileExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Css/stylesGeneral.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Css/stylesGeneral.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FIleDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Multihreading/FIleDownloader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileImporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Others/Utils/FileExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Utils/FileExporter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -274,7 +263,14 @@
       <option name="project" value="LOCAL" />
       <updated>1613391718024</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="created methods for logarithm trend function">
+      <created>1613677263231</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1613677263231</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -296,7 +292,8 @@
     <MESSAGE value="fxml update" />
     <MESSAGE value="updates" />
     <MESSAGE value="cosmetical changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="cosmetical changes" />
+    <MESSAGE value="created methods for logarithm trend function" />
+    <option name="LAST_COMMIT_MESSAGE" value="created methods for logarithm trend function" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

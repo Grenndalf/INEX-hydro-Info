@@ -86,7 +86,7 @@
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="dane szczegółowe">
+                <Tab fx:id="secTab" onSelectionChanged="#addChart" text="dane szczegółowe">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
@@ -95,7 +95,7 @@
                         </AnchorPane>
                     </content>
                 </Tab>
-                <Tab text="TODO">
+                <Tab fx:id="rdTab" onSelectionChanged="#populateTableView" text="TODO">
                     <content>
                         <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                             <children>
@@ -104,7 +104,7 @@
                                         <TableColumn fx:id="num" prefWidth="27.0" text="Lp." />
                                         <TableColumn fx:id="maxFlow" prefWidth="124.0" text="Przepływ maksymalny roczny" />
                                         <TableColumn fx:id="probability" minWidth="6.0" prefWidth="144.0" text="prawodpodobieństwo empiryczne" />
-                              <TableColumn fx:id="logNumValue" prefWidth="169.0" text="logarytm naturalny z Lp." />
+                                        <TableColumn fx:id="logNumValue" prefWidth="169.0" text="logarytm naturalny z Lp." />
                                     </columns>
                                 </TableView>
                             </children>

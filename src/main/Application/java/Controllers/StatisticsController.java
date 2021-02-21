@@ -28,40 +28,48 @@ import static Others.Utils.Utils.divideIntegers;
 import static java.util.Collections.reverse;
 
 
-public class StatisticsController {
+public class StatisticsController<maxValue> {
     private static final String YAXIS_TEXT = "statistics.chart.yaxis";
     private static final String SSQ = "SSQ";
     private static final String SYSTEM = "System";
     private static final String M_3_S = " [m3]/s";
+
+    private final GaugeDBActions gaugeDBActions = new GaugeDBActions ();
     @FXML
-    public Arc dataArc;
+    public Tab secTab;
     @FXML
-    public Label correctDataInfo;
-    @FXML
-    public AnchorPane statisticsContainer;
-    @FXML
-    public Tab tabGeneralInfo;
-    @FXML
-    public Pane chartContainer;
-    @FXML
-    public Label totalDataQuantity;
-    @FXML
-    public Label correctDataQuantity;
-    @FXML
-    public Label IncorrectDataQuantity;
-    @FXML
-    public Label averageFlowValue;
-    @FXML
-    public Pane secLineChartContainer;
-    public TableView<TableViewData> table;
-    public TableColumn probability;
-    public TableColumn maxFlow;
     public TableColumn num;
+    @FXML
+    public TableColumn maxFlow;
+    @FXML
+    public TableColumn probability;
+    @FXML
     public TableColumn logNumValue;
-    private GaugeDBActions gaugeDBActions = new GaugeDBActions ();
+    @FXML
+    public TableView table;
     List<GaugeMeasurement> selectedTownData =
             gaugeDBActions.queryForDataOfSelectedTown (ControllerHolder.getInstance ().getTownName ());
     List<GaugeMeasurement> correctedDataList = correctData (selectedTownData);
+    @FXML
+    private Arc dataArc;
+    @FXML
+    private Label correctDataInfo;
+    @FXML
+    private AnchorPane statisticsContainer;
+    @FXML
+    private Tab tabGeneralInfo;
+    @FXML
+    private Pane chartContainer;
+    @FXML
+    private Label totalDataQuantity;
+    @FXML
+    private Label correctDataQuantity;
+    @FXML
+    private Label IncorrectDataQuantity;
+    @FXML
+    private Label averageFlowValue;
+    @FXML
+    private Pane secLineChartContainer;
 
     @FXML
     void initialize () {
@@ -71,8 +79,17 @@ public class StatisticsController {
         chartContainer.getChildren ().add (getLineChart ());
         setQuantityInfo ();
         getAverageFlowValue ();
-        secLineChartContainer.getChildren ().add (createSecondChart (averageValuesFromSortedData ()));
-        System.out.println (calculateB1(getMaxValuePerYear ()));
+        System.out.println (calculateDeciles (calculateB0 (getMaxValuePerYear ()),
+                              calculateB1 (getMaxValuePerYear ()),
+                              0.1* getMaxValuePerYear ().size ()));
+        System.out.println (calculateDeciles (calculateB0 (getMaxValuePerYear ()),
+                              calculateB1 (getMaxValuePerYear ()),
+                              0.5* getMaxValuePerYear ().size ()));
+        System.out.println (calculateDeciles (calculateB0 (getMaxValuePerYear ()),
+                              calculateB1 (getMaxValuePerYear ()),
+                              0.9* getMaxValuePerYear ().size ()));
+        System.out.println (calculateDeciles (calculateB0 (getMaxValuePerYear ()),
+                              calculateB1 (getMaxValuePerYear ()), getMaxValuePerYear ().size ()));
 
     }
 
@@ -208,18 +225,11 @@ public class StatisticsController {
     }
 
     private Double getMeasurementsFromOneYear (Short aShort) {
-        double maxValue = 0.0;
-        if (correctedDataList
+        return correctedDataList
                 .stream ()
                 .filter (gaugeMeasurement -> gaugeMeasurement.getMeasurementYear () == aShort)
-                .map (GaugeMeasurement::getData2).max (Double::compareTo).isPresent ()) {
-            maxValue = correctedDataList
-                    .stream ()
-                    .filter (gaugeMeasurement -> gaugeMeasurement.getMeasurementYear () == aShort)
-                    .map (GaugeMeasurement::getData2)
-                    .max (Double::compareTo).get ();
-        }
-        return maxValue;
+                .map (GaugeMeasurement::getData2)
+                .max (Double::compareTo).orElse (0.0);
     }
 
     private LineChart<Number, Number> createSecondChart (Map<Integer, Double> dataset) {
@@ -242,15 +252,16 @@ public class StatisticsController {
     }
 
 
+    @FXML
     private void populateTableView () {
         final ObservableList<TableViewData> tableViewDataList = FXCollections.observableArrayList ();
         List<Short> convertedYearRangeList = new ArrayList<> (getYearRange ());
-        for (int i = 1; i < convertedYearRangeList.size (); i++) {
-            tableViewDataList.add (new TableViewData (new SimpleIntegerProperty (i),
+        for (int i = 0; i < convertedYearRangeList.size (); i++) {
+            tableViewDataList.add (new TableViewData (new SimpleIntegerProperty (i+1),
                                                       new SimpleDoubleProperty (getMaxValuePerYear ().get (i)),
-                                                      new SimpleDoubleProperty (100 * (divideIntegers (i,
+                                                      new SimpleDoubleProperty (100 * (divideIntegers (i+1,
                                                                                                        (getYearRange ().size () + 1)))),
-                                                      new SimpleDoubleProperty (Math.log (i))));
+                                                      new SimpleDoubleProperty (Math.log (i+1))));
         }
         num.setCellValueFactory (new PropertyValueFactory<TableViewData, Integer> ("numValue"));
         maxFlow.setCellValueFactory (new PropertyValueFactory<TableViewData, Double> ("maxFlowValue"));
@@ -259,9 +270,11 @@ public class StatisticsController {
         table.setItems (tableViewDataList);
     }
 
-    private void calculateFirstDecile (double b0, double b1, int x) {
-        double firstDecile = Math.log (0.1 * x);
-
+    private double calculateDeciles (double b0, double b1, double x) {
+        if (0 < x && x < 100) {
+            return (b0 + b1 * Math.log (x));
+        }
+        return 0.0;
     }
 
     private List<Integer> numList (int maxValueListSize) {
@@ -276,9 +289,12 @@ public class StatisticsController {
     }
 
     private double calculateB0 (List<Double> maxValuesList) {
-
         if (maxValuesList.size () > 0) {
-            return maxValuesList.stream ().collect (Collectors.averagingDouble (value -> value));
+            final double averageLogNumValue =
+                    averageNatLog (maxValuesList.size ());
+            final double averageMaxFlowValue =
+                    averageMaxValue (maxValuesList);
+            return averageMaxFlowValue - (averageLogNumValue * calculateB1 (maxValuesList));
         } else {
             return 0;
         }
@@ -288,37 +304,35 @@ public class StatisticsController {
         if (maxValuesList.size () > 0) {
             double sumOfMultiplyAverageValues = 0;
             double sumOfPowLogValues = 0;
-            for (int i = 0; i < maxValuesList.size (); i++) {
+            int i = 0;
+            while (i < maxValuesList.size ()) {
                 sumOfPowLogValues +=
-                        Math.pow ((getLogModifiedMaxValueList (maxValuesList).get (i)),2);
-                System.out.println (getLogModifiedMaxValueList (maxValuesList).get (i));
-                System.out.println (sumOfPowLogValues);
+                        Math.pow ((getLogModifiedMaxValueList (maxValuesList).get (i)), 2);
                 sumOfMultiplyAverageValues +=
                         getLogModifiedMaxValueList (maxValuesList).get (i) * getModifiedMaxValueList (maxValuesList).get (i);
+                i++;
             }
-            double result = sumOfMultiplyAverageValues/sumOfPowLogValues;
-            return result;
+            return sumOfMultiplyAverageValues / sumOfPowLogValues;
         } else {
             return 0;
         }
     }
-//ok
+
+    //ok
     private List<Double> getModifiedMaxValueList (List<Double> maxValuesList) {
-        List<Double> maxValuesModifiedList =
-                maxValuesList.stream ()
-                        .map (aDouble -> aDouble - averageMaxValue (maxValuesList))
-                        .collect (Collectors.toList ());
-        return maxValuesModifiedList;
+        return maxValuesList.stream ()
+                .map (aDouble -> aDouble - averageMaxValue (maxValuesList))
+                .collect (Collectors.toList ());
     }
-//ok
+
+    //ok
     private List<Double> getLogModifiedMaxValueList (List<Double> maxValuesList) {
-        List<Double> logModifiedMaxValuesList =
-                IntStream.range (1, (maxValuesList.size () + 1))
-                        .mapToObj (i -> Math.log (i) - averageNatLog (maxValuesList.size ()))
-                        .collect (Collectors.toList ());
-        return logModifiedMaxValuesList;
+        return IntStream.range (1, (maxValuesList.size () + 1))
+                .mapToObj (i -> Math.log (i) - averageNatLog (maxValuesList.size ()))
+                .collect (Collectors.toList ());
     }
-//ok
+
+    //ok
     private double averageNatLog (int listSize) {
         double result = 0;
         if (listSize > 0) {
@@ -330,13 +344,17 @@ public class StatisticsController {
             return result;
         }
     }
-//ok
+
+    //ok
     private double averageMaxValue (List<Double> maxValuesList) {
         if (maxValuesList.size () > 0) {
             return maxValuesList.stream ().collect (Collectors.averagingDouble (value -> value));
-        } else {
-            return 0;
         }
+        return 0;
     }
 
+    public void addChart () {
+        secLineChartContainer.getChildren ().clear ();
+        secLineChartContainer.getChildren ().add (createSecondChart (averageValuesFromSortedData ()));
+    }
 }
