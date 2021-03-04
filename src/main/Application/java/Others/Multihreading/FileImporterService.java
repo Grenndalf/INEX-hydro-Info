@@ -18,6 +18,7 @@ public class FileImporterService extends Service<Void> {
     protected Task<Void> createTask() {
         FileImporter fileImporter = new FileImporter();
         fileImporter.setFileList(fileList);
+
         return fileImporter;
     }
 

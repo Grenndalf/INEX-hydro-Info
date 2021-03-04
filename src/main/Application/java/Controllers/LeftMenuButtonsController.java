@@ -14,6 +14,17 @@ public class LeftMenuButtonsController {
     @FXML
     public Label townName;
 
+    public Label getRiverName () {
+        return riverName;
+    }
+
+    public void setRiverName (Label riverName) {
+        this.riverName = riverName;
+    }
+
+    @FXML
+    public Label riverName;
+
     @FXML
     void initialize() {
         ControllerHolder.getInstance().registerButtonLeftMenuButtonController(this);
@@ -21,6 +32,11 @@ public class LeftMenuButtonsController {
         townName.textProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue == null){
                 townName.setText(oldValue);
+            }
+        });
+        riverName.textProperty().addListener((observable, oldValue, newValue) -> {
+            if (newValue == null){
+                riverName.setText(oldValue);
             }
         });
     }

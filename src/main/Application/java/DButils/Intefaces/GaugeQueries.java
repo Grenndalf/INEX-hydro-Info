@@ -9,11 +9,13 @@ public interface GaugeQueries {
 
     void createOrUpdateMeasurementTable(List<GaugeMeasurement> gaugeMeasurement);
 
-    List<GaugeMeasurement> queryForDataOfSelectedTown(String selectedTown);
-
     List<GaugeMeasurement> queryForAllGaugeMeasurements();
 
     int removeAllMeasurements();
 
+    List<GaugeMeasurement> queryForDataOfSelectedTownAndRiver (String selectedRiver, String selectedTown);
+
     List<String> getTownListOfSelectedRiver(String riverName);
+
+//    List<Short> getYearRange(String riverName);
 }

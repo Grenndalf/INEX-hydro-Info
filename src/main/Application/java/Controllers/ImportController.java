@@ -11,15 +11,15 @@ import Others.Utils.Utils;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 import javafx.application.Platform;
+import javafx.concurrent.Service;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.layout.HBox;
-import javafx.scene.layout.Priority;
-import javafx.scene.layout.Region;
-import javafx.scene.layout.VBox;
+import javafx.scene.image.ImageView;
+import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
 import javafx.scene.text.FontWeight;
@@ -43,6 +43,7 @@ public class ImportController {
     public static final String CSV = "*.csv";
     public static final String CANCEL = "Cancel";
     public static final String SET_DESTINATION = "Wybierz miejsce zapisu dla pobieranych plików";
+    public Pane testPane;
     GaugeDBActions gaugeDBActions = new GaugeDBActions ();
     RiverDBActions riverDBActions = new RiverDBActions ();
     @FXML
@@ -72,8 +73,9 @@ public class ImportController {
             setLabelProperty ();
         }
         showHelpOnHover (downloadButton, downloadTextArea);
-        showHelpOnHover (importButton,importTextArea);
-        showHelpOnHover (removeDataButton,removeDataTextArea);
+        showHelpOnHover (importButton, importTextArea);
+        showHelpOnHover (removeDataButton, removeDataTextArea);
+        testing ();
     }
 
     private void showHelpOnHover (Button button, JFXTextArea textArea) {
@@ -261,5 +263,21 @@ public class ImportController {
         };
         Platform.runLater (runnable);
     }
+
+    public void testing () {
+        ImageView gif = new ImageView (new Image("/Images/loadingspinner.gif",200,200,true,true));
+        gif.resize (200 ,200);
+        testPane.getChildren ().add (gif);
+
+                Task task = new Task () {
+                    @Override
+                    protected Object call () throws Exception {
+                        Thread.sleep (5000);
+                        return null;
+                    }
+                };
+                task.setOnSucceeded (event -> Platform.runLater (() -> testPane.getChildren ().clear ()));
+                new Thread (task).start ();
+            }
 }
 

@@ -67,11 +67,13 @@ public class GaugeListController {
 
     private void addRiverListViewListener () {
         riverListView.getSelectionModel ().selectedItemProperty ().addListener ((observable, oldValue, newValue) -> {
+            ControllerHolder.getInstance ().setTownName ("BRAK");
             if (newValue != null) {
                 ObservableList<String> items;
                 items = FXCollections.observableArrayList (
                         new HashSet<> (gaugeDBActions.getTownListOfSelectedRiver (newValue.getRiverName ())));
                 townListView.setItems (items);
+                ControllerHolder.getInstance ().setRiverName (String.valueOf (newValue));
             } else {
                 ObservableList<String> emptyList = new SimpleListProperty<> ();
                 townListView.setItems (emptyList);

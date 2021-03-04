@@ -23,7 +23,7 @@ public class ExportController {
         directoryChooser.setTitle ("Wybierz miejsce do zapisu pliku");
         File filePath = directoryChooser.showDialog (exportButton.getScene ().getWindow ());
         if (filePath != null) {
-            fe.createWorkBook (ge.queryForDataOfSelectedTown (ControllerHolder.getInstance ().getTownName ()),
+            fe.createWorkBook (ge.queryForDataOfSelectedTownAndRiver (ControllerHolder.getInstance ().getRiverName (), ControllerHolder.getInstance ().getTownName ()),
                                filePath.getAbsolutePath ());
         }
     }

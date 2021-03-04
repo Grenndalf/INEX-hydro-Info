@@ -83,7 +83,7 @@ public class FileExporter {
             List<Double> dataByYear = dataMap.get (yearList.get (i));
             sumRow.createCell (i + 1).setCellValue (dataByYear.stream ().mapToDouble (Double::doubleValue).sum ());
             //dodaæ jakiegoœ optionala?
-            averageRow.createCell (i + 1).setCellValue (dataByYear.stream ().mapToDouble (Double::doubleValue).average ().getAsDouble ());
+            averageRow.createCell (i + 1).setCellValue (dataByYear.stream ().mapToDouble (Double::doubleValue).average ().orElse (0.0));
         }
 
         //tworzenie wierszy w trzecim arkuszu
@@ -110,7 +110,7 @@ public class FileExporter {
 
         //zapis do pliku
         try {
-            File file = new File (absolutePath + "\\" + ControllerHolder.getInstance ().getTownName () + XLSX);
+            File file = new File (absolutePath + System.getProperty ("file.separator") + ControllerHolder.getInstance ().getTownName () + XLSX);
             FileOutputStream path = new FileOutputStream (file);
             workbook.write (path);
             Platform.runLater (() -> {
