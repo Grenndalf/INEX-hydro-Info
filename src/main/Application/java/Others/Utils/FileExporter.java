@@ -79,11 +79,14 @@ public class FileExporter {
         sumRow.createCell (0).setCellValue ("SUMA");
         Row averageRow = sheet2.createRow (369);
         averageRow.createCell (0).setCellValue ("ŒREDNIA");
+        Row maxValueRow = sheet2.createRow (370);
+        maxValueRow.createCell (0).setCellValue ("MAX");
         for (int i = 0; i < yearList.size (); i++) {
             List<Double> dataByYear = dataMap.get (yearList.get (i));
             sumRow.createCell (i + 1).setCellValue (dataByYear.stream ().mapToDouble (Double::doubleValue).sum ());
             //dodaæ jakiegoœ optionala?
             averageRow.createCell (i + 1).setCellValue (dataByYear.stream ().mapToDouble (Double::doubleValue).average ().orElse (0.0));
+            maxValueRow.createCell (i + 1).setCellValue (dataByYear.stream ().mapToDouble (Double::doubleValue).max ().orElse (0.0));
         }
 
         //tworzenie wierszy w trzecim arkuszu

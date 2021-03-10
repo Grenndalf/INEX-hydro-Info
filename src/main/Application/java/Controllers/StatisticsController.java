@@ -2,8 +2,9 @@ package Controllers;
 
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.Tables.GaugeMeasurement;
-import Others.Mediator.ControllerHolder;
+import Others.Utils.ListsUtils;
 import Others.Utils.Utils;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
@@ -14,14 +15,11 @@ import javafx.scene.layout.Pane;
 import javafx.scene.shape.Arc;
 import javafx.scene.text.Font;
 
-import java.math.BigDecimal;
-import java.math.RoundingMode;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 
+import static Others.Mediator.ControllerHolder.getInstance;
 import static Others.Utils.Utils.divideIntegers;
-import static java.util.Collections.reverse;
 
 
 public class StatisticsController {
@@ -29,12 +27,14 @@ public class StatisticsController {
     private static final String SSQ = "SSQ";
     private static final String SYSTEM = "System";
     private static final String M_3_S = " [m3]/s";
-
     private final GaugeDBActions gaugeDBActions = new GaugeDBActions ();
     List<GaugeMeasurement> selectedTownData =
-            gaugeDBActions.queryForDataOfSelectedTownAndRiver (ControllerHolder.getInstance ().getRiverName (),
-                                                               ControllerHolder.getInstance ().getTownName ());
+            gaugeDBActions.queryForDataOfSelectedTownAndRiver (getInstance ().getRiverName (),
+                                                               getInstance ().getTownName ());
     List<GaugeMeasurement> correctedDataList = correctData (selectedTownData);
+    ListsUtils ls = new ListsUtils (gaugeDBActions.getCorrectedDoubleMeasurementsList (getInstance ().getRiverName ()
+            , getInstance ().getTownName ()));
+
     @FXML
     private Label q10;
     @FXML
@@ -64,20 +64,28 @@ public class StatisticsController {
     @FXML
     private Pane secLineChartContainer;
 
-
     @FXML
     void initialize () {
-        q10.setText (getStringValueOfDecile (0.1));
-        q50.setText (getStringValueOfDecile (0.5));
-        q90.setText (getStringValueOfDecile (0.9));
-        q100.setText (getStringValueOfDecile (1));
-        setHelperValue ();
-        // factor.setText (getQuantilePointer ().toEngineeringString ());
         initDataArcValues ();
         initCorrectDataInfo ();
         chartContainer.getChildren ().add (getLineChart ());
         setQuantityInfo ();
         getAverageFlowValue ();
+        setDeciles ();
+        addSecondChart ();
+    }
+
+    private void setDeciles () {
+        Platform.runLater (() -> {
+            ls.initVariables ();
+            q10.setText (ls.getQ10 ().toEngineeringString ());
+            q50.setText (ls.getQ50 ().toEngineeringString ());
+            q90.setText (ls.getQ90 ().toEngineeringString ());
+            q100.setText (ls.getQ100 ().toEngineeringString ());
+            factor.setText (ls.getFactor ().toEngineeringString ());
+            helperValue.setText (ls.getHelperValue ().toEngineeringString ());
+
+        });
     }
 
     private void getAverageFlowValue () {
@@ -95,27 +103,26 @@ public class StatisticsController {
 
     private LineChart<Number, Number> getLineChart () {
         NumberAxis xAxis = new NumberAxis ();
+        final HashMap<Short, Double> maxValuesPerYear =
+                gaugeDBActions.getMaxValuesPerYear (getInstance ().getTownName (),
+                                                   getInstance ().getRiverName ());
+        short maxXAXis = maxValuesPerYear.keySet ().stream ().max (Short::compareTo).orElse ((short) 9);
+        short minXAXis = maxValuesPerYear.keySet ().stream ().min (Short::compareTo).orElse (((short) 1));
+        XYChart.Series<Number, Number> series = new XYChart.Series<> ();
         setXaxisParameters (xAxis);
         xAxis.setTickLength (20);
-        Map<Short, Double> dataMap = new HashMap<> ();
-        XYChart.Series<Number, Number> series = new XYChart.Series<> ();
-        fillDataMap (dataMap);
         LineChart<Number, Number> lineChart = new LineChart<> (xAxis, new NumberAxis ());
+        lineChart.getData ().add (series);
+        setSeriesFirstChart (series, maxValuesPerYear);
         lineChart.setPrefWidth (1100);
         lineChart.setPrefHeight (400);
-        lineChart.getData ().add (series);
-        xAxis.setLowerBound (dataMap.keySet ().stream ().min (Short::compareTo).orElse ((short) 1) - 1);
-        xAxis.setUpperBound (dataMap.keySet ().stream ().max (Short::compareTo).orElse ((short) 9) + 1);
+        xAxis.setLowerBound (minXAXis - 1);
+        xAxis.setUpperBound (maxXAXis + 1);
         lineChart.setLegendVisible (false);
-        setSeriesFirstChart (dataMap, series);
+
         lineChart.getYAxis ().setLabel (Utils.getResourceBundle ().getString (YAXIS_TEXT));
         lineChart.setTitle (SSQ);
         return lineChart;
-    }
-
-    private void setSeriesFirstChart (Map<Short, Double> dataMap, XYChart.Series<Number, Number> series) {
-        dataMap.forEach ((aShort, aDouble) -> series.getData ().add (new XYChart.Data<> (aShort, aDouble)));
-        series.getData ().forEach (this::addTooltipToChart);
     }
 
     private void setSeriesSecondChart (Map<Integer, Double> dataMap, XYChart.Series<Number, Number> series) {
@@ -123,18 +130,14 @@ public class StatisticsController {
         series.getData ().forEach (this::addTooltipToChart);
     }
 
-    private void fillDataMap (Map<Short, Double> dataMap) {
-        final List<Object[]> maxValuesPerYear =
-                gaugeDBActions.getMaxValuesPerYear (ControllerHolder.getInstance ().getTownName (),
-                                                    ControllerHolder.getInstance ().getRiverName ());
-        for (Object[] row : maxValuesPerYear) {
-            dataMap.put ((short) row[0], (double) row[1]);
-        }
+    private void setSeriesFirstChart (XYChart.Series<Number, Number> series, HashMap<Short, Double> maxValuesPerYear) {
+        maxValuesPerYear.forEach ((year, data) -> series.getData ().add (new XYChart.Data<> (year, data)));
+        series.getData ().forEach (this::addTooltipToChart);
     }
 
     private void setXaxisParameters (NumberAxis xAxis) {
         xAxis.setTickLabelRotation (120);
-        xAxis.setTickLabelFont (Font.font (SYSTEM, 15));
+        xAxis.setTickLabelFont (Font.font (SYSTEM, 10));
         xAxis.setAutoRanging (false);
         xAxis.setTickUnit (1);
         if (getYearRange ().size () > 40) {
@@ -168,44 +171,30 @@ public class StatisticsController {
     private List<GaugeMeasurement> correctData (List<GaugeMeasurement> dataToCorrect) {
         return dataToCorrect
                 .stream ()
-                .filter (data -> data.getData2 () < 99999.0)
+                .filter (data -> data.getData2 () < 9999.0)
                 .collect (Collectors.toList ());
     }
 
 
     private Map<Integer, Double> averageValuesFromSortedDataPerDay () {
-
         Map<Integer, Double> result = new HashMap<> ();
         Map<Short, List<Double>> dataMap = new HashMap<> ();
-
-        getYearRange ().forEach (aShort -> {
-            List<Double> measurementsFromOneYear = correctedDataList
-                    .stream ()
-                    .filter (gaugeMeasurement -> gaugeMeasurement.getMeasurementYear () == aShort)
-                    .map (GaugeMeasurement::getData2)
-                    .sorted (Double::compareTo)
-                    .collect (Collectors.toList ());
-            reverse (measurementsFromOneYear);
-            dataMap.put (aShort, measurementsFromOneYear);
+        List<Object[]> list =
+                gaugeDBActions.getSortedValuesPerYearAndPerDay (getInstance ().getRiverName (),
+                                                                getInstance ().getTownName ());
+        list.forEach (objects -> {
+            if (!dataMap.containsKey (objects[0])) {
+                List<Double> data = new ArrayList<> ();
+                data.add ((double) objects[1]);
+                dataMap.put ((short) objects[0], data);
+            } else {
+                dataMap.get (objects[0]).add ((double) objects[1]);
+            }
         });
 
-//        List<Object[]> list =
-//                gaugeDBActions.getSortedValuesPerYearAndPerDay (ControllerHolder.getInstance ().getRiverName (),
-//                                                                ControllerHolder.getInstance ().getTownName ());
-//        list.forEach (objects -> {
-//            if (!dataMap.containsKey (objects[0])) {
-//                List<Double> data = new ArrayList<> ();
-//                data.add ((double) objects[1]);
-//                dataMap.put ((short) objects[0], data);
-//            } else {
-//                dataMap.get (objects[0]).add ((double) objects[1]);
-//            }
-//        });
-//        System.out.println (dataMap);
-
-        for (int i = 0; i < 366; i++) {
+        for (int i = 0; i < 365; i++) {
             double sumOfMeasurements = 0;
-            List<Short> yearList = new ArrayList<> (getYearRange ());
+            List<Short> yearList = new ArrayList<> (dataMap.keySet ());
             for (Short aShort : yearList)
                 if (i < dataMap.get (aShort).size ())
                     sumOfMeasurements = sumOfMeasurements + dataMap.get (aShort).get (i);
@@ -217,29 +206,10 @@ public class StatisticsController {
         return result;
     }
 
-
-    private List<Double> getMaxValuePerYear () {
-        List<Double> maxValuesPerYear = new ArrayList<> ();
-        getYearRange ().forEach (aShort -> {
-            double measurementsFromOneYear = getMeasurementsFromOneYear (aShort);
-            maxValuesPerYear.add (measurementsFromOneYear);
-        });
-        maxValuesPerYear.sort (Comparator.reverseOrder ());
-        return maxValuesPerYear;
-    }
-
-    private Double getMeasurementsFromOneYear (Short aShort) {
-        return correctedDataList
-                .stream ()
-                .filter (gaugeMeasurement -> gaugeMeasurement.getMeasurementYear () == aShort)
-                .map (GaugeMeasurement::getData2)
-                .max (Double::compareTo).orElse (0.0);
-    }
-
     private LineChart<Number, Number> createSecondChart (Map<Integer, Double> dataset) {
         NumberAxis xAxis = new NumberAxis ();
         xAxis.setTickLabelRotation (90);
-        xAxis.setTickLabelFont (Font.font (SYSTEM, 15));
+        xAxis.setTickLabelFont (Font.font (SYSTEM, 10));
         xAxis.setAutoRanging (true);
         XYChart.Series<Number, Number> series = new XYChart.Series<> ();
         LineChart<Number, Number> lineChart = new LineChart<> (xAxis, new NumberAxis ());
@@ -256,129 +226,11 @@ public class StatisticsController {
     }
 
 
-    //OK W KLASIE
-    private BigDecimal getQuantilePointer () {
-        return (getBigDecimalValueDecile (0.1).subtract (getBigDecimalValueDecile (0.9)))
-                .divide (getBigDecimalValueDecile (0.5).multiply (BigDecimal.valueOf (2)),
-                         RoundingMode.HALF_UP);
-    }
-
-    private void setHelperValue () {
-        helperValue.setText (calculateHelperValue ());
-    }
-
-    //OK W KLASIE
-    private String calculateHelperValue () {
-        if ((getBigDecimalValueDecile (0.5).subtract (getBigDecimalValueDecile (1))).setScale (2,
-                                                                                               RoundingMode.HALF_UP).signum () > 0) {
-            return (getQuantilePointer ().multiply (getBigDecimalValueDecile (0.5)))
-                    .divide (getBigDecimalValueDecile (0.5).subtract (getBigDecimalValueDecile (1)), 2,
-                             RoundingMode.HALF_UP)
-                    .toEngineeringString ();
-        }
-        return "0";
-    }
-
-    private String getStringValueOfDecile (double v) {
-        return getBigDecimalValueDecile (v).toEngineeringString ();
-    }
-
-    //OK W KLASIE
-    private BigDecimal getBigDecimalValueDecile (double v) {
-        return calculateDeciles (calculateB0 (getMaxValuePerYear ()),
-                                 calculateB1 (getMaxValuePerYear ()),
-                                 BigDecimal.valueOf (v).multiply (BigDecimal.valueOf (getMaxValuePerYear ().size ())));
-    }
-
-    //OK W KLASIE
-    private BigDecimal calculateDeciles (BigDecimal b0, BigDecimal b1, BigDecimal x) {
-        if (x.compareTo (BigDecimal.valueOf (1)) > 0 && x.compareTo (BigDecimal.valueOf (100)) < 0) {
-            return (b0.add ((b1).multiply (BigDecimal.valueOf (Math.log (x.doubleValue ()))))).setScale (2,
-                                                                                                         RoundingMode.HALF_UP);
-        }
-        return BigDecimal.ZERO;
-    }
-
-    //ok w klasie
-    private BigDecimal calculateB0 (List<Double> maxValuesList) {
-        if (maxValuesList.size () > 0) {
-            final BigDecimal averageLogNumValue = averageNatLog (maxValuesList.size ());
-            final BigDecimal averageMaxFlowValue = averageMaxValue (maxValuesList);
-            return averageMaxFlowValue.subtract (averageLogNumValue
-                                                         .multiply (calculateB1 (maxValuesList)))
-                    .setScale (4, RoundingMode.HALF_UP);
-
-        } else {
-            return BigDecimal.ZERO;
-        }
-    }
-
-    //ok w klasie
-    private BigDecimal calculateB1 (List<Double> maxValuesList) {
-        if (maxValuesList.size () > 0) {
-            BigDecimal sumOfMultiplyAverageValues = BigDecimal.ZERO;
-            BigDecimal sumOfPowLogValues = BigDecimal.ZERO;
-            int i = 0;
-            while (i < maxValuesList.size ()) {
-                sumOfPowLogValues = sumOfPowLogValues.add (BigDecimal.valueOf (
-                        Math.pow ((getLogModifiedMaxValueList (maxValuesList.size ()).get (i)), 2))).setScale (8,
-                                                                                                               RoundingMode.HALF_UP);
-
-                sumOfMultiplyAverageValues = sumOfMultiplyAverageValues.add (BigDecimal.valueOf (
-                        getLogModifiedMaxValueList (maxValuesList.size ()).get (i)).multiply (getModifiedMaxValueList (maxValuesList).get (i))).setScale (4, RoundingMode.HALF_UP);
-                i++;
-            }
-            if (sumOfPowLogValues.signum () > 0) {
-                return sumOfMultiplyAverageValues.divide (sumOfPowLogValues, 4, RoundingMode.HALF_UP);
-            }
-            return BigDecimal.ZERO;
-        }
-        return BigDecimal.ZERO;
-    }
-
-    //ok w klasie
-    private List<BigDecimal> getModifiedMaxValueList (List<Double> maxValuesList) {
-        return maxValuesList.stream ()
-                .map (aDouble -> BigDecimal.valueOf (aDouble).subtract (averageMaxValue (maxValuesList)))
-                .collect (Collectors.toList ());
-    }
-
-    //ok w klasie
-    private List<Double> getLogModifiedMaxValueList (int maxValuesList) {
-        return IntStream.range (1, (maxValuesList + 1))
-                .mapToObj (i -> Math.log (i) - averageNatLog (maxValuesList).doubleValue ())
-                .collect (Collectors.toList ());
-    }
-
-    //ok w klasie
-    private BigDecimal averageNatLog (int listSize) {
-        BigDecimal result = BigDecimal.ZERO;
-        if (listSize > 0) {
-            for (int i = 1; i <= listSize; i++) {
-                result = result.add (BigDecimal.valueOf (Math.log (i)));
-            }
-            return result.divide (BigDecimal.valueOf (listSize), 2, RoundingMode.HALF_UP);
-        } else {
-            return result;
-        }
-    }
-
-    //ok w klasie
-    private BigDecimal averageMaxValue (List<Double> maxValuesList) {
-        if (maxValuesList.size () > 0) {
-            BigDecimal result = BigDecimal.ZERO;
-            for (Double value : maxValuesList
-            ) {
-                result = result.add (BigDecimal.valueOf (value));
-            }
-            return BigDecimal.valueOf (maxValuesList.stream ().collect (Collectors.averagingDouble (value -> value))).setScale (4, RoundingMode.HALF_UP);
-        }
-        return BigDecimal.ZERO;
-    }
-
-    public void addChart () {
-        secLineChartContainer.getChildren ().clear ();
-        secLineChartContainer.getChildren ().add (createSecondChart (averageValuesFromSortedDataPerDay ()));
+    public void addSecondChart () {
+        Platform.runLater (() -> {
+            secLineChartContainer.getChildren ().clear ();
+            secLineChartContainer.getChildren ().add (createSecondChart (averageValuesFromSortedDataPerDay ()));
+        });
     }
 
 

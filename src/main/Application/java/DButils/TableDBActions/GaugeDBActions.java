@@ -12,8 +12,8 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
-import java.math.BigDecimal;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class GaugeDBActions implements GaugeQueries {
@@ -37,11 +37,16 @@ public class GaugeDBActions implements GaugeQueries {
         EntityManager em = emf.createEntityManager ();
         try {
             em.getTransaction ().begin ();
-            List<GaugeMeasurement> result =
-                    em.createQuery ("SELECT A FROM GaugeMeasurement A WHERE A.riverName = '" + selectedRiver +
-                                            "' AND A.gaugeName = '" + selectedTown + "'",
-                                    GaugeMeasurement.class).getResultList ();
+            CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder ();
+            CriteriaQuery<GaugeMeasurement> criteriaQuery = criteriaBuilder.createQuery (GaugeMeasurement.class);
+            Root<GaugeMeasurement> gaugeMeasurementRoot = criteriaQuery.from (GaugeMeasurement.class);
+            criteriaQuery.select (gaugeMeasurementRoot)
+                    .where (criteriaBuilder.equal (gaugeMeasurementRoot.get ("riverName"), selectedRiver),
+                            (criteriaBuilder.equal (gaugeMeasurementRoot.get ("gaugeName"), selectedTown)));
+            TypedQuery<GaugeMeasurement> query = em.createQuery (criteriaQuery);
+            List<GaugeMeasurement> result = query.getResultList ();
             em.getTransaction ().commit ();
+            System.out.println ("queryForDataOfSelectedTownAndRiver " + result.size ());
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
@@ -61,7 +66,8 @@ public class GaugeDBActions implements GaugeQueries {
             CriteriaQuery<String> criteriaQuery = criteriaBuilder.createQuery (String.class);
             Root<GaugeMeasurement> gaugeMeasurementRoot = criteriaQuery.from (GaugeMeasurement.class);
             criteriaQuery.select (gaugeMeasurementRoot.get ("gaugeName"))
-                    .where (criteriaBuilder.equal (gaugeMeasurementRoot.get ("riverName"), riverName));
+                    .where (criteriaBuilder.equal (gaugeMeasurementRoot.get ("riverName"), riverName))
+                    .orderBy (criteriaBuilder.asc (gaugeMeasurementRoot.get ("gaugeName")));
             TypedQuery<String> query = em.createQuery (criteriaQuery);
             List<String> result = query.getResultList ();
             em.getTransaction ().commit ();
@@ -80,19 +86,21 @@ public class GaugeDBActions implements GaugeQueries {
     }
 
 
-    public List<BigDecimal> getCorrectedDoubleMeasurementsList (String riverName) {
+    public List<Double> getCorrectedDoubleMeasurementsList (String riverName, String townName) {
         EntityManager em = emf.createEntityManager ();
         try {
             em.getTransaction ().begin ();
             CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder ();
-            CriteriaQuery<BigDecimal> criteriaQuery = criteriaBuilder.createQuery (BigDecimal.class);
+            CriteriaQuery<Double> criteriaQuery = criteriaBuilder.createQuery (Double.class);
             Root<GaugeMeasurement> gaugeMeasurementRoot = criteriaQuery.from (GaugeMeasurement.class);
-            criteriaQuery.select (gaugeMeasurementRoot.get ("measurementYear"))
-                    .where (criteriaBuilder.equal (gaugeMeasurementRoot.get ("riverName"),
-                                                   riverName), criteriaBuilder.lt (gaugeMeasurementRoot.get ("data2")
-                            , 9999));
-            TypedQuery<BigDecimal> query = em.createQuery (criteriaQuery);
-            List<BigDecimal> result = query.getResultList ();
+            criteriaQuery.select (criteriaBuilder.max (gaugeMeasurementRoot.get ("data2")))
+                    .where (criteriaBuilder.equal (gaugeMeasurementRoot.get ("riverName"), riverName),
+                            criteriaBuilder.equal (gaugeMeasurementRoot.get ("gaugeName"), townName),
+                            criteriaBuilder.lt (gaugeMeasurementRoot.get ("data2"), 9999))
+                    .groupBy (gaugeMeasurementRoot.get ("measurementYear"))
+                    .orderBy (criteriaBuilder.desc (gaugeMeasurementRoot.get ("data2")));
+            TypedQuery<Double> query = em.createQuery (criteriaQuery);
+            List<Double> result = query.getResultList ();
             em.getTransaction ().commit ();
             return result;
         } catch (Exception ex) {
@@ -108,8 +116,9 @@ public class GaugeDBActions implements GaugeQueries {
         return new ArrayList<> ();
     }
 
-    public List<Object[]> getMaxValuesPerYear (String riverName, String townName) {
+    public HashMap<Short, Double> getMaxValuesPerYear (String riverName, String townName) {
         EntityManager em = emf.createEntityManager ();
+        HashMap<Short, Double> resultMap = new HashMap<> ();
         try {
             em.getTransaction ().begin ();
             CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder ();
@@ -117,16 +126,18 @@ public class GaugeDBActions implements GaugeQueries {
             Root<GaugeMeasurement> gaugeMeasurementRoot = criteriaQuery.from (GaugeMeasurement.class);
             criteriaQuery.multiselect (gaugeMeasurementRoot.get ("measurementYear"),
                                        criteriaBuilder.max (gaugeMeasurementRoot.get ("data2")))
-                    .where (criteriaBuilder.equal (gaugeMeasurementRoot.get ("gaugeName"),
-                                                   riverName), criteriaBuilder.equal (gaugeMeasurementRoot.get (
-                            "riverName"),
-                                                                                      townName),
-                            criteriaBuilder.lt (gaugeMeasurementRoot.get ("data2")
-                                    , 9999)).groupBy (gaugeMeasurementRoot.get ("measurementYear")).orderBy (criteriaBuilder.asc (gaugeMeasurementRoot.get ("measurementYear")));
+                    .where (criteriaBuilder.equal (gaugeMeasurementRoot.get ("gaugeName"), riverName),
+                            criteriaBuilder.equal (gaugeMeasurementRoot.get ("riverName"), townName),
+                            criteriaBuilder.lt (gaugeMeasurementRoot.get ("data2"), 9999))
+                    .groupBy (gaugeMeasurementRoot.get ("measurementYear"))
+                    .orderBy (criteriaBuilder.asc (gaugeMeasurementRoot.get ("measurementYear")));
             TypedQuery<Object[]> query = em.createQuery (criteriaQuery);
             List<Object[]> result = query.getResultList ();
             em.getTransaction ().commit ();
-            return result;
+            for (Object[] row : result) {
+                resultMap.put ((short) row[0], (double) row[1]);
+            }
+            return resultMap;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
             logger.info (ex.getMessage ());
@@ -137,7 +148,7 @@ public class GaugeDBActions implements GaugeQueries {
                 em.close ();
             }
         }
-        return new ArrayList<> ();
+        return new HashMap<> ();
     }
 
     public List<Object[]> getSortedValuesPerYearAndPerDay (String riverName, String townName) {
@@ -149,8 +160,8 @@ public class GaugeDBActions implements GaugeQueries {
             Root<GaugeMeasurement> gaugeMeasurementRoot = criteriaQuery.from (GaugeMeasurement.class);
             criteriaQuery.multiselect (gaugeMeasurementRoot.get ("measurementYear"),
                                        gaugeMeasurementRoot.get ("data2"))
-                    .where (criteriaBuilder.equal (gaugeMeasurementRoot.get ("gaugeName"), riverName),
-                            criteriaBuilder.equal (gaugeMeasurementRoot.get ("riverName"), townName),
+                    .where (criteriaBuilder.equal (gaugeMeasurementRoot.get ("gaugeName"), townName),
+                            criteriaBuilder.equal (gaugeMeasurementRoot.get ("riverName"), riverName),
                             criteriaBuilder.lt (gaugeMeasurementRoot.get ("data2"), 9999))
                     .orderBy (criteriaBuilder.asc (gaugeMeasurementRoot.get ("measurementYear")),
                               criteriaBuilder.desc (gaugeMeasurementRoot.get ("data2")));
@@ -158,35 +169,6 @@ public class GaugeDBActions implements GaugeQueries {
             List<Object[]> result = query.getResultList ();
             em.getTransaction ().commit ();
 
-            return result;
-        } catch (Exception ex) {
-            em.getTransaction ().rollback ();
-            logger.info (ex.getMessage ());
-        } finally {
-            if (em.getTransaction ().isActive ()) {
-                em.flush ();
-                em.clear ();
-                em.close ();
-            }
-        }
-        return new ArrayList<> ();
-    }
-
-    public List<Object[]> getAverageValuesPerYear (String riverName) {
-        EntityManager em = emf.createEntityManager ();
-        try {
-            em.getTransaction ().begin ();
-            CriteriaBuilder criteriaBuilder = em.getCriteriaBuilder ();
-            CriteriaQuery<Object[]> criteriaQuery = criteriaBuilder.createQuery (Object[].class);
-            Root<GaugeMeasurement> gaugeMeasurementRoot = criteriaQuery.from (GaugeMeasurement.class);
-            criteriaQuery.multiselect (gaugeMeasurementRoot.get ("measurementYear"),
-                                       criteriaBuilder.avg (gaugeMeasurementRoot.get ("data2")))
-                    .where (criteriaBuilder.equal (gaugeMeasurementRoot.get ("riverName"),
-                                                   riverName), criteriaBuilder.lt (gaugeMeasurementRoot.get ("data2")
-                            , 9999)).orderBy (criteriaBuilder.asc (gaugeMeasurementRoot.get ("measurementYear")));
-            TypedQuery<Object[]> query = em.createQuery (criteriaQuery);
-            List<Object[]> result = query.getResultList ();
-            em.getTransaction ().commit ();
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
@@ -224,7 +206,6 @@ public class GaugeDBActions implements GaugeQueries {
         }
         return 0;
     }
-
 
     @Override
     public List<GaugeMeasurement> queryForAllGaugeMeasurements () {

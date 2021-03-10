@@ -3,7 +3,6 @@ package Controllers;
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.TableDBActions.RiverDBActions;
 import DButils.Tables.River;
-import Others.Mediator.ControllerHolder;
 import com.jfoenix.controls.JFXListView;
 import javafx.beans.property.SimpleListProperty;
 import javafx.collections.FXCollections;
@@ -14,12 +13,14 @@ import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.FlowPane;
 
-import java.util.ArrayList;
+import java.util.Comparator;
 import java.util.HashSet;
 
+import static Others.Mediator.ControllerHolder.getInstance;
+
 public class GaugeListController {
-    private static final String TOGGLE_BUTTONS = "toggleButtons";
     public static final String ALPHABET = "A¥BCDEÊFGHIJKL£MNOÓPRSŒTUWYZ¯";
+    private static final String TOGGLE_BUTTONS = "toggleButtons";
     ToggleGroup toggleGroup = new ToggleGroup ();
     RiverDBActions riverDBActions = new RiverDBActions ();
     GaugeDBActions gaugeDBActions = new GaugeDBActions ();
@@ -62,18 +63,18 @@ public class GaugeListController {
 
     private void addTownListViewListener () {
         townListView.getSelectionModel ().selectedItemProperty ().addListener ((observable, oldValue, newValue) ->
-                                                                                       ControllerHolder.getInstance ().setTownName (newValue));
+                                                                                       getInstance ().setTownName (newValue));
     }
 
     private void addRiverListViewListener () {
         riverListView.getSelectionModel ().selectedItemProperty ().addListener ((observable, oldValue, newValue) -> {
-            ControllerHolder.getInstance ().setTownName ("BRAK");
+            getInstance ().setTownName ("BRAK");
             if (newValue != null) {
-                ObservableList<String> items;
-                items = FXCollections.observableArrayList (
-                        new HashSet<> (gaugeDBActions.getTownListOfSelectedRiver (newValue.getRiverName ())));
+                ObservableList<String> items =
+                        FXCollections.observableArrayList (new HashSet<> (gaugeDBActions.getTownListOfSelectedRiver (newValue.getRiverName ())));
+                items.sort (Comparator.naturalOrder ());
                 townListView.setItems (items);
-                ControllerHolder.getInstance ().setRiverName (String.valueOf (newValue));
+                getInstance ().setRiverName (String.valueOf (newValue));
             } else {
                 ObservableList<String> emptyList = new SimpleListProperty<> ();
                 townListView.setItems (emptyList);

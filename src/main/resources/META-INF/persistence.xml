@@ -16,11 +16,12 @@
             <property name="hibernate.show_sql" value="true"/>
             <property name="hibernate.format_sql" value="true"/>
             <property name="hibernate.dialect" value="org.hibernate.dialect.SQLiteDialect"/>
-            <property name="hibernate.connection.characterEncoding" value="utf8"/>
+            <property name="hibernate.connection.characterEncoding" value="windows-1250"/>
             <property name="hibernate.jdbc.batch-size" value="50"/>
             <property name="hibernate.order-updates" value="true"/>
             <property name="hibernate.order-inserts" value="true"/>
             <property name="hibernate.highlight_sql" value="true"/>
+            <property name="hibernate.connection.useUnicode" value="true"/>
         </properties>
     </persistence-unit>
 </persistence>
