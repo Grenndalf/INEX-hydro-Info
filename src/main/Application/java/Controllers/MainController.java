@@ -3,7 +3,6 @@ package Controllers;
 import DButils.TableDBActions.GaugeDBActions;
 import Others.Mediator.ControllerHolder;
 import Others.Utils.Utils;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -31,6 +30,7 @@ public class MainController {
     void initialize() throws IOException {
         ControllerHolder.getInstance().registerMainController(this);
         setLeftMenu();
+        testBoundGenerator();
     }
 
     private void setLeftMenu() throws IOException {
@@ -51,4 +51,10 @@ public class MainController {
         loadedContent.prefHeightProperty().bind(contentContainer.heightProperty());
     }
 
+    private void testBoundGenerator(){
+        System.out.println (Utils.getLowerBoundsForInterpolationB (1.5));
+        System.out.println (Utils.getUpperBoundsForInterpolationB (Utils.getLowerBoundsForInterpolationB (1.54)));
+        System.out.println (Utils.getLowerSkewCoefficientBound (9999));
+        System.out.println (Utils.getUpperSkewCoefficientBound (9999));
+    }
 }

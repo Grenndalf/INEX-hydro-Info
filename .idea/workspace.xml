@@ -23,28 +23,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
+      <change afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/UtilsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/RiverDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/RiverDBActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/DataFiller.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/DataFillerService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/FileExporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/ListsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/ListsUtils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Utils/FileExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Utils/FileExporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Utils/Utils.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -61,6 +52,7 @@
         <option value="FxmlFile" />
         <option value="Interface" />
         <option value="Class" />
+        <option value="JUnit5 Test Class" />
       </list>
     </option>
   </component>
@@ -99,6 +91,9 @@
     <property name="LombokPluginIS_VAL_Enabled" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit5" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5" value="" />
+    <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last.edited.regexp" value="" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -119,8 +114,14 @@
       <recent name="C:\Users\Ugnip\OneDrive\Pulpit\wodowskazy\projekt\test\transfer\src\main\resources" />
       <recent name="C:\Users\Ugnip\OneDrive\Pulpit\wodowskazy\projekt\test\transfer\src" />
     </key>
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
     <key name="MoveInnerDialog.RECENTS_KEY">
       <recent name="RegularClasses.Multihreading" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="Others.Utils" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="DButils.TableDBActions" />
@@ -295,7 +296,14 @@
       <option name="project" value="LOCAL" />
       <updated>1614847443193</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="latest work - statistics counting (interpolation)">
+      <created>1615390199666</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1615390199666</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -319,7 +327,8 @@
     <MESSAGE value="cosmetical changes" />
     <MESSAGE value="created methods for logarithm trend function" />
     <MESSAGE value="minor changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="minor changes" />
+    <MESSAGE value="latest work - statistics counting (interpolation)" />
+    <option name="LAST_COMMIT_MESSAGE" value="latest work - statistics counting (interpolation)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

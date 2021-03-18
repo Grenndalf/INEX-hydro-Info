@@ -1,30 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.*?>
-<AnchorPane fx:id="mainParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
-            prefHeight="800.0" prefWidth="1380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="Controllers.MainController">
+
+<AnchorPane fx:id="mainParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="1380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.MainController">
     <children>
-        <AnchorPane fx:id="leftMenuContainer" prefHeight="800.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0"
-                    AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1160.0" AnchorPane.topAnchor="0.0"/>
-        <AnchorPane fx:id="contentContainer" layoutX="220.0" prefHeight="800.0" prefWidth="1160.0"
-                    style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0"
-                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <AnchorPane fx:id="leftMenuContainer" prefHeight="800.0" prefWidth="220.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="1160.0" AnchorPane.topAnchor="0.0" />
+        <AnchorPane fx:id="contentContainer" layoutX="220.0" prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
             <opaqueInsets>
-                <Insets/>
+                <Insets />
             </opaqueInsets>
             <padding>
-                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
+                <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
             </padding>
+         <children>
+            <ImageView fitHeight="696.0" fitWidth="716.0" layoutX="232.0" layoutY="52.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="232.0" AnchorPane.rightAnchor="232.0" AnchorPane.topAnchor="52.0">
+               <image>
+                  <Image url="@../Images/inex_logo.png" />
+               </image>
+            </ImageView>
+         </children>
         </AnchorPane>
-        <Pane prefHeight="25.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0"
-              AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="788.0">
+        <Pane prefHeight="25.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="788.0">
             <children>
-                <Hyperlink layoutX="549.0" layoutY="-6.0" text="Bartosz.J.Olczak@gmail.com" textFill="#00b2ff"/>
-                <Label layoutX="470.0" layoutY="-3.0" text="created by"/>
+                <Hyperlink layoutX="549.0" layoutY="-6.0" text="Bartosz.J.Olczak@gmail.com" textFill="#00b2ff" />
+                <Label layoutX="470.0" layoutY="-3.0" text="created by" />
             </children>
         </Pane>
     </children>

@@ -3,6 +3,8 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Hyperlink?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.*?>
 <AnchorPane fx:id="mainParent" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
             prefHeight="800.0" prefWidth="1380.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
@@ -19,6 +21,15 @@
             <padding>
                 <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
             </padding>
+            <children>
+                <ImageView fitHeight="696.0" fitWidth="716.0" layoutX="232.0" layoutY="52.0" pickOnBounds="true"
+                           preserveRatio="true" AnchorPane.bottomAnchor="52.0" AnchorPane.leftAnchor="232.0"
+                           AnchorPane.rightAnchor="232.0" AnchorPane.topAnchor="52.0">
+                    <image>
+                        <Image url="@../Images/inex_logo.png"/>
+                    </image>
+                </ImageView>
+            </children>
         </AnchorPane>
         <Pane prefHeight="25.0" prefWidth="1400.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="220.0"
               AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="788.0">

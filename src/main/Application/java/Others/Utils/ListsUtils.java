@@ -11,6 +11,7 @@ import static java.lang.Math.log;
 
 public class ListsUtils {
 
+    @Getter
     private final List<Double> inputList;
     private BigDecimal nominatorB1 = BigDecimal.ZERO;
     private BigDecimal denominatorB1 = BigDecimal.ZERO;
@@ -53,14 +54,11 @@ public class ListsUtils {
                     , RoundingMode.HALF_UP);
             System.out.println (averageNaturalLogarithmOfX);
             for (int j = 1; j <= inputList.size (); j++) {
-                nominatorB1 =
-                        nominatorB1.add (((BigDecimal.valueOf (log (getX (j)))).subtract (averageNaturalLogarithmOfX)).multiply (BigDecimal.valueOf (inputList.get (j - 1)).subtract (averageOfMaxValues))).setScale (4, RoundingMode.HALF_UP);
-                denominatorB1 =
-                        denominatorB1.add ((BigDecimal.valueOf (log (getX (j))).subtract (averageNaturalLogarithmOfX)).pow (2).setScale (4, RoundingMode.HALF_UP));
+                nominatorB1 = nominatorB1.add (((BigDecimal.valueOf (log (getX (j)))).subtract (averageNaturalLogarithmOfX)).multiply (BigDecimal.valueOf (inputList.get (j - 1)).subtract (averageOfMaxValues))).setScale (4, RoundingMode.HALF_UP);
+                denominatorB1 = denominatorB1.add ((BigDecimal.valueOf (log (getX (j))).subtract (averageNaturalLogarithmOfX)).pow (2).setScale (4, RoundingMode.HALF_UP));
             }
             BigDecimal b1 = nominatorB1.divide (denominatorB1, 4, RoundingMode.HALF_UP);
-            BigDecimal b0 = averageOfMaxValues.subtract (b1.multiply (averageNaturalLogarithmOfX)).setScale (4,
-                                                                                                             RoundingMode.HALF_UP);
+            BigDecimal b0 = averageOfMaxValues.subtract (b1.multiply (averageNaturalLogarithmOfX)).setScale (4, RoundingMode.HALF_UP);
             setQ10 (b0.add (b1.multiply (BigDecimal.valueOf (log (10)))).setScale (4, RoundingMode.HALF_UP));
             setQ50 (b0.add (b1.multiply (BigDecimal.valueOf (log (50)))).setScale (4, RoundingMode.HALF_UP));
             setQ90 (b0.add (b1.multiply (BigDecimal.valueOf (log (90)))).setScale (4, RoundingMode.HALF_UP));
@@ -84,7 +82,7 @@ public class ListsUtils {
                 .multiply (new BigDecimal ("0.0045")).add (new BigDecimal ("0.84")).setScale (3, RoundingMode.HALF_UP);
     }
 
-    private double getX (int i) {
+    public double getX (int i) {
         return 100 * (i / ((double) inputList.size () + 1));
     }
 }
