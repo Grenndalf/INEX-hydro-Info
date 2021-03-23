@@ -36,7 +36,6 @@ public class FileExporter {
 
     public void createWorkBook (List<GaugeMeasurement> spreadsheetData, String absolutePath) {
 
-
         XSSFSheet sheet1 = workbook.createSheet (DANE_CALOSC);
         XSSFSheet sheet2 = workbook.createSheet (DANE_UPORZADKOWANE);
         XSSFSheet sheet3 = workbook.createSheet (DANE_POSORTOWANE);
@@ -102,7 +101,6 @@ public class FileExporter {
         for (int i = 0; i < yearList.size (); i++) {
             List<Double> dataByYear = dataMap.get (yearList.get (i));
             sumRow.createCell (i + 1).setCellValue (dataByYear.stream ().mapToDouble (Double::doubleValue).sum ());
-            //dodaæ jakiegoœ optionala?
             averageRow.createCell (i + 1).setCellValue (dataByYear.stream ().mapToDouble (Double::doubleValue).average ().orElse (0.0));
             maxValueRow.createCell (i + 1).setCellValue (dataByYear.stream ().mapToDouble (Double::doubleValue).max ().orElse (0.0));
         }
@@ -162,6 +160,9 @@ public class FileExporter {
 
             interpolationActions (decilesRowHeader, decileValues1, decileValues2, decileValues3);
 
+            createInterpolationSkewTable (sheet4, rowNum,
+                                          Utils.getModifiedInterpolationSkewMap (ls.getSkewCoefficient ().doubleValue ()));
+
         }
 
         sheet4.autoSizeColumn (1);
@@ -218,13 +219,13 @@ public class FileExporter {
         decileValues3.createCell (6).setCellFormula (getDecile (logTrendValueOfA, logTrendValueOfB, 90));
         decileValues4.createCell (5).setCellValue ("Q100%");
         decileValues4.createCell (6).setCellFormula (getDecile (logTrendValueOfA, logTrendValueOfB, 100));
-        decilesRowHeader.createCell (9).setCellFormula (new StringBuilder ().append ("ROUND((")
+        decilesRowHeader.createCell (9).setCellFormula (new StringBuilder ().append ("(")
                                                                 .append (getCellAddress (decileValues1, 6))
                                                                 .append ("-")
                                                                 .append (getCellAddress (decileValues3, 6))
                                                                 .append (")/(2*")
                                                                 .append (getCellAddress (decileValues2, 6))
-                                                                .append ("),2)").toString ());
+                                                                .append (")").toString ());
         decileValues1.createCell (8).setCellValue ("wielkoœæ pomocnicza b");
         decileValues1.createCell (9).setCellFormula (new StringBuilder ().append ("ROUND((")
                                                              .append (getCellAddress (decilesRowHeader, 9))
@@ -234,29 +235,57 @@ public class FileExporter {
                                                              .append ("-")
                                                              .append (getCellAddress (decileValues4, 6))
                                                              .append ("),2)").toString ());
-
         logTrendFunctionInfo.createCell (5).setCellValue ("wzór: y = (a * LN(x)) + b");
         logTrendValueOfA.createCell (5).setCellValue ("a=");
         logTrendValueOfB.createCell (5).setCellValue ("b=");
     }
 
     private void interpolationActions (Row decilesRowHeader, Row decileValues1, Row decileValues2, Row decileValues3) {
-        double helper = decileValues1.getCell (9).getNumericCellValue ();
+        double helper = ls.getHelperValue ().doubleValue ();
         double lowerBound = Utils.getLowerBoundsForInterpolationB (helper);
-        double upperBound = Utils.getLowerBoundsForInterpolationB (lowerBound);
+        double upperBound = Utils.getUpperBoundsForInterpolationB (helper);
         double lowerSkew = Utils.getLowerSkewCoefficientBound (lowerBound);
         double upperSkew = Utils.getUpperSkewCoefficientBound (upperBound);
-        String interpolationStep = getInterpolationModifier (lowerBound,upperBound);
-        decilesRowHeader.createCell (13).setCellValue ("Interpolacja");
-        decileValues1.createCell (13).setCellValue (lowerBound);
-        decileValues3.createCell (13).setCellValue (upperBound);
-        decileValues2.createCell (13).setCellValue (getInterpolationModifier(decileValues1.getCell (13).getNumericCellValue (),decileValues3.getCell (13).getNumericCellValue ()));
-        decileValues2.createCell (13).setCellFormula (new StringBuilder ().append ("(")
-                                                              .append (decileValues3.getCell (13).getAddress ().formatAsString ())
-                                                              .append ("-")
-                                                              .append (decileValues1.getCell (13).getAddress ().formatAsString ()).append (")")
-                                                              .append ("/").append (interpolationStep).toString ());
+        System.out.println (lowerBound);
+        System.out.println (upperBound);
+        if (lowerBound != upperBound) {
+            decilesRowHeader.createCell (11).setCellValue ("Interpolacja");
+            decileValues1.createCell (11).setCellValue (lowerBound);
+            decileValues3.createCell (11).setCellValue (upperBound);
+            decileValues2.createCell (11).setCellValue (0.01);
+            decileValues1.createCell (12).setCellValue (lowerSkew);
+            decileValues3.createCell (12).setCellValue (upperSkew);
+            decileValues2.createCell (12).setCellFormula (new StringBuilder ().append ("(")
+                                                                  .append (getCellAddress (decileValues3, 12))
+                                                                  .append ("-")
+                                                                  .append (getCellAddress (decileValues1, 12))
+                                                                  .append (")/((")
+                                                                  .append (getCellAddress (decileValues3, 11))
+                                                                  .append ("-")
+                                                                  .append (getCellAddress (decileValues1, 11))
+                                                                  .append (")/")
+                                                                  .append (decileValues2.getCell (11).getAddress ())
+                                                                  .append (")").toString ());
+            decileValues3.createCell (8).setCellValue ("kwantylowy wspó³czynnik skoœnoœci");
+            decileValues3.createCell (9).setCellFormula (new StringBuilder ()
+                                                                 .append ("ROUND(((((")
+                                                                 .append (decileValues1.getCell (9).getAddress ())
+                                                                 .append ("-")
+                                                                 .append (decileValues1.getCell (11).getAddress ())
+                                                                 .append (")/")
+                                                                 .append (decileValues2.getCell (11).getAddress ())
+                                                                 .append (")*")
+                                                                 .append (decileValues2.getCell (12).getAddress ())
+                                                                 .append (")+")
+                                                                 .append (decileValues1.getCell (12).getAddress ())
+                                                                 .append ("),2)").toString ());
+        } else {
+            decileValues3.createCell (8).setCellValue ("kwantylowy wspó³czynnik skoœnoœci");
+            decileValues3.createCell (9).setCellValue (Utils.getQuantile (helper));
+        }
+
     }
+
 
     private void getSheet4TableValues (XSSFSheet sheet4, Row logTrendValueOfA, Row logTrendValueOfB) {
         for (int i = 1; i <= ls.getInputList ().size (); i++) {
@@ -280,16 +309,6 @@ public class FileExporter {
                                                        .append ("+")
                                                        .append (getCellAddress (logTrendValueOfB, 6))
                                                        .append (",2)").toString ());
-        }
-    }
-
-    private String getInterpolationModifier (double lower, double bigger) {
-        if (bigger - lower <= 1) {
-            return "0.01";
-        } else if (bigger - lower <= 10) {
-            return "1";
-        } else {
-            return "2";
         }
     }
 
@@ -344,5 +363,76 @@ public class FileExporter {
 
     }
 
+    private void createInterpolationSkewTable (XSSFSheet sheet4, int rowNum, Map<Double, LinkedList<Double>> valueMap) {
+        Row header = sheet4.getRow (rowNum+6);
+        header.createCell (9).setCellValue (100);
+        header.createCell (10).setCellValue (99);
+        header.createCell (11).setCellValue (95);
+        header.createCell (12).setCellValue (90);
+        header.createCell (13).setCellValue (80);
+        header.createCell (14).setCellValue (70);
+        header.createCell (15).setCellValue (50);
+        header.createCell (16).setCellValue (30);
+        header.createCell (17).setCellValue (20);
+        header.createCell (18).setCellValue (10);
+        header.createCell (19).setCellValue (5);
+        header.createCell (20).setCellValue (2);
+        header.createCell (21).setCellValue (1);
+        header.createCell (22).setCellValue (0.5);
+        header.createCell (23).setCellValue (0.2);
+        header.createCell (24).setCellValue (0.1);
+        header.createCell (25).setCellValue (0.01);
 
+        if (valueMap.size () > 1) {
+            Row data1 = sheet4.getRow (rowNum + 7);
+            final double lowerBound =
+                    Utils.getLowerBoundsForSkewInterpolation (ls.getSkewCoefficient ().doubleValue ());
+            data1.createCell (8).setCellValue (lowerBound);
+            for (int i = 0; i < valueMap.get (lowerBound).size (); i++) {
+                data1.createCell (9 + i).setCellValue (valueMap.get (lowerBound).get (i));
+            }
+            Row data2 = sheet4.getRow (rowNum + 8);
+            Row interpoler = sheet4.createRow (rowNum +9);
+            final double upperBound =
+                    Utils.getUpperBoundsForSkewInterpolation (ls.getSkewCoefficient ().doubleValue ());
+            data2.createCell (8).setCellValue (upperBound);
+            interpoler.createCell (8).setCellValue (ls.getSkewCoefficient ().doubleValue ());
+            Row pqHeader = sheet4.createRow (rowNum+11);
+            pqHeader.createCell (5).setCellValue ("P%");
+            pqHeader.createCell (6).setCellValue ("Q(P%)");
+            for (int i = 0; i < valueMap.get (upperBound).size (); i++) {
+                data2.createCell (9 + i).setCellValue (valueMap.get (upperBound).get (i));
+                interpoler.createCell (9+i).setCellFormula (new StringBuilder ().append ("ROUND(((")
+                                                                    .append (interpoler.getCell (8).getAddress ())
+                                                                    .append ("-")
+                                                                    .append (data1.getCell (8).getAddress ())
+                                                                    .append (")/(")
+                                                                    .append (data2.getCell (8).getAddress ())
+                                                                    .append ("-")
+                                                                    .append (data1.getCell (8).getAddress ())
+                                                                    .append ("))*(")
+                                                                    .append (data2.getCell (9+i).getAddress ())
+                                                                    .append ("-")
+                                                                    .append (data1.getCell (9+i).getAddress ())
+                                                                    .append (")+")
+                                                                    .append (data1.getCell (9+i).getAddress ())
+                                                                    .append (",2)")
+                                                                    .toString ());
+                Row row = sheet4.createRow (rowNum+12+i);
+                row.createCell (5).setCellValue (header.getCell (9+i).getNumericCellValue ());
+                row.createCell (6).setCellFormula (new StringBuilder ().append (sheet4.getRow (rowNum+2).getCell (6).getAddress ())
+                        .append ("*(1+")
+                        .append (sheet4.getRow (rowNum).getCell (9).getAddress ())
+                        .append ("*")
+                        .append (interpoler.getCell (9+i).getAddress ())
+                        .append (")").toString ());
+            }
+        } else {
+            Row data1 = sheet4.createRow (rowNum + 1);
+            data1.createCell (8).setCellValue (ls.getSkewCoefficient ().doubleValue ());
+            for (int i = 0; i < valueMap.get (ls.getSkewCoefficient ().doubleValue ()).size (); i++) {
+                data1.createCell (9 + i).setCellValue (valueMap.get (ls.getSkewCoefficient ().doubleValue ()).get (i));
+            }
+        }
+    }
 }

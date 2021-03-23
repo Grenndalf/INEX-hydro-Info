@@ -11,10 +11,12 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 
 import java.io.IOException;
+import java.math.BigDecimal;
+import java.math.RoundingMode;
+import java.util.Objects;
 
 public class MainController {
 
-    public Button testy;
     @FXML
     private AnchorPane leftMenuContainer;
 
@@ -22,15 +24,9 @@ public class MainController {
     private AnchorPane contentContainer;
 
     @FXML
-    private AnchorPane mainParent;
-
-    GaugeDBActions gaugeDBActions = new GaugeDBActions();
-
-    @FXML
     void initialize() throws IOException {
         ControllerHolder.getInstance().registerMainController(this);
         setLeftMenu();
-        testBoundGenerator();
     }
 
     private void setLeftMenu() throws IOException {
@@ -51,10 +47,4 @@ public class MainController {
         loadedContent.prefHeightProperty().bind(contentContainer.heightProperty());
     }
 
-    private void testBoundGenerator(){
-        System.out.println (Utils.getLowerBoundsForInterpolationB (1.5));
-        System.out.println (Utils.getUpperBoundsForInterpolationB (Utils.getLowerBoundsForInterpolationB (1.54)));
-        System.out.println (Utils.getLowerSkewCoefficientBound (9999));
-        System.out.println (Utils.getUpperSkewCoefficientBound (9999));
-    }
 }

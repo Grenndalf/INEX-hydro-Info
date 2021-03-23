@@ -77,14 +77,12 @@ public class StatisticsController {
 
     private void setDeciles () {
         Platform.runLater (() -> {
-            ls.initVariables ();
             q10.setText (ls.getQ10 ().toEngineeringString ());
             q50.setText (ls.getQ50 ().toEngineeringString ());
             q90.setText (ls.getQ90 ().toEngineeringString ());
             q100.setText (ls.getQ100 ().toEngineeringString ());
             factor.setText (ls.getFactor ().toEngineeringString ());
             helperValue.setText (ls.getHelperValue ().toEngineeringString ());
-
         });
     }
 

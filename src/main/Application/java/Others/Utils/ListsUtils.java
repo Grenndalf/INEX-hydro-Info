@@ -35,9 +35,13 @@ public class ListsUtils {
     @Getter
     @Setter
     private BigDecimal helperValue = BigDecimal.ZERO;
+    @Getter
+    @Setter
+    private BigDecimal skewCoefficient = BigDecimal.ZERO;
 
     public ListsUtils (List<Double> inputList) {
         this.inputList = inputList;
+        this.initVariables ();
     }
 
     public void initVariables () {
@@ -52,13 +56,22 @@ public class ListsUtils {
                                                             RoundingMode.HALF_UP);
             averageNaturalLogarithmOfX = averageNaturalLogarithmOfX.divide (BigDecimal.valueOf (inputList.size ()), 4
                     , RoundingMode.HALF_UP);
-            System.out.println (averageNaturalLogarithmOfX);
             for (int j = 1; j <= inputList.size (); j++) {
-                nominatorB1 = nominatorB1.add (((BigDecimal.valueOf (log (getX (j)))).subtract (averageNaturalLogarithmOfX)).multiply (BigDecimal.valueOf (inputList.get (j - 1)).subtract (averageOfMaxValues))).setScale (4, RoundingMode.HALF_UP);
-                denominatorB1 = denominatorB1.add ((BigDecimal.valueOf (log (getX (j))).subtract (averageNaturalLogarithmOfX)).pow (2).setScale (4, RoundingMode.HALF_UP));
+                nominatorB1 =
+                        nominatorB1.add (((BigDecimal.valueOf (log (getX (j)))).subtract (averageNaturalLogarithmOfX))
+                                                 .multiply (BigDecimal.valueOf (inputList.get (j - 1))
+                                                                    .subtract (averageOfMaxValues)))
+                                .setScale (4, RoundingMode.HALF_UP);
+                denominatorB1 =
+                        denominatorB1.add ((BigDecimal.valueOf (log (getX (j)))
+                                .subtract (averageNaturalLogarithmOfX))
+                                                   .pow (2)
+                                                   .setScale (4, RoundingMode.HALF_UP));
             }
             BigDecimal b1 = nominatorB1.divide (denominatorB1, 4, RoundingMode.HALF_UP);
-            BigDecimal b0 = averageOfMaxValues.subtract (b1.multiply (averageNaturalLogarithmOfX)).setScale (4, RoundingMode.HALF_UP);
+            BigDecimal b0 = averageOfMaxValues.subtract (b1.multiply (averageNaturalLogarithmOfX)).setScale (4,
+                                                                                                             RoundingMode.HALF_UP);
+
             setQ10 (b0.add (b1.multiply (BigDecimal.valueOf (log (10)))).setScale (4, RoundingMode.HALF_UP));
             setQ50 (b0.add (b1.multiply (BigDecimal.valueOf (log (50)))).setScale (4, RoundingMode.HALF_UP));
             setQ90 (b0.add (b1.multiply (BigDecimal.valueOf (log (90)))).setScale (4, RoundingMode.HALF_UP));
@@ -72,14 +85,29 @@ public class ListsUtils {
             } catch (ArithmeticException e) {
                 helperValue = BigDecimal.ZERO;
             }
-            System.out.println (interpolation ());
+            double helper = helperValue.doubleValue ();
+            System.out.println (helper);
+            double lowerBound = Utils.getLowerBoundsForInterpolationB (helper);
+            System.out.println (lowerBound);
+            double upperBound = Utils.getUpperBoundsForInterpolationB (helper);
+            System.out.println (upperBound);
+            double lowerSkew = Utils.getLowerSkewCoefficientBound (lowerBound);
+            System.out.println (lowerSkew);
+            double upperSkew = Utils.getUpperSkewCoefficientBound (upperBound);
+            System.out.println (upperSkew);
+            if (Utils.getQuantile (helper) == 9999) {
+                skewCoefficient = (((helperValue.subtract (BigDecimal.valueOf (lowerBound)))
+                        .divide (BigDecimal.valueOf (0.01),10,RoundingMode.HALF_UP))
+                        .multiply ((BigDecimal.valueOf (upperSkew).subtract (BigDecimal.valueOf (lowerSkew)))
+                                           .divide ((BigDecimal.valueOf (upperBound)
+                                                   .subtract (BigDecimal.valueOf (lowerBound)))
+                                                            .divide (BigDecimal.valueOf (0.01), 10,
+                                                                     RoundingMode.HALF_UP), 10, RoundingMode.HALF_UP)))
+                        .add (BigDecimal.valueOf (lowerSkew)).setScale (2, RoundingMode.HALF_UP);
+            } else {
+                skewCoefficient = BigDecimal.valueOf (Utils.getQuantile (helper));
+            }
         }
-    }
-
-    public BigDecimal interpolation () {
-        return (helperValue.subtract (new BigDecimal ("1.4")))
-                .divide (new BigDecimal ("0.01"), 0, RoundingMode.HALF_UP)
-                .multiply (new BigDecimal ("0.0045")).add (new BigDecimal ("0.84")).setScale (3, RoundingMode.HALF_UP);
     }
 
     public double getX (int i) {

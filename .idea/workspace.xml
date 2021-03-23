@@ -23,16 +23,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
-      <change afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/UtilsTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/app.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/FileExporter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/ListsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/ListsUtils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Utils/FileExporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Utils/FileExporter.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Utils/Utils.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/MainContainer.fxml" afterDir="false" />
@@ -303,7 +304,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615390199666</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="working on excel export">
+      <created>1616062070500</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1616062070500</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -328,7 +336,8 @@
     <MESSAGE value="created methods for logarithm trend function" />
     <MESSAGE value="minor changes" />
     <MESSAGE value="latest work - statistics counting (interpolation)" />
-    <option name="LAST_COMMIT_MESSAGE" value="latest work - statistics counting (interpolation)" />
+    <MESSAGE value="working on excel export" />
+    <option name="LAST_COMMIT_MESSAGE" value="working on excel export" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

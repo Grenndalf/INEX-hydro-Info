@@ -74,7 +74,6 @@ public class ImportController {
         showHelpOnHover (downloadButton, downloadTextArea);
         showHelpOnHover (importButton, importTextArea);
         showHelpOnHover (removeDataButton, removeDataTextArea);
-        testing ();
     }
 
     private void showHelpOnHover (Button button, JFXTextArea textArea) {
@@ -263,20 +262,5 @@ public class ImportController {
         Platform.runLater (runnable);
     }
 
-    public void testing () {
-        ImageView gif = new ImageView (new Image("/Images/loadingspinner.gif",200,200,true,true));
-        gif.resize (200 ,200);
-        testPane.getChildren ().add (gif);
-
-                Task task = new Task () {
-                    @Override
-                    protected Object call () throws Exception {
-                        Thread.sleep (5000);
-                        return null;
-                    }
-                };
-                task.setOnSucceeded (event -> Platform.runLater (() -> testPane.getChildren ().clear ()));
-                new Thread (task).start ();
-            }
 }
 
