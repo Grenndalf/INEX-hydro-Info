@@ -29,6 +29,7 @@ public class StatisticsController {
     private static final String M_3_S = " [m3]/s";
     public static final String KRZYWA_SUM = "Krzywa sum czasów trwania wraz z wy¿szymi";
     private final GaugeDBActions gaugeDBActions = new GaugeDBActions ();
+
     List<GaugeMeasurement> selectedTownData =
             gaugeDBActions.queryForDataOfSelectedTownAndRiver (getInstance ().getRiverName (),
                                                                getInstance ().getTownName ());
@@ -48,6 +49,8 @@ public class StatisticsController {
     private Label factor;
     @FXML
     private Label helperValue;
+    @FXML
+    private Label skewCoefficient;
     @FXML
     private Arc dataArc;
     @FXML
@@ -84,6 +87,7 @@ public class StatisticsController {
             q100.setText (ls.getQ100 ().toEngineeringString ());
             factor.setText (ls.getFactor ().toEngineeringString ());
             helperValue.setText (ls.getHelperValue ().toEngineeringString ());
+            skewCoefficient.setText (ls.getSkewCoefficient ().toEngineeringString ());
         });
     }
 

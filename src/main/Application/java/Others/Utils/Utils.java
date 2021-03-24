@@ -139,12 +139,14 @@ public class Utils {
 
     public static Map<Double, LinkedList<Double>> getModifiedInterpolationSkewMap (double skewCoefficient) {
         LinkedHashMap<Double, LinkedList<Double>> linkedHashMap = new LinkedHashMap<> ();
+        System.out.println (skewCoefficient);
         if (interpolationSkewMap ().get (skewCoefficient) == null) {
             linkedHashMap.put (getLowerBoundsForSkewInterpolation (skewCoefficient),
                                interpolationSkewMap ().get (getLowerBoundsForSkewInterpolation (skewCoefficient)));
             linkedHashMap.put (getUpperBoundsForSkewInterpolation (skewCoefficient),
                                interpolationSkewMap ().get (getUpperBoundsForSkewInterpolation (skewCoefficient)));
         }else {
+            System.out.println ("dupa");
             linkedHashMap.put (skewCoefficient,interpolationSkewMap ().get (skewCoefficient));
         }
         return linkedHashMap;

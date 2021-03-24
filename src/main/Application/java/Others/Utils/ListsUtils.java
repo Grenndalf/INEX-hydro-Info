@@ -39,6 +39,8 @@ public class ListsUtils {
     @Setter
     private BigDecimal skewCoefficient = BigDecimal.ZERO;
 
+
+
     public ListsUtils (List<Double> inputList) {
         this.inputList = inputList;
         this.initVariables ();
@@ -86,13 +88,17 @@ public class ListsUtils {
                 helperValue = BigDecimal.ZERO;
             }
             double helper = helperValue.doubleValue ();
+
             double lowerBound = Utils.getLowerBoundsForInterpolationB (helper);
+
             double upperBound = Utils.getUpperBoundsForInterpolationB (helper);
+
             double lowerSkew = Utils.getLowerSkewCoefficientBound (lowerBound);
+
             double upperSkew = Utils.getUpperSkewCoefficientBound (upperBound);
             if (Utils.getQuantile (helper) == 9999) {
                 skewCoefficient = (((helperValue.subtract (BigDecimal.valueOf (lowerBound)))
-                        .divide (BigDecimal.valueOf (0.01),4,RoundingMode.HALF_UP))
+                        .divide (BigDecimal.valueOf (0.01), 4, RoundingMode.HALF_UP))
                         .multiply ((BigDecimal.valueOf (upperSkew).subtract (BigDecimal.valueOf (lowerSkew)))
                                            .divide ((BigDecimal.valueOf (upperBound)
                                                    .subtract (BigDecimal.valueOf (lowerBound)))

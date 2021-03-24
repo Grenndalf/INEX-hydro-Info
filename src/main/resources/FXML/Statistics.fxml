@@ -11,130 +11,163 @@
 <AnchorPane fx:id="statisticsContainer" prefHeight="800.0" prefWidth="1160.0" stylesheets="@../Css/stylesGeneral.css"
             xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="Controllers.StatisticsController">
-    <JFXTabPane style="-fx-border-color: none;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
-                AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
-        <Tab text="SSQ i dane ogólne">
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                <Pane fx:id="chartContainer" layoutX="22.0" layoutY="12.0" prefHeight="400.0"
-                      prefWidth="1120.0" style="-fx-border-radius: 20; -fx-border-color: #797979;"
-                      AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
-                      AnchorPane.topAnchor="20.0"/>
-                <VBox layoutX="20.0" layoutY="470.0" prefHeight="280.0" prefWidth="220.0"
-                      spacing="20.0">
-                    <padding>
-                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
-                    </padding>
-                    <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0"
-                           prefWidth="202.0" text="Poprawność danych" textAlignment="CENTER">
-                        <font>
-                            <Font size="18.0"/>
-                        </font>
-                    </Label>
-                    <Pane prefHeight="200.0" prefWidth="200.0"
-                          style="-fx-background-color: #d4d4d4;">
-                        <Arc fx:id="dataArc" fill="#ff1f1f" layoutX="100.0" layoutY="100.0"
-                             radiusX="100.0" radiusY="100.0" stroke="TRANSPARENT"
-                             strokeType="INSIDE" strokeWidth="0.0" type="ROUND"/>
-                        <Circle fill="WHITE" layoutX="100.0" layoutY="100.0" radius="90.0"
-                                stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0"/>
-                        <Label fx:id="correctDataInfo" alignment="CENTER"
-                               contentDisplay="CENTER" layoutY="80.0"
-                               nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0"
-                               prefWidth="200.0" text="0%" textAlignment="CENTER"
-                               textFill="#797979">
-                            <font>
-                                <Font name="System Bold" size="24.0"/>
-                            </font>
-                        </Label>
-                    </Pane>
-                </VBox>
-                <GridPane hgap="5.0" layoutX="256.0" layoutY="553.0" vgap="5.0">
-                    <columnConstraints>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="50.0"
-                                           prefWidth="150.0"/>
-                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0"
-                                           prefWidth="59.0"/>
-                    </columnConstraints>
-                    <rowConstraints>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-                    </rowConstraints>
-                    <padding>
-                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
-                    </padding>
-                    <Label text="Całkowita ilość danych">
-                        <cursor>
-                            <Cursor fx:constant="TEXT"/>
-                        </cursor>
-                    </Label>
-                    <Label text="Dane poprawne" GridPane.rowIndex="1"/>
-                    <Label text="Dane odrzucone" GridPane.rowIndex="2"/>
-                    <Label fx:id="totalDataQuantity" text="0" GridPane.columnIndex="1"/>
-                    <Label fx:id="correctDataQuantity" text="0" GridPane.columnIndex="1"
-                           GridPane.rowIndex="1"/>
-                    <Label fx:id="IncorrectDataQuantity" text="0" GridPane.columnIndex="1"
-                           GridPane.rowIndex="2"/>
-                </GridPane>
-                <Label layoutX="636.0" layoutY="480.0" text="Całkowity średni przepływ:"/>
-                <Label fx:id="averageFlowValue" alignment="CENTER_RIGHT" layoutX="799.0" layoutY="480.0"
-                       prefHeight="17.0" prefWidth="96.0" text="0" textAlignment="RIGHT"
-                       underline="true">
-                    <font>
-                        <Font name="System Bold" size="12.0"/>
-                    </font>
-                    <cursor>
-                        <Cursor fx:constant="HAND"/>
-                    </cursor>
-                </Label>
-            </AnchorPane>
-        </Tab>
-        <Tab fx:id="secTab" text="dane szczegółowe">
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
-                <Pane fx:id="secLineChartContainer" layoutX="20.0" layoutY="25.0" prefHeight="400.0"
-                      prefWidth="1120.0" style="-fx-border-radius: 20; -fx-border-color: #797979;"
-                      AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
-                      AnchorPane.topAnchor="25.0"/>
-            </AnchorPane>
-        </Tab>
-        <Tab text="Przepływy prawdopodobne">
-            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0"
-                        prefWidth="200.0">
-                <VBox alignment="BASELINE_CENTER" layoutX="25.0" layoutY="46.0" prefHeight="115.0"
-                      prefWidth="100.0" spacing="10.0" styleClass="infoContainer"
-                      AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="50.0">
-                    <Label text="Q10%"/>
-                    <Label text="Q50%"/>
-                    <Label text="Q90%"/>
-                    <Label alignment="CENTER" contentDisplay="CENTER" text="Q100%"
-                           VBox.vgrow="SOMETIMES"/>
-                </VBox>
-                <VBox alignment="BASELINE_CENTER" layoutX="125.0" layoutY="46.0" prefHeight="115.0"
-                      prefWidth="100.0" spacing="10.0" styleClass="infoContainer"
-                      AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="50.0">
-                    <Label fx:id="q10" text="0"/>
-                    <Label fx:id="q50" text="0"/>
-                    <Label fx:id="q90" text="0"/>
-                    <Label fx:id="q100" text="0"/>
-                </VBox>
-                <HBox alignment="BASELINE_CENTER" layoutX="27.0" layoutY="27.0" prefHeight="25.0"
-                      prefWidth="198.0" styleClass="infoContainer">
-                    <Label alignment="BASELINE_CENTER" prefHeight="25.0" prefWidth="100.0"
-                           text="Decyle"/>
-                    <Label alignment="BASELINE_CENTER" prefHeight="25.0" prefWidth="100.0"
-                           text="Wartości"/>
-                </HBox>
-                <VBox alignment="BASELINE_CENTER" layoutX="246.0" layoutY="27.0" prefHeight="60.0"
-                      prefWidth="220.0" spacing="10.0" styleClass="infoContainer">
-                    <Label text="kwantylowy współczynnik cv"/>
-                    <Label text="wielkość pomocnicza b"/>
-                </VBox>
-                <VBox alignment="BASELINE_CENTER" layoutX="463.0" layoutY="27.0" prefHeight="60.0"
-                      prefWidth="50.0" spacing="10.0" styleClass="infoContainer">
-                    <Label fx:id="factor" text="0"/>
-                    <Label fx:id="helperValue" text="0"/>
-                </VBox>
-            </AnchorPane>
-        </Tab>
-    </JFXTabPane>
+    <children>
+        <JFXTabPane style="-fx-border-color: none;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0"
+                    AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <tabs>
+                <Tab text="SSQ i dane ogólne">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Pane fx:id="chartContainer" layoutX="22.0" layoutY="12.0" prefHeight="400.0"
+                                      prefWidth="1120.0" style="-fx-border-radius: 20; -fx-border-color: #797979;"
+                                      AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
+                                      AnchorPane.topAnchor="20.0"/>
+                                <VBox layoutX="20.0" layoutY="470.0" prefHeight="280.0" prefWidth="220.0"
+                                      spacing="20.0">
+                                    <padding>
+                                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                                    </padding>
+                                    <children>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="17.0"
+                                               prefWidth="202.0" text="Poprawność danych" textAlignment="CENTER">
+                                            <font>
+                                                <Font size="18.0"/>
+                                            </font>
+                                        </Label>
+                                        <Pane prefHeight="200.0" prefWidth="200.0"
+                                              style="-fx-background-color: #d4d4d4;">
+                                            <children>
+                                                <Arc fx:id="dataArc" fill="#ff1f1f" layoutX="100.0" layoutY="100.0"
+                                                     radiusX="100.0" radiusY="100.0" stroke="TRANSPARENT"
+                                                     strokeType="INSIDE" strokeWidth="0.0" type="ROUND"/>
+                                                <Circle fill="WHITE" layoutX="100.0" layoutY="100.0" radius="90.0"
+                                                        stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0"/>
+                                                <Label fx:id="correctDataInfo" alignment="CENTER"
+                                                       contentDisplay="CENTER" layoutY="80.0"
+                                                       nodeOrientation="LEFT_TO_RIGHT" prefHeight="40.0"
+                                                       prefWidth="200.0" text="0%" textAlignment="CENTER"
+                                                       textFill="#797979">
+                                                    <font>
+                                                        <Font name="System Bold" size="24.0"/>
+                                                    </font>
+                                                </Label>
+                                            </children>
+                                        </Pane>
+                                    </children>
+                                </VBox>
+                                <GridPane hgap="5.0" layoutX="256.0" layoutY="553.0" vgap="5.0">
+                                    <columnConstraints>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="50.0"
+                                                           prefWidth="150.0"/>
+                                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="95.0" minWidth="10.0"
+                                                           prefWidth="59.0"/>
+                                    </columnConstraints>
+                                    <rowConstraints>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+                                    </rowConstraints>
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </padding>
+                                    <children>
+                                        <Label text="Całkowita ilość danych">
+                                            <cursor>
+                                                <Cursor fx:constant="TEXT"/>
+                                            </cursor>
+                                        </Label>
+                                        <Label text="Dane poprawne" GridPane.rowIndex="1"/>
+                                        <Label text="Dane odrzucone" GridPane.rowIndex="2"/>
+                                        <Label fx:id="totalDataQuantity" text="0" GridPane.columnIndex="1"/>
+                                        <Label fx:id="correctDataQuantity" text="0" GridPane.columnIndex="1"
+                                               GridPane.rowIndex="1"/>
+                                        <Label fx:id="IncorrectDataQuantity" text="0" GridPane.columnIndex="1"
+                                               GridPane.rowIndex="2"/>
+                                    </children>
+                                </GridPane>
+                                <Label layoutX="636.0" layoutY="480.0" text="Całkowity średni przepływ:"/>
+                                <Label fx:id="averageFlowValue" alignment="CENTER_RIGHT" layoutX="799.0" layoutY="480.0"
+                                       prefHeight="17.0" prefWidth="96.0" text="0" textAlignment="RIGHT"
+                                       underline="true">
+                                    <font>
+                                        <Font name="System Bold" size="12.0"/>
+                                    </font>
+                                    <cursor>
+                                        <Cursor fx:constant="HAND"/>
+                                    </cursor>
+                                </Label>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab fx:id="secTab" text="dane szczegółowe">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <Pane fx:id="secLineChartContainer" layoutX="20.0" layoutY="25.0" prefHeight="400.0"
+                                      prefWidth="1120.0" style="-fx-border-radius: 20; -fx-border-color: #797979;"
+                                      AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0"
+                                      AnchorPane.topAnchor="25.0"/>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Przepływy prawdopodobne">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox alignment="BASELINE_CENTER" layoutX="25.0" layoutY="46.0" prefHeight="115.0"
+                                      prefWidth="100.0" spacing="10.0" styleClass="infoContainer"
+                                      AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="50.0">
+                                    <children>
+                                        <Label text="Q10%"/>
+                                        <Label text="Q50%"/>
+                                        <Label text="Q90%"/>
+                                        <Label alignment="CENTER" contentDisplay="CENTER" text="Q100%"
+                                               VBox.vgrow="SOMETIMES"/>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="BASELINE_CENTER" layoutX="125.0" layoutY="46.0" prefHeight="115.0"
+                                      prefWidth="100.0" spacing="10.0" styleClass="infoContainer"
+                                      AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="50.0">
+                                    <children>
+                                        <Label fx:id="q10" text="0"/>
+                                        <Label fx:id="q50" text="0"/>
+                                        <Label fx:id="q90" text="0"/>
+                                        <Label fx:id="q100" text="0"/>
+                                    </children>
+                                </VBox>
+                                <HBox alignment="BASELINE_CENTER" layoutX="27.0" layoutY="27.0" prefHeight="25.0"
+                                      prefWidth="198.0" styleClass="infoContainer">
+                                    <children>
+                                        <Label alignment="BASELINE_CENTER" prefHeight="25.0" prefWidth="100.0"
+                                               text="Decyle"/>
+                                        <Label alignment="BASELINE_CENTER" prefHeight="25.0" prefWidth="100.0"
+                                               text="Wartości"/>
+                                    </children>
+                                </HBox>
+                                <VBox alignment="BASELINE_CENTER" layoutX="246.0" layoutY="27.0" prefHeight="90.0"
+                                      prefWidth="220.0" spacing="10.0" styleClass="infoContainer">
+                                    <children>
+                                        <Label text="kwantylowy współczynnik cv"/>
+                                        <Label text="wielkość pomocnicza b"/>
+                                        <Label text="kwantylowy współczynnik skośności"/>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="BASELINE_CENTER" layoutX="463.0" layoutY="27.0" prefHeight="90.0"
+                                      prefWidth="50.0" spacing="10.0" styleClass="infoContainer">
+                                    <children>
+                                        <Label fx:id="factor" text="0"/>
+                                        <Label fx:id="helperValue" text="0"/>
+                                        <Label fx:id="skewCoefficient" text="0"/>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </JFXTabPane>
+    </children>
 </AnchorPane>
