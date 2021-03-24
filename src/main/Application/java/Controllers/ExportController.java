@@ -2,7 +2,9 @@ package Controllers;
 
 import DButils.TableDBActions.GaugeDBActions;
 import Others.Mediator.ControllerHolder;
-import Others.Utils.FileExporter;
+import Others.Multihreading.FileDownloaderService;
+import Others.Multihreading.FileExporter;
+import Others.Multihreading.FileExporterService;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.DirectoryChooser;
@@ -15,7 +17,7 @@ public class ExportController {
     public Button exportButton;
 
     GaugeDBActions ge = new GaugeDBActions ();
-    FileExporter fe = new FileExporter ();
+
     DirectoryChooser directoryChooser = new DirectoryChooser ();
 
 
@@ -23,8 +25,10 @@ public class ExportController {
         directoryChooser.setTitle ("Wybierz miejsce do zapisu pliku");
         File filePath = directoryChooser.showDialog (exportButton.getScene ().getWindow ());
         if (filePath != null) {
-            fe.createWorkBook (ge.queryForDataOfSelectedTownAndRiver (ControllerHolder.getInstance ().getRiverName (), ControllerHolder.getInstance ().getTownName ()),
-                               filePath.getAbsolutePath ());
+            FileExporter fe = new FileExporter (ge.queryForDataOfSelectedTownAndRiver (ControllerHolder.getInstance ().getRiverName (), ControllerHolder.getInstance ().getTownName ()),
+                                                filePath.getAbsolutePath ());
+            FileExporterService service = new FileExporterService (fe);
+            service.restart ();
         }
     }
 }

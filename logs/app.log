@@ -17654,3 +17654,123 @@
 [INFO ] 2021-03-23 16:12:22.028 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
 [INFO ] 2021-03-23 16:12:22.387 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3b10beae] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
 [INFO ] 2021-03-23 16:12:23.984 [JavaFX Application Thread] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-03-24 14:09:41.627 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-03-24 14:09:41.699 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-03-24 14:09:41.701 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-03-24 14:09:41.737 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-03-24 14:09:41.869 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-03-24 14:09:41.873 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-03-24 14:09:41.874 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {useUnicode=true, user=admin, password=****, characterEncoding=windows-1250}
+[INFO ] 2021-03-24 14:09:41.874 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-03-24 14:09:41.875 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-03-24 14:09:42.116 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-03-24 14:09:42.143 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-03-24 14:09:42.563 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3845510e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-03-24 14:09:43.711 [JavaFX Application Thread] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-03-24 14:20:32.191 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-03-24 14:20:32.246 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-03-24 14:20:32.248 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-03-24 14:20:32.279 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-03-24 14:20:32.390 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-03-24 14:20:32.393 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-03-24 14:20:32.393 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {useUnicode=true, user=admin, password=****, characterEncoding=windows-1250}
+[INFO ] 2021-03-24 14:20:32.393 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-03-24 14:20:32.395 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-03-24 14:20:32.626 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-03-24 14:20:32.646 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-03-24 14:20:32.984 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3c3c1272] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-03-24 14:20:34.374 [JavaFX Application Thread] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-03-24 14:25:08.608 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-03-24 14:25:08.657 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-03-24 14:25:08.658 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-03-24 14:25:08.692 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-03-24 14:25:08.802 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-03-24 14:25:08.805 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-03-24 14:25:08.805 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {useUnicode=true, user=admin, password=****, characterEncoding=windows-1250}
+[INFO ] 2021-03-24 14:25:08.805 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-03-24 14:25:08.807 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-03-24 14:25:09.009 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-03-24 14:25:09.029 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-03-24 14:25:09.352 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@6bc7912d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-03-24 14:25:09.495 [JavaFX Application Thread] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-03-24 14:27:15.068 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-03-24 14:27:15.117 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-03-24 14:27:15.118 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-03-24 14:27:15.147 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-03-24 14:27:15.250 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-03-24 14:27:15.252 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-03-24 14:27:15.253 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {useUnicode=true, user=admin, password=****, characterEncoding=windows-1250}
+[INFO ] 2021-03-24 14:27:15.253 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-03-24 14:27:15.254 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-03-24 14:27:15.470 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-03-24 14:27:15.489 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-03-24 14:27:15.828 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3845510e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-03-24 14:27:17.096 [JavaFX Application Thread] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-03-24 14:29:15.289 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-03-24 14:29:15.337 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-03-24 14:29:15.338 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-03-24 14:29:15.365 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-03-24 14:29:15.467 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-03-24 14:29:15.470 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-03-24 14:29:15.470 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {useUnicode=true, user=admin, password=****, characterEncoding=windows-1250}
+[INFO ] 2021-03-24 14:29:15.470 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-03-24 14:29:15.472 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-03-24 14:29:15.692 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-03-24 14:29:15.712 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-03-24 14:29:16.044 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3056742d] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-03-24 14:29:17.553 [JavaFX Application Thread] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-03-24 14:30:22.437 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-03-24 14:30:22.485 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-03-24 14:30:22.487 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-03-24 14:30:22.515 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-03-24 14:30:22.616 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-03-24 14:30:22.618 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-03-24 14:30:22.619 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {useUnicode=true, user=admin, password=****, characterEncoding=windows-1250}
+[INFO ] 2021-03-24 14:30:22.619 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-03-24 14:30:22.620 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-03-24 14:30:22.838 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-03-24 14:30:22.857 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-03-24 14:30:23.185 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@2a35584] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-03-24 14:30:24.281 [JavaFX Application Thread] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-03-24 14:41:25.342 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-03-24 14:41:25.392 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-03-24 14:41:25.392 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-03-24 14:41:25.420 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-03-24 14:41:25.519 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-03-24 14:41:25.522 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-03-24 14:41:25.522 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {useUnicode=true, user=admin, password=****, characterEncoding=windows-1250}
+[INFO ] 2021-03-24 14:41:25.523 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-03-24 14:41:25.524 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-03-24 14:41:25.723 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-03-24 14:41:25.742 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-03-24 14:41:26.092 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@3888232e] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-03-24 14:41:27.168 [JavaFX Application Thread] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory
+[INFO ] 2021-03-24 14:54:49.937 [JavaFX Application Thread] LogHelper - HHH000204: Processing PersistenceUnitInfo [
+	name: gaugePersistenceUnit
+	...]
+[INFO ] 2021-03-24 14:54:49.988 [JavaFX Application Thread] Version - HHH000412: Hibernate Core {5.2.9.Final}
+[INFO ] 2021-03-24 14:54:49.989 [JavaFX Application Thread] Environment - HHH000206: hibernate.properties not found
+[INFO ] 2021-03-24 14:54:50.018 [JavaFX Application Thread] Version - HCANN000001: Hibernate Commons Annotations {5.0.1.Final}
+[WARN ] 2021-03-24 14:54:50.122 [JavaFX Application Thread] pooling - HHH10001002: Using Hibernate built-in connection pool (not for production use!)
+[INFO ] 2021-03-24 14:54:50.125 [JavaFX Application Thread] pooling - HHH10001005: using driver [org.sqlite.JDBC] at URL [jdbc:sqlite:pomiary.db]
+[INFO ] 2021-03-24 14:54:50.125 [JavaFX Application Thread] pooling - HHH10001001: Connection properties: {useUnicode=true, user=admin, password=****, characterEncoding=windows-1250}
+[INFO ] 2021-03-24 14:54:50.125 [JavaFX Application Thread] pooling - HHH10001003: Autocommit mode: false
+[INFO ] 2021-03-24 14:54:50.127 [JavaFX Application Thread] DriverManagerConnectionProviderImpl - HHH000115: Hibernate connection pool size: 20 (min=1)
+[INFO ] 2021-03-24 14:54:50.324 [JavaFX Application Thread] Dialect - HHH000400: Using dialect: org.hibernate.dialect.SQLiteDialect
+[INFO ] 2021-03-24 14:54:50.343 [JavaFX Application Thread] LobCreatorBuilderImpl - HHH000423: Disabling contextual LOB creation as JDBC driver reported JDBC version [2] less than 4
+[INFO ] 2021-03-24 14:54:50.665 [JavaFX Application Thread] access - HHH10001501: Connection obtained from JdbcConnectionAccess [org.hibernate.engine.jdbc.env.internal.JdbcEnvironmentInitiator$ConnectionProviderJdbcConnectionAccess@75abf559] for (non-JTA) DDL execution was not in auto-commit mode; the Connection 'local transaction' will be committed and the Connection will be set into auto-commit mode.
+[INFO ] 2021-03-24 14:54:51.931 [JavaFX Application Thread] QueryTranslatorFactoryInitiator - HHH000397: Using ASTQueryTranslatorFactory

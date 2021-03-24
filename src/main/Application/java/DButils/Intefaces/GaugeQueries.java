@@ -2,14 +2,14 @@ package DButils.Intefaces;
 
 import DButils.Tables.GaugeMeasurement;
 
+import java.util.HashMap;
 import java.util.List;
 
 public interface GaugeQueries {
-    void createOrUpdateMeasurementTable(GaugeMeasurement gaugeMeasurement);
 
     void createOrUpdateMeasurementTable(List<GaugeMeasurement> gaugeMeasurement);
 
-    List<GaugeMeasurement> queryForAllGaugeMeasurements();
+    HashMap<Short, Double> getMaxValuesPerYear (String riverName, String townName);
 
     int removeAllMeasurements();
 
@@ -17,5 +17,8 @@ public interface GaugeQueries {
 
     List<String> getTownListOfSelectedRiver(String riverName);
 
-//    List<Short> getYearRange(String riverName);
+    List<Double> getCorrectedDoubleMeasurementsList (String riverName, String townName);
+
+    List<Object[]> getSortedValuesPerYearAndPerDay (String riverName, String townName);
 }
+

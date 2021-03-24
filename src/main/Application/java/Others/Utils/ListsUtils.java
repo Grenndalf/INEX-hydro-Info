@@ -86,23 +86,18 @@ public class ListsUtils {
                 helperValue = BigDecimal.ZERO;
             }
             double helper = helperValue.doubleValue ();
-            System.out.println (helper);
             double lowerBound = Utils.getLowerBoundsForInterpolationB (helper);
-            System.out.println (lowerBound);
             double upperBound = Utils.getUpperBoundsForInterpolationB (helper);
-            System.out.println (upperBound);
             double lowerSkew = Utils.getLowerSkewCoefficientBound (lowerBound);
-            System.out.println (lowerSkew);
             double upperSkew = Utils.getUpperSkewCoefficientBound (upperBound);
-            System.out.println (upperSkew);
             if (Utils.getQuantile (helper) == 9999) {
                 skewCoefficient = (((helperValue.subtract (BigDecimal.valueOf (lowerBound)))
-                        .divide (BigDecimal.valueOf (0.01),10,RoundingMode.HALF_UP))
+                        .divide (BigDecimal.valueOf (0.01),4,RoundingMode.HALF_UP))
                         .multiply ((BigDecimal.valueOf (upperSkew).subtract (BigDecimal.valueOf (lowerSkew)))
                                            .divide ((BigDecimal.valueOf (upperBound)
                                                    .subtract (BigDecimal.valueOf (lowerBound)))
-                                                            .divide (BigDecimal.valueOf (0.01), 10,
-                                                                     RoundingMode.HALF_UP), 10, RoundingMode.HALF_UP)))
+                                                            .divide (BigDecimal.valueOf (0.01), 4,
+                                                                     RoundingMode.HALF_UP), 4, RoundingMode.HALF_UP)))
                         .add (BigDecimal.valueOf (lowerSkew)).setScale (2, RoundingMode.HALF_UP);
             } else {
                 skewCoefficient = BigDecimal.valueOf (Utils.getQuantile (helper));

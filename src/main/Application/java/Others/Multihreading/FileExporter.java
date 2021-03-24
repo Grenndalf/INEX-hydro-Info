@@ -1,10 +1,14 @@
-package Others.Utils;
+package Others.Multihreading;
 
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.Tables.GaugeMeasurement;
 import Others.Mediator.ControllerHolder;
+import Others.Utils.ListsUtils;
+import Others.Utils.Utils;
 import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.scene.control.Alert;
+import org.apache.poi.ooxml.POIXMLProperties;
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.CellStyle;
 import org.apache.poi.ss.usermodel.HorizontalAlignment;
@@ -21,7 +25,7 @@ import java.util.stream.Collectors;
 
 import static Others.Mediator.ControllerHolder.getInstance;
 
-public class FileExporter {
+public class FileExporter extends Task {
 
 
     public static final String DANE_CALOSC = "Dane Ca³oœæ";
@@ -29,13 +33,28 @@ public class FileExporter {
     public static final String DANE_POSORTOWANE = "Dane Posortowane";
     public static final String XLSX = ".xlsx";
     public static final String PRZEPLYWY_PRAWDOPODOBNE = "Przep³ywy prawdopodobne";
+    public static final String CREATOR = "INEX GREEN";
     private final XSSFWorkbook workbook = new XSSFWorkbook ();
     ListsUtils ls = new ListsUtils (new GaugeDBActions ().getCorrectedDoubleMeasurementsList (
             getInstance ().getRiverName (),
             getInstance ().getTownName ()));
+    List<GaugeMeasurement> gaugeMeasurements;
+    String absolutePath;
 
-    public void createWorkBook (List<GaugeMeasurement> spreadsheetData, String absolutePath) {
+    public FileExporter (List<GaugeMeasurement> gaugeMeasurements, String absolutePath) {
+        this.gaugeMeasurements = gaugeMeasurements;
+        this.absolutePath = absolutePath;
+    }
 
+    @Override
+    protected Object call () {
+        createWorkBook ();
+        return null;
+    }
+    public void createWorkBook () {
+        POIXMLProperties xmlProps = workbook.getProperties();
+        POIXMLProperties.CoreProperties coreProps =  xmlProps.getCoreProperties();
+        coreProps.setCreator(CREATOR);
         XSSFSheet sheet1 = workbook.createSheet (DANE_CALOSC);
         XSSFSheet sheet2 = workbook.createSheet (DANE_UPORZADKOWANE);
         XSSFSheet sheet3 = workbook.createSheet (DANE_POSORTOWANE);
@@ -46,18 +65,18 @@ public class FileExporter {
         createHeadersInSheet (sheet1);
 
 //insert danych z bazy do pierwszego arkusza
-        for (int i = 0; i < spreadsheetData.size (); i++) {
+        for (int i = 0; i < gaugeMeasurements.size (); i++) {
             Row row = sheet1.createRow (i + 1);
-            row.createCell (0).setCellValue (spreadsheetData.get (i).getGaugeID ());
+            row.createCell (0).setCellValue (gaugeMeasurements.get (i).getGaugeID ());
             row.getCell (0).setCellStyle (cellStyle);
-            row.createCell (1).setCellValue (spreadsheetData.get (i).getGaugeName ());
-            row.createCell (2).setCellValue (spreadsheetData.get (i).getRiverName ());
-            row.createCell (3).setCellValue (spreadsheetData.get (i).getMeasurementYear ());
-            row.createCell (4).setCellValue (spreadsheetData.get (i).getMeasurementMonth ());
-            row.createCell (5).setCellValue (spreadsheetData.get (i).getMeasurementDay ());
-            row.createCell (6).setCellValue (spreadsheetData.get (i).getData1 ());
-            row.createCell (7).setCellValue (spreadsheetData.get (i).getData2 ());
-            row.createCell (8).setCellValue (spreadsheetData.get (i).getData3 ());
+            row.createCell (1).setCellValue (gaugeMeasurements.get (i).getGaugeName ());
+            row.createCell (2).setCellValue (gaugeMeasurements.get (i).getRiverName ());
+            row.createCell (3).setCellValue (gaugeMeasurements.get (i).getMeasurementYear ());
+            row.createCell (4).setCellValue (gaugeMeasurements.get (i).getMeasurementMonth ());
+            row.createCell (5).setCellValue (gaugeMeasurements.get (i).getMeasurementDay ());
+            row.createCell (6).setCellValue (gaugeMeasurements.get (i).getData1 ());
+            row.createCell (7).setCellValue (gaugeMeasurements.get (i).getData2 ());
+            row.createCell (8).setCellValue (gaugeMeasurements.get (i).getData3 ());
         }
         sheet1.autoSizeColumn (0);
         sheet1.autoSizeColumn (1);
@@ -68,13 +87,13 @@ public class FileExporter {
         List<Row> rowListInSheet2 = getRowListInSheet (sheet2);
 
 
-        List<Short> yearList = spreadsheetData.stream ()
+        List<Short> yearList = gaugeMeasurements.stream ()
                 .map (GaugeMeasurement::getMeasurementYear)
                 .distinct ()
                 .collect (Collectors.toList ());
 
         yearList.forEach (aShort -> {
-            List<Double> dataList = spreadsheetData.stream ()
+            List<Double> dataList = gaugeMeasurements.stream ()
                     .filter (gaugeMeasurement -> gaugeMeasurement.getMeasurementYear () == aShort)
                     .map (GaugeMeasurement::getData2)
                     .collect (Collectors.toList ());
@@ -172,12 +191,15 @@ public class FileExporter {
 
         //zapis do pliku
         try {
+
             File file = new File (new StringBuilder ().append (absolutePath)
                                           .append (System.getProperty ("file.separator"))
                                           .append (ControllerHolder.getInstance ().getTownName ())
                                           .append (XLSX).toString ());
             FileOutputStream path = new FileOutputStream (file);
             workbook.write (path);
+            path.close ();
+            workbook.close ();
             Platform.runLater (() -> {
                 Alert alert = new Alert (Alert.AlertType.CONFIRMATION);
                 alert.setTitle ("Zakoñczono");
@@ -435,4 +457,5 @@ public class FileExporter {
             }
         }
     }
+
 }

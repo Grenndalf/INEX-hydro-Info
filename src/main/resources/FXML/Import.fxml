@@ -56,6 +56,4 @@
             <Font name="Calibri Light" size="15.0"/>
         </font>
     </JFXTextArea>
-    <Pane fx:id="testPane" layoutX="506.0" layoutY="177.0" prefHeight="200.0" prefWidth="200.0"
-          style="-fx-background-color: lightgrey;"/>
 </AnchorPane>

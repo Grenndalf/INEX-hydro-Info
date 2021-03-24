@@ -27,6 +27,7 @@ public class StatisticsController {
     private static final String SSQ = "SSQ";
     private static final String SYSTEM = "System";
     private static final String M_3_S = " [m3]/s";
+    public static final String KRZYWA_SUM = "Krzywa sum czasów trwania wraz z wy¿szymi";
     private final GaugeDBActions gaugeDBActions = new GaugeDBActions ();
     List<GaugeMeasurement> selectedTownData =
             gaugeDBActions.queryForDataOfSelectedTownAndRiver (getInstance ().getRiverName (),
@@ -206,11 +207,15 @@ public class StatisticsController {
 
     private LineChart<Number, Number> createSecondChart (Map<Integer, Double> dataset) {
         NumberAxis xAxis = new NumberAxis ();
+        NumberAxis yAxis = new NumberAxis ();
+        yAxis.setLabel ("Przep³yw Q [m3/s]");
         xAxis.setTickLabelRotation (90);
         xAxis.setTickLabelFont (Font.font (SYSTEM, 10));
         xAxis.setAutoRanging (true);
+        xAxis.setLabel ("Czas (t) dni");
         XYChart.Series<Number, Number> series = new XYChart.Series<> ();
-        LineChart<Number, Number> lineChart = new LineChart<> (xAxis, new NumberAxis ());
+        LineChart<Number, Number> lineChart = new LineChart<> (xAxis, yAxis);
+
         lineChart.getStyleClass ().add ("sec-line-chart");
         lineChart.setPrefWidth (1100);
         lineChart.setPrefHeight (400);
@@ -219,7 +224,7 @@ public class StatisticsController {
         setSeriesSecondChart (dataset, series);
 
         lineChart.getYAxis ().setLabel (Utils.getResourceBundle ().getString (YAXIS_TEXT));
-        lineChart.setTitle (SSQ);
+        lineChart.setTitle (KRZYWA_SUM);
         return lineChart;
     }
 

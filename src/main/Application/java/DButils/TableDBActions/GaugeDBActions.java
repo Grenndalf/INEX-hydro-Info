@@ -23,11 +23,6 @@ public class GaugeDBActions implements GaugeQueries {
     private final EntityManagerFactory emf = HibernateFactory.getEntityManagerFactory ();
 
     @Override
-    public void createOrUpdateMeasurementTable (GaugeMeasurement gaugeMeasurement) {
-        crudOperator.save (gaugeMeasurement);
-    }
-
-    @Override
     public void createOrUpdateMeasurementTable (List<GaugeMeasurement> gaugeMeasurements) {
         crudOperator.saveMultiple (gaugeMeasurements);
     }
@@ -85,7 +80,7 @@ public class GaugeDBActions implements GaugeQueries {
         return new ArrayList<> ();
     }
 
-
+    @Override
     public List<Double> getCorrectedDoubleMeasurementsList (String riverName, String townName) {
         EntityManager em = emf.createEntityManager ();
         try {
@@ -116,6 +111,7 @@ public class GaugeDBActions implements GaugeQueries {
         return new ArrayList<> ();
     }
 
+    @Override
     public HashMap<Short, Double> getMaxValuesPerYear (String riverName, String townName) {
         EntityManager em = emf.createEntityManager ();
         HashMap<Short, Double> resultMap = new HashMap<> ();
@@ -151,6 +147,7 @@ public class GaugeDBActions implements GaugeQueries {
         return new HashMap<> ();
     }
 
+    @Override
     public List<Object[]> getSortedValuesPerYearAndPerDay (String riverName, String townName) {
         EntityManager em = emf.createEntityManager ();
         try {
@@ -183,7 +180,6 @@ public class GaugeDBActions implements GaugeQueries {
         return new ArrayList<> ();
     }
 
-
     @Override
     public int removeAllMeasurements () {
         EntityManager em = emf.createEntityManager ();
@@ -207,8 +203,4 @@ public class GaugeDBActions implements GaugeQueries {
         return 0;
     }
 
-    @Override
-    public List<GaugeMeasurement> queryForAllGaugeMeasurements () {
-        return crudOperator.getAll (GaugeMeasurement.class);
-    }
 }
