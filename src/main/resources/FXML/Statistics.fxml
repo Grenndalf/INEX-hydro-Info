@@ -115,9 +115,10 @@
                 </Tab>
                 <Tab text="Przepływy prawdopodobne">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"
+                                    AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="200.0">
                             <children>
-                                <VBox alignment="BASELINE_CENTER" layoutX="25.0" layoutY="46.0" prefHeight="115.0"
+                                <VBox alignment="BASELINE_CENTER" layoutX="25.0" layoutY="46.0" prefHeight="120.0"
                                       prefWidth="100.0" spacing="10.0" styleClass="infoContainer"
                                       AnchorPane.leftAnchor="27.0" AnchorPane.topAnchor="50.0">
                                     <children>
@@ -128,7 +129,7 @@
                                                VBox.vgrow="SOMETIMES"/>
                                     </children>
                                 </VBox>
-                                <VBox alignment="BASELINE_CENTER" layoutX="125.0" layoutY="46.0" prefHeight="115.0"
+                                <VBox alignment="BASELINE_CENTER" layoutX="125.0" layoutY="46.0" prefHeight="120.0"
                                       prefWidth="100.0" spacing="10.0" styleClass="infoContainer"
                                       AnchorPane.leftAnchor="125.0" AnchorPane.topAnchor="50.0">
                                     <children>
@@ -150,9 +151,9 @@
                                 <VBox alignment="BASELINE_CENTER" layoutX="246.0" layoutY="27.0" prefHeight="90.0"
                                       prefWidth="220.0" spacing="10.0" styleClass="infoContainer">
                                     <children>
-                                        <Label text="kwantylowy współczynnik cv"/>
-                                        <Label text="wielkość pomocnicza b"/>
-                                        <Label text="kwantylowy współczynnik skośności"/>
+                                        <Label text="Kwantylowy współczynnik cv"/>
+                                        <Label text="Wielkość pomocnicza b"/>
+                                        <Label text="Kwantylowy współczynnik skośności"/>
                                     </children>
                                 </VBox>
                                 <VBox alignment="BASELINE_CENTER" layoutX="463.0" layoutY="27.0" prefHeight="90.0"
@@ -163,6 +164,19 @@
                                         <Label fx:id="skewCoefficient" text="0"/>
                                     </children>
                                 </VBox>
+                                <VBox alignment="BASELINE_CENTER" layoutX="27.0" layoutY="227.0" prefHeight="30.0"
+                                      prefWidth="100.0" spacing="10.0" styleClass="infoContainer"/>
+                                <VBox alignment="BASELINE_CENTER" layoutX="127.0" layoutY="227.0" prefHeight="30.0"
+                                      prefWidth="100.0" spacing="10.0" styleClass="infoContainer"/>
+                                <HBox alignment="BASELINE_CENTER" layoutX="28.0" layoutY="202.0" prefHeight="25.0"
+                                      prefWidth="198.0" styleClass="infoContainer">
+                                    <children>
+                                        <Label alignment="BASELINE_CENTER" prefHeight="25.0" prefWidth="100.0"
+                                               text="P%"/>
+                                        <Label alignment="BASELINE_CENTER" prefHeight="25.0" prefWidth="100.0"
+                                               text="Q(P%)"/>
+                                    </children>
+                                </HBox>
                             </children>
                         </AnchorPane>
                     </content>

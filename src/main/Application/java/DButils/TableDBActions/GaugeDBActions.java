@@ -41,7 +41,6 @@ public class GaugeDBActions implements GaugeQueries {
             TypedQuery<GaugeMeasurement> query = em.createQuery (criteriaQuery);
             List<GaugeMeasurement> result = query.getResultList ();
             em.getTransaction ().commit ();
-            System.out.println ("queryForDataOfSelectedTownAndRiver " + result.size ());
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();

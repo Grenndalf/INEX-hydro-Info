@@ -23,7 +23,7 @@ public final class ControllerHolder implements MediatorMethods {
     }
 
     @Override
-    public void registerButtonLeftMenuButtonController (LeftMenuButtonsController controller) {
+    public void registerLeftMenuButtonController (LeftMenuButtonsController controller) {
         menuButtonsController = controller;
     }
 

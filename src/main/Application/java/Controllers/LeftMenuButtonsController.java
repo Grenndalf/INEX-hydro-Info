@@ -27,7 +27,7 @@ public class LeftMenuButtonsController {
 
     @FXML
     void initialize() {
-        ControllerHolder.getInstance().registerButtonLeftMenuButtonController(this);
+        ControllerHolder.getInstance().registerLeftMenuButtonController (this);
         addToggleGroupListener();
         townName.textProperty().addListener((observable, oldValue, newValue) -> {
             if (newValue == null){

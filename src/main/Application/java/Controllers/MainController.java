@@ -2,6 +2,7 @@ package Controllers;
 
 import DButils.TableDBActions.GaugeDBActions;
 import Others.Mediator.ControllerHolder;
+import Others.Utils.Calculations;
 import Others.Utils.Utils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;

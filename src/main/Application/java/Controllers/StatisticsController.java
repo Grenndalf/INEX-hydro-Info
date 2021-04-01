@@ -2,7 +2,9 @@ package Controllers;
 
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.Tables.GaugeMeasurement;
-import Others.Utils.ListsUtils;
+import Others.Multihreading.FileExporter;
+import Others.Multihreading.FileExporterService;
+import Others.Utils.Calculations;
 import Others.Utils.Utils;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -34,7 +36,7 @@ public class StatisticsController {
             gaugeDBActions.queryForDataOfSelectedTownAndRiver (getInstance ().getRiverName (),
                                                                getInstance ().getTownName ());
     List<GaugeMeasurement> correctedDataList = correctData (selectedTownData);
-    ListsUtils ls = new ListsUtils (gaugeDBActions.getCorrectedDoubleMeasurementsList (getInstance ().getRiverName ()
+    Calculations ls = new Calculations (gaugeDBActions.getCorrectedDoubleMeasurementsList (getInstance ().getRiverName ()
             , getInstance ().getTownName ()));
 
     @FXML

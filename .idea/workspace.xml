@@ -23,22 +23,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
+      <change afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Calculations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/app.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ExportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ExportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/LeftMenuButtonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/LeftMenuButtonsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/ControllerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/ControllerHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/MediatorMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/MediatorMethods.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Dialogs.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/ListsUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/ListsUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/ListsUtils.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/UtilsTest.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/GaugeQueries.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Intefaces/GaugeQueries.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/ControllerHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Mediator/ControllerHolder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/MediatorMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Mediator/MediatorMethods.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Import.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -335,7 +343,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616595837314</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="small changes">
+      <created>1616622313219</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1616622313219</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -363,7 +378,8 @@
     <MESSAGE value="working on excel export" />
     <MESSAGE value="Very beta version ready - to do: createworkbook method move to separate thread" />
     <MESSAGE value="small corrections, added: file creation in different task" />
-    <option name="LAST_COMMIT_MESSAGE" value="small corrections, added: file creation in different task" />
+    <MESSAGE value="small changes" />
+    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -372,15 +388,16 @@
           <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
           <option name="timeStamp" value="2" />
         </breakpoint>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.NullPointerException" package="java.lang" />
-          <option name="timeStamp" value="3" />
-        </breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
     <select />
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/transfer$App.ic" NAME="App Coverage Results" MODIFIED="1617220046784" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="idea" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false">
+      <FILTER>App.*</FILTER>
+    </SUITE>
   </component>
 </project>
