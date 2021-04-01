@@ -23,31 +23,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
-      <change afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Calculations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ExportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ExportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/LeftMenuButtonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/LeftMenuButtonsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/ControllerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/ControllerHolder.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/MediatorMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/MediatorMethods.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/ListsUtils.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Utils.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/UtilsTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Calculations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Calculations.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/ControllerHolder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Mediator/ControllerHolder.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/MediatorMethods.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Mediator/MediatorMethods.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Others/Utils/Utils.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Utils/Utils.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -350,7 +329,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616622313219</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="refactor + add chart to sheet4">
+      <created>1617273030443</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1617273030444</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -379,7 +365,8 @@
     <MESSAGE value="Very beta version ready - to do: createworkbook method move to separate thread" />
     <MESSAGE value="small corrections, added: file creation in different task" />
     <MESSAGE value="small changes" />
-    <option name="LAST_COMMIT_MESSAGE" value="small changes" />
+    <MESSAGE value="refactor + add chart to sheet4" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactor + add chart to sheet4" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

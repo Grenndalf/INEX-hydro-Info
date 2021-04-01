@@ -115,7 +115,7 @@
                 </Tab>
                 <Tab text="Przepływy prawdopodobne">
                     <content>
-                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="205.0"
                                     AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="200.0">
                             <children>
                                 <VBox alignment="BASELINE_CENTER" layoutX="25.0" layoutY="46.0" prefHeight="120.0"
@@ -148,26 +148,20 @@
                                                text="Wartości"/>
                                     </children>
                                 </HBox>
-                                <VBox alignment="BASELINE_CENTER" layoutX="246.0" layoutY="27.0" prefHeight="90.0"
-                                      prefWidth="220.0" spacing="10.0" styleClass="infoContainer">
-                                    <children>
-                                        <Label text="Kwantylowy współczynnik cv"/>
-                                        <Label text="Wielkość pomocnicza b"/>
-                                        <Label text="Kwantylowy współczynnik skośności"/>
-                                    </children>
+                                <VBox fx:id="pPercentContainer" alignment="BASELINE_CENTER" layoutX="28.0"
+                                      layoutY="225.0" prefHeight="30.0" prefWidth="100.0" spacing="10.0"
+                                      styleClass="infoContainer">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </padding>
                                 </VBox>
-                                <VBox alignment="BASELINE_CENTER" layoutX="463.0" layoutY="27.0" prefHeight="90.0"
-                                      prefWidth="50.0" spacing="10.0" styleClass="infoContainer">
-                                    <children>
-                                        <Label fx:id="factor" text="0"/>
-                                        <Label fx:id="helperValue" text="0"/>
-                                        <Label fx:id="skewCoefficient" text="0"/>
-                                    </children>
+                                <VBox fx:id="qpPercentContainer" alignment="BASELINE_CENTER" layoutX="126.0"
+                                      layoutY="225.0" prefHeight="30.0" prefWidth="100.0" spacing="10.0"
+                                      styleClass="infoContainer">
+                                    <padding>
+                                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+                                    </padding>
                                 </VBox>
-                                <VBox alignment="BASELINE_CENTER" layoutX="27.0" layoutY="227.0" prefHeight="30.0"
-                                      prefWidth="100.0" spacing="10.0" styleClass="infoContainer"/>
-                                <VBox alignment="BASELINE_CENTER" layoutX="127.0" layoutY="227.0" prefHeight="30.0"
-                                      prefWidth="100.0" spacing="10.0" styleClass="infoContainer"/>
                                 <HBox alignment="BASELINE_CENTER" layoutX="28.0" layoutY="202.0" prefHeight="25.0"
                                       prefWidth="198.0" styleClass="infoContainer">
                                     <children>
@@ -177,6 +171,24 @@
                                                text="Q(P%)"/>
                                     </children>
                                 </HBox>
+                                <Pane fx:id="chartContainer2" layoutX="255.0" layoutY="140.0" prefHeight="590.0"
+                                      prefWidth="890.0" style="-fx-border-radius: 20; -fx-border-color: #797979;"/>
+                                <VBox alignment="BASELINE_CENTER" layoutX="449.0" layoutY="27.0" prefHeight="90.0"
+                                      prefWidth="50.0" spacing="10.0" styleClass="infoContainer">
+                                    <children>
+                                        <Label fx:id="factor" text="0"/>
+                                        <Label fx:id="helperValue" text="0"/>
+                                        <Label fx:id="skewCoefficient" text="0"/>
+                                    </children>
+                                </VBox>
+                                <VBox alignment="BASELINE_CENTER" layoutX="252.0" layoutY="27.0" prefHeight="90.0"
+                                      prefWidth="199.0" spacing="10.0" styleClass="infoContainer">
+                                    <children>
+                                        <Label text="Kwantylowy współczynnik cv"/>
+                                        <Label text="Wielkość pomocnicza b"/>
+                                        <Label text="Kwantylowy współczynnik skośności"/>
+                                    </children>
+                                </VBox>
                             </children>
                         </AnchorPane>
                     </content>

@@ -2,8 +2,6 @@ package Controllers;
 
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.Tables.GaugeMeasurement;
-import Others.Multihreading.FileExporter;
-import Others.Multihreading.FileExporterService;
 import Others.Utils.Calculations;
 import Others.Utils.Utils;
 import javafx.application.Platform;
@@ -14,6 +12,7 @@ import javafx.scene.chart.XYChart;
 import javafx.scene.control.Label;
 import javafx.scene.control.Tooltip;
 import javafx.scene.layout.Pane;
+import javafx.scene.layout.VBox;
 import javafx.scene.shape.Arc;
 import javafx.scene.text.Font;
 
@@ -25,20 +24,21 @@ import static Others.Utils.Utils.divideIntegers;
 
 
 public class StatisticsController {
+    public static final String KRZYWA_SUM = "Krzywa sum czasów trwania wraz z wy¿szymi";
     private static final String YAXIS_TEXT = "statistics.chart.yaxis";
     private static final String SSQ = "SSQ";
     private static final String SYSTEM = "System";
     private static final String M_3_S = " [m3]/s";
-    public static final String KRZYWA_SUM = "Krzywa sum czasów trwania wraz z wy¿szymi";
     private final GaugeDBActions gaugeDBActions = new GaugeDBActions ();
+
 
     List<GaugeMeasurement> selectedTownData =
             gaugeDBActions.queryForDataOfSelectedTownAndRiver (getInstance ().getRiverName (),
                                                                getInstance ().getTownName ());
     List<GaugeMeasurement> correctedDataList = correctData (selectedTownData);
-    Calculations ls = new Calculations (gaugeDBActions.getCorrectedDoubleMeasurementsList (getInstance ().getRiverName ()
+    Calculations ls =
+            new Calculations (gaugeDBActions.getCorrectedDoubleMeasurementsList (getInstance ().getRiverName ()
             , getInstance ().getTownName ()));
-
     @FXML
     private Label q10;
     @FXML
@@ -69,6 +69,12 @@ public class StatisticsController {
     private Label averageFlowValue;
     @FXML
     private Pane secLineChartContainer;
+    @FXML
+    private Pane chartContainer2;
+    @FXML
+    private VBox qpPercentContainer;
+    @FXML
+    private VBox pPercentContainer;
 
     @FXML
     void initialize () {
@@ -79,6 +85,8 @@ public class StatisticsController {
         getAverageFlowValue ();
         setDeciles ();
         addSecondChart ();
+        addThirdChart ();
+        setPercentValues ();
     }
 
     private void setDeciles () {
@@ -91,6 +99,12 @@ public class StatisticsController {
             helperValue.setText (ls.getHelperValue ().toEngineeringString ());
             skewCoefficient.setText (ls.getSkewCoefficient ().toEngineeringString ());
         });
+    }
+    private void setPercentValues(){
+        for (int i = 0; i < Utils.percentValueList ().size (); i++) {
+            pPercentContainer.getChildren ().add (new Label (Utils.percentValueList ().get (i).toString ()));
+            qpPercentContainer.getChildren ().add (new Label (ls.getFinalResults ().get (Utils.percentValueList ().size ()-1-i).toString ()));
+        }
     }
 
     private void getAverageFlowValue () {
@@ -110,7 +124,7 @@ public class StatisticsController {
         NumberAxis xAxis = new NumberAxis ();
         final HashMap<Short, Double> maxValuesPerYear =
                 gaugeDBActions.getMaxValuesPerYear (getInstance ().getTownName (),
-                                                   getInstance ().getRiverName ());
+                                                    getInstance ().getRiverName ());
         short maxXAXis = maxValuesPerYear.keySet ().stream ().max (Short::compareTo).orElse ((short) 9);
         short minXAXis = maxValuesPerYear.keySet ().stream ().min (Short::compareTo).orElse (((short) 1));
         XYChart.Series<Number, Number> series = new XYChart.Series<> ();
@@ -130,6 +144,33 @@ public class StatisticsController {
         return lineChart;
     }
 
+    private LineChart<Number, Number> createFinalChart () {
+        NumberAxis xAxis = new NumberAxis ();
+        xAxis.setLowerBound (-5);
+        xAxis.setUpperBound (105);
+        xAxis.setTickUnit (10);
+        xAxis.setAutoRanging (false);
+        xAxis.setLabel ("prawdopodobieñstwo przewy¿szenia p [%]");
+        xAxis.setMinorTickVisible (true);
+        final HashMap<Double, Double> finalDataMap = new HashMap<> ();
+        for (int i = 0; i < Utils.percentValueList ().size (); i++) {
+            finalDataMap.put (Utils.percentValueList ().get (i),
+                              ls.getFinalResults ().get (ls.getFinalResults ().size () - 1 - i));
+        }
+        XYChart.Series<Number, Number> series = new XYChart.Series<> ();
+        LineChart<Number, Number> lineChart = new LineChart<> (xAxis, new NumberAxis ());
+        lineChart.getData ().add (series);
+        lineChart.getYAxis ().setLabel ("Przep³yw [m3/s]");
+        setSeriesThirdChart (series, finalDataMap);
+        lineChart.setPrefWidth (890);
+        lineChart.setPrefHeight (590);
+        lineChart.setLegendVisible (false);
+
+        lineChart.getYAxis ().setLabel (Utils.getResourceBundle ().getString (YAXIS_TEXT));
+        lineChart.setTitle ("Przep³ywy Prawdopodobne");
+        return lineChart;
+    }
+
     private void setSeriesSecondChart (Map<Integer, Double> dataMap, XYChart.Series<Number, Number> series) {
         dataMap.forEach ((integer, aDouble) -> series.getData ().add (new XYChart.Data<> (integer, aDouble)));
         series.getData ().forEach (this::addTooltipToChart);
@@ -137,6 +178,11 @@ public class StatisticsController {
 
     private void setSeriesFirstChart (XYChart.Series<Number, Number> series, HashMap<Short, Double> maxValuesPerYear) {
         maxValuesPerYear.forEach ((year, data) -> series.getData ().add (new XYChart.Data<> (year, data)));
+        series.getData ().forEach (this::addTooltipToChart);
+    }
+
+    private void setSeriesThirdChart (XYChart.Series<Number, Number> series, HashMap<Double, Double> finalDataMap) {
+        finalDataMap.forEach ((year, data) -> series.getData ().add (new XYChart.Data<> (year, data)));
         series.getData ().forEach (this::addTooltipToChart);
     }
 
@@ -239,6 +285,13 @@ public class StatisticsController {
         Platform.runLater (() -> {
             secLineChartContainer.getChildren ().clear ();
             secLineChartContainer.getChildren ().add (createSecondChart (averageValuesFromSortedDataPerDay ()));
+        });
+    }
+
+    public void addThirdChart () {
+        Platform.runLater (() -> {
+            chartContainer2.getChildren ().clear ();
+            chartContainer2.getChildren ().add (createFinalChart ());
         });
     }
 

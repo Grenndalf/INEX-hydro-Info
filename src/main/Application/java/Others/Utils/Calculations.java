@@ -242,34 +242,41 @@ public class Calculations {
 
     public LinkedList<Double> getFinalResults () {
         LinkedList<Double> resultList = new LinkedList<> ();
-        if (Utils.interpolationSkewMap ().containsKey (skewCoefficient.doubleValue ())) {
-            Utils.interpolationSkewMap ().get (skewCoefficient)
-                    .forEach (value ->
-                                      resultList.add (q50.multiply (BigDecimal.ONE.add
-                                              (factor.multiply (BigDecimal.valueOf (value)))).doubleValue ()));
-        } else {
-            if (skewCoefficient.doubleValue () > 2 || skewCoefficient.doubleValue () < 0) {
-                return resultList;
+        if (getInputList ().size () > 2) {
+            if (Utils.interpolationSkewMap ().containsKey (skewCoefficient.doubleValue ())) {
+                Utils.interpolationSkewMap ().get (skewCoefficient)
+                        .forEach (value -> resultList.add (q50.multiply (BigDecimal.ONE.add
+                                (factor.multiply (BigDecimal.valueOf (value)))).doubleValue ()));
+            } else {
+                if (skewCoefficient.doubleValue () > 2 || skewCoefficient.doubleValue () < 0) {
+                    return resultList;
+                }
+                BigDecimal lowerBound =
+                        BigDecimal.valueOf (getLowerBoundsForSkewInterpolation (skewCoefficient.doubleValue ()));
+                BigDecimal upperBound =
+                        BigDecimal.valueOf (getUpperBoundsForSkewInterpolation (skewCoefficient.doubleValue ()));
+                LinkedList<Double> upperBoundList =
+                        Utils.interpolationSkewMap ().get (getUpperBoundsForSkewInterpolation (skewCoefficient.doubleValue ()));
+                LinkedList<Double> lowerBoundList =
+                        Utils.interpolationSkewMap ().get (getLowerBoundsForSkewInterpolation (skewCoefficient.doubleValue ()));
+                LinkedList<Double> helperList = new LinkedList<> ();
+                for (int i = 0; i < lowerBoundList.size (); i++) {
+                    BigDecimal interpolationResult =
+                            ((skewCoefficient.subtract (lowerBound)).divide (upperBound.subtract (lowerBound)
+                                    , 4, RoundingMode.HALF_UP))
+                                    .multiply (BigDecimal.valueOf (upperBoundList.get (i)).subtract (BigDecimal.valueOf (lowerBoundList.get (i))))
+                                    .add (BigDecimal.valueOf (lowerBoundList.get (i))).setScale (2,
+                                                                                                 RoundingMode.HALF_UP);
+                    helperList.add (interpolationResult.doubleValue ());
+                }
+                helperList.forEach (value -> resultList.add (q50.multiply (BigDecimal.ONE.add (factor.multiply (BigDecimal.valueOf (value)))).setScale (4, RoundingMode.HALF_UP).doubleValue ()));
             }
-            BigDecimal lowerBound =
-                    BigDecimal.valueOf (getLowerBoundsForSkewInterpolation (skewCoefficient.doubleValue ()));
-            BigDecimal upperBound =
-                    BigDecimal.valueOf (getUpperBoundsForSkewInterpolation (skewCoefficient.doubleValue ()));
-            LinkedList<Double> upperBoundList =
-                    Utils.interpolationSkewMap ().get (getUpperBoundsForSkewInterpolation (skewCoefficient.doubleValue ()));
-            LinkedList<Double> lowerBoundList =
-                    Utils.interpolationSkewMap ().get (getLowerBoundsForSkewInterpolation (skewCoefficient.doubleValue ()));
-            LinkedList<Double> helperList = new LinkedList<> ();
-            for (int i = 0; i < lowerBoundList.size (); i++) {
-                BigDecimal interpolationResult =
-                        ((skewCoefficient.subtract (lowerBound)).divide (upperBound.subtract (lowerBound)
-                        , 4, RoundingMode.HALF_UP))
-                        .multiply (BigDecimal.valueOf (upperBoundList.get (i)).subtract (BigDecimal.valueOf (lowerBoundList.get (i))))
-                        .add (BigDecimal.valueOf (lowerBoundList.get (i))).setScale (2, RoundingMode.HALF_UP);
-                helperList.add (interpolationResult.doubleValue ());
+            return resultList;
+        }else {
+            for (int i = 0; i < Utils.percentValueList ().size (); i++) {
+                resultList.add (9999.0);
             }
-            helperList.forEach (value -> resultList.add (q50.multiply (BigDecimal.ONE.add (factor.multiply (BigDecimal.valueOf (value)))).setScale (4,RoundingMode.HALF_UP).doubleValue ()));
+            return resultList;
         }
-        return resultList;
     }
 }
