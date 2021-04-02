@@ -7,8 +7,7 @@ import javafx.scene.control.TextArea;
 import net.lingala.zip4j.core.ZipFile;
 import net.lingala.zip4j.io.ZipInputStream;
 import net.lingala.zip4j.model.FileHeader;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 import java.io.*;
 import java.net.HttpURLConnection;
@@ -28,7 +27,6 @@ public class FIleDownloader extends Task<Void> {
     public static final String PLIK = " plik: ";
     private static final String DANE_HYDROLOGICZNE_DOBOWE = "https://danepubliczne.imgw" +
             ".pl/data/dane_pomiarowo_obserwacyjne/dane_hydrologiczne/dobowe/";
-    private static final Logger logger = LogManager.getLogger (FIleDownloader.class);
     public static final String FILE_SEPARATOR = System.getProperty ("file.separator");
     public static String PATHNAME;
     public static ArrayList<String> errorList = new ArrayList<> ();
@@ -85,7 +83,6 @@ public class FIleDownloader extends Task<Void> {
                 } catch (Exception e) {
                     if (url != null) {
                         errorList.add (new StringBuilder ().append (e.getCause ()).append (" link: ").append (url.toString ()).toString ());
-                        logger.warn (new StringBuilder ().append ("error during file downloading: ").append (e.getCause ()).append (" ").append (e.getMessage ()).toString ());
                     } else {
                         errorList.add (e.getCause () + " link: " + "is null");
                     }
@@ -122,13 +119,12 @@ public class FIleDownloader extends Task<Void> {
                 }
             } catch (Exception e) {
                 errorList.add (new StringBuilder ().append (e.getMessage ()).append (PLIK).append (file.getName ()).toString ());
-//                logger.warning("cos sie sta³o!");
             } finally {
                 try {
                     closeFileHandlers (is, os);
                 } catch (IOException e) {
                     errorList.add (new StringBuilder ().append (e.getMessage ()).append (PLIK).append (file.getName ()).toString ());
-//                    logger.warning("cos sie sta³o!");
+
                 }
             }
         });

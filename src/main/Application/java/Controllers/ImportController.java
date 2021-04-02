@@ -1,6 +1,6 @@
 package Controllers;
 
-import App.App;
+import App.Main;
 import DButils.TableDBActions.GaugeDBActions;
 import DButils.TableDBActions.RiverDBActions;
 import Others.Multihreading.FIleDownloader;
@@ -11,13 +11,11 @@ import Others.Utils.Utils;
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXTextArea;
 import javafx.application.Platform;
-import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.*;
 import javafx.scene.paint.Paint;
 import javafx.scene.text.Font;
@@ -224,7 +222,7 @@ public class ImportController {
         displayLabel.setFont (Font.font (null, FontWeight.BOLD, 14));
 
         dialog.setTitle ("Wymagane Potwierdzenie");
-        dialog.getIcons ().add (new Image (App.INEX_LOGO_PNG));
+        dialog.getIcons ().add (new Image (Main.INEX_LOGO_PNG));
         dialog.initModality (Modality.APPLICATION_MODAL);
         dialog.initOwner (removeDataButton.getScene ().getWindow ());
 

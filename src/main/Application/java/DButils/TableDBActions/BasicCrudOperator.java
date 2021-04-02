@@ -1,7 +1,6 @@
 package DButils.TableDBActions;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -11,8 +10,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class BasicCrudOperator<T> {
-
-    private static final Logger logger = LogManager.getLogger(BasicCrudOperator.class);
 
     private final EntityManagerFactory emf = HibernateFactory.getEntityManagerFactory();
 
@@ -24,7 +21,6 @@ public class BasicCrudOperator<T> {
             em.getTransaction().commit();
         } catch (Exception ex) {
             em.getTransaction().rollback();
-            logger.info(ex.getMessage());
         } finally {
             if (em.getTransaction().isActive()) em.close();
         }
@@ -45,7 +41,6 @@ public class BasicCrudOperator<T> {
             em.getTransaction().commit();
         } catch (Exception ex) {
             em.getTransaction().rollback();
-            logger.info(ex.getMessage());
         } finally {
             if (em.getTransaction().isActive()) em.close();
         }
@@ -59,7 +54,6 @@ public class BasicCrudOperator<T> {
             em.getTransaction().commit();
         } catch (Exception ex) {
             em.getTransaction().rollback();
-            logger.info(ex.getMessage());
         } finally {
             if (em.getTransaction().isActive()) em.close();
         }
@@ -78,7 +72,6 @@ public class BasicCrudOperator<T> {
             return resultList;
         } catch (Exception ex) {
             em.getTransaction().rollback();
-            logger.info(ex.getMessage());
         } finally {
             if (em.getTransaction().isActive()) em.close();
         }

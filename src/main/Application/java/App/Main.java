@@ -7,12 +7,9 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
-
 import java.util.Locale;
 
-import static com.sun.org.apache.bcel.internal.util.SecuritySupport.getResourceAsStream;
-
-public class App extends Application {
+public class Main extends Application {
 
 
     public static final String INEX_LOGO_PNG = "Images/inex_logo.png";
@@ -30,7 +27,6 @@ public class App extends Application {
             Platform.exit();
             System.exit(0);
         });
-        System.out.println (System.getProperty ("file.separator"));
         primaryStage.setScene(scene);
         primaryStage.show();
     }

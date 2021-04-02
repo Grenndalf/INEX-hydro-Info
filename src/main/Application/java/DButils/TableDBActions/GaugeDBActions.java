@@ -2,9 +2,6 @@ package DButils.TableDBActions;
 
 import DButils.Intefaces.GaugeQueries;
 import DButils.Tables.GaugeMeasurement;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;
@@ -19,7 +16,6 @@ import java.util.List;
 public class GaugeDBActions implements GaugeQueries {
 
     private final BasicCrudOperator<GaugeMeasurement> crudOperator = new BasicCrudOperator<> ();
-    private final Logger logger = LogManager.getLogger (GaugeDBActions.class);
     private final EntityManagerFactory emf = HibernateFactory.getEntityManagerFactory ();
 
     @Override
@@ -44,7 +40,6 @@ public class GaugeDBActions implements GaugeQueries {
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
-            logger.info (ex.getMessage ());
         } finally {
             if (em.getTransaction ().isActive ()) em.close ();
         }
@@ -68,7 +63,6 @@ public class GaugeDBActions implements GaugeQueries {
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
-            logger.info (ex.getMessage ());
         } finally {
             if (em.getTransaction ().isActive ()) {
                 em.flush ();
@@ -99,7 +93,6 @@ public class GaugeDBActions implements GaugeQueries {
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
-            logger.info (ex.getMessage ());
         } finally {
             if (em.getTransaction ().isActive ()) {
                 em.flush ();
@@ -135,7 +128,6 @@ public class GaugeDBActions implements GaugeQueries {
             return resultMap;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
-            logger.info (ex.getMessage ());
         } finally {
             if (em.getTransaction ().isActive ()) {
                 em.flush ();
@@ -168,7 +160,6 @@ public class GaugeDBActions implements GaugeQueries {
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
-            logger.info (ex.getMessage ());
         } finally {
             if (em.getTransaction ().isActive ()) {
                 em.flush ();
@@ -191,7 +182,6 @@ public class GaugeDBActions implements GaugeQueries {
             return i;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
-            logger.info (ex.getMessage ());
         } finally {
             if (em.getTransaction ().isActive ()) {
                 em.flush ();
