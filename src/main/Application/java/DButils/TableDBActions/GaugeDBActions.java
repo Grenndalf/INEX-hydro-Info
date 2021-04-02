@@ -2,6 +2,7 @@ package DButils.TableDBActions;
 
 import DButils.Intefaces.GaugeQueries;
 import DButils.Tables.GaugeMeasurement;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.Query;

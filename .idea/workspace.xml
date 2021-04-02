@@ -23,28 +23,43 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/App/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/BasicCrudOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/BasicCrudOperator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FIleDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FIleDownloader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileExporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileImporter.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/log4j2.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/App/App.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/BasicCrudOperator.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/BasicCrudOperator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FIleDownloader.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Multihreading/FIleDownloader.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileImporter.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileImporter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/fxml/Statistics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/log4j2.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Bundles/labels.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/Bundles/labels.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Bundles/labels_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/Bundles/labels_pl.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/Css/stylesGeneral.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Export.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/Export.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/GaugeList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/GaugeList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/Import.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/LeftMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/LeftMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/MainContainer.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/Statistics.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/LeftMenuButtonsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Controllers/StatisticsController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/GaugeQueries.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Intefaces/RiverQueries.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/BasicCrudOperator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/GaugeDBActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/HibernateFactory.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/GaugeMeasurement.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/River.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/ControllerHolder$1.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/ControllerHolder$ControllerMediatorHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/ControllerHolder.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/MediatorMethods.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FIleDownloader.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileDownloaderService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileImporter.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileImporterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Others/Utils/Utils.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +92,9 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MavenRunner">
+    <option name="skipTests" value="true" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedIndex" value="1" />
   </component>
@@ -107,11 +125,11 @@
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last.edited.regexp" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="project.structure.last.edited" value="SDKs" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../jfoenix-8.0.10.jar" />
+    <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.35287356" />
-    <property name="settings.editor.selected.configurable" value="aws" />
+    <property name="settings.editor.selected.configurable" value="reference.settings.project.maven.repository.indices" />
   </component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
@@ -368,7 +386,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617308605734</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="danger commit - savepoint here">
+      <created>1617352540658</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1617352540658</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -399,7 +424,8 @@
     <MESSAGE value="small changes" />
     <MESSAGE value="refactor + add chart to sheet4" />
     <MESSAGE value="added chart to statistics, fill tables in last bookmark" />
-    <option name="LAST_COMMIT_MESSAGE" value="added chart to statistics, fill tables in last bookmark" />
+    <MESSAGE value="danger commit - savepoint here" />
+    <option name="LAST_COMMIT_MESSAGE" value="danger commit - savepoint here" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

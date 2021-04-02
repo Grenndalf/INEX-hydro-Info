@@ -1,20 +1,14 @@
 package Controllers;
 
-import DButils.TableDBActions.GaugeDBActions;
 import Others.Mediator.ControllerHolder;
-import Others.Utils.Calculations;
 import Others.Utils.Utils;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.Region;
 
 import java.io.IOException;
-import java.math.BigDecimal;
-import java.math.RoundingMode;
-import java.util.Objects;
 
 public class MainController {
 
