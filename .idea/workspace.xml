@@ -23,19 +23,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations/_template__of_Application.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/runConfigurations/_template__of_Application.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Bundles/labels.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/Bundles/labels.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Bundles/labels_pl.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/Bundles/labels_pl.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Css/stylesGeneral.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/Css/stylesGeneral.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Export.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/Export.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/GaugeList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/GaugeList.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Import.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/Import.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/LeftMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/LeftMenu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/MainContainer.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/FXML/Statistics.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/Statistics.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/META-INF/persistence.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ExportController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/GaugeListController.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Controllers/ImportController.class" beforeDir="false" />
@@ -50,7 +42,6 @@
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/TableDBActions/RiverDBActions.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/GaugeMeasurement.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/River.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/ControllerHolder$1.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/ControllerHolder$ControllerMediatorHolder.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Mediator/ControllerHolder.class" beforeDir="false" />
@@ -60,7 +51,8 @@
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileImporter.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Multihreading/FileImporterService.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/Others/Utils/Utils.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/wodowskazy-1.0-SNAPSHOT.jar" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +117,7 @@
     <property name="create.test.in.the.same.root" value="true" />
     <property name="extract.method.default.visibility" value="private" />
     <property name="last.edited.regexp" value="" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../jfoenix-8.0.10.jar" />
+    <property name="last_opened_file_path" value="$USER_HOME$/jfoenix-8.0.10.jar" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.35287356" />
@@ -228,9 +220,10 @@
       </method>
     </configuration>
     <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="BUNDLED" />
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="App.Main" />
-      <module name="wodowskazy" />
+      <module name="INEX-hydro-Info" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="App.*" />
