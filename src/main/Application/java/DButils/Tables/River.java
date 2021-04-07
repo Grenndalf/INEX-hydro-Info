@@ -15,10 +15,10 @@ import javax.persistence.*;
 public class River {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    @Column(name = "ID_rzeki")
     private int id;
 
-    @Column(name = "Nazwa_rzeki", unique = true)
+    @Column(name = "Nazwa_rzeki")
     private String riverName;
 
     @Override

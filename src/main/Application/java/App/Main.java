@@ -1,5 +1,6 @@
 package App;
 
+import DButils.TableDBActions.HibernateFactory;
 import Others.Utils.Utils;
 import javafx.application.Application;
 import javafx.application.Platform;
@@ -8,6 +9,7 @@ import javafx.scene.Scene;
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
+import javax.persistence.EntityManagerFactory;
 import java.util.Locale;
 
 public class Main extends Application {
@@ -28,6 +30,7 @@ public class Main extends Application {
             Platform.exit();
             System.exit(0);
         });
+        final EntityManagerFactory emf = HibernateFactory.getEntityManagerFactory();
         primaryStage.setScene(scene);
         primaryStage.show();
     }

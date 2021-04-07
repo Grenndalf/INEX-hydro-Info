@@ -12,15 +12,15 @@
             <property name="javax.persistence.jdbc.password" value="admin"/>
             <property name="javax.persistence.jdbc.driver" value="org.sqlite.JDBC"/>
             <property name="javax.persistence.schema-generation.database.action" value="none"/>
-            <property name="hibernate.hbm2ddl.auto" value="create"/>
-            <property name="hibernate.show_sql" value="true"/>
-            <property name="hibernate.format_sql" value="true"/>
-            <property name="hibernate.dialect" value="org.hibernate.dialect.SQLiteDialect"/>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.show_sql" value="false"/>
+            <property name="hibernate.format_sql" value="false"/>
+            <property name="hibernate.dialect" value="org.sqlite.hibernate.dialect.SQLiteDialect"/>
             <property name="hibernate.connection.characterEncoding" value="windows-1250"/>
             <property name="hibernate.jdbc.batch-size" value="50"/>
             <property name="hibernate.order-updates" value="true"/>
             <property name="hibernate.order-inserts" value="true"/>
-            <property name="hibernate.highlight_sql" value="true"/>
+            <property name="hibernate.highlight_sql" value="false"/>
             <property name="hibernate.connection.useUnicode" value="true"/>
         </properties>
     </persistence-unit>

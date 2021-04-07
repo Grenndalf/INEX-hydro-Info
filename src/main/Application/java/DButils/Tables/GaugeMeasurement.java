@@ -24,7 +24,7 @@ public class GaugeMeasurement {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "ID")
+    @Column(name = "ID_pomiaru")
     private int id;
 
     @Column(name = "Nazwa_wodowskazu")
