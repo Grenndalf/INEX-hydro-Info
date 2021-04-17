@@ -1,45 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import com.jfoenix.controls.*?>
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.text.*?>
 <?import com.jfoenix.controls.JFXListView?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: white;"
-            stylesheets="@../Css/stylesGeneral.css" xmlns="http://javafx.com/javafx/8"
-            xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GaugeListController">
+
+<AnchorPane prefHeight="800.0" prefWidth="1160.0" style="-fx-background-color: white;" stylesheets="@../Css/stylesGeneral.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.GaugeListController">
     <children>
-        <FlowPane fx:id="buttonContainer" hgap="20.0" layoutX="50.0" layoutY="60.0" prefHeight="20.0" prefWidth="640.0"
-                  vgap="30.0" AnchorPane.leftAnchor="30.0" AnchorPane.rightAnchor="480.0" AnchorPane.topAnchor="30.0">
+        <FlowPane fx:id="buttonContainer" hgap="20.0" layoutX="50.0" layoutY="70.0" prefHeight="20.0" prefWidth="691.0" vgap="30.0" AnchorPane.leftAnchor="40.0" AnchorPane.rightAnchor="430.0" AnchorPane.topAnchor="60.0">
             <padding>
-                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
             </padding>
         </FlowPane>
-        <JFXListView fx:id="riverListView" layoutX="722.0" layoutY="60.0" prefHeight="368.0" prefWidth="380.0"
-                     AnchorPane.bottomAnchor="439.0" AnchorPane.rightAnchor="50.0" AnchorPane.topAnchor="50.0"/>
-        <Label layoutX="720.0" layoutY="353.0" text="%river.quantity"/>
-        <Label fx:id="gaugeQuantity" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="0.0"
-               layoutX="1021.0" layoutY="353.0" text="%not.selected" textAlignment="CENTER" textFill="#0095ff"
-               AnchorPane.rightAnchor="50.0">
-            <font>
-                <Font name="System Bold" size="12.0"/>
-            </font>
-        </Label>
-        <JFXListView fx:id="townListView" layoutX="730.0" layoutY="498.0" prefHeight="334.0" prefWidth="380.0"
-                     AnchorPane.bottomAnchor="50.0" AnchorPane.rightAnchor="50.0"/>
-        <Label layoutX="720.0" layoutY="41.0" prefHeight="17.0" prefWidth="90.0" text="Lista Rzek:">
-            <font>
-                <Font name="Calibri" size="15.0"/>
-            </font>
-        </Label>
-        <Label layoutX="720.0" layoutY="388.0" prefHeight="18.0" prefWidth="254.0"
-               text="Lista wodowskazów na wybranej rzece:">
-            <font>
-                <Font name="Calibri" size="15.0"/>
-            </font>
-        </Label>
+        <VBox layoutX="691.0" layoutY="37.0" prefWidth="350.0" AnchorPane.bottomAnchor="30.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="30.0">
+            <children>
+                <Label prefHeight="17.0" prefWidth="90.0" text="Lista Rzek:">
+                    <font>
+                        <Font name="Calibri" size="15.0" />
+                    </font>
+                </Label>
+                <JFXListView fx:id="riverListView" prefHeight="360.0" prefWidth="380.0" GridPane.rowIndex="1" />
+                <GridPane fx:id="labelContainer1" prefHeight="20.0" GridPane.rowIndex="2">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints halignment="RIGHT" hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="%river.quantity" />
+                        <Label fx:id="gaugeQuantity" alignment="CENTER_RIGHT" contentDisplay="RIGHT" graphicTextGap="0.0" text="%not.selected" textAlignment="RIGHT" textFill="#0095ff" GridPane.columnIndex="1">
+                            <font>
+                                <Font name="System Bold" size="12.0" />
+                            </font>
+                        </Label>
+                    </children>
+                    <padding>
+                        <Insets bottom="5.0" right="5.0" top="5.0" />
+                    </padding>
+                </GridPane>
+                <Label prefHeight="20.0" text="Lista wodowskazów na wybranej rzece:" GridPane.rowIndex="3">
+                    <font>
+                        <Font name="Calibri" size="15.0" />
+                    </font>
+                </Label>
+                <JFXListView fx:id="townListView" prefHeight="360.0" prefWidth="380.0" GridPane.rowIndex="4" />
+            </children>
+        </VBox>
     </children>
     <padding>
-        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0"/>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
     </padding>
 </AnchorPane>

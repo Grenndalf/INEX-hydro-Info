@@ -23,82 +23,37 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8f3aacdf-38fd-407b-96ff-029e42bc97ed" name="Default Changelist" comment="some small improvements">
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_woodstox_woodstox_core_5_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_github_virtuald_curvesapi_1_06.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_zaxxer_SparseBitSet_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_6.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__de_rototor_pdfbox_graphics2d_0_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_lingala_zip4j_zip4j_1_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_compress_1_20.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_math3_3_6_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_fontbox_2_0_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_pdfbox_pdfbox_2_0_22.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_4_1_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_5_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_poi_poi_ooxml_lite_5_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_santuario_xmlsec_2_2_1.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlbeans_xmlbeans_4_0_0.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_all_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_anim_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_awt_util_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_bridge_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_codec_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_constants_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_css_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_dom_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_ext_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_extension_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_gui_util_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_gvt_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_i18n_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_parser_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_rasterizer_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_rasterizer_ext_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_script_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_shared_resources_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_slideshow_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_squiggle_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_squiggle_ext_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svg_dom_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svgbrowser_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svggen_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svgpp_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_svgrasterizer_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_swing_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_transcoder_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_ttf2svg_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_util_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_batik_xml_1_13.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_xmlgraphics_xmlgraphics_commons_2_4.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcpkix_jdk15on_1_68.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_bouncycastle_bcprov_jdk15on_1_68.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_woodstox_stax2_api_4_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_projectlombok_lombok_1_18_18.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_30.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_xerial_sqlite_jdbc_3_32_3_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_2.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_ext_1_3_04.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/INEX-hydro-Info.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/lib.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/Controllers/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/App/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/GaugeMeasurement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/River.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/River.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/META-INF/MANIFEST.MF" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/Resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/GaugeMeasurement.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Tables/GaugeMeasurement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/DButils/Tables/River.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/DButils/Tables/River.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/App/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/App/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ExportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controllers/ExportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/GaugeListController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controllers/GaugeListController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/ImportController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controllers/ImportController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/LeftMenuButtonsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controllers/LeftMenuButtonsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Controllers/StatisticsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Controllers/StatisticsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/Intefaces/GaugeQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DButils/Intefaces/GaugeQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/Intefaces/RiverQueries.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DButils/Intefaces/RiverQueries.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/BasicCrudOperator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DButils/TableDBActions/BasicCrudOperator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/GaugeDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DButils/TableDBActions/GaugeDBActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/HibernateFactory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DButils/TableDBActions/HibernateFactory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/TableDBActions/RiverDBActions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DButils/TableDBActions/RiverDBActions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/GaugeMeasurement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DButils/Tables/GaugeMeasurement.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/DButils/Tables/River.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/DButils/Tables/River.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/ControllerHolder.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Others/Mediator/ControllerHolder.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Mediator/MediatorMethods.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Others/Mediator/MediatorMethods.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FIleDownloader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Others/Multihreading/FIleDownloader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileDownloaderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Others/Multihreading/FileDownloaderService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileExporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Others/Multihreading/FileExporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileExporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Others/Multihreading/FileExporterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileImporter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Others/Multihreading/FileImporter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Multihreading/FileImporterService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Others/Multihreading/FileImporterService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Calculations.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Others/Utils/Calculations.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Application/java/Others/Utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Others/Utils/Utils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/FXML/GaugeList.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/GaugeList.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/FXML/LeftMenu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/LeftMenu.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/Resources/FXML/MainContainer.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/Resources/FXML/MainContainer.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -133,9 +88,6 @@
   <component name="MavenRunner">
     <option name="skipTests" value="true" />
   </component>
-  <component name="ProblemsViewState">
-    <option name="selectedIndex" value="1" />
-  </component>
   <component name="ProjectCodeStyleSettingsMigration">
     <option name="version" value="1" />
   </component>
@@ -164,9 +116,10 @@
     <property name="extract.method.default.visibility" value="private" />
     <property name="last.edited.regexp" value="" />
     <property name="last_opened_file_path" value="$USER_HOME$/jfoenix-8.0.10.jar" />
-    <property name="project.structure.last.edited" value="Modules" />
+    <property name="project.structure.last.edited" value="SDKs" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.35287356" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="reference.projectsettings.compiler.javacompiler" />
   </component>
   <component name="RecentsManager">
@@ -187,6 +140,11 @@
     <key name="MoveInnerDialog.RECENTS_KEY">
       <recent name="RegularClasses.Multihreading" />
     </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="Application" />
+      <recent name="" />
+      <recent name="Application.java" />
+    </key>
     <key name="CreateTestDialog.RecentsKey">
       <recent name="Others.Utils" />
     </key>
@@ -195,19 +153,6 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Main">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App.App" />
-      <module name="wodowskazy" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="App.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="App.App" />
       <module name="wodowskazy" />
@@ -265,11 +210,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
+    <configuration name="Main" type="Application" factoryName="Application" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="1.8 (2)" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="App.Main" />
-      <module name="INEX-hydro-Info" />
+      <module name="INEX-HYDRO-info" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="App.*" />
@@ -280,15 +225,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="Application.App" />
-      <item itemvalue="Application.Main" />
-    </list>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.Main" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">

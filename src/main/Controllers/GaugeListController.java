@@ -12,6 +12,7 @@ import javafx.scene.control.Label;
 import javafx.scene.control.ToggleButton;
 import javafx.scene.control.ToggleGroup;
 import javafx.scene.layout.FlowPane;
+import javafx.scene.layout.GridPane;
 
 import java.util.Comparator;
 import java.util.HashSet;
@@ -24,6 +25,8 @@ public class GaugeListController {
     ToggleGroup toggleGroup = new ToggleGroup ();
     RiverDBActions riverDBActions = new RiverDBActions ();
     GaugeDBActions gaugeDBActions = new GaugeDBActions ();
+    @FXML
+    private GridPane labelContainer1;
     @FXML
     private FlowPane buttonContainer;
     @FXML

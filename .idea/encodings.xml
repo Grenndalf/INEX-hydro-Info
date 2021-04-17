@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="Encoding" native2AsciiForPropertiesFiles="true" defaultCharsetForPropertiesFiles="windows-1250" addBOMForNewFiles="with BOM under Windows, with no BOM otherwise">
-    <file url="file://$PROJECT_DIR$/src/main/Application/java/DButils/Tables/GaugeMeasurement.java" charset="windows-1250" />
-    <file url="file://$PROJECT_DIR$/src/main/Application/java/Others/Utils/Alphabet.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/DButils/Tables/GaugeMeasurement.java" charset="windows-1250" />
+    <file url="file://$PROJECT_DIR$/src/main/Others/Utils/Alphabet.java" charset="windows-1250" />
     <file url="PROJECT" charset="windows-1250" />
   </component>
 </project>
