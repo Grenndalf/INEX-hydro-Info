@@ -52,7 +52,7 @@ public class FIleDownloader extends Task<Void> {
                 fileName.append (beforeMonth);
                 fileName.append (month);
                 fileName.append (".zip");
-                if (Files.exists (Paths.get (PATHNAME + fileName.toString ()))) continue;
+                if (Files.exists (Paths.get (PATHNAME + fileName))) continue;
                 URL url = null;
                 try {
                     StringBuilder urlAppender = new StringBuilder ();
@@ -81,7 +81,7 @@ public class FIleDownloader extends Task<Void> {
                     outputStream.close ();
                 } catch (Exception e) {
                     if (url != null) {
-                        errorList.add (new StringBuilder ().append (e.getCause ()).append (" link: ").append (url.toString ()).toString ());
+                        errorList.add (new StringBuilder ().append (e.getCause ()).append (" link: ").append (url).toString ());
                     } else {
                         errorList.add (e.getCause () + " link: " + "is null");
                     }
