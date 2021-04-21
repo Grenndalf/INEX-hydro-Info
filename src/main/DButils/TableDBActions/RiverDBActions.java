@@ -2,6 +2,9 @@ package DButils.TableDBActions;
 
 import DButils.Intefaces.RiverQueries;
 import DButils.Tables.River;
+import javafx.scene.Node;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Dialog;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -11,6 +14,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Set;
 import java.util.stream.Collectors;
@@ -43,7 +47,9 @@ public class RiverDBActions implements RiverQueries {
             em.getTransaction ().commit ();
             return result;
         } catch (Exception ex) {
+            em.getTransaction ().rollback ();
             ex.printStackTrace ();
+            showDialog(ex);
         } finally {
             if (em.getTransaction ().isActive ()) em.close ();
         }
@@ -64,6 +70,7 @@ public class RiverDBActions implements RiverQueries {
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
             ex.printStackTrace ();
+            showDialog(ex);
         } finally {
             if (em.getTransaction ().isActive ()) em.close ();
         }
@@ -81,6 +88,7 @@ public class RiverDBActions implements RiverQueries {
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
             ex.printStackTrace ();
+            showDialog(ex);
         } finally {
             if (em.getTransaction ().isActive ()) em.close ();
         }
@@ -90,5 +98,16 @@ public class RiverDBActions implements RiverQueries {
     @Override
     public List<River> getAllRivers () {
         return null;
+    }
+
+    private static void showDialog(Exception exception){
+        Dialog dialog = new Dialog ();
+        dialog.setTitle ("Wyst¹pi³ b³¹d");
+        dialog.setContentText (Arrays.toString (exception.getStackTrace ()));
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.CLOSE);
+        Node closeButton = dialog.getDialogPane().lookupButton(ButtonType.CLOSE);
+        closeButton.managedProperty().bind(closeButton.visibleProperty());
+        closeButton.setVisible(false);
+        dialog.show ();
     }
 }

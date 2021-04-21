@@ -17,10 +17,11 @@
             <property name="hibernate.format_sql" value="false"/>
             <property name="hibernate.dialect" value="org.sqlite.hibernate.dialect.SQLiteDialect"/>
             <property name="hibernate.connection.characterEncoding" value="windows-1250"/>
-            <property name="hibernate.jdbc.batch-size" value="50"/>
+            <property name="hibernate.jdbc.batch-size" value="100"/>
             <property name="hibernate.order-updates" value="true"/>
             <property name="hibernate.order-inserts" value="true"/>
             <property name="hibernate.highlight_sql" value="false"/>
+            <property name="hibernate.connection.pool_size" value="1"/>
             <property name="hibernate.connection.useUnicode" value="true"/>
         </properties>
     </persistence-unit>

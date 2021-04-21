@@ -31,14 +31,7 @@
         }
 
     .progress-bar > .bar {
-        -fx-background-color: linear-gradient(
-            from 0px .75em to .75em 0px,
-            repeat,
-            -fx-accent 0%,
-            -fx-accent 49%,
-            derive(-fx-accent, 30%) 50%,
-            derive(-fx-accent, 30%) 99%
-        );
+        -fx-background-color:linear-gradient(from 0% 0% to 100% 100%, -fx-inex-blue, -fx-inex-green);
     }
 
     .tab{
@@ -106,20 +99,6 @@
     .text-area .text {
         -fx-padding: 10px;
         -fx-line-spacing: 5px;
-    }
-    .table-view .column-header{
-       -fx-pref-height: 20px;
-       -fx-font-weight: bold;
-       -fx-alignment: CENTER_LEFT;
-    }
-    .table-view .scroll-bar * {
-        -fx-min-width: 0;
-        -fx-pref-width: 0;
-        -fx-max-width: 0;
-
-        -fx-min-height: 0;
-        -fx-pref-height: 0;
-        -fx-max-height: 0;
     }
 
     .grid {

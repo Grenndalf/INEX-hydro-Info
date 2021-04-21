@@ -38,7 +38,7 @@ public class ImportController {
     public static final String NOT_IMPORTED_LIST = "not.imported.list";
     public static final String CSV_FILES = "csv.files";
     public static final String CSV = "*.csv";
-    public static final String CANCEL = "Cancel";
+    public static final String CANCEL = "Anuluj";
     public static final String SET_DESTINATION = "Wybierz miejsce zapisu dla pobieranych plików";
     public Pane testPane;
     GaugeDBActions gaugeDBActions = new GaugeDBActions ();
@@ -240,8 +240,9 @@ public class ImportController {
         dialogVbox2.getChildren ().add (answerCancel);
 
         answerYes.setOnMouseClicked (e -> {
-            removeDataFromDataBase ();
+            e.consume ();
             dialog.close ();
+            Platform.runLater (this::removeDataFromDataBase);
         });
         answerCancel.setOnMouseClicked (e -> dialog.close ());
 
@@ -249,15 +250,6 @@ public class ImportController {
         Scene dialogScene = new Scene (dialogHbox, 500, 40);
         dialog.setScene (dialogScene);
         dialog.show ();
-        Runnable runnable = () -> {
-            try {
-                Thread.sleep (3000);
-                Platform.runLater (dialog::close);
-            } catch (InterruptedException e) {
-                e.printStackTrace ();
-            }
-        };
-        Platform.runLater (runnable);
     }
 
 }

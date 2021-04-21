@@ -15,18 +15,19 @@ import static Others.Mediator.ControllerHolder.getInstance;
 public class ExportController {
 
     @FXML
-    public Button exportButton;
+    private Button exportButton;
 
     GaugeDBActions ge = new GaugeDBActions ();
 
     DirectoryChooser directoryChooser = new DirectoryChooser ();
 
-    Calculations calculations =
-            new Calculations (new GaugeDBActions ().getCorrectedDoubleMeasurementsList (getInstance ().getRiverName (),
-                                                                                        getInstance ().getTownName ()));
-
-    public void selectDestinationAndSaveFile () {
+    @FXML
+    private void selectDestinationAndSaveFile () {
+        Calculations calculations =
+                new Calculations (new GaugeDBActions ().getCorrectedDoubleMeasurementsList (getInstance ().getRiverName (),
+                                                                                            getInstance ().getTownName ()));
         directoryChooser.setTitle ("Wybierz miejsce do zapisu pliku");
+
         File filePath = directoryChooser.showDialog (exportButton.getScene ().getWindow ());
         if (filePath != null) {
             FileExporter fe =
@@ -37,4 +38,6 @@ public class ExportController {
             service.restart ();
         }
     }
+
+
 }

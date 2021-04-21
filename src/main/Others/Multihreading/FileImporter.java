@@ -29,8 +29,8 @@ public class FileImporter extends Task<Void> {
         myTask = this;
         importErrors.clear ();
         int progress = 1;
-        for (File file : this.fileList
-        ) {
+        List<File> list = this.fileList;
+        for (File file : list) {
             List<GaugeMeasurement> gaugeMeasurementsListFromOneFile = new ArrayList<> ();
 
             try (Scanner scanner = new Scanner (new FileReader (file))) {
@@ -59,7 +59,7 @@ public class FileImporter extends Task<Void> {
                 e.getCause ();
             }
         }
-        riverList.removeAll (riverDBActions.queryForAllRiverNames ());
+        riverDBActions.queryForAllRiverNames ().forEach (riverList::remove);
         riverDBActions.createOrUpdateRiverTable (riverList);
 
         myTask = null;

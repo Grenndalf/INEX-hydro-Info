@@ -2,11 +2,14 @@ package DButils.TableDBActions;
 
 
 
+import javafx.scene.control.Dialog;
+
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class BasicCrudOperator<T> {
@@ -21,6 +24,7 @@ public class BasicCrudOperator<T> {
             em.getTransaction().commit();
         } catch (Exception ex) {
             em.getTransaction().rollback();
+            showDialog (ex);
         } finally {
             if (em.getTransaction().isActive()) em.close();
         }
@@ -33,7 +37,7 @@ public class BasicCrudOperator<T> {
             em.getTransaction().begin();
             for (int i = 0; i < list.size(); i++) {
                 em.persist(list.get(i));
-                if (i % 50 == 0) {
+                if (i % 100 == 0) {
                     em.flush();
                     em.clear();
                 }
@@ -41,6 +45,7 @@ public class BasicCrudOperator<T> {
             em.getTransaction().commit();
         } catch (Exception ex) {
             em.getTransaction().rollback();
+            showDialog (ex);
         } finally {
             if (em.getTransaction().isActive()) em.close();
         }
@@ -54,6 +59,7 @@ public class BasicCrudOperator<T> {
             em.getTransaction().commit();
         } catch (Exception ex) {
             em.getTransaction().rollback();
+            showDialog (ex);
         } finally {
             if (em.getTransaction().isActive()) em.close();
         }
@@ -72,9 +78,16 @@ public class BasicCrudOperator<T> {
             return resultList;
         } catch (Exception ex) {
             em.getTransaction().rollback();
+            showDialog (ex);
         } finally {
             if (em.getTransaction().isActive()) em.close();
         }
         return new ArrayList<>();
+    }
+    private static void showDialog(Exception exception){
+        Dialog dialog = new Dialog ();
+        dialog.setTitle ("Wyst¹pi³ b³¹d");
+        dialog.setContentText (Arrays.toString (exception.getStackTrace ()));
+        dialog.show ();
     }
 }

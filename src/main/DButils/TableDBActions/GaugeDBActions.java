@@ -2,6 +2,9 @@ package DButils.TableDBActions;
 
 import DButils.Intefaces.GaugeQueries;
 import DButils.Tables.GaugeMeasurement;
+import javafx.scene.Node;
+import javafx.scene.control.ButtonType;
+import javafx.scene.control.Dialog;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
@@ -10,7 +13,9 @@ import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import javax.persistence.criteria.Root;
+import javax.transaction.Transactional;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 
@@ -41,6 +46,8 @@ public class GaugeDBActions implements GaugeQueries {
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
+            ex.printStackTrace ();
+            showDialog (ex);
         } finally {
             if (em.getTransaction ().isActive ()) em.close ();
         }
@@ -64,6 +71,8 @@ public class GaugeDBActions implements GaugeQueries {
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
+            ex.printStackTrace ();
+            showDialog (ex);
         } finally {
             if (em.getTransaction ().isActive ()) {
                 em.flush ();
@@ -94,6 +103,8 @@ public class GaugeDBActions implements GaugeQueries {
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
+            ex.printStackTrace ();
+            showDialog (ex);
         } finally {
             if (em.getTransaction ().isActive ()) {
                 em.flush ();
@@ -129,6 +140,8 @@ public class GaugeDBActions implements GaugeQueries {
             return resultMap;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
+            ex.printStackTrace ();
+            showDialog (ex);
         } finally {
             if (em.getTransaction ().isActive ()) {
                 em.flush ();
@@ -161,6 +174,8 @@ public class GaugeDBActions implements GaugeQueries {
             return result;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
+            ex.printStackTrace ();
+            showDialog (ex);
         } finally {
             if (em.getTransaction ().isActive ()) {
                 em.flush ();
@@ -183,6 +198,8 @@ public class GaugeDBActions implements GaugeQueries {
             return i;
         } catch (Exception ex) {
             em.getTransaction ().rollback ();
+            ex.printStackTrace ();
+            showDialog (ex);
         } finally {
             if (em.getTransaction ().isActive ()) {
                 em.flush ();
@@ -191,6 +208,16 @@ public class GaugeDBActions implements GaugeQueries {
             }
         }
         return 0;
+    }
+    private static void showDialog(Exception exception){
+        Dialog dialog = new Dialog ();
+        dialog.setTitle ("Wyst¹pi³ b³¹d");
+        dialog.setContentText (Arrays.toString (exception.getStackTrace ()));
+        dialog.getDialogPane().getButtonTypes().add(ButtonType.CLOSE);
+        Node closeButton = dialog.getDialogPane().lookupButton(ButtonType.CLOSE);
+        closeButton.managedProperty().bind(closeButton.visibleProperty());
+        closeButton.setVisible(false);
+        dialog.show ();
     }
 
 }

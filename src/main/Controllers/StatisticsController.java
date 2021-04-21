@@ -4,13 +4,21 @@ import DButils.TableDBActions.GaugeDBActions;
 import DButils.Tables.GaugeMeasurement;
 import Others.Utils.Calculations;
 import Others.Utils.Utils;
+import com.jfoenix.controls.JFXTabPane;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
+import javafx.scene.Node;
+import javafx.scene.SnapshotParameters;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.chart.XYChart;
+import javafx.scene.control.ContextMenu;
 import javafx.scene.control.Label;
+import javafx.scene.control.MenuItem;
 import javafx.scene.control.Tooltip;
+import javafx.scene.image.WritableImage;
+import javafx.scene.input.Clipboard;
+import javafx.scene.input.ClipboardContent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
 import javafx.scene.shape.Arc;
@@ -31,6 +39,8 @@ public class StatisticsController {
     private static final String M_3_S = " [m3]/s";
     private final GaugeDBActions gaugeDBActions = new GaugeDBActions ();
 
+    @FXML
+    public JFXTabPane tabPane;
 
     List<GaugeMeasurement> selectedTownData =
             gaugeDBActions.queryForDataOfSelectedTownAndRiver (getInstance ().getRiverName (),
@@ -38,7 +48,7 @@ public class StatisticsController {
     List<GaugeMeasurement> correctedDataList = correctData (selectedTownData);
     Calculations ls =
             new Calculations (gaugeDBActions.getCorrectedDoubleMeasurementsList (getInstance ().getRiverName ()
-            , getInstance ().getTownName ()));
+                    , getInstance ().getTownName ()));
     @FXML
     private Label q10;
     @FXML
@@ -70,7 +80,7 @@ public class StatisticsController {
     @FXML
     private Pane secLineChartContainer;
     @FXML
-    private Pane chartContainer2;
+    private Pane thirdChartContainer;
     @FXML
     private VBox qpPercentContainer;
     @FXML
@@ -80,12 +90,12 @@ public class StatisticsController {
     void initialize () {
         initDataArcValues ();
         initCorrectDataInfo ();
-        chartContainer.getChildren ().add (getLineChart ());
         setQuantityInfo ();
         getAverageFlowValue ();
         setDeciles ();
-        addSecondChart ();
-        addThirdChart ();
+        addChart (chartContainer, getFirstLineChart (), tabPane);
+        addChart (secLineChartContainer, getSecondLineChart (), tabPane);
+        addChart (thirdChartContainer, getThirdLineChart (), tabPane);
         setPercentValues ();
     }
 
@@ -100,10 +110,11 @@ public class StatisticsController {
             skewCoefficient.setText (ls.getSkewCoefficient ().toEngineeringString ());
         });
     }
-    private void setPercentValues(){
+
+    private void setPercentValues () {
         for (int i = 0; i < Utils.percentValueList ().size (); i++) {
             pPercentContainer.getChildren ().add (new Label (Utils.percentValueList ().get (i).toString ()));
-            qpPercentContainer.getChildren ().add (new Label (ls.getFinalResults ().get (Utils.percentValueList ().size ()-1-i).toString ()));
+            qpPercentContainer.getChildren ().add (new Label (ls.getFinalResults ().get (Utils.percentValueList ().size () - 1 - i).toString ()));
         }
     }
 
@@ -120,7 +131,7 @@ public class StatisticsController {
         IncorrectDataQuantity.setText (String.valueOf (selectedTownData.size () - correctedDataList.size ()));
     }
 
-    private LineChart<Number, Number> getLineChart () {
+    private LineChart<Number, Number> getFirstLineChart () {
         NumberAxis xAxis = new NumberAxis ();
         final HashMap<Short, Double> maxValuesPerYear =
                 gaugeDBActions.getMaxValuesPerYear (getInstance ().getTownName (),
@@ -133,18 +144,38 @@ public class StatisticsController {
         LineChart<Number, Number> lineChart = new LineChart<> (xAxis, new NumberAxis ());
         lineChart.getData ().add (series);
         setSeriesFirstChart (series, maxValuesPerYear);
-        lineChart.setPrefWidth (1100);
-        lineChart.setPrefHeight (400);
+        lineChart.prefWidthProperty ().bind (chartContainer.widthProperty ());
+        lineChart.prefHeightProperty ().bind (chartContainer.heightProperty ());
         xAxis.setLowerBound (minXAXis - 1);
         xAxis.setUpperBound (maxXAXis + 1);
         lineChart.setLegendVisible (false);
-
         lineChart.getYAxis ().setLabel (Utils.getResourceBundle ().getString (YAXIS_TEXT));
         lineChart.setTitle (SSQ);
         return lineChart;
     }
 
-    private LineChart<Number, Number> createFinalChart () {
+    private LineChart<Number, Number> getSecondLineChart () {
+        NumberAxis xAxis = new NumberAxis ();
+        NumberAxis yAxis = new NumberAxis ();
+        yAxis.setLabel ("Przep造w Q [m3/s]");
+        xAxis.setTickLabelRotation (90);
+        xAxis.setTickLabelFont (Font.font (SYSTEM, 10));
+        xAxis.setAutoRanging (true);
+        xAxis.setLabel ("Czas (t) dni");
+        XYChart.Series<Number, Number> series = new XYChart.Series<> ();
+        LineChart<Number, Number> lineChart = new LineChart<> (xAxis, yAxis);
+        lineChart.getStyleClass ().add ("sec-line-chart");
+        lineChart.prefWidthProperty ().bind (secLineChartContainer.widthProperty ());
+        lineChart.prefHeightProperty ().bind (secLineChartContainer.heightProperty ());
+        lineChart.getData ().add (series);
+        lineChart.setLegendVisible (false);
+        setSeriesSecondChart (averageValuesFromSortedDataPerDay (), series);
+        lineChart.getYAxis ().setLabel (Utils.getResourceBundle ().getString (YAXIS_TEXT));
+        lineChart.setTitle (KRZYWA_SUM);
+        return lineChart;
+    }
+
+    private LineChart<Number, Number> getThirdLineChart () {
         NumberAxis xAxis = new NumberAxis ();
         xAxis.setLowerBound (-5);
         xAxis.setUpperBound (105);
@@ -162,16 +193,15 @@ public class StatisticsController {
         lineChart.getData ().add (series);
         lineChart.getYAxis ().setLabel ("Przep造w [m3/s]");
         setSeriesThirdChart (series, finalDataMap);
-        lineChart.setPrefWidth (890);
-        lineChart.setPrefHeight (590);
+        lineChart.prefWidthProperty ().bind (thirdChartContainer.widthProperty ());
+        lineChart.prefHeightProperty ().bind (thirdChartContainer.heightProperty ());
         lineChart.setLegendVisible (false);
-
         lineChart.getYAxis ().setLabel (Utils.getResourceBundle ().getString (YAXIS_TEXT));
         lineChart.setTitle ("Przep造wy Prawdopodobne");
         return lineChart;
     }
 
-    private void setSeriesSecondChart (Map<Integer, Double> dataMap, XYChart.Series<Number, Number> series) {
+    private void setSeriesSecondChart (HashMap<Integer, Double> dataMap, XYChart.Series<Number, Number> series) {
         dataMap.forEach ((integer, aDouble) -> series.getData ().add (new XYChart.Data<> (integer, aDouble)));
         series.getData ().forEach (this::addTooltipToChart);
     }
@@ -218,18 +248,16 @@ public class StatisticsController {
         dataArc.setStartAngle (450 - divideIntegers (correctedDataList.size (), selectedTownData.size ()) * 360);
     }
 
-
     private List<GaugeMeasurement> correctData (List<GaugeMeasurement> dataToCorrect) {
         return dataToCorrect
                 .stream ()
-                .filter (data -> data.getData2 () < 9999.0)
+                .filter (data -> data.getData2 () < 9_999.0)
                 .collect (Collectors.toList ());
     }
 
-
-    private Map<Integer, Double> averageValuesFromSortedDataPerDay () {
-        Map<Integer, Double> result = new HashMap<> ();
-        Map<Short, List<Double>> dataMap = new HashMap<> ();
+    private HashMap<Integer, Double> averageValuesFromSortedDataPerDay () {
+        HashMap<Integer, Double> result = new HashMap<> ();
+        HashMap<Short, List<Double>> dataMap = new HashMap<> ();
         List<Object[]> list =
                 gaugeDBActions.getSortedValuesPerYearAndPerDay (getInstance ().getRiverName (),
                                                                 getInstance ().getTownName ());
@@ -242,7 +270,6 @@ public class StatisticsController {
                 dataMap.get (objects[0]).add ((double) objects[1]);
             }
         });
-
         for (int i = 0; i < 365; i++) {
             double sumOfMeasurements = 0;
             List<Short> yearList = new ArrayList<> (dataMap.keySet ());
@@ -257,43 +284,28 @@ public class StatisticsController {
         return result;
     }
 
-    private LineChart<Number, Number> createSecondChart (Map<Integer, Double> dataset) {
-        NumberAxis xAxis = new NumberAxis ();
-        NumberAxis yAxis = new NumberAxis ();
-        yAxis.setLabel ("Przep造w Q [m3/s]");
-        xAxis.setTickLabelRotation (90);
-        xAxis.setTickLabelFont (Font.font (SYSTEM, 10));
-        xAxis.setAutoRanging (true);
-        xAxis.setLabel ("Czas (t) dni");
-        XYChart.Series<Number, Number> series = new XYChart.Series<> ();
-        LineChart<Number, Number> lineChart = new LineChart<> (xAxis, yAxis);
-
-        lineChart.getStyleClass ().add ("sec-line-chart");
-        lineChart.setPrefWidth (1100);
-        lineChart.setPrefHeight (400);
-        lineChart.getData ().add (series);
-        lineChart.setLegendVisible (false);
-        setSeriesSecondChart (dataset, series);
-
-        lineChart.getYAxis ().setLabel (Utils.getResourceBundle ().getString (YAXIS_TEXT));
-        lineChart.setTitle (KRZYWA_SUM);
-        return lineChart;
-    }
-
-
-    public void addSecondChart () {
+    public void addChart (Pane container, LineChart lineChart, Node windowOwner) {
         Platform.runLater (() -> {
-            secLineChartContainer.getChildren ().clear ();
-            secLineChartContainer.getChildren ().add (createSecondChart (averageValuesFromSortedDataPerDay ()));
+            container.getChildren ().clear ();
+            container.getChildren ().add (lineChart);
         });
+        setContextMenuCopy (container, windowOwner);
     }
 
-    public void addThirdChart () {
-        Platform.runLater (() -> {
-            chartContainer2.getChildren ().clear ();
-            chartContainer2.getChildren ().add (createFinalChart ());
+    private void setContextMenuCopy (Node imageArea, Node windowOwner) {
+        ContextMenu contextMenu = new ContextMenu ();
+        MenuItem menuItem1 = new MenuItem ("Kopiuj");
+        contextMenu.getItems ().add (menuItem1);
+        menuItem1.setOnAction (event -> {
+            Clipboard clipboard = Clipboard.getSystemClipboard ();
+            ClipboardContent content = new ClipboardContent ();
+            SnapshotParameters snapshotParams = new SnapshotParameters ();
+            WritableImage image = imageArea.snapshot (snapshotParams, null);
+            content.putImage (image);
+            clipboard.setContent (content);
         });
+        imageArea.setOnContextMenuRequested (event -> contextMenu.show (windowOwner.getScene ().getWindow (),
+                                                                        event.getScreenX (),
+                                                                        event.getScreenY ()));
     }
-
-
 }
