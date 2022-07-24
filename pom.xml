@@ -3,13 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
     <groupId>org.example</groupId>
     <artifactId>INEX-HYDRO-info</artifactId>
     <version>1.0</version>
     <packaging>jar</packaging>
     <build>
         <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                </configuration>
+            </plugin>
             <plugin>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <version>3.3.0</version>
@@ -33,6 +40,50 @@
                     </execution>
                 </executions>
             </plugin>
+
+            <plugin>
+                <groupId>com.akathist.maven.plugins.launch4j</groupId>
+                <artifactId>launch4j-maven-plugin</artifactId>
+                <version>2.1.2</version>
+                <executions>
+                    <execution>
+                        <id>l4j-clui</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>launch4j</goal>
+                        </goals>
+                        <configuration>
+                            <headerType>gui</headerType>
+                            <jar>target/INEX-HYDRO-info-1.0-jar-with-dependencies.jar</jar>
+                            <outfile>target/HYDRO.exe</outfile>
+                            <downloadUrl>http://java.com/download</downloadUrl>
+                            <classPath>
+                                <mainClass>App.Main</mainClass>
+                            </classPath>
+                            <icon>src/main/Resources/Images/put-icon-here.ico</icon>
+                            <jre>
+                                <bundledJre64Bit>false</bundledJre64Bit>
+                                <bundledJreAsFallback>false</bundledJreAsFallback>
+                                <minVersion>1.8.0</minVersion>
+                                <jdkPreference>preferJre</jdkPreference>
+                                <runtimeBits>32</runtimeBits>
+                            </jre>
+                            <versionInfo>
+                                <fileVersion>1.0.0.0</fileVersion>
+                                <txtFileVersion>${project.version}</txtFileVersion>
+                                <fileDescription>${project.name}</fileDescription>
+                                <copyright>C</copyright>
+                                <productVersion>1.0.0.0</productVersion>
+                                <txtProductVersion>1.0.0.0</txtProductVersion>
+                                <productName>${project.name}</productName>
+                                <internalName>AppName</internalName>
+                                <originalFilename>HYDRO.exe</originalFilename>
+                            </versionInfo>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
     <repositories>
